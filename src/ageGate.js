@@ -29,11 +29,14 @@ const ageGate = () => {
     $body.addClass(disableScroll);
     console.log('No Cookies!');
   }
-  // $confirmAge.on('click', () => {
-  //   // If 19+ is checked but remember me is not, create 24 hour cookie and hide overlay and remove from DOM?
-  //   // If 19+ is checked and remember is checked, create 30 day cookie and hide overlay and remove from DOM?
-  //   // If 19+ is not checked reject/error handle
-  // });
+  $confirmAge.submit((e) => {
+    e.preventDefault;
+    console.log('Clicking Button');
+  });
+  // If 19+ is checked but remember me is not, create 24 hour cookie and hide overlay and remove from DOM?
+
+  // If 19+ is checked and remember is checked, create 30 day cookie and hide overlay and remove from DOM?
+  // If 19+ is not checked reject/error handle
 };
 
 export default ageGate;
