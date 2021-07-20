@@ -33,15 +33,16 @@ const ageGate = () => {
   $ageGateForm.submit((e) => {
     e.preventDefault();
     if (!$verifyAge.prop('checked')) {
-      console.log('Underage');
-    } else if ($verifyAge.prop('checked')) {
-      console.log('Of Age');
+      console.log(`I'm underage`); // reject totally;
+      // If 19+ is not checked reject/error handle
+    } else if ($verifyAge.prop('checked') && !$rememberMe.prop('checked')) {
+      console.log(`I'm of age, but don't remember me`);
+      // If 19+ is checked but remember me is not, create 24 hour cookie and hide overlay and remove from DOM?
+    } else if ($verifyAge.prop('checked') && $rememberMe.prop('checked')) {
+      console.log(`I'm of age AND remember me`);
+      // If 19+ is checked and remember is checked, create 30 day cookie and hide overlay and remove from DOM?
     }
   });
-  // If 19+ is checked but remember me is not, create 24 hour cookie and hide overlay and remove from DOM?
-
-  // If 19+ is checked and remember is checked, create 30 day cookie and hide overlay and remove from DOM?
-  // If 19+ is not checked reject/error handle
 };
 
 export default ageGate;
