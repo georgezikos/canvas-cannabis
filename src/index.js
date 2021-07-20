@@ -28,7 +28,6 @@ canvasCannabis.init = () => {
       canvasCannabis.thursdaySpecials.css('display', 'flex');
       console.log('Thursday!');
     }
-    canvasCannabis.dailySpecials();
   };
   canvasCannabis.showSpecials();
 };
