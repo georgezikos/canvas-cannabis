@@ -4,7 +4,8 @@ import './age-gate.css';
 // DOM Selectors
 const $body = $('body');
 const $ageGate = $('.age-gate');
-const $verifyAge = $('#verify-age');
+const $ageGateForm = $('.age-gate__form');
+// const $verifyAge = $('#verify-age'); submit button
 const $rememberMe = $('#remember-me');
 const $confirmAge = $('#confirm-age');
 
@@ -29,7 +30,7 @@ const ageGate = () => {
     $body.addClass(disableScroll);
     console.log('No Cookies!');
   }
-  $confirmAge.on('click', (e) => {
+  $ageGateForm.on('submit', (e) => {
     e.preventDefault;
     console.log('Clicking Button');
   });
