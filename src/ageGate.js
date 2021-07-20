@@ -29,7 +29,7 @@ const ageGate = () => {
     $body.addClass(disableScroll);
     console.log('No Cookies!');
   }
-  $confirmAge.submit((e) => {
+  $confirmAge.on('click', (e) => {
     e.preventDefault;
     console.log('Clicking Button');
   });
