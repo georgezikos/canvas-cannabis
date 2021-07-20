@@ -8,7 +8,7 @@ const $thursdaySpecials = $('#thursday-specials');
 const currentDate = new Date();
 const currentDay = currentDate.getDay();
 
-const showSpecials = () => {
+const dailySpecials = () => {
   if (currentDay === 0 || currentDay === 6 || currentDay === 5) {
     console.log('Not today, freak!');
   } else if (currentDay === 1) {
@@ -26,6 +26,6 @@ const showSpecials = () => {
   }
 };
 
-showSpecials();
+dailySpecials();
 
 export default dailySpecials;
