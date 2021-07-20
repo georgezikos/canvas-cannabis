@@ -1,0 +1,1 @@
+(()=>{"use strict";var i={init:function(){i.dailySpecials()}};$((function(){i.init()}))})();
