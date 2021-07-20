@@ -15,7 +15,7 @@ canvasCannabis.init = () => {
       canvasCannabis.currentDate.getDay() === 5
     ) {
       console.log('Not today, freak!');
-    } else if (ccanvasCannabis.currentDate.getDay() === 1) {
+    } else if (canvasCannabis.currentDate.getDay() === 1) {
       canvasCannabis.mondaySpecials.css('display', 'flex');
       console.log('Monday!');
     } else if (canvasCannabis.currentDate.getDay() === 2) {
