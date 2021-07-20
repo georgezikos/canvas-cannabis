@@ -30,8 +30,16 @@ const ageGate = () => {
     $body.addClass(disableScroll);
     console.log('No Cookies!');
   }
+  if (!$rememberMe.prop('checked')) {
+    console.log('Unchecked');
+  }
   $ageGateForm.submit((e) => {
     e.preventDefault();
+    if ($rememberMe.prop('checked')) {
+      console.log('Remember Me');
+    } else {
+      console.log(`Don't Remember Me!`);
+    }
     console.log('Clicking Button');
   });
   // If 19+ is checked but remember me is not, create 24 hour cookie and hide overlay and remove from DOM?
