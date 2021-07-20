@@ -9,8 +9,8 @@ const $rememberMe = $('remember-me');
 const $confirmAge = $('confirm-age');
 
 // CSS Classes
-const activeAgeGate = '.age-gate--active';
-const disableScroll = '.active-modal';
+const activeAgeGate = 'age-gate--active';
+const disableScroll = 'active-modal';
 
 // Cookies
 // Cookies.set('Remember Me', true, { expires: 30 });
@@ -27,6 +27,7 @@ const ageGate = () => {
     // If the overlay is active, prevent page scroll – body overflow hidden/auto
     // $body add class disableScroll
     $body.addClass(disableScroll);
+    console.log('No Cookies!');
   }
   // $confirmAge.on('click', () => {
   //   // If 19+ is checked but remember me is not, create 24 hour cookie and hide overlay and remove from DOM?
