@@ -1,6 +1,6 @@
 import dailySpecials from './dailySpecials';
 
-const canvasCannabis = {};
+const canvasCannabis = { dailySpecials: dailySpecials() };
 
 canvasCannabis.init = () => {
   canvasCannabis.dailySpecials();

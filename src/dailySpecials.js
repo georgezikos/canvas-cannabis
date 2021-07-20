@@ -1,5 +1,3 @@
-import './test.css';
-
 const dailySpecials = () => {
   const mondaySpecials = $('#monday-specials');
   const tuesdaySpecials = $('#tuesday-specials');
