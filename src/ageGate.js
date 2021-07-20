@@ -13,10 +13,6 @@ const $rememberMe = $('#remember-me');
 const activeAgeGate = 'age-gate--active';
 const disableScroll = 'active-modal';
 
-// Cookies
-// Cookies.set('Remember Me', true, { expires: 30 });
-// Cookies.set('Default', true, { expires: 1 });
-
 const ageGate = () => {
   // Check if 24 hour or 30 day cookie exists
   if (Cookies.get('Remember Me') || Cookies.get('Default')) {
@@ -37,8 +33,10 @@ const ageGate = () => {
       // If 19+ is not checked reject/error handle
     } else if ($verifyAge.prop('checked') && !$rememberMe.prop('checked')) {
       console.log(`I'm of age, but don't remember me`);
+      Cookies.set('Default', true, { expires: 1 });
       // If 19+ is checked but remember me is not, create 24 hour cookie and hide overlay and remove from DOM?
     } else if ($verifyAge.prop('checked') && $rememberMe.prop('checked')) {
+      Cookies.set('Remember Me', true, { expires: 30 });
       console.log(`I'm of age AND remember me`);
       // If 19+ is checked and remember is checked, create 30 day cookie and hide overlay and remove from DOM?
     }
