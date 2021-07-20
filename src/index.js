@@ -1,5 +1,5 @@
-import dailySpecials from './dailySpecials';
-import ageGate from './ageGate';
+import dailySpecials from './components/dailySpecials/dailySpecials';
+import ageGate from './components/ageGate/ageGate';
 
 const init = () => {
   dailySpecials();
