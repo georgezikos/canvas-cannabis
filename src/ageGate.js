@@ -30,7 +30,7 @@ const ageGate = () => {
     $body.addClass(disableScroll);
     console.log('No Cookies!');
   }
-  $ageGateForm.on('submit', (e) => {
+  $ageGateForm.submit((e) => {
     e.preventDefault;
     console.log('Clicking Button');
   });
