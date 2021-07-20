@@ -1,0 +1,7 @@
+.active-modal {
+  overflow: hidden;
+}
+
+.age-gate--active {
+  display: flex;
+}
