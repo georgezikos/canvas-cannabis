@@ -40,10 +40,14 @@ const ageGate = () => {
     } else if ($verifyAge.prop('checked') && !$rememberMe.prop('checked')) {
       console.log(`I'm of age, but don't remember me`);
       Cookies.set(defaultCookie, true, { expires: 1 });
+      $ageGate.removeClass(activeAgeGate);
+      $body.removeClass(disableScroll);
       // If 19+ is checked but remember me is not, create 24 hour cookie and hide overlay and remove from DOM?
     } else if ($verifyAge.prop('checked') && $rememberMe.prop('checked')) {
-      Cookies.set(rememberMeCookie, true, { expires: 30 });
       console.log(`I'm of age AND remember me`);
+      Cookies.set(rememberMeCookie, true, { expires: 30 });
+      $ageGate.removeClass(activeAgeGate);
+      $body.removeClass(disableScroll);
       // If 19+ is checked and remember is checked, create 30 day cookie and hide overlay and remove from DOM?
     }
   });
