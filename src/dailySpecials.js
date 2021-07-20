@@ -26,6 +26,4 @@ const dailySpecials = () => {
   }
 };
 
-dailySpecials();
-
 export default dailySpecials;
