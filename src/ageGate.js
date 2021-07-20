@@ -5,9 +5,9 @@ import './age-gate.css';
 const $body = $('body');
 const $ageGate = $('.age-gate');
 const $ageGateForm = $('.age-gate__form');
-// const $verifyAge = $('#verify-age'); submit button
+const $verifyAge = $('#verify-age');
 const $rememberMe = $('#remember-me');
-const $confirmAge = $('#confirm-age');
+// const $confirmAge = $('#confirm-age'); submit button
 
 // CSS Classes
 const activeAgeGate = 'age-gate--active';
@@ -32,9 +32,9 @@ const ageGate = () => {
   }
   $ageGateForm.submit((e) => {
     e.preventDefault();
-    if (!$confirmAge.prop('checked')) {
+    if (!$verifyAge.prop('checked')) {
       console.log('Underage');
-    } else if ($confirmAge.prop('checked')) {
+    } else if ($verifyAge.prop('checked')) {
       consoole.log('Of Age');
     }
   });
