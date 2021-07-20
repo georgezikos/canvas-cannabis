@@ -31,7 +31,7 @@ const ageGate = () => {
     console.log('No Cookies!');
   }
   $ageGateForm.submit((e) => {
-    e.preventDefault;
+    e.preventDefault();
     console.log('Clicking Button');
   });
   // If 19+ is checked but remember me is not, create 24 hour cookie and hide overlay and remove from DOM?
