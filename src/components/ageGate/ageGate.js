@@ -1,64 +1,52 @@
 import Cookies from 'js-cookie';
-import './age-gate.css';
+import './ageGate.css';
 
-// DOM Selectors
+// Selectors
 const $body = $('body');
 const $html = $('html');
 const $ageGate = $('.age-gate');
 const $ageGateForm = $('.age-gate__form');
 const $verifyAge = $('#verify-age');
 const $rememberMe = $('#remember-me');
-// const $confirmAge = $('#confirm-age'); submit button
 
-// CSS Classes
+// Classes
 const activeAgeGate = 'age-gate--active';
 const disableScroll = 'active-modal';
-// const posRel = 'pos-rel';
 
 // Cookie Names
 const defaultCookie = 'default';
 const rememberMeCookie = 'rememberMe';
 
 const ageGate = () => {
-  // Check if 24 hour or 30 day cookie exists
+  // Checks for the existence of cookies
   if (Cookies.get(rememberMeCookie) || Cookies.get(defaultCookie)) {
-    // $ageGate.remove();
+    // Does nothing if they have an active cookies
     return;
   } else {
-    // If neither exist, overlay is active (display flex), if either exists keep overlay hidden (default)
-    // $ageGate add class activeAgeGate
+    // Shows the age gate otherwise
     $ageGate.addClass(activeAgeGate);
-    // If the overlay is active, prevent page scroll – body overflow hidden/auto
-    // $body add class disableScroll
     $html.addClass(disableScroll);
     $body.addClass(disableScroll);
-    console.log('No Cookies!');
   }
   $ageGateForm.submit((e) => {
     e.preventDefault();
     if (!$verifyAge.prop('checked')) {
-      console.log(`I'm underage`);
+      // If they haven't verified their age, nothing happens on submit
       return;
-      // reject totally;
-      // If 19+ is not checked reject/error handle
     } else if ($verifyAge.prop('checked') && !$rememberMe.prop('checked')) {
-      console.log(`I'm of age, but don't remember me`);
+      // If they only verify their age, but do not wanted to be remembered, let them in and create a 24-hour cookie
       Cookies.set(defaultCookie, true, { expires: 1 });
       $ageGate.removeClass(activeAgeGate);
       $html.removeClass(disableScroll);
       $body.removeClass(disableScroll);
-      // $ageGate.remove();
       return;
-      // If 19+ is checked but remember me is not, create 24 hour cookie and hide overlay and remove from DOM?
     } else if ($verifyAge.prop('checked') && $rememberMe.prop('checked')) {
-      console.log(`I'm of age AND remember me`);
+      // If they verify their age and also want to be remembered, let them in and create a 30-day cookie
       Cookies.set(rememberMeCookie, true, { expires: 30 });
       $ageGate.removeClass(activeAgeGate);
       $html.removeClass(disableScroll);
       $body.removeClass(disableScroll);
-      // $ageGate.remove();
       return;
-      // If 19+ is checked and remember is checked, create 30 day cookie and hide overlay and remove from DOM?
     }
   });
 };

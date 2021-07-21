@@ -1,17 +1,15 @@
+/* For the body and html elements */
 .active-modal {
   overflow: hidden;
   position: fixed;
 }
 
+/* For the age gate's containing element */
 .age-gate--active {
   display: flex;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
-
-/* .pos-rel {
-  position: relative;
-} */
 
 .active-nav {
   overflow: hidden;
