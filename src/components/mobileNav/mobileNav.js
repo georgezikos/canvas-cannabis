@@ -26,7 +26,7 @@ const mobileNav = () => {
   $window.on('resize', () => {
     if (
       $linksList.hasClass(activeMobileNav) &&
-      window.width() > windowNavClose
+      $window.width() > windowNavClose
     ) {
       console.log(window.innerWidth);
       navHandler();
