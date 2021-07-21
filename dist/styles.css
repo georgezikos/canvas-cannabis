@@ -22,7 +22,7 @@
 /* For the containing element of the nav's links */
 .main-nav__links-list--active {
   display: block;
-  overflow-y: auto;
+  overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
 
