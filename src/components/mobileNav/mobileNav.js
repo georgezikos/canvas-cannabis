@@ -25,12 +25,9 @@ const navHandler = () => {
   $mainNav.toggleClass(mainNavActiveMobile);
   $navLogo.toggleClass(navLogoActiveMobile);
   $body.toggleClass(disableScroll);
-  if (!$mainNav.hasClass('main-nav--dark')) {
-    console.log('It does');
-    $hamburgerBottom.toggleClass(hamburgerBunsActiveMobile);
-    $hamburgerTop.toggleClass(hamburgerBunsActiveMobile);
-    $linksList.toggleClass(activeMobileNav);
-  }
+  $hamburgerBottom.toggleClass(hamburgerBunsActiveMobile);
+  $hamburgerTop.toggleClass(hamburgerBunsActiveMobile);
+  $linksList.toggleClass(activeMobileNav);
 };
 
 const mobileNav = () => {
