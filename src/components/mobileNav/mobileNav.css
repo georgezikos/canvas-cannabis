@@ -1,11 +1,3 @@
-.active-modal {
-  overflow: hidden;
-}
-
-.age-gate--active {
-  display: flex;
-}
-
 .active-nav {
   overflow: hidden;
 }
@@ -13,4 +5,3 @@
 .main-nav__links-list--active {
   display: block;
 }
-
