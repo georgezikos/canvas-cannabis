@@ -4,4 +4,6 @@
 
 .age-gate--active {
   display: flex;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }

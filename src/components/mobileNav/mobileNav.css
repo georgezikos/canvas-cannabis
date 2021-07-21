@@ -1,5 +1,3 @@
-/* Add to the HTML element */
-
 .active-nav {
   overflow: hidden;
 }
@@ -14,10 +12,10 @@
   background-color: #f2efed;
 } */
 
-.main-nav__logo--active-mobile {
+/* .main-nav__logo--active-mobile {
   filter: invert();
 }
 
 .hamburger--active {
   background-color: black;
-}
+} */
