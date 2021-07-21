@@ -12,11 +12,14 @@
   -webkit-overflow-scrolling: touch;
 }
 
+/* For the body and html elements */
 .active-nav {
   overflow: hidden;
   position: fixed;
+  width: 100%;
 }
 
+/* For the containing element of the nav's links */
 .main-nav__links-list--active {
   display: block;
   overflow-y: auto;

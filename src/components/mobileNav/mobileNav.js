@@ -1,8 +1,8 @@
 import './mobileNav.css';
 
-// DOM Selectors
+// Selectors
 const $window = $(window);
-// const $body = $('body');
+const $body = $('body');
 const $html = $('html');
 const $hamburger = $('.main-nav__hamburger');
 const $linksList = $('.main-nav__links-list');
@@ -11,7 +11,7 @@ const $linksList = $('.main-nav__links-list');
 // const $hamburgerBottom = $('div.hamburger__bottom');
 // const $hamburgerTop = $('div.hamburger__top');
 
-// CSS Classes
+// Classes
 const activeMobileNav = 'main-nav__links-list--active';
 const disableScroll = 'active-nav';
 // const mainNavActiveMobile = 'main-nav--active-mobile';
@@ -19,13 +19,14 @@ const disableScroll = 'active-nav';
 // const hamburgerBunsActiveMobile = 'hamburger--active';
 
 // Other
-const windowNavClose = 991;
+const windowNavClose = 991; // If the mobile menu is left open, this width will trigger a menu close
 
 // Functions
 const navHandler = () => {
   // $mainNav.toggleClass(mainNavActiveMobile);
   // $navLogo.toggleClass(navLogoActiveMobile);
   $html.toggleClass(disableScroll);
+  $body.toggleClass(disableScroll);
   // $hamburgerBottom.toggleClass(hamburgerBunsActiveMobile);
   // $hamburgerTop.toggleClass(hamburgerBunsActiveMobile);
   $linksList.toggleClass(activeMobileNav);
