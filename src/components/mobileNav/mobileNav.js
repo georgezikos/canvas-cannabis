@@ -4,7 +4,7 @@ import './mobileNav.css';
 const $body = $('body');
 const $hamburger = $('.main-nav__hamburger');
 const $linksList = $('.main-nav__links-list');
-const $window = $(window);
+// const $window = $(window);
 
 // CSS Classes
 const activeMobileNav = 'main-nav__links-list--active';
@@ -25,9 +25,10 @@ const mobileNav = () => {
   });
   if (
     $linksList.hasClass(activeMobileNav) &&
-    $window.width() > windowNavClose
+    window.innerWidth > windowNavClose
   ) {
-    navHandler();
+    $linksList.removeClass(activeMobileNav);
+    $body.removeClass(disableScroll);
   }
 };
 
