@@ -1,5 +1,6 @@
 .active-nav {
   overflow: hidden;
+  position: fixed;
 }
 
 .main-nav__links-list--active {
