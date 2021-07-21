@@ -25,7 +25,7 @@ const navHandler = () => {
   $mainNav.toggleClass(mainNavActiveMobile);
   $navLogo.toggleClass(navLogoActiveMobile);
   $body.toggleClass(disableScroll);
-  if (!$mainNav.hasClass('.main-nav--dark')) {
+  if (!$mainNav.hasClass('main-nav--dark')) {
     $hamburgerBottom.toggleClass(hamburgerBunsActiveMobile);
     $hamburgerTop.toggleClass(hamburgerBunsActiveMobile);
     $linksList.toggleClass(activeMobileNav);
