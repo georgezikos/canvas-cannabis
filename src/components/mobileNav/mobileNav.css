@@ -5,3 +5,15 @@
 .main-nav__links-list--active {
   display: block;
 }
+
+.main-nav--active-mobile {
+  background-color: #f2efed;
+}
+
+.main-nav__logo--active-mobile {
+  filter: invert();
+}
+
+.hamburger--active {
+  background-color: black;
+}
