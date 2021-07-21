@@ -2,7 +2,7 @@ import Cookies from 'js-cookie';
 import './age-gate.css';
 
 // DOM Selectors
-// const $body = $('body');
+const $body = $('body');
 const $html = $('html');
 const $ageGate = $('.age-gate');
 const $ageGateForm = $('.age-gate__form');
@@ -13,6 +13,7 @@ const $rememberMe = $('#remember-me');
 // CSS Classes
 const activeAgeGate = 'age-gate--active';
 const disableScroll = 'active-modal';
+const posRel = 'pos-rel';
 
 // Cookie Names
 const defaultCookie = 'default';
@@ -30,6 +31,7 @@ const ageGate = () => {
     // If the overlay is active, prevent page scroll – body overflow hidden/auto
     // $body add class disableScroll
     $html.addClass(disableScroll);
+    $body.addClass(posRel);
     console.log('No Cookies!');
   }
   $ageGateForm.submit((e) => {
@@ -44,6 +46,7 @@ const ageGate = () => {
       Cookies.set(defaultCookie, true, { expires: 1 });
       $ageGate.removeClass(activeAgeGate);
       $html.removeClass(disableScroll);
+      $body.removeClass(posRel);
       // $ageGate.remove();
       return;
       // If 19+ is checked but remember me is not, create 24 hour cookie and hide overlay and remove from DOM?
@@ -52,6 +55,7 @@ const ageGate = () => {
       Cookies.set(rememberMeCookie, true, { expires: 30 });
       $ageGate.removeClass(activeAgeGate);
       $html.removeClass(disableScroll);
+      $body.removeClass(posRel);
       // $ageGate.remove();
       return;
       // If 19+ is checked and remember is checked, create 30 day cookie and hide overlay and remove from DOM?
