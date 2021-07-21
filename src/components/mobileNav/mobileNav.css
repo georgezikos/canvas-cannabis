@@ -1,14 +1,18 @@
+/* Add to the HTML element */
+
 .active-nav {
   overflow: hidden;
 }
 
 .main-nav__links-list--active {
   display: block;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
-.main-nav--active-mobile {
+/* .main-nav--active-mobile {
   background-color: #f2efed;
-}
+} */
 
 .main-nav__logo--active-mobile {
   filter: invert();
