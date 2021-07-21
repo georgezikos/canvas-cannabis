@@ -27,6 +27,7 @@ const mobileNav = () => {
     $linksList.hasClass(activeMobileNav) &&
     window.innerWidth > windowNavClose
   ) {
+    console.log(window.innerWidth);
     $linksList.removeClass(activeMobileNav);
     $body.removeClass(disableScroll);
   }
