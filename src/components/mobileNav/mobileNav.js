@@ -24,10 +24,12 @@ const windowNavClose = 991;
 const navHandler = () => {
   $mainNav.toggleClass(mainNavActiveMobile);
   $navLogo.toggleClass(navLogoActiveMobile);
-  $hamburgerBottom.toggleClass(hamburgerBunsActiveMobile);
-  $hamburgerTop.toggleClass(hamburgerBunsActiveMobile);
-  $linksList.toggleClass(activeMobileNav);
   $body.toggleClass(disableScroll);
+  if (!$mainNav.hasClass('.main-nav--dark')) {
+    $hamburgerBottom.toggleClass(hamburgerBunsActiveMobile);
+    $hamburgerTop.toggleClass(hamburgerBunsActiveMobile);
+    $linksList.toggleClass(activeMobileNav);
+  }
 };
 
 const mobileNav = () => {
