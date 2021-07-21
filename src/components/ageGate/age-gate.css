@@ -1,5 +1,6 @@
 .active-modal {
   overflow: hidden;
+  position: fixed;
 }
 
 .age-gate--active {
