@@ -67,7 +67,7 @@ const mobileNav = () => {
   // Submenu handler
   $dropdownLink.on('click', () => {
     console.log('clicked');
-    console.log($(this).children($dropdownSubMenu).html());
+    console.log($(this).children('.main-nav__submenu').html());
     // $(this).children($dropdownSubMenu).toggleClass(activeSubMenu);
 
     // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
