@@ -16,8 +16,8 @@ const $hamburgerTop = $('div.hamburger__top');
 const $dropdownLink = $('.main-nav__links--dropdown'); // onclick
 
 // Children
-const $dropdownSubMenu = $('.main-nav__sub-menu'); // display: block;
-const $dropdownIcon = $('.main-nav__dropdown-icon'); // rotateZ -180deg
+const $dropdownSubMenu = $('main-nav__sub-menu'); // display: block;
+const $dropdownIcon = $('main-nav__dropdown-icon'); // rotateZ -180deg
 
 // Classes
 const activeMobileNav = 'main-nav__links-list--active';
