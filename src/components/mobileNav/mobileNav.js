@@ -14,6 +14,7 @@ const $hamburgerTop = $('div.hamburger__top');
 
 // Parent
 const $dropdownLink = $('.main-nav__links-item--container');
+const $linkListContainer = $('.main-nav__links-item--dropdown');
 
 // Children
 const $dropdownSubMenu = $('.main-nav__sub-menu');
@@ -54,8 +55,9 @@ const navHandler = () => {
 const subMenuHandler = () => {
   $dropdownLink.on('click', function () {
     // prettier-ignore
-    const $openSubMenus = $(this).parent().siblings('.main-nav__links-item--dropdown');
+    const $openSubMenus = $(this).parent().siblings($linkListContainer); // Other open submenus
     if ($openSubMenus.find($dropdownSubMenu).hasClass(activeSubMenu)) {
+      // Collapse other submenus that are open
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
       // prettier-ignore
       $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
