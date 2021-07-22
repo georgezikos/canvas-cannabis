@@ -42,7 +42,7 @@
   filter: invert();
 }
 
-.hamburger--active {
+.hamburger--active-mobile {
   background-color: black;
 }
 

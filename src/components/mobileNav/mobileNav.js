@@ -17,20 +17,23 @@ const activeMobileNav = 'main-nav__links-list--active';
 const disableScroll = 'active-nav';
 const mainNavActiveMobile = 'main-nav--active-mobile';
 const navLogoActiveMobile = 'main-nav__logo--active-mobile';
-const hamburgerBunsActiveMobile = 'hamburger--active';
+const hamburgerBunsActiveMobile = 'hamburger--active-mobile';
+const mainNavDark = 'main-nav--dark';
 
 // Other
 const windowNavClose = 991; // If the mobile menu is left open, this width will trigger a menu close
 
 // Functions
 const navHandler = () => {
-  $mainNav.toggleClass(mainNavActiveMobile);
-  $navLogo.toggleClass(navLogoActiveMobile);
   $html.toggleClass(disableScroll);
   $body.toggleClass(disableScroll);
-  $hamburgerBottom.toggleClass(hamburgerBunsActiveMobile);
-  $hamburgerTop.toggleClass(hamburgerBunsActiveMobile);
   $linksList.toggleClass(activeMobileNav);
+  if (!$mainNav.hasClass(mainNavDark)) {
+    $mainNav.toggleClass(mainNavActiveMobile);
+    $navLogo.toggleClass(navLogoActiveMobile);
+    $hamburgerBottom.toggleClass(hamburgerBunsActiveMobile);
+    $hamburgerTop.toggleClass(hamburgerBunsActiveMobile);
+  }
 };
 
 const mobileNav = () => {
