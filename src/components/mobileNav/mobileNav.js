@@ -53,12 +53,14 @@ const navHandler = () => {
 
 const subMenuHandler = () => {
   $dropdownLink.on('click', function () {
-    $('.main-nav__sub-menu.main-nav__sub-menu--active').removeClass(
-      activeSubMenu
-    );
-    $('.main-nav__dropdown-icon.main-nav__dropdown-icon--active').removeClass(
-      activeDropdownIcon
-    );
+    if (
+      $dropdownLink.not($(this)).next().hasClass(activeSubMenu) &&
+      $dropdownLink.not($(this)).find(dropdownIcon).hasClass(activeDropdownIcon)
+    ) {
+      $dropdownLink.not($(this)).next().removeClass(activeSubMenu);
+      // prettier-ignore
+      $dropdownLink.not($(this)).find(dropdownIcon).removeClass(activeDropdownIcon);
+    }
     $(this).next().toggleClass(activeSubMenu);
     $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
   });
