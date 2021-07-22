@@ -79,27 +79,20 @@ const menuCloseHandler = () => {
     }
   });
   // Window resize handler
-  $window.on(
-    'resize',
-    () => {
-      if (
-        $linksList.hasClass(activeMobileNav) &&
-        $window.width() > windowNavClose
-      ) {
-        navHandler();
-      } else if (
-        $dropdownSubMenu.hasClass(activeSubMenu) &&
-        $window.width() <= windowNavClose // and not an orientation change
-      ) {
-        $dropdownSubMenu.removeClass(activeSubMenu);
-        $dropdownIcon.removeClass(activeDropdownIcon);
-      }
-    },
-    'orientationchange',
-    () => {
-      return;
+  $window.on('resize', () => {
+    if (
+      $linksList.hasClass(activeMobileNav) &&
+      $window.width() > windowNavClose
+    ) {
+      navHandler();
+    } else if (
+      $dropdownSubMenu.hasClass(activeSubMenu) &&
+      $window.width() <= windowNavClose // and not an orientation change
+    ) {
+      $dropdownSubMenu.removeClass(activeSubMenu);
+      $dropdownIcon.removeClass(activeDropdownIcon);
     }
-  );
+  });
   // Clicking away from element
   $document.on('click', (e) => {
     let $target = $(e.target);
