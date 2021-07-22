@@ -24,12 +24,12 @@ const windowNavClose = 991; // If the mobile menu is left open, this width will 
 
 // Functions
 const navHandler = () => {
-  // $mainNav.toggleClass(mainNavActiveMobile);
-  // $navLogo.toggleClass(navLogoActiveMobile);
+  $mainNav.toggleClass(mainNavActiveMobile);
+  $navLogo.toggleClass(navLogoActiveMobile);
   $html.toggleClass(disableScroll);
   $body.toggleClass(disableScroll);
-  // $hamburgerBottom.toggleClass(hamburgerBunsActiveMobile);
-  // $hamburgerTop.toggleClass(hamburgerBunsActiveMobile);
+  $hamburgerBottom.toggleClass(hamburgerBunsActiveMobile);
+  $hamburgerTop.toggleClass(hamburgerBunsActiveMobile);
   $linksList.toggleClass(activeMobileNav);
 };
 

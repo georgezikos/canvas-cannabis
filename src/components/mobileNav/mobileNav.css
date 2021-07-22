@@ -20,14 +20,14 @@
   display: none;
 }
 
-/* .main-nav--active-mobile {
+.main-nav--active-mobile {
   background-color: #f2efed;
-} */
+}
 
-/* .main-nav__logo--active-mobile {
+.main-nav__logo--active-mobile {
   filter: invert();
 }
 
 .hamburger--active {
   background-color: black;
-} */
+}
