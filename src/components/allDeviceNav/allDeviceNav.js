@@ -53,7 +53,8 @@ const navHandler = () => {
 };
 
 const subMenuHandler = () => {
-  $dropdownLink.on('click', function () {
+  $dropdownLink.on('click', function (e) {
+    e.stopPropagation();
     // prettier-ignore
     const $openSubMenus = $(this).parent().siblings($linkListContainer); // Other open submenus
     if ($openSubMenus.find($dropdownSubMenu).hasClass(activeSubMenu)) {
@@ -93,13 +94,12 @@ const menuCloseHandler = () => {
     }
   });
   // Clicking away from element
-  $document.on('click', (e) => {
-    if ($dropdownSubMenu.hasClass(activeSubMenu) && $(e.target).not($mainNav)) {
-      $dropdownSubMenu.removeClass(activeSubMenu);
-      $dropdownIcon.removeClass(activeDropdownIcon);
-      e.stopPropagation();
-    }
-  });
+  // $document.on('click', (e) => {
+  //   if ($dropdownSubMenu.hasClass(activeSubMenu) && $(e.target).not($mainNav)) {
+  //     $dropdownSubMenu.removeClass(activeSubMenu);
+  //     $dropdownIcon.removeClass(activeDropdownIcon);
+  //   }
+  // });
 };
 
 // if ($(e.target).closest("#CONTAINER").length === 0) {
