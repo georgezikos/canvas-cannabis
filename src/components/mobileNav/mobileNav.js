@@ -44,6 +44,11 @@ const navHandler = () => {
     $hamburgerBottom.toggleClass(hamburgerBunsActiveMobile);
     $hamburgerTop.toggleClass(hamburgerBunsActiveMobile);
   }
+  // Collapsing submenus
+  if ($dropdownSubMenu.hasClass(activeSubMenu)) {
+    $dropdownSubMenu.removeClass(activeSubMenu);
+    $dropdownIcon.removeClass(activeDropdownIcon);
+  }
 };
 
 const subMenuHandler = () => {
