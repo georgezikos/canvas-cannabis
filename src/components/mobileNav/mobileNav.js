@@ -58,7 +58,7 @@ const subMenuHandler = () => {
     if ($openSubMenus.find($dropdownSubMenu).hasClass(activeSubMenu)) {
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
       // prettier-ignore
-      $openSubMenus.find($dropdownSubMenu).prev(activeSubMenu).find($dropdownIcon).removeClass(activeDropdownIcon);
+      $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
     }
     $(this).next().toggleClass(activeSubMenu);
     $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
