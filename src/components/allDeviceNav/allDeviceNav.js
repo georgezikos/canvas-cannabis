@@ -74,6 +74,7 @@ const menuCloseHandler = () => {
       navHandler();
     } else if ($dropdownSubMenu.hasClass(activeSubMenu) && e.keyCode === 27) {
       $dropdownSubMenu.removeClass(activeSubMenu);
+      $dropdownIcon.removeClass(activeDropdownIcon);
     }
   });
 };
