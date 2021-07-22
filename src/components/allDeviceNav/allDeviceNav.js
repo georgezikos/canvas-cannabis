@@ -103,8 +103,9 @@ const menuCloseHandler = () => {
     ) {
       $dropdownSubMenu.removeClass(activeSubMenu);
       $dropdownIcon.removeClass(activeDropdownIcon);
-      console.log('Clicked nav');
+      console.log('Clicked away');
     } else {
+      console.log('Clicked nav');
       return;
     }
   });
