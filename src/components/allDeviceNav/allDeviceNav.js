@@ -55,6 +55,7 @@ const navHandler = () => {
 const subMenuHandler = () => {
   $dropdownLink.on('click', function () {
     // e.stopPropagation();
+    console.log($dropdownLink.html());
     // prettier-ignore
     const $openSubMenus = $(this).parent().siblings($linkListContainer); // Other open submenus
     if ($openSubMenus.find($dropdownSubMenu).hasClass(activeSubMenu)) {
