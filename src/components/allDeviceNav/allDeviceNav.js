@@ -92,6 +92,13 @@ const menuCloseHandler = () => {
       $dropdownIcon.removeClass(activeDropdownIcon);
     }
   });
+  // Clicking away from element
+  $document.on('click', (e) => {
+    if ($dropdownSubMenu.hasClass(activeSubMenu) && e.not($mainNav)) {
+      $dropdownSubMenu.removeClass(activeSubMenu);
+      $dropdownIcon.removeClass(activeDropdownIcon);
+    }
+  });
 };
 
 const allDeviceNav = () => {
