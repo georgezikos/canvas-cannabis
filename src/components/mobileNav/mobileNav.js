@@ -53,10 +53,12 @@ const navHandler = () => {
 
 const subMenuHandler = () => {
   $dropdownLink.on('click', function () {
-    if ($dropdownSubMenu.hasClass(activeSubMenu)) {
-      $dropdownSubMenu.removeClass(activeSubMenu);
-      $dropdownIcon.removeClass(activeDropdownIcon);
-    }
+    $('.main-nav__sub-menu.main-nav__sub-menu--active').removeClass(
+      activeSubMenu
+    );
+    $('.main-nav__dropdown-icon.main-nav__dropdown-icon--active').removeClass(
+      activeDropdownIcon
+    );
     $(this).next().toggleClass(activeSubMenu);
     $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
   });
