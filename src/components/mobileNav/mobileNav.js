@@ -53,6 +53,10 @@ const navHandler = () => {
 
 const subMenuHandler = () => {
   $dropdownLink.on('click', function () {
+    if ($(this).parent().siblings().hasClass('.main-nav__links--dropdown')) {
+      // prettier-ignore
+      console.log($(this).parent().siblings().hasClass('.main-nav__links--dropdown').html());
+    }
     $(this).next().toggleClass(activeSubMenu);
     $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
   });
