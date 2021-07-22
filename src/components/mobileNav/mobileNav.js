@@ -13,7 +13,7 @@ const $hamburgerBottom = $('div.hamburger__bottom');
 const $hamburgerTop = $('div.hamburger__top');
 
 // Parent
-const $dropdownLink = $('.main-nav__links--dropdown'); // onclick
+const $dropdownLink = $('.main-nav__links-item--container'); // onclick
 
 // Children
 const $dropdownSubMenu = $('.main-nav__sub-menu'); // display: block;
