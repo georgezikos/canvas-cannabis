@@ -98,7 +98,7 @@ const menuCloseHandler = () => {
     let $target = $(e.target);
     if (
       $dropdownSubMenu.hasClass(activeSubMenu) &&
-      !$target.closest($mainNav)
+      !$target.closest($mainNav).length
     ) {
       // $dropdownSubMenu.removeClass(activeSubMenu);
       // $dropdownIcon.removeClass(activeDropdownIcon);
