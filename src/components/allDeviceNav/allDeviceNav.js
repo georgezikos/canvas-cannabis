@@ -83,7 +83,11 @@ const allDeviceNav = () => {
   });
   // Esc key to close menu
   $document.keyup((e) => {
-    if ($linksList.hasClass(activeMobileNav) && e.keyCode === 27) navHandler();
+    if (
+      ($linksList.hasClass(activeMobileNav) && e.keyCode === 27) ||
+      ($dropdownSubMenu.hasClass(activeSubMenu) && e.keyCode === 27)
+    )
+      navHandler();
   });
   // Submenu functionality
   subMenuHandler();
