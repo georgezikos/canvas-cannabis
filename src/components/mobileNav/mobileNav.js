@@ -66,7 +66,7 @@ const mobileNav = () => {
   });
   // Submenu handler
   $('.main-nav__links--dropdown').on('click', () => {
-    $(this).find($dropdownSubMenu).toggleClass(activeSubMenu);
+    this.find($dropdownSubMenu).toggleClass(activeSubMenu);
 
     // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
   });
