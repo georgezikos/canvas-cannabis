@@ -100,18 +100,14 @@ const menuCloseHandler = () => {
       $dropdownSubMenu.hasClass(activeSubMenu) &&
       !$target.closest($mainNav).length
     ) {
-      // $dropdownSubMenu.removeClass(activeSubMenu);
-      // $dropdownIcon.removeClass(activeDropdownIcon);
+      $dropdownSubMenu.removeClass(activeSubMenu);
+      $dropdownIcon.removeClass(activeDropdownIcon);
       console.log('Clicking away');
     } else {
       console.log('Clicking nav');
     }
   });
 };
-
-// if ($(e.target).closest("#CONTAINER").length === 0) {
-//   $("#CONTAINER").hide();
-// }
 
 const allDeviceNav = () => {
   // Hamburger click handler
