@@ -73,7 +73,7 @@ const menuCloseHandler = () => {
     if ($linksList.hasClass(activeMobileNav) && e.keyCode === 27) {
       navHandler();
     } else if ($dropdownSubMenu.hasClass(activeSubMenu) && e.keyCode === 27) {
-      subMenuHandler();
+      $dropdownSubMenu.removeClass(activeSubMenu);
     }
   });
 };
