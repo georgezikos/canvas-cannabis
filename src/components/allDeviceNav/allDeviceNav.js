@@ -97,15 +97,15 @@ const menuCloseHandler = () => {
   $document.on('click', (e) => {
     let $target = $(e.target);
     if (
+      $window.width() > windowNavClose &&
       $dropdownSubMenu.hasClass(activeSubMenu) &&
-      !$target.closest($mainNav).length &&
-      $window.width() <= windowNavClose
+      !$target.closest($mainNav).length
     ) {
       $dropdownSubMenu.removeClass(activeSubMenu);
       $dropdownIcon.removeClass(activeDropdownIcon);
-      console.log('Clicking away');
+      console.log('Clicked nav');
     } else {
-      console.log('Clicking nav');
+      return;
     }
   });
 };
