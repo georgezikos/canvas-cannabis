@@ -2,6 +2,7 @@ import './mobileNav.css';
 
 // Selectors
 const $window = $(window);
+const $document = $(document);
 const $body = $('body');
 const $html = $('html');
 const $hamburger = $('.main-nav__hamburger');
@@ -45,6 +46,10 @@ const mobileNav = () => {
     ) {
       navHandler();
     }
+  });
+  // Esc key to close menu
+  $document.keyup((e) => {
+    if ($linksList.hasClass(activeMobileNav) && e.keyCode === 27) navHandler();
   });
 };
 
