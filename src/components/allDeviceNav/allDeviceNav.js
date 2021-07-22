@@ -104,9 +104,10 @@ const menuCloseHandler = () => {
       $dropdownSubMenu.removeClass(activeSubMenu);
       $dropdownIcon.removeClass(activeDropdownIcon);
       console.log('Clicked away');
+    } else if ($window.width() <= windowNavClose) {
+      return;
     } else {
       console.log('Clicked nav');
-      return;
     }
   });
 };
