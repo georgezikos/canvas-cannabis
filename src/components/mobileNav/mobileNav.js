@@ -7,17 +7,17 @@ const $body = $('body');
 const $html = $('html');
 const $hamburger = $('.main-nav__hamburger');
 const $linksList = $('.main-nav__links-list');
-// const $mainNav = $('nav.main-nav');
-// const $navLogo = $('img.main-nav__logo');
-// const $hamburgerBottom = $('div.hamburger__bottom');
-// const $hamburgerTop = $('div.hamburger__top');
+const $mainNav = $('nav.main-nav');
+const $navLogo = $('img.main-nav__logo');
+const $hamburgerBottom = $('div.hamburger__bottom');
+const $hamburgerTop = $('div.hamburger__top');
 
 // Classes
 const activeMobileNav = 'main-nav__links-list--active';
 const disableScroll = 'active-nav';
-// const mainNavActiveMobile = 'main-nav--active-mobile';
-// const navLogoActiveMobile = 'main-nav__logo--active-mobile';
-// const hamburgerBunsActiveMobile = 'hamburger--active';
+const mainNavActiveMobile = 'main-nav--active-mobile';
+const navLogoActiveMobile = 'main-nav__logo--active-mobile';
+const hamburgerBunsActiveMobile = 'hamburger--active';
 
 // Other
 const windowNavClose = 991; // If the mobile menu is left open, this width will trigger a menu close
