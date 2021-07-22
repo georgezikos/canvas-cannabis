@@ -16,8 +16,8 @@ const $hamburgerTop = $('div.hamburger__top');
 const $dropdownLink = $('.main-nav__links--dropdown'); // onclick
 
 // Children
-const $dropdownSubMenu = $('main-nav__sub-menu'); // display: block;
-const $dropdownIcon = $('main-nav__dropdown-icon'); // rotateZ -180deg
+const $dropdownSubMenu = $('.main-nav__sub-menu'); // display: block;
+const $dropdownIcon = $('.main-nav__dropdown-icon'); // rotateZ -180deg
 
 // Classes
 const activeMobileNav = 'main-nav__links-list--active';
@@ -67,8 +67,9 @@ const mobileNav = () => {
   // Submenu handler
   $dropdownLink.on('click', () => {
     console.log('clicked');
+    console.log($(this).children($dropdownSubMenu));
     // $(this).children($dropdownSubMenu).toggleClass(activeSubMenu);
-    $(this).find($dropdownSubMenu).addClass(activeSubMenu);
+
     // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
   });
 };
