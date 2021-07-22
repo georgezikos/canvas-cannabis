@@ -54,7 +54,7 @@ const navHandler = () => {
 const subMenuHandler = () => {
   $dropdownLink.on('click', function () {
     // prettier-ignore
-    const $openSubMenus = $(this).parent().siblings('.main-nav__links--dropdown');
+    const $openSubMenus = $(this).parent().siblings('.main-nav__links-item--dropdown');
     if ($openSubMenus.find($dropdownSubMenu).hasClass(activeSubMenu)) {
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
       // prettier-ignore
