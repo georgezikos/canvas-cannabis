@@ -13,11 +13,11 @@ const $hamburgerBottom = $('div.hamburger__bottom');
 const $hamburgerTop = $('div.hamburger__top');
 
 // Parent
-const $dropdownLink = $('.main-nav__links-item--container'); // onclick
+const $dropdownLink = $('.main-nav__links-item--container');
 
 // Children
-const $dropdownSubMenu = $('.main-nav__sub-menu'); // display: block;
-const $dropdownIcon = $('.main-nav__dropdown-icon'); // rotateZ -180deg
+const $dropdownSubMenu = $('.main-nav__sub-menu');
+const $dropdownIcon = $('.main-nav__dropdown-icon');
 
 // Classes
 const activeMobileNav = 'main-nav__links-list--active';
@@ -53,11 +53,6 @@ const navHandler = () => {
 
 const subMenuHandler = () => {
   $dropdownLink.on('click', function () {
-    if ($dropdownLink.not($(this)).next().hasClass(activeSubMenu)) {
-      $dropdownLink.not($(this)).next().removeClass(activeSubMenu);
-      // prettier-ignore
-      $dropdownLink.not($(this)).find(dropdownIcon).removeClass(activeDropdownIcon);
-    }
     $(this).next().toggleClass(activeSubMenu);
     $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
   });
