@@ -36,6 +36,6 @@
   transform: rotateZ(-180deg);
 }
 
-.main-nav__sub-menu {
+.main-nav__sub-menu--active {
   display: block;
 }

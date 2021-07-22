@@ -27,7 +27,7 @@ const navLogoActiveMobile = 'main-nav__logo--active-mobile';
 const hamburgerBunsActiveMobile = 'hamburger--active-mobile';
 const mainNavDark = 'main-nav--dark';
 const activeDropdownIcon = 'main-nav__dropdown-icon--active';
-const activeSubMenu = 'main-nav__sub-menu';
+const activeSubMenu = 'main-nav__sub-menu--active';
 
 // Other
 const windowNavClose = 991; // If the mobile menu is left open, this width will trigger a menu close
