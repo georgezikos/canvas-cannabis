@@ -93,7 +93,7 @@ const menuCloseHandler = () => {
     }
   });
   // Clicking away from element
-  $document.on('click', (e) => {
+  $document.on('click', function (e) {
     if ($dropdownSubMenu.hasClass(activeSubMenu) && e.not($mainNav)) {
       $dropdownSubMenu.removeClass(activeSubMenu);
       $dropdownIcon.removeClass(activeDropdownIcon);
