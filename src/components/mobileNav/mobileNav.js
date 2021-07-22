@@ -54,6 +54,7 @@ const navHandler = () => {
 const subMenuHandler = () => {
   $dropdownLink.on('click', function () {
     $dropdownSubMenu.removeClass(activeSubMenu);
+    $dropdownIcon.removeClass(activeDropdownIcon);
     $(this).next().toggleClass(activeSubMenu);
     $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
   });
