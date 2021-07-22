@@ -67,6 +67,17 @@ const subMenuHandler = () => {
   });
 };
 
+const menuCloseHandler = () => {
+  // Esc key to close menu
+  $document.keyup((e) => {
+    if ($linksList.hasClass(activeMobileNav) && e.keyCode === 27) {
+      navHandler();
+    } else if ($dropdownSubMenu.hasClass(activeSubMenu) && e.keyCode === 27) {
+      subMenuHandler();
+    }
+  });
+};
+
 const allDeviceNav = () => {
   // Hamburger click handler
   $hamburger.on('click', () => {
@@ -81,16 +92,10 @@ const allDeviceNav = () => {
       navHandler();
     }
   });
-  // Esc key to close menu
-  $document.keyup((e) => {
-    if (
-      ($linksList.hasClass(activeMobileNav) && e.keyCode === 27) ||
-      ($dropdownSubMenu.hasClass(activeSubMenu) && e.keyCode === 27)
-    )
-      navHandler();
-  });
   // Submenu functionality
   subMenuHandler();
+  // Menu close functionalities
+  menuCloseHandler();
 };
 
 export default allDeviceNav;
