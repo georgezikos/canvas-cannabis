@@ -53,10 +53,7 @@ const navHandler = () => {
 
 const subMenuHandler = () => {
   $dropdownLink.on('click', function () {
-    if (
-      $dropdownLink.not($(this)).next().hasClass(activeSubMenu) &&
-      $dropdownLink.not($(this)).find(dropdownIcon).hasClass(activeDropdownIcon)
-    ) {
+    if ($dropdownLink.not($(this)).next().hasClass(activeSubMenu)) {
       $dropdownLink.not($(this)).next().removeClass(activeSubMenu);
       // prettier-ignore
       $dropdownLink.not($(this)).find(dropdownIcon).removeClass(activeDropdownIcon);
