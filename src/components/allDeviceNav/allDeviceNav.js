@@ -93,13 +93,17 @@ const menuCloseHandler = () => {
     }
   });
   // Clicking away from element
-  $document.on('click', function (e) {
-    if ($dropdownSubMenu.hasClass(activeSubMenu) && e.target.not($mainNav)) {
+  $document.on('click', (e) => {
+    if ($dropdownSubMenu.hasClass(activeSubMenu) && $(e.target).not($mainNav)) {
       $dropdownSubMenu.removeClass(activeSubMenu);
       $dropdownIcon.removeClass(activeDropdownIcon);
     }
   });
 };
+
+// if ($(e.target).closest("#CONTAINER").length === 0) {
+//   $("#CONTAINER").hide();
+// }
 
 const allDeviceNav = () => {
   // Hamburger click handler
