@@ -77,13 +77,6 @@ const menuCloseHandler = () => {
       $dropdownIcon.removeClass(activeDropdownIcon);
     }
   });
-};
-
-const allDeviceNav = () => {
-  // Hamburger click handler
-  $hamburger.on('click', () => {
-    navHandler();
-  });
   // Window resize handler
   $window.on('resize', () => {
     if (
@@ -91,7 +84,20 @@ const allDeviceNav = () => {
       $window.width() > windowNavClose
     ) {
       navHandler();
+    } else if (
+      $dropdownSubMenu.hasClass(activeSubMenu) &&
+      $window.width() <= windowNavClose
+    ) {
+      $dropdownSubMenu.removeClass(activeSubMenu);
+      $dropdownIcon.removeClass(activeDropdownIcon);
     }
+  });
+};
+
+const allDeviceNav = () => {
+  // Hamburger click handler
+  $hamburger.on('click', () => {
+    navHandler();
   });
   // Submenu functionality
   subMenuHandler();
