@@ -96,7 +96,7 @@ const menuCloseHandler = () => {
   // Clicking away from element
   $document.on('click', (e) => {
     // $dropdownSubMenu.hasClass(activeSubMenu) && $(e.target).not($mainNav)
-    if ($(e.target).not($mainNav)) {
+    if ($(e.currentTarget).not($mainNav)) {
       // $dropdownSubMenu.removeClass(activeSubMenu);
       // $dropdownIcon.removeClass(activeDropdownIcon);
       console.log('Clicking away');
