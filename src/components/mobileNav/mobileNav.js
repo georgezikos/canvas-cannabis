@@ -46,6 +46,13 @@ const navHandler = () => {
   }
 };
 
+const subMenuHandler = () => {
+  $dropdownLink.on('click', function () {
+    $(this).find($dropdownSubMenu).toggleClass(activeSubMenu);
+    $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
+  });
+};
+
 const mobileNav = () => {
   // Hamburger click handler
   $hamburger.on('click', () => {
@@ -64,11 +71,8 @@ const mobileNav = () => {
   $document.keyup((e) => {
     if ($linksList.hasClass(activeMobileNav) && e.keyCode === 27) navHandler();
   });
-  // Submenu handler
-  $('.main-nav__links--dropdown').on('click', function () {
-    $(this).find($dropdownSubMenu).toggleClass(activeSubMenu);
-    $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
-  });
+  // Submenu functionality
+  subMenuHandler();
 };
 
 export default mobileNav;
