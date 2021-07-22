@@ -65,8 +65,8 @@ const mobileNav = () => {
     if ($linksList.hasClass(activeMobileNav) && e.keyCode === 27) navHandler();
   });
   // Submenu handler
-  $('.main-nav__links--dropdown').on('click', () => {
-    this.find($dropdownSubMenu).toggleClass(activeSubMenu);
+  $('.main-nav__links--dropdown').on(function () {
+    $(this).find($dropdownSubMenu).toggleClass(activeSubMenu);
 
     // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
   });
