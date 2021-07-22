@@ -65,7 +65,7 @@ const mobileNav = () => {
     if ($linksList.hasClass(activeMobileNav) && e.keyCode === 27) navHandler();
   });
   // Submenu handler
-  $dropdownLink.on('click', () => {
+  $('.main-nav__links--dropdown').on('click', () => {
     $(this).find($dropdownSubMenu).toggleClass(activeSubMenu);
 
     // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
