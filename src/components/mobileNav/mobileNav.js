@@ -12,6 +12,13 @@ const $navLogo = $('img.main-nav__logo');
 const $hamburgerBottom = $('div.hamburger__bottom');
 const $hamburgerTop = $('div.hamburger__top');
 
+// Parent
+const $dropdownLink = $('.main-nav__links--dropdown'); // onclick
+
+// Children
+const $dropdownSubMenu = $('.main-nav__sub-menu'); // display: block;
+const $dropdownIcon = $('.main-nav__dropdown-icon'); // rotateZ -180deg
+
 // Classes
 const activeMobileNav = 'main-nav__links-list--active';
 const disableScroll = 'active-nav';
@@ -19,6 +26,8 @@ const mainNavActiveMobile = 'main-nav--active-mobile';
 const navLogoActiveMobile = 'main-nav__logo--active-mobile';
 const hamburgerBunsActiveMobile = 'hamburger--active-mobile';
 const mainNavDark = 'main-nav--dark';
+const activeDropdownIcon = 'main-nav__dropdown-icon--active';
+const activeSubMenu = 'main-nav__sub-menu';
 
 // Other
 const windowNavClose = 991; // If the mobile menu is left open, this width will trigger a menu close
@@ -28,6 +37,7 @@ const navHandler = () => {
   $html.toggleClass(disableScroll);
   $body.toggleClass(disableScroll);
   $linksList.toggleClass(activeMobileNav);
+  // Handling dependent on UI theme
   if (!$mainNav.hasClass(mainNavDark)) {
     $mainNav.toggleClass(mainNavActiveMobile);
     $navLogo.toggleClass(navLogoActiveMobile);
@@ -53,6 +63,11 @@ const mobileNav = () => {
   // Esc key to close menu
   $document.keyup((e) => {
     if ($linksList.hasClass(activeMobileNav) && e.keyCode === 27) navHandler();
+  });
+  // Submenu handler
+  $dropdownLink.on('click', () => {
+    $(this).children($dropdownSubMenu).toggleClass(activeSubMenu);
+    $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
   });
 };
 

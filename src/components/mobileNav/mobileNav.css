@@ -31,3 +31,11 @@
 .hamburger--active-mobile {
   background-color: black;
 }
+
+.main-nav__dropdown-icon--active {
+  transform: rotateZ(-180deg);
+}
+
+.main-nav__sub-menu {
+  display: block;
+}
