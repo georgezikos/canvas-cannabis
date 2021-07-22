@@ -97,6 +97,7 @@ const menuCloseHandler = () => {
     if ($dropdownSubMenu.hasClass(activeSubMenu) && $(e.target).not($mainNav)) {
       $dropdownSubMenu.removeClass(activeSubMenu);
       $dropdownIcon.removeClass(activeDropdownIcon);
+      e.stopPropagation();
     }
   });
 };
