@@ -36,12 +36,14 @@
   transform: rotateZ(-180deg);
 }
 
+/* Desktop */
 @media (min-width: 992px) {
   .main-nav__sub-menu--active {
     display: flex;
   }
 }
 
+/* Tablet and Below */
 @media (max-width: 991px) {
   .main-nav__sub-menu--active {
     display: block;

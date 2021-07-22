@@ -1,11 +1,11 @@
 import dailySpecials from './components/dailySpecials/dailySpecials';
 import ageGate from './components/ageGate/ageGate';
-import mobileNav from './components/mobileNav/mobileNav';
+import allDeviceNav from './components/allDeviceNav/allDeviceNav';
 
 const init = () => {
   dailySpecials();
   ageGate();
-  mobileNav();
+  allDeviceNav();
 };
 
 $(function () {

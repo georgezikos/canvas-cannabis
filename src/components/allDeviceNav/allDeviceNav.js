@@ -1,4 +1,4 @@
-import './mobileNav.css';
+import './allDeviceNav.css';
 
 // Selectors
 const $window = $(window);
@@ -67,7 +67,7 @@ const subMenuHandler = () => {
   });
 };
 
-const mobileNav = () => {
+const allDeviceNav = () => {
   // Hamburger click handler
   $hamburger.on('click', () => {
     navHandler();
@@ -89,4 +89,4 @@ const mobileNav = () => {
   subMenuHandler();
 };
 
-export default mobileNav;
+export default allDeviceNav;
