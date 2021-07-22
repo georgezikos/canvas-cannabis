@@ -13,7 +13,7 @@ const $hamburgerBottom = $('div.hamburger__bottom');
 const $hamburgerTop = $('div.hamburger__top');
 
 // Parent
-const $dropdownLink = $('.main-nav__links--dropdown'); // onclick
+const $dropdownLink = $('.main-nav__links-item--container'); // onclick
 
 // Children
 const $dropdownSubMenu = $('.main-nav__sub-menu'); // display: block;
@@ -52,11 +52,7 @@ const navHandler = () => {
 };
 
 const subMenuHandler = () => {
-  // $dropdownLink.on('click', function () {
-  //   $(this).find($dropdownSubMenu).toggleClass(activeSubMenu);
-  //   $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
-  // });
-  $('.main-nav__links-item--container').on('click', function () {
+  $dropdownLink.on('click', function () {
     $(this).next().toggleClass(activeSubMenu);
     $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
   });
