@@ -87,7 +87,7 @@ const menuCloseHandler = () => {
       navHandler();
     } else if (
       $dropdownSubMenu.hasClass(activeSubMenu) &&
-      $window.width() <= windowNavClose // and not an orientation change
+      $window.width() <= windowNavClose // and not an orientation change, currently collapses submenus on orientation change
     ) {
       $dropdownSubMenu.removeClass(activeSubMenu);
       $dropdownIcon.removeClass(activeDropdownIcon);

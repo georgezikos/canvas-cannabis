@@ -9,9 +9,9 @@ const currentDate = new Date();
 const currentDay = currentDate.getDay();
 
 const dailySpecials = () => {
-  if (currentDay === 0 || currentDay === 6 || currentDay === 5) {
+  if (currentDay === 0 || currentDay === 6) {
     console.log('Not today, freak!');
-  } else if (currentDay === 1) {
+  } else if (currentDay === 1 || currentDay === 5) {
     $mondaySpecials.css('display', 'flex');
     console.log('Monday!');
   } else if (currentDay === 2) {
