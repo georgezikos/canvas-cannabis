@@ -1,5 +1,4 @@
 import './allDeviceNav.css';
-import 'animate.css';
 
 // Selectors
 const $window = $(window);
@@ -64,10 +63,7 @@ const subMenuHandler = () => {
       // prettier-ignore
       $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
     }
-    $(this)
-      .next()
-      .addClass('animated__animated animate__fadeInDown')
-      .toggleClass(activeSubMenu);
+    $(this).next().toggleClass(activeSubMenu);
     $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
   });
 };
