@@ -67,7 +67,7 @@ const subMenuHandler = () => {
     $(this).next().toggleClass(activeSubMenu);
     // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
     anime({
-      target: this.querySelector('.main-nav__dropdown-icon'),
+      targets: this.querySelector('.main-nav__dropdown-icon'),
       rotateZ: -180,
     });
   });
