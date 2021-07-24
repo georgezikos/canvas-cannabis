@@ -32,9 +32,9 @@
   background-color: black;
 }
 
-/* .main-nav__dropdown-icon--active {
+.main-nav__dropdown-icon--active {
   transform: rotateZ(-180deg);
-} */
+}
 
 /* Desktop */
 @media (min-width: 992px) {
