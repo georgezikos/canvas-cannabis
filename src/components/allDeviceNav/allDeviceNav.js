@@ -66,11 +66,8 @@ const subMenuHandler = () => {
       $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
     }
     $(this).next().toggleClass(activeSubMenu);
-    // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
-    const $thisDropdownIcon = $(this).find($dropdownIcon);
-    $thisDropdownIcon.animejs({
-      translateY: 100,
-    });
+    $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
+    $mainNav.animejs({ translate: 100 });
   });
 };
 
