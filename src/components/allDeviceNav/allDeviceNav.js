@@ -113,9 +113,16 @@ const menuCloseHandler = () => {
       !$target.closest($mainNav).length
     ) {
       $dropdownSubMenu.removeClass(activeSubMenu);
-      $dropdownIcon.removeClass(activeDropdownIcon).velocity({
-        transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-      });
+      // $dropdownIcon.removeClass(activeDropdownIcon).velocity({
+      //   transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+      // });
+      $('.main-nav__sub-menu--active')
+        .find('.main-nav__sub-menu--active')
+        .removeClass(activeDropdownIcon)
+        .velocity({
+          transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+        });
+
       console.log('Clicked away');
     } else {
       return;
