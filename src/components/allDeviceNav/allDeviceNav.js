@@ -67,7 +67,7 @@ const subMenuHandler = () => {
     $(this).next().toggleClass(activeSubMenu);
     // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
     $(this).find($dropdownIcon).velocity({
-      width: '200px',
+      transform: 'rotateZ(-180deg)',
     });
   });
 };
