@@ -64,6 +64,10 @@ const subMenuHandler = () => {
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
       // prettier-ignore
       $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
+      // prettier-ignore
+      $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).velocity({
+        transform: ['rotateZ(180deg)', 'rotateZ(-180deg)'],
+      });
     }
     $(this).next().toggleClass(activeSubMenu);
     // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
