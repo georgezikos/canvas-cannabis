@@ -1,4 +1,4 @@
-import velocity from 'velocity-animate';
+// import velocity from 'velocity-animate';
 import './allDeviceNav.css';
 
 // Selectors
