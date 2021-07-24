@@ -49,16 +49,17 @@ const navHandler = () => {
   // Collapsing submenus
   if ($dropdownSubMenu.hasClass(activeSubMenu)) {
     $dropdownSubMenu.removeClass(activeSubMenu);
-    $dropdownIcon.removeClass(activeDropdownIcon);
+    // $dropdownIcon.removeClass(activeDropdownIcon);
+    $dropdownIcon.velocity({
+      transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+    });
   }
 };
 
 const subMenuHandler = () => {
   $dropdownLink.on('click', function () {
-    // e.stopPropagation();
     // prettier-ignore
     const $openSubMenus = $(this).parent().siblings($linkListContainer); // Other open submenus
-
     if ($openSubMenus.find($dropdownSubMenu).hasClass(activeSubMenu)) {
       // Collapse other submenus that are open
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
