@@ -87,7 +87,7 @@ const menuCloseHandler = () => {
     } else if ($dropdownSubMenu.hasClass(activeSubMenu) && e.keyCode === 27) {
       $dropdownSubMenu.removeClass(activeSubMenu);
       // $dropdownIcon.removeClass(activeDropdownIcon);
-      $dropdownIcon.velocity({
+      $dropdownIcon.hasClass(activeDropdownIcon).velocity({
         transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
       });
     }
@@ -105,7 +105,7 @@ const menuCloseHandler = () => {
     ) {
       $dropdownSubMenu.removeClass(activeSubMenu);
       // $dropdownIcon.removeClass(activeDropdownIcon);
-      $dropdownIcon.velocity({
+      $dropdownIcon.hasClass(activeDropdownIcon).velocity({
         transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
       });
     }
@@ -120,7 +120,7 @@ const menuCloseHandler = () => {
     ) {
       $dropdownSubMenu.removeClass(activeSubMenu);
       // $dropdownIcon.removeClass(activeDropdownIcon);
-      $dropdownIcon.velocity({
+      $dropdownIcon.hasClass(activeDropdownIcon).velocity({
         transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
       });
       console.log('Clicked away');
