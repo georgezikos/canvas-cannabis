@@ -58,11 +58,15 @@ const subMenuHandler = () => {
     // e.stopPropagation();
     // prettier-ignore
     const $openSubMenus = $(this).parent().siblings($linkListContainer); // Other open submenus
+
     const linkItem = this.parentNode;
-    const linkItemSiblings = [...linkItem.children].filter((child) => {
-      child !== linkItem;
-    });
-    console.log(linkItemSiblings);
+    const linkItemSiblings = [...linkItem.parentNode.children].filter(
+      (child) => {
+        child !== linkItem;
+      }
+    );
+    console.log(linkItem, linkItemSiblings);
+
     if ($openSubMenus.find($dropdownSubMenu).hasClass(activeSubMenu)) {
       // Collapse other submenus that are open
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
