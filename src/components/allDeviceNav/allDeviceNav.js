@@ -1,4 +1,5 @@
 import './allDeviceNav.css';
+import 'velocity-animate';
 
 // Selectors
 const $window = $(window);
@@ -65,7 +66,15 @@ const subMenuHandler = () => {
       $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
     }
     $(this).next().toggleClass(activeSubMenu);
-    $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
+    // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
+    $(this).find($dropdownIcon).velocity(
+      {
+        width: '200px',
+      },
+      {
+        duration: 400,
+      }
+    );
   });
 };
 
