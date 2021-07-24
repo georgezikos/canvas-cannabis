@@ -67,7 +67,8 @@ const subMenuHandler = () => {
     }
     $(this).next().toggleClass(activeSubMenu);
     // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
-    $(this).find($dropdownIcon).animejs({
+    const $thisDropdownIcon = $(this).find($dropdownIcon);
+    $thisDropdownIcon.animejs({
       translateY: 100,
     });
   });
