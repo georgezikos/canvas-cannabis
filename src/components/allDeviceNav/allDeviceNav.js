@@ -20,7 +20,6 @@ const $linkListContainer = $('.main-nav__links-item--dropdown');
 // Children
 const $dropdownSubMenu = $('.main-nav__sub-menu');
 const $dropdownIcon = $('.main-nav__dropdown-icon');
-let $activeDropdownIcon = $('.main-nav__dropdown-icon--active');
 
 // Classes
 const activeMobileNav = 'main-nav__links-list--active';
@@ -51,15 +50,17 @@ const navHandler = () => {
   if ($dropdownSubMenu.hasClass(activeSubMenu)) {
     $dropdownSubMenu.removeClass(activeSubMenu);
     // $dropdownIcon.removeClass(activeDropdownIcon);
-    $activeDropdownIcon.removeClass(activeDropdownIcon).velocity(
-      {
-        transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-      },
-      {
-        duration: 200,
-        easing: 'ease-out',
-      }
-    );
+    $('.main-nav__dropdown-icon--active')
+      .removeClass(activeDropdownIcon)
+      .velocity(
+        {
+          transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+        },
+        {
+          duration: 200,
+          easing: 'ease-out',
+        }
+      );
   }
 };
 
@@ -105,15 +106,17 @@ const menuCloseHandler = () => {
       navHandler();
     } else if ($dropdownSubMenu.hasClass(activeSubMenu) && e.keyCode === 27) {
       $dropdownSubMenu.removeClass(activeSubMenu);
-      $activeDropdownIcon.removeClass(activeDropdownIcon).velocity(
-        {
-          transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-        },
-        {
-          duration: 200,
-          easing: 'ease-out',
-        }
-      );
+      $('.main-nav__dropdown-icon--active')
+        .removeClass(activeDropdownIcon)
+        .velocity(
+          {
+            transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+          },
+          {
+            duration: 200,
+            easing: 'ease-out',
+          }
+        );
     }
   });
   // Window resize handler
@@ -128,15 +131,17 @@ const menuCloseHandler = () => {
       $window.width() <= windowNavClose // and not an orientation change, currently collapses submenus on orientation change
     ) {
       $dropdownSubMenu.removeClass(activeSubMenu);
-      $activeDropdownIcon.removeClass(activeDropdownIcon).velocity(
-        {
-          transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-        },
-        {
-          duration: 200,
-          easing: 'ease-out',
-        }
-      );
+      $('.main-nav__dropdown-icon--active')
+        .removeClass(activeDropdownIcon)
+        .velocity(
+          {
+            transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+          },
+          {
+            duration: 200,
+            easing: 'ease-out',
+          }
+        );
     }
   });
   // Clicking away from element
@@ -149,15 +154,17 @@ const menuCloseHandler = () => {
     ) {
       $dropdownSubMenu.removeClass(activeSubMenu);
       // $dropdownIcon.removeClass(activeDropdownIcon);
-      $activeDropdownIcon.removeClass(activeDropdownIcon).velocity(
-        {
-          transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-        },
-        {
-          duration: 200,
-          easing: 'ease-out',
-        }
-      );
+      $('.main-nav__dropdown-icon--active')
+        .removeClass(activeDropdownIcon)
+        .velocity(
+          {
+            transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+          },
+          {
+            duration: 200,
+            easing: 'ease-out',
+          }
+        );
       console.log('Clicked away');
     } else {
       return;
