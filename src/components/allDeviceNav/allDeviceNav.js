@@ -54,7 +54,12 @@ const navHandler = () => {
   // Collapsing submenus
   if ($dropdownSubMenu.hasClass(activeSubMenu)) {
     $dropdownSubMenu.removeClass(activeSubMenu);
-    $dropdownIcon.removeClass(activeDropdownIcon);
+    if ($dropdownIcon.hasClass(activeDropdownIcon)) {
+      $dropdownIcon.removeClass(activeDropdownIcon);
+      $dropdownIcon.velocity({
+        transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+      });
+    }
   }
 };
 
@@ -66,10 +71,17 @@ const subMenuHandler = () => {
       // Collapse other submenus that are open
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
       // prettier-ignore
-      $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
+      // $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
+      $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).velocity({
+        transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+      });
     }
     $(this).next().toggleClass(activeSubMenu);
-    $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
+    // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
+    // prettier-ignore
+    $(this).find($dropdownIcon).toggleClass(activeDropdownIcon).velocity({
+      transform: ['rotateZ(-180deg)', 'rotateZ(0deg)'],
+    });
   });
 };
 
@@ -80,7 +92,12 @@ const menuCloseHandler = () => {
       navHandler();
     } else if ($dropdownSubMenu.hasClass(activeSubMenu) && e.keyCode === 27) {
       $dropdownSubMenu.removeClass(activeSubMenu);
-      $dropdownIcon.removeClass(activeDropdownIcon);
+      if ($dropdownIcon.hasClass(activeDropdownIcon)) {
+        $dropdownIcon.removeClass(activeDropdownIcon);
+        $dropdownIcon.velocity({
+          transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+        });
+      }
     }
   });
   // Window resize handler
@@ -95,7 +112,12 @@ const menuCloseHandler = () => {
       $window.width() <= windowNavClose // and not an orientation change, currently collapses submenus on orientation change
     ) {
       $dropdownSubMenu.removeClass(activeSubMenu);
-      $dropdownIcon.removeClass(activeDropdownIcon);
+      if ($dropdownIcon.hasClass(activeDropdownIcon)) {
+        $dropdownIcon.removeClass(activeDropdownIcon);
+        $dropdownIcon.velocity({
+          transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+        });
+      }
     }
   });
   // Clicking away from element
@@ -107,7 +129,12 @@ const menuCloseHandler = () => {
       !$target.closest($mainNav).length
     ) {
       $dropdownSubMenu.removeClass(activeSubMenu);
-      $dropdownIcon.removeClass(activeDropdownIcon);
+      if ($dropdownIcon.hasClass(activeDropdownIcon)) {
+        $dropdownIcon.removeClass(activeDropdownIcon);
+        $dropdownIcon.velocity({
+          transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+        });
+      }
       console.log('Clicked away');
     } else {
       return;
