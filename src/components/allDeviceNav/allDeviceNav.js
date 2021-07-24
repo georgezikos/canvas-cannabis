@@ -34,11 +34,6 @@ const activeSubMenu = 'main-nav__sub-menu--active';
 // Other
 const windowNavClose = 991; // If the mobile menu is left open, this width will trigger a menu close
 
-// animating icons
-// .velocity({
-//   transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-// });
-
 // Functions
 const navHandler = () => {
   $html.toggleClass(disableScroll);
@@ -71,7 +66,8 @@ const subMenuHandler = () => {
       // Collapse other submenus that are open
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
       // prettier-ignore
-      // $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
+      $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
+      // prettier-ignore
       $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).velocity({
         transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
       });
