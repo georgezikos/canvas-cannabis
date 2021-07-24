@@ -1,4 +1,5 @@
 import './allDeviceNav.css';
+import 'animate.css';
 
 // Selectors
 const $window = $(window);
