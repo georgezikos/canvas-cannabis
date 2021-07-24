@@ -1,3 +1,5 @@
+import anime from 'animejs/lib/anime.es';
+import 'jquery.animejs';
 import './allDeviceNav.css';
 
 // Selectors
@@ -64,7 +66,9 @@ const subMenuHandler = () => {
       $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
     }
     $(this).next().toggleClass(activeSubMenu);
-    $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
+    $(this).find($dropdownIcon).toggleClass(activeDropdownIcon).animejs({
+      translateY: 100,
+    });
   });
 };
 
@@ -119,6 +123,7 @@ const allDeviceNav = () => {
   subMenuHandler();
   // Menu close functionalities
   menuCloseHandler();
+  // Show & Hide Menu on Scroll
 };
 
 export default allDeviceNav;
