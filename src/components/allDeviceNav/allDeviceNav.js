@@ -1,5 +1,3 @@
-import anime from 'animejs/lib/anime.es.js';
-import _ from 'lodash';
 import './allDeviceNav.css';
 
 // Selectors
@@ -60,18 +58,6 @@ const subMenuHandler = () => {
     // prettier-ignore
     const $openSubMenus = $(this).parent().siblings($linkListContainer); // Other open submenus
 
-    const linkItem = this.parentNode;
-
-    const linkItemSiblings = [...linkItem.parentNode.children].filter(
-      (child) => {
-        if (!_.isEqual(child, linkItem)) {
-          return child;
-        }
-      }
-    );
-
-    console.log(linkItemSiblings);
-
     if ($openSubMenus.find($dropdownSubMenu).hasClass(activeSubMenu)) {
       // Collapse other submenus that are open
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
@@ -79,11 +65,7 @@ const subMenuHandler = () => {
       $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
     }
     $(this).next().toggleClass(activeSubMenu);
-    // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
-    anime({
-      targets: this.querySelector('.main-nav__dropdown-icon'),
-      rotateZ: -180,
-    });
+    $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
   });
 };
 
