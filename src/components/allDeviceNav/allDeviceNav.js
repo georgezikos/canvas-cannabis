@@ -69,6 +69,9 @@ const subMenuHandler = () => {
       // $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
       $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon).velocity({
         transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+      }, {
+        duration: 200,
+        easing: 'ease-out',
       });
     }
     $(this).next().toggleClass(activeSubMenu);
@@ -79,10 +82,16 @@ const subMenuHandler = () => {
     if ($(this).find($dropdownIcon).hasClass(activeDropdownIcon)) {
       $(this).find($dropdownIcon).removeClass(activeDropdownIcon).velocity({
         transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+      }, {
+        duration: 200,
+        easing: 'ease-out',
       });
     } else {
       $(this).find($dropdownIcon).addClass(activeDropdownIcon).velocity({
         transform: ['rotateZ(-180deg)', 'rotateZ(0deg)'],
+      }, {
+        duration: 200,
+        easing: 'ease-out',
       });
     }
   });
