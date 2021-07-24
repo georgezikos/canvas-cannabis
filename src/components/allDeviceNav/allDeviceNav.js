@@ -70,6 +70,8 @@ const subMenuHandler = () => {
       }
     );
 
+    console.log(linkItemSiblings);
+
     if ($openSubMenus.find($dropdownSubMenu).hasClass(activeSubMenu)) {
       // Collapse other submenus that are open
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
