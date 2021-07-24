@@ -66,15 +66,10 @@ const subMenuHandler = () => {
       // Collapse other submenus that are open
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
       // prettier-ignore
-      $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
-      $openSubMenus
-        .find($dropdownSubMenu)
-        .prev($dropdownLink)
-        .find($dropdownIcon)
-        .removeClass(activeDropdownIcon)
-        .velocity({
-          transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-        });
+      // $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
+      $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon).velocity({
+        transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+      });
     }
     $(this).next().toggleClass(activeSubMenu);
     // prettier-ignore
