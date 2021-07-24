@@ -1,4 +1,3 @@
-import velocity from 'velocity-animate';
 import './allDeviceNav.css';
 
 // Selectors
@@ -64,16 +63,11 @@ const subMenuHandler = () => {
       // prettier-ignore
       $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
     }
-    $(this).next().toggleClass(activeSubMenu);
-    // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
     $(this)
-      .find($dropdownIcon)
-      .velocity(
-        {
-          transform: ['rotateZ(-180deg)'],
-        },
-        { duration: 250 }
-      );
+      .next()
+      .addClass('animated__animated animate__fadeInDown')
+      .toggleClass(activeSubMenu);
+    $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
   });
 };
 
