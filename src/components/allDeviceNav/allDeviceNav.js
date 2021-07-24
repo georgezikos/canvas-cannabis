@@ -70,7 +70,7 @@ const subMenuHandler = () => {
       .find($dropdownIcon)
       .velocity(
         {
-          transform: ['translateX(100px)', 'translateX(0px)'],
+          transform: ['rotateZ(-180deg)', 'rotateZ(0deg)'],
         },
         { duration: 1000 }
       );
