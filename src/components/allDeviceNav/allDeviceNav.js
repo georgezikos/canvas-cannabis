@@ -66,9 +66,14 @@ const subMenuHandler = () => {
     }
     $(this).next().toggleClass(activeSubMenu);
     // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
-    $(this).find($dropdownIcon).velocity({
-      transform: 'rotateZ(-180deg)',
-    });
+    $(this)
+      .find($dropdownIcon)
+      .velocity(
+        {
+          transform: ['translateX(100px)', 'translateX(0px)'],
+        },
+        { duration: 1000 }
+      );
   });
 };
 
