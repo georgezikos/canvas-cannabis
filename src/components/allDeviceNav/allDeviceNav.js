@@ -64,13 +64,10 @@ const subMenuHandler = () => {
       // prettier-ignore
       // $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
       let otherDropdownIcon = $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon);
-      console.log(otherDropdownIcon);
-      // anime({
-      //   targets: this.parentElement.querySelector(
-      //     '.main-nav__links-item--dropdown'
-      //   ).previousElementSibling,
-      //   rotateZ: 180,
-      // });
+      anime({
+        targets: otherDropdownIcon,
+        rotateZ: 180,
+      });
     }
     $(this).next().toggleClass(activeSubMenu);
     // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
