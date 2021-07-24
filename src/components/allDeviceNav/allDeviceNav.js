@@ -1,4 +1,5 @@
 import anime from 'animejs/lib/anime.es.js';
+import _ from 'lodash';
 import './allDeviceNav.css';
 
 // Selectors
@@ -61,13 +62,13 @@ const subMenuHandler = () => {
 
     const linkItem = this.parentNode;
 
-    // const linkItemSiblings = [...linkItem.parentNode.children].filter(
-    //   (child) => {
-    //     child !== linkItem;
-    //   }
-    // );
-
-    console.log(linkItem, linkItem.parentNode.children);
+    const linkItemSiblings = [...linkItem.parentNode.children].filter(
+      (child) => {
+        if (!_.isEqual(child, linkItem)) {
+          return child;
+        }
+      }
+    );
 
     if ($openSubMenus.find($dropdownSubMenu).hasClass(activeSubMenu)) {
       // Collapse other submenus that are open
