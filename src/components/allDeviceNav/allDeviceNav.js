@@ -1,5 +1,5 @@
 import anime from 'animejs/lib/anime.es.js';
-import 'jquery.animejs';
+import animejs from 'jquery.animejs';
 import './allDeviceNav.css';
 
 // Selectors
@@ -65,14 +65,12 @@ const subMenuHandler = () => {
       // prettier-ignore
       // $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
       $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).animejs({
-        target: this,
         rotateZ: 180,
       });
     }
     $(this).next().toggleClass(activeSubMenu);
     // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
     $(this).find($dropdownIcon).animejs({
-      target: this,
       rotateZ: -180,
     });
   });
@@ -130,6 +128,7 @@ const allDeviceNav = () => {
   // Menu close functionalities
   menuCloseHandler();
   // Show & Hide Menu on Scroll
+  console.log(animejs);
 };
 
 export default allDeviceNav;
