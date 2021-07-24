@@ -66,7 +66,7 @@ const subMenuHandler = () => {
     }
     $(this).next().toggleClass(activeSubMenu);
     // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
-    $(this).find($dropdownIcon).velocity({ translateZ: 0, rotateZ: '90deg' });
+    $(this).find($dropdownIcon).velocity({ opacity: 0 });
   });
 };
 
