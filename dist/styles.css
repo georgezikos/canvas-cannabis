@@ -46,14 +46,8 @@
   background-color: black;
 }
 
-@keyframes rotate-chevron {
-  to {
-    transform: rotateZ(-180deg);
-  }
-}
-
 .main-nav__dropdown-icon--active {
-  animation: rotate-chevron 200ms ease-out;
+  transform: rotateZ(-180deg);
 }
 
 /* Desktop */
