@@ -66,7 +66,7 @@ const subMenuHandler = () => {
       let otherDropdownIcon = $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon);
       anime({
         targets: otherDropdownIcon,
-        rotateZ: 180,
+        rotateZ: 0,
       });
     }
     $(this).next().toggleClass(activeSubMenu);
