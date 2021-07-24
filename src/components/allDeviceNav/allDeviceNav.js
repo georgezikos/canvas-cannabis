@@ -1,4 +1,5 @@
 import anime from 'animejs/lib/anime.es.js';
+import animejs from 'jquery.animejs';
 import './allDeviceNav.css';
 
 // Selectors
@@ -63,8 +64,7 @@ const subMenuHandler = () => {
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
       // prettier-ignore
       // $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
-      let otherDropdownIcon = $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon);
-      anime({
+      $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).animejs({
         targets: otherDropdownIcon,
         rotateZ: 0,
       });
