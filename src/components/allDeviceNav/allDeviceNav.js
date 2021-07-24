@@ -149,7 +149,8 @@ const menuCloseHandler = () => {
     ) {
       $dropdownSubMenu.removeClass(activeSubMenu);
       // $dropdownIcon.removeClass(activeDropdownIcon);
-      $activeDropdownIcon.removeClass(activeDropdownIcon).velocity(
+      // prettier-ignore
+      $activeDropdownIcon.velocity(
         {
           transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
         },
@@ -157,7 +158,7 @@ const menuCloseHandler = () => {
           duration: 200,
           easing: 'ease-out',
         }
-      );
+      ).removeClass(activeDropdownIcon);
       console.log('Clicked away');
     } else {
       return;
