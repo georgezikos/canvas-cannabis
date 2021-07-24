@@ -1,5 +1,3 @@
-import anime from 'animejs/lib/anime.es';
-import 'jquery.animejs';
 import './allDeviceNav.css';
 
 // Selectors
@@ -67,7 +65,6 @@ const subMenuHandler = () => {
     }
     $(this).next().toggleClass(activeSubMenu);
     $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
-    $mainNav.animejs({ translate: 100 });
   });
 };
 
