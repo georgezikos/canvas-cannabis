@@ -65,7 +65,6 @@ const subMenuHandler = () => {
       // prettier-ignore
       // $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
       $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).animejs({
-        targets: otherDropdownIcon,
         rotateZ: 0,
       });
     }
