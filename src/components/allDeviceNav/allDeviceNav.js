@@ -70,10 +70,8 @@ const subMenuHandler = () => {
       });
     }
     $(this).next().toggleClass(activeSubMenu);
-    // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
-    $(this)
-      .find($dropdownIcon)
-      .velocity({
+    // prettier-ignore
+    $(this).find($dropdownIcon).toggleClass(activeDropdownIcon).velocity({
         transform: ['rotateZ(-180deg)', 'rotateZ(0deg)'],
       });
   });
