@@ -1,5 +1,5 @@
 import anime from 'animejs/lib/anime.es.js';
-import animejs from 'jquery.animejs';
+import 'jquery.animejs';
 import './allDeviceNav.css';
 
 // Selectors
@@ -128,7 +128,7 @@ const allDeviceNav = () => {
   // Menu close functionalities
   menuCloseHandler();
   // Show & Hide Menu on Scroll
-  console.dir(animejs);
+  $mainNav.animejs({ translateX: 200 });
 };
 
 export default allDeviceNav;
