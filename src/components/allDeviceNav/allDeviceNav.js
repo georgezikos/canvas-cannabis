@@ -73,9 +73,18 @@ const subMenuHandler = () => {
     }
     $(this).next().toggleClass(activeSubMenu);
     // prettier-ignore
-    $(this).find($dropdownIcon).toggleClass(activeDropdownIcon).velocity({
-      transform: ['rotateZ(-180deg)', 'rotateZ(0deg)'],
-    });
+    // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon).velocity({
+    //   transform: ['rotateZ(-180deg)', 'rotateZ(0deg)'],
+    // });
+    if ($(this).find($dropdownIcon).hasClass(activeDropdownIcon)) {
+      $(this).find($dropdownIcon).removeClass(activeDropdownIcon).velocity({
+        transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+      });
+    } else {
+      $(this).find($dropdownIcon).addClass(activeDropdownIcon).velocity({
+        transform: ['rotateZ(-180deg)', 'rotateZ(0deg)'],
+      });
+    }
   });
 };
 
