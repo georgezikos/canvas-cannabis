@@ -59,9 +59,11 @@ const subMenuHandler = () => {
     // prettier-ignore
     const $openSubMenus = $(this).parent().siblings($linkListContainer); // Other open submenus
 
-    const openSubMenus = [...this.parentNode.children].filter((child) => {
-      return child;
-    });
+    const openSubMenus = [...this.parentNode.parentNode.children].filter(
+      (child) => {
+        child;
+      }
+    );
     console.log(openSubMenus);
 
     if ($openSubMenus.find($dropdownSubMenu).hasClass(activeSubMenu)) {
