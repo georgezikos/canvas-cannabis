@@ -62,7 +62,13 @@ const subMenuHandler = () => {
       // Collapse other submenus that are open
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
       // prettier-ignore
-      $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
+      // $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
+      anime({
+        targets: this.parentElement.querySelector(
+          '.main-nav__links-item--dropdown'
+        ).previousElementSibling,
+        rotateZ: 180,
+      });
     }
     $(this).next().toggleClass(activeSubMenu);
     // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
