@@ -1,5 +1,5 @@
 import anime from 'animejs/lib/anime.es.js';
-import animejs from 'jquery.animejs';
+import 'jquery.animejs';
 import './allDeviceNav.css';
 
 // Selectors
@@ -64,13 +64,15 @@ const subMenuHandler = () => {
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
       // prettier-ignore
       // $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
-      $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).animejs({
+      let $prevDropdownIcon = $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon);
+      $prevDropdownIcon.animejs({
         rotateZ: 180,
       });
     }
     $(this).next().toggleClass(activeSubMenu);
     // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
-    $(this).find($dropdownIcon).animejs({
+    let $currDropdownIcon = $(this).find($dropdownIcon);
+    $currDropdownIcon.animejs({
       rotateZ: -180,
     });
   });
