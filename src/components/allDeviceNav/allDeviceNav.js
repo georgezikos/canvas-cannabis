@@ -63,15 +63,17 @@ const subMenuHandler = () => {
       // Collapse other submenus that are open
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
       // prettier-ignore
-      $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
+      // $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
       // prettier-ignore
       $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).velocity({
         transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
       });
     }
     $(this).next().toggleClass(activeSubMenu);
-    // prettier-ignore
-    $(this).find($dropdownIcon).toggleClass(activeDropdownIcon).velocity({
+    // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
+    $(this)
+      .find($dropdownIcon)
+      .velocity({
         transform: ['rotateZ(-180deg)', 'rotateZ(0deg)'],
       });
   });
@@ -85,7 +87,7 @@ const menuCloseHandler = () => {
     } else if ($dropdownSubMenu.hasClass(activeSubMenu) && e.keyCode === 27) {
       $dropdownSubMenu.removeClass(activeSubMenu);
       // $dropdownIcon.removeClass(activeDropdownIcon);
-      $dropdownIcon.hasClass(activeDropdownIcon).velocity({
+      $dropdownIcon.velocity({
         transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
       });
     }
@@ -103,7 +105,7 @@ const menuCloseHandler = () => {
     ) {
       $dropdownSubMenu.removeClass(activeSubMenu);
       // $dropdownIcon.removeClass(activeDropdownIcon);
-      $dropdownIcon.hasClass(activeDropdownIcon).velocity({
+      $dropdownIcon.velocity({
         transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
       });
     }
@@ -118,7 +120,7 @@ const menuCloseHandler = () => {
     ) {
       $dropdownSubMenu.removeClass(activeSubMenu);
       // $dropdownIcon.removeClass(activeDropdownIcon);
-      $dropdownIcon.hasClass(activeDropdownIcon).velocity({
+      $dropdownIcon.velocity({
         transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
       });
       console.log('Clicked away');
