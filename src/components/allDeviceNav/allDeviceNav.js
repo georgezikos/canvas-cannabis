@@ -2,14 +2,6 @@ import anime from 'animejs/lib/anime.es';
 import 'jquery.animejs';
 import './allDeviceNav.css';
 
-anime({
-  targets: 'div',
-  translateX: 250,
-  rotate: '1turn',
-  backgroundColor: '#FFF',
-  duration: 800,
-});
-
 // Selectors
 const $window = $(window);
 const $document = $(document);
