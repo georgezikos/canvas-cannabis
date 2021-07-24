@@ -128,7 +128,7 @@ const allDeviceNav = () => {
   // Menu close functionalities
   menuCloseHandler();
   // Show & Hide Menu on Scroll
-  console.log(animejs);
+  console.dir(animejs);
 };
 
 export default allDeviceNav;
