@@ -60,12 +60,14 @@ const subMenuHandler = () => {
     const $openSubMenus = $(this).parent().siblings($linkListContainer); // Other open submenus
 
     const linkItem = this.parentNode;
-    const linkItemSiblings = [...linkItem.parentNode.children].filter(
-      (child) => {
-        child !== linkItem;
-      }
-    );
-    console.log(linkItem, linkItemSiblings);
+
+    // const linkItemSiblings = [...linkItem.parentNode.children].filter(
+    //   (child) => {
+    //     child !== linkItem;
+    //   }
+    // );
+
+    console.log(linkItem, linkItem.parentNode);
 
     if ($openSubMenus.find($dropdownSubMenu).hasClass(activeSubMenu)) {
       // Collapse other submenus that are open
