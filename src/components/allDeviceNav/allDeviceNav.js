@@ -20,7 +20,7 @@ const $linkListContainer = $('.main-nav__links-item--dropdown');
 // Children
 const $dropdownSubMenu = $('.main-nav__sub-menu');
 const $dropdownIcon = $('.main-nav__dropdown-icon');
-const $activeDropdownIcon = $('.main-nav__dropdown-icon--active');
+let $activeDropdownIcon = $('.main-nav__dropdown-icon--active');
 
 // Classes
 const activeMobileNav = 'main-nav__links-list--active';
@@ -149,17 +149,15 @@ const menuCloseHandler = () => {
     ) {
       $dropdownSubMenu.removeClass(activeSubMenu);
       // $dropdownIcon.removeClass(activeDropdownIcon);
-      $('.main-nav__dropdown-icon--active')
-        .removeClass(activeDropdownIcon)
-        .velocity(
-          {
-            transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-          },
-          {
-            duration: 200,
-            easing: 'ease-out',
-          }
-        );
+      $activeDropdownIcon.removeClass(activeDropdownIcon).velocity(
+        {
+          transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+        },
+        {
+          duration: 200,
+          easing: 'ease-out',
+        }
+      );
       console.log('Clicked away');
     } else {
       return;
