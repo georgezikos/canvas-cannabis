@@ -145,6 +145,7 @@ const menuCloseHandler = () => {
     }
   });
   // Clicking away from element
+  const $activeDropdownIcon = $('.main-nav__dropdown-icon--active');
   $document.on('click', (e) => {
     let $target = $(e.target);
     if (
@@ -154,17 +155,15 @@ const menuCloseHandler = () => {
     ) {
       $dropdownSubMenu.removeClass(activeSubMenu);
       // $dropdownIcon.removeClass(activeDropdownIcon);
-      $('.main-nav__dropdown-icon--active')
-        .removeClass(activeDropdownIcon)
-        .velocity(
-          {
-            transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-          },
-          {
-            duration: 200,
-            easing: 'ease-out',
-          }
-        );
+      $activeDropdownIcon.removeClass(activeDropdownIcon).velocity(
+        {
+          transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+        },
+        {
+          duration: 200,
+          easing: 'ease-out',
+        }
+      );
       console.log('Clicked away');
     } else {
       return;
