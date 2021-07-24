@@ -1,4 +1,4 @@
-// import velocity from 'velocity-animate';
+import velocity from 'velocity-animate';
 import './allDeviceNav.css';
 
 // Selectors
@@ -68,7 +68,7 @@ const subMenuHandler = () => {
     $(this)
       .find($dropdownIcon)
       .toggleClass(activeDropdownIcon)
-      .velocity({ opacity: 0 });
+      .velocity({ rotateZ: '180deg' });
   });
 };
 
