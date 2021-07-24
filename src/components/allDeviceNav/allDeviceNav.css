@@ -33,9 +33,6 @@
 }
 
 @keyframes rotate-chevron {
-  from {
-    transform: rotateZ(0deg);
-  }
   to {
     transform: rotateZ(-180deg);
   }
