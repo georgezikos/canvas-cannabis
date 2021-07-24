@@ -1,3 +1,4 @@
+import anime from 'animejs/lib/anime.es.js';
 import './allDeviceNav.css';
 
 // Selectors
@@ -64,7 +65,11 @@ const subMenuHandler = () => {
       $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
     }
     $(this).next().toggleClass(activeSubMenu);
-    $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
+    // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
+    anime({
+      targets: this.querySelector('.main-nav__dropdown-icon'),
+      translateX: 250,
+    });
   });
 };
 
