@@ -1,5 +1,5 @@
-import 'animejs/lib/anime.es.js';
-import 'jquery.animejs';
+import anime from 'animejs/lib/anime.es.js';
+import animejs from 'jquery.animejs';
 import './allDeviceNav.css';
 
 // Selectors
