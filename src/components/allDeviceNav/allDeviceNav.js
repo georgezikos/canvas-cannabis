@@ -64,15 +64,15 @@ const subMenuHandler = () => {
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
       // prettier-ignore
       // $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon);
-      let $prevDropdownIcon = $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon);
-      $prevDropdownIcon.animejs({
+      $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).animejs({
+        target: this,
         rotateZ: 180,
       });
     }
     $(this).next().toggleClass(activeSubMenu);
     // $(this).find($dropdownIcon).toggleClass(activeDropdownIcon);
-    let $currDropdownIcon = $(this).find($dropdownIcon);
-    $currDropdownIcon.animejs({
+    $(this).find($dropdownIcon).animejs({
+      target: this,
       rotateZ: -180,
     });
   });
