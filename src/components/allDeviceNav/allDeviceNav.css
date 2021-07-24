@@ -32,8 +32,17 @@
   background-color: black;
 }
 
+@keyframes rotate-chevron {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-180deg);
+  }
+}
+
 .main-nav__dropdown-icon--active {
-  transform: rotateZ(-180deg);
+  animation: rotate-chevron 200ms ease-out;
 }
 
 /* Desktop */
