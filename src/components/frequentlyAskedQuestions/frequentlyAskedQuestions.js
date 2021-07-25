@@ -25,13 +25,21 @@ const questionAnswerToggle = () => {
     $this.toggleClass(activeToggleButton);
     $this.next().toggleClass(activeAnswer);
     // prettier-ignore
-    $this.find($toggleIcon).toggleClass(activeToggleIcon).velocity({
-      transform: ['rotateZ(90deg)', 'rotateZ(0deg)']
-    }, {
-      duration: 200,
-      easing: 'ease-out',
-    });
-
+    if ($this.find($toggleIcon).hasClass(activeToggleIcon)) {
+      $this.find($toggleIcon).removeClass(activeToggleIcon).velocity({
+        transform: ['rotateZ(-90deg)', 'rotateZ(90deg)']
+      }, {
+        duration: 200,
+        easing: 'ease-out',
+      });
+    } else {
+      $this.find($toggleIcon).addClass(activeToggleIcon).velocity({
+        transform: ['rotateZ(90deg)', 'rotateZ(0deg)']
+      }, {
+        duration: 200,
+        easing: 'ease-out',
+      });;
+    }
     // if ($openSubMenus.find($dropdownSubMenu).hasClass(activeSubMenu)) {
     //   // Collapse other submenus that are open
     //   $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
