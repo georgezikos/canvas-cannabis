@@ -24,6 +24,13 @@ const questionAnswerToggle = () => {
 
     $this.toggleClass(activeToggleButton);
     $this.next().toggleClass(activeAnswer);
+    // prettier-ignore
+    $this.child(toggleIcon).toggleClass(activeToggleIcon).velocity({
+      transform: ['rotateZ(-180deg)', 'rotateZ(0deg)']
+    }, {
+      duration: 200,
+      easing: 'ease-out',
+    });
 
     // if ($openSubMenus.find($dropdownSubMenu).hasClass(activeSubMenu)) {
     //   // Collapse other submenus that are open
