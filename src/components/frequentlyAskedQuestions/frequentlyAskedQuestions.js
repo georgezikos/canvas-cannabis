@@ -20,14 +20,6 @@ const questionAnswerToggle = () => {
   $toggleButton.on('click', function (e) {
     e.stopPropagation();
     const $this = $(this);
-
-    const $openQuestions = $this.parent().siblings().find($toggleButton);
-
-    if ($openQuestions.hasClass(activeToggleButton)) {
-      $openQuestions.removeClass(activeToggleButton);
-      $openQuestions.find($toggleIcon).removeClass(activeToggleIcon);
-    }
-
     $this.toggleClass(activeToggleButton);
     $this.next().toggleClass(activeAnswer);
     // prettier-ignore
