@@ -18,9 +18,10 @@ const activeToggleIcon = 'customer-support__faq-toggle-icon--active';
 
 const questionAnswerToggle = () => {
   $toggleButton.on('click', function () {
-    // prettier-ignore
+    const $this = $(this);
+    $this.addClass(activeAnswer);
+
     const $openQuestions = $(this).parent().siblings(); // Other open questions
-    console.log($openQuestions);
 
     // if ($openSubMenus.find($dropdownSubMenu).hasClass(activeSubMenu)) {
     //   // Collapse other submenus that are open
