@@ -20,7 +20,8 @@ const questionAnswerToggle = () => {
   $toggleButton.on('click', function (e) {
     e.stopPropagation();
     const $this = $(this);
-    const $openQuestions = $(this).parent().siblings().children($toggleButton); // Other open questions
+    const $openQuestions =
+      $(this).parent().siblings().find(activeToggleButton) && false; // Other open questions
 
     console.log($openQuestions);
 
