@@ -27,7 +27,7 @@ const questionAnswerToggle = () => {
     // prettier-ignore
     if ($this.find($toggleIcon).hasClass(activeToggleIcon)) {
       $this.find($toggleIcon).removeClass(activeToggleIcon).velocity({
-        transform: ['rotateZ(-90deg)', 'rotateZ(90deg)']
+        transform: ['rotateZ(0deg)', 'rotateZ(90deg)']
       }, {
         duration: 200,
         easing: 'ease-out',
