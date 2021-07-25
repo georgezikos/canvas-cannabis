@@ -20,13 +20,13 @@ const questionAnswerToggle = () => {
   $toggleButton.on('click', function (e) {
     e.stopPropagation();
     const $this = $(this);
-    const $openQuestions =
-      $(this)
-        .parent()
-        .siblings()
-        .find('.customer-support__faq-question-container--active') && false; // Other open questions
 
-    console.log($openQuestions);
+    const $openQuestions = $this.parent().siblings().find($toggleButton);
+
+    if ($openQuestions.hasClass(activeToggleButton)) {
+      $openQuestions.removeClass(activeToggleButton);
+      $openQuestions.find($toggleIcon).removeClass(activeToggleIcon);
+    }
 
     $this.toggleClass(activeToggleButton);
     $this.next().toggleClass(activeAnswer);
@@ -46,35 +46,6 @@ const questionAnswerToggle = () => {
         easing: 'ease-out',
       });;
     }
-
-    // if ($openSubMenus.find($dropdownSubMenu).hasClass(activeSubMenu)) {
-    //   // Collapse other submenus that are open
-    //   $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
-    //   // prettier-ignore
-    //   $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon).velocity({
-    //     transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-    //   }, {
-    //     duration: 200,
-    //     easing: 'ease-out',
-    //   });
-    // }
-    // $(this).next().toggleClass(activeSubMenu);
-    // // prettier-ignore
-    // if ($(this).find($dropdownIcon).hasClass(activeDropdownIcon)) {
-    //   $(this).find($dropdownIcon).removeClass(activeDropdownIcon).velocity({
-    //     transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-    //   }, {
-    //     duration: 200,
-    //     easing: 'ease-out',
-    //   });
-    // } else {
-    //   $(this).find($dropdownIcon).addClass(activeDropdownIcon).velocity({
-    //     transform: ['rotateZ(-180deg)', 'rotateZ(0deg)'],
-    //   }, {
-    //     duration: 200,
-    //     easing: 'ease-out',
-    //   });
-    // }
   });
 };
 
