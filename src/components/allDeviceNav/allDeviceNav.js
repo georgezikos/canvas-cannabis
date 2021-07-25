@@ -49,7 +49,7 @@ const navHandler = () => {
   // Collapsing submenus
   if ($dropdownSubMenu.hasClass(activeSubMenu)) {
     $dropdownSubMenu.removeClass(activeSubMenu);
-    // $dropdownIcon.removeClass(activeDropdownIcon);
+    // All of these implementations with this direct selector work, but not if the selector is cached – get to the bottom of why this is the case
     $('.main-nav__dropdown-icon--active')
       .removeClass(activeDropdownIcon)
       .velocity(
@@ -145,7 +145,6 @@ const menuCloseHandler = () => {
     }
   });
   // Clicking away from element
-  const $activeDropdownIcon = $('.main-nav__dropdown-icon--active');
   $document.on('click', (e) => {
     let $target = $(e.target);
     if (
@@ -154,16 +153,17 @@ const menuCloseHandler = () => {
       !$target.closest($mainNav).length
     ) {
       $dropdownSubMenu.removeClass(activeSubMenu);
-      // $dropdownIcon.removeClass(activeDropdownIcon);
-      $activeDropdownIcon.removeClass(activeDropdownIcon).velocity(
-        {
-          transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-        },
-        {
-          duration: 200,
-          easing: 'ease-out',
-        }
-      );
+      $('.main-nav__dropdown-icon--active')
+        .removeClass(activeDropdownIcon)
+        .velocity(
+          {
+            transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+          },
+          {
+            duration: 200,
+            easing: 'ease-out',
+          }
+        );
       console.log('Clicked away');
     } else {
       return;
