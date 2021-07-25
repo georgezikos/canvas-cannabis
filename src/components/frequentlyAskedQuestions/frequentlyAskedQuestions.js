@@ -25,7 +25,7 @@ const questionAnswerToggle = () => {
     $this.toggleClass(activeToggleButton);
     $this.next().toggleClass(activeAnswer);
     // prettier-ignore
-    $this.child(toggleIcon).toggleClass(activeToggleIcon).velocity({
+    $this.child($toggleIcon).toggleClass(activeToggleIcon).velocity({
       transform: ['rotateZ(-180deg)', 'rotateZ(0deg)']
     }, {
       duration: 200,
