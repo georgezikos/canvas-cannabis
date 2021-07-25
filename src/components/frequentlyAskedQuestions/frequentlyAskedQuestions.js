@@ -20,7 +20,9 @@ const questionAnswerToggle = () => {
   $toggleButton.on('click', function (e) {
     e.stopPropagation();
     const $this = $(this);
-    // const $openQuestions = $(this).parent().siblings(); // Other open questions
+    const $openQuestions = $(this).parent().siblings(); // Other open questions
+
+    console.log($openQuestions);
 
     $this.toggleClass(activeToggleButton);
     $this.next().toggleClass(activeAnswer);
@@ -40,6 +42,7 @@ const questionAnswerToggle = () => {
         easing: 'ease-out',
       });;
     }
+
     // if ($openSubMenus.find($dropdownSubMenu).hasClass(activeSubMenu)) {
     //   // Collapse other submenus that are open
     //   $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
