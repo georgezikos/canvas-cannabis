@@ -21,7 +21,10 @@ const questionAnswerToggle = () => {
     e.stopPropagation();
     const $this = $(this);
     const $openQuestions =
-      $(this).parent().siblings().find(activeToggleButton) && false; // Other open questions
+      $(this)
+        .parent()
+        .siblings()
+        .find('.customer-support__faq-question-container--active') && false; // Other open questions
 
     console.log($openQuestions);
 
