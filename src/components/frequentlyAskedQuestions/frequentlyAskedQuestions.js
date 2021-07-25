@@ -19,7 +19,7 @@ const activeToggleIcon = 'customer-support__faq-toggle-icon--active';
 const questionAnswerToggle = () => {
   $toggleButton.on('click', function () {
     const $this = $(this);
-    $this.addClass(activeAnswer);
+    $this.toggleClass(activeAnswer);
 
     const $openQuestions = $(this).parent().siblings(); // Other open questions
 
