@@ -23,7 +23,7 @@ const questionAnswerToggle = () => {
     const $openQuestions = $(this).parent().siblings(); // Other open questions
 
     for (const question of $openQuestions) {
-      console.log(question.children());
+      console.log(question);
     }
 
     $this.toggleClass(activeToggleButton);
