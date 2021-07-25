@@ -46,6 +46,7 @@
   background-color: black;
 }
 
+/* Applied via Velocity instead */
 /* .main-nav__dropdown-icon--active {
   transform: rotateZ(-180deg);
 } */
@@ -65,4 +66,8 @@
 }
 
 /* Nav Show and Hide */
+
+.customer-support__faq-answer-container--active {
+  display: block;
+}
 
