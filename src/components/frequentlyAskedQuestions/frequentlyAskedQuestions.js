@@ -2,13 +2,7 @@ import './frequentlyAskedQuestions.css';
 import 'velocity-animate';
 
 // Selectors
-const $window = $(window);
-const $document = $(document);
-const $body = $('body');
-const $html = $('html');
-
 const $toggleButton = $('.customer-support__faq-question-container'); // container with question and toggle icon - triggers the whole thing
-const $answer = $('.customer-support__faq-answer-container'); // answer, original state is display none, needs to go to block
 const $toggleIcon = $('.customer-support__faq-toggle-icon'); // toggle icon needs to rotate
 
 // Classes
@@ -36,7 +30,7 @@ const questionAnswerToggle = () => {
       }, {
         duration: 200,
         easing: 'ease-out',
-      });;
+      });
     }
   });
 };
