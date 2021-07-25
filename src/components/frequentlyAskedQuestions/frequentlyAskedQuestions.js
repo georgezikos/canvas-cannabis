@@ -17,12 +17,13 @@ const activeAnswer = 'customer-support__faq-answer-container--active';
 const activeToggleIcon = 'customer-support__faq-toggle-icon--active';
 
 const questionAnswerToggle = () => {
-  $toggleButton.on('click', function () {
+  $toggleButton.on('click', function (e) {
+    e.stopPropagation();
     const $this = $(this);
-    const $openQuestions = $(this).parent().siblings(); // Other open questions
-    console.log(typeof $openQuestions);
+    // const $openQuestions = $(this).parent().siblings(); // Other open questions
 
     $this.toggleClass(activeToggleButton);
+    $this.next().toggleClass(activeAnswer);
 
     // if ($openSubMenus.find($dropdownSubMenu).hasClass(activeSubMenu)) {
     //   // Collapse other submenus that are open
