@@ -172,37 +172,37 @@ const menuCloseHandler = () => {
 };
 
 // Sticky Hide and Reveal Handler
-// const stickyHideReveal = () => {
-//   const activeNav = 'main-nav--active';
-//   const inactiveNav = 'main-nav--inactive';
-//   let lastScroll = 0;
-//   $window.scroll(function () {
-//     let currentScroll = $window.scrollTop();
-//     if (currentScroll <= 0) {
-//       $mainNav.removeClass(activeNav);
-//       $mainNav.velocity({
-//         transform: ['translateY(-100%)', 'translateY(0)'],
-//       });
-//       return;
-//     }
-//     if (currentScroll > lastScroll && !$mainNav.hasClass(inactiveNav)) {
-//       // down
-//       $mainNav.removeClass(activeNav);
-//       $mainNav.addClass(inactiveNav);
-//       $mainNav.velocity({
-//         transform: ['translateY(-100%)', 'translateY(0)'],
-//       });
-//     } else if (currentScroll < lastScroll && $mainNav.hasClass(inactiveNav)) {
-//       // up
-//       $mainNav.removeClass(inactiveNav);
-//       $mainNav.addClass(activeNav);
-//       $mainNav.velocity({
-//         transform: ['translateY(0)', 'translateY(-100%)'],
-//       });
-//     }
-//     lastScroll = currentScroll;
-//   });
-// };
+const stickyHideReveal = () => {
+  const activeNav = 'main-nav--active';
+  const inactiveNav = 'main-nav--inactive';
+  let lastScroll = 0;
+  $window.scroll(function () {
+    let currentScroll = $window.scrollTop();
+    if (currentScroll <= 0) {
+      $mainNav.removeClass(activeNav);
+      $mainNav.velocity({
+        transform: ['translateY(-100%)', 'translateY(0)'],
+      });
+      return;
+    }
+    if (currentScroll > lastScroll && !$mainNav.hasClass(inactiveNav)) {
+      // down
+      $mainNav.removeClass(activeNav);
+      $mainNav.addClass(inactiveNav);
+      $mainNav.velocity({
+        transform: ['translateY(-100%)', 'translateY(0)'],
+      });
+    } else if (currentScroll < lastScroll && $mainNav.hasClass(inactiveNav)) {
+      // up
+      $mainNav.removeClass(inactiveNav);
+      $mainNav.addClass(activeNav);
+      $mainNav.velocity({
+        transform: ['translateY(0)', 'translateY(-100%)'],
+      });
+    }
+    lastScroll = currentScroll;
+  });
+};
 
 const allDeviceNav = () => {
   // Hamburger click handler
@@ -214,7 +214,7 @@ const allDeviceNav = () => {
   // Menu close functionalities
   menuCloseHandler();
   // Show & Hide Menu on Scroll
-  // stickyHideReveal();
+  stickyHideReveal();
 };
 
 export default allDeviceNav;
