@@ -173,6 +173,7 @@ const menuCloseHandler = () => {
 
 // Sticky Hide and Reveal Handler
 const stickyHideReveal = () => {
+  let position = $window.scrollTop();
   $window.scroll(function () {
     let scroll = $window.scrollTop();
     if (scroll > position) {
