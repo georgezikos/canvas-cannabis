@@ -185,19 +185,18 @@ const stickyHideReveal = () => {
     if (currentScroll > lastScroll && $mainNav.hasClass(activeNav)) {
       // down
       //prettier-ignore
-      $mainNav.toggleClass(activeNav);
+      $mainNav.toggleClass(activeNav).velocity(
+        {
+          transform: ['translateY(-100%)', 'translateY(0)'],
+        },
+        {
+          duration: 300,
+          easing: 'ease-out',
+        }
+      );
       return;
     }
 
-    // .velocity(
-    //   {
-    //     transform: ['translateY(-100%)', 'translateY(0)'],
-    //   },
-    //   {
-    //     duration: 300,
-    //     easing: 'ease-out',
-    //   }
-    // );
     //   } else if (currentScroll < lastScroll && $mainNav.hasClass(inactiveNav)) {
     //     // up
     //     $mainNav.removeClass(inactiveNav);
