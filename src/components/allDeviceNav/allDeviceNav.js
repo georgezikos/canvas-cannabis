@@ -42,7 +42,7 @@ const windowNavClose = 991; // If the mobile menu is left open, this width will 
 const toggleMobileNav = () => {
   $linksList.toggleClass(activeMobileNav);
   $document.height(`${$window.innerHeight()}px`);
-  $linksList.height(`${window.innerHeight() - 104}px`);
+  $linksList.height(`${$window.innerHeight() - 104}px`);
   $window.on('resize', function () {
     $document.height(`${$window.innerHeight()}px`);
   });
