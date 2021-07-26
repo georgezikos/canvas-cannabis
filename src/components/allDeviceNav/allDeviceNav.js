@@ -178,6 +178,10 @@ const stickyHideReveal = () => {
     let scroll = $window.scrollTop();
     if (scroll > position) {
       console.log('scroll down');
+      // scroll down
+      $mainNav.velocity({
+        transform: ['translateY(-100%)', 'translateY(0)'],
+      });
     } else {
       console.log('scrollUp');
     }
