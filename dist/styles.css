@@ -15,7 +15,7 @@
 /* For the body and html elements */
 .active-nav {
   overflow: hidden;
-  position: fixed;
+  position: fixed; /* may not be necessary for what I'm trying to prevent – does nothing really */
   /*
   top: 0%;
   left: 0%;
@@ -72,6 +72,17 @@
 }
 
 /* Nav Show and Hide */
+.headroom {
+  will-change: transform;
+  transition: transform 200ms linear;
+}
+
+.headroom--unpinned {
+  transform: translateY(-100%);
+}
+.headroom--pinned {
+  transform: translateY(0%);
+}
 
 .customer-support__faq-answer-container--active {
   display: block;

@@ -1,5 +1,6 @@
 import './allDeviceNav.css';
 import 'velocity-animate';
+import Headroom from 'headroom.js';
 
 // Selectors
 const $window = $(window);
@@ -12,6 +13,8 @@ const $mainNav = $('nav.main-nav');
 const $navLogo = $('img.main-nav__logo');
 const $hamburgerBottom = $('div.hamburger__bottom');
 const $hamburgerTop = $('div.hamburger__top');
+
+const mainNav = document.querySelector('nav.main-nav');
 
 // Parent
 const $dropdownLink = $('.main-nav__links-item--container');
@@ -207,6 +210,11 @@ const menuCloseHandler = () => {
 //   });
 // };
 
+const stickyHideReveal = () => {
+  let headroom = new Headroom(mainNav);
+  headroom.init();
+};
+
 const allDeviceNav = () => {
   // Hamburger click handler
   $hamburger.on('click', () => {
@@ -217,7 +225,7 @@ const allDeviceNav = () => {
   // Menu close functionalities
   menuCloseHandler();
   // Show & Hide Menu on Scroll
-  // stickyHideReveal();
+  stickyHideReveal();
 };
 
 export default allDeviceNav;
