@@ -15,11 +15,11 @@
 /* For the body and html elements */
 .active-nav {
   overflow: hidden;
-  /* position: fixed;
+  position: fixed;
   top: 0%;
   left: 0%;
   right: 0%;
-  bottom: 0%; */
+  bottom: 0%;
   width: 100%;
 }
 
@@ -31,8 +31,6 @@
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-  /* height: 100vh;
-  padding: 80px 5%; */
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
