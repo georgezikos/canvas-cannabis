@@ -176,7 +176,7 @@ const stickyHideReveal = () => {
   const activeNav = 'main-nav--active';
   const inactiveNav = 'main-nav--inactive';
   let lastScroll = 0;
-  $window.scroll(function () {
+  $window.on('scroll', function () {
     let currentScroll = $window.scrollTop();
     if (currentScroll <= 0) {
       $mainNav.removeClass(activeNav);
