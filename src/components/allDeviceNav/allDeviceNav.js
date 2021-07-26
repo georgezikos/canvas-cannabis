@@ -172,44 +172,40 @@ const menuCloseHandler = () => {
 };
 
 // Sticky Hide and Reveal Handler
-const stickyHideReveal = () => {
-  const activeNav = 'main-nav--active';
-  // const inactiveNav = 'main-nav--inactive';
-  let lastScroll = 0;
-  $window.scroll(function () {
-    let currentScroll = $window.scrollTop();
-    if (currentScroll < 0) {
-      return;
-    }
-    if (currentScroll === 0 && !$mainNav.hasClass(activeNav)) {
-      $mainNav.toggleClass(activeNav).velocity({
-        // transform: ['translateY(0)', 'translateY(-100%)'],
-        top: '0',
-      });
-      return;
-    }
-    if (currentScroll > lastScroll && $mainNav.hasClass(activeNav)) {
-      // down
-      //prettier-ignore
-      $mainNav.toggleClass(activeNav).velocity({
-        // transform: ['translateY(-100%)', 'translateY(0)'],
-        top: '-100%',
-      });
-      return;
-    } else if (currentScroll < lastScroll && !$mainNav.hasClass(activeNav)) {
-      $mainNav.toggleClass(activeNav).velocity({
-        // transform: ['translateY(0)', 'translateY(-100%)'],
-        top: '0',
-      });
-      $mainNav.toggleClass(mainNavActiveMobile);
-      $navLogo.toggleClass(navLogoActiveMobile);
-      $hamburgerBottom.toggleClass(hamburgerBunsActiveMobile);
-      $hamburgerTop.toggleClass(hamburgerBunsActiveMobile);
-      return;
-    }
-    lastScroll = currentScroll;
-  });
-};
+// const stickyHideReveal = () => {
+//   const activeNav = 'main-nav--active';
+//   // const inactiveNav = 'main-nav--inactive';
+//   let lastScroll = 0;
+//   $window.scroll(function () {
+//     let currentScroll = $window.scrollTop();
+//     if (currentScroll < 0) {
+//       return;
+//     }
+//     if (currentScroll === 0 && !$mainNav.hasClass(activeNav)) {
+//       $mainNav.toggleClass(activeNav).velocity({
+//         // transform: ['translateY(0)', 'translateY(-100%)'],
+//         top: '0',
+//       });
+//       return;
+//     }
+//     if (currentScroll > lastScroll && $mainNav.hasClass(activeNav)) {
+//       // down
+//       //prettier-ignore
+//       $mainNav.toggleClass(activeNav).velocity({
+//         // transform: ['translateY(-100%)', 'translateY(0)'],
+//         top: '-100%',
+//       });
+//       return;
+//     } else if (currentScroll < lastScroll && !$mainNav.hasClass(activeNav)) {
+//       $mainNav.toggleClass(activeNav).velocity({
+//         // transform: ['translateY(0)', 'translateY(-100%)'],
+//         top: '0',
+//       });
+//       return;
+//     }
+//     lastScroll = currentScroll;
+//   });
+// };
 
 const allDeviceNav = () => {
   // Hamburger click handler
@@ -221,7 +217,7 @@ const allDeviceNav = () => {
   // Menu close functionalities
   menuCloseHandler();
   // Show & Hide Menu on Scroll
-  stickyHideReveal();
+  // stickyHideReveal();
 };
 
 export default allDeviceNav;
