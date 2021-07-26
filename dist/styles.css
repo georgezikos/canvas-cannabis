@@ -21,12 +21,14 @@
 
 /* For the containing element of the nav's links */
 .main-nav__links-list--active {
-  display: block;
+  /* display: block; */
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  height: 100vh;
+  padding: 80px 5%;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
