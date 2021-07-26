@@ -210,11 +210,8 @@ const menuCloseHandler = () => {
 //     lastScroll = currentScroll;
 //   });
 // };
-// const setLinksHeight = () => {
-//   $linksList.height(`${$window.innerHeight()}px`);
-// };
 const setLinksHeight = () => {
-  $linksList.height(`${iosInnerHeight() - 104}px`);
+  $linksList.height(`${$window.innerHeight()}px`);
 };
 $window.on('resize', setLinksHeight);
 
