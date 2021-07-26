@@ -201,6 +201,10 @@ const stickyHideReveal = () => {
         // transform: ['translateY(0)', 'translateY(-100%)'],
         top: '0',
       });
+      $mainNav.toggleClass(mainNavActiveMobile);
+      $navLogo.toggleClass(navLogoActiveMobile);
+      $hamburgerBottom.toggleClass(hamburgerBunsActiveMobile);
+      $hamburgerTop.toggleClass(hamburgerBunsActiveMobile);
       return;
     }
     lastScroll = currentScroll;
