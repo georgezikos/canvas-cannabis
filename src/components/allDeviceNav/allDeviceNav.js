@@ -171,31 +171,36 @@ const menuCloseHandler = () => {
   });
 };
 
-const activeNav = 'main-nav--active';
-const inactiveNav = 'main-nav--inactive';
-
 // Sticky Hide and Reveal Handler
 const stickyHideReveal = () => {
-  let position = $window.scrollTop();
+  const activeNav = 'main-nav--active';
+  const inactiveNav = 'main-nav--inactive';
+  let lastScroll = 0;
   $window.scroll(function () {
-    let scroll = $window.scrollTop();
-    if (scroll > position && !$mainNav.hasClass(inactiveNav)) {
-      console.log('scroll down');
-      // scroll down
+    let currentScroll = $window.scrollTop();
+    if (currentScroll <= 0) {
+      $mainNav.removeClass(activeNav);
       $mainNav.velocity({
         transform: ['translateY(-100%)', 'translateY(0)'],
       });
+      return;
+    }
+    if (currentScroll > lastScroll && !$mainNav.hasClass(inactiveNav)) {
+      // down
+      $mainNav.removeClass(activeNav);
       $mainNav.addClass(inactiveNav);
-    } else {
-      console.log('scrollUp');
-      // scroll up
+      $mainNav.velocity({
+        transform: ['translateY(-100%)', 'translateY(0)'],
+      });
+    } else if (currentScroll < lastScroll && $mainNav.hasClass(inactiveNav)) {
+      // up
       $mainNav.removeClass(inactiveNav);
       $mainNav.addClass(activeNav);
       $mainNav.velocity({
         transform: ['translateY(0)', 'translateY(-100%)'],
       });
     }
-    position = scroll;
+    lastScroll = currentScroll;
   });
 };
 
