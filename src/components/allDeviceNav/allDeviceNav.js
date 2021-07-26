@@ -185,6 +185,7 @@ const stickyHideReveal = () => {
       $mainNav.toggleClass(activeNav).velocity({
         // transform: ['translateY(0)', 'translateY(-100%)'],
         top: '0',
+        position: 'fixed',
       });
       return;
     }
@@ -194,12 +195,14 @@ const stickyHideReveal = () => {
       $mainNav.toggleClass(activeNav).velocity({
         // transform: ['translateY(-100%)', 'translateY(0)'],
         top: '-100%',
+        position: 'relative',
       });
       return;
     } else if (currentScroll < lastScroll && !$mainNav.hasClass(activeNav)) {
       $mainNav.toggleClass(activeNav).velocity({
         // transform: ['translateY(0)', 'translateY(-100%)'],
         top: '0',
+        position: 'fixed',
       });
       return;
     }
