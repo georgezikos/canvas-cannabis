@@ -1,6 +1,5 @@
 import './allDeviceNav.css';
 import 'velocity-animate';
-import Headroom from 'headroom.js';
 
 // Selectors
 const $window = $(window);
@@ -204,13 +203,6 @@ const menuCloseHandler = () => {
 //     lastScroll = currentScroll;
 //   });
 // };
-const mainNav = document.querySelector('.main-nav');
-const stickyHideReveal = () => {
-  const headroom = new Headroom(mainNav);
-  headroom.init();
-};
-
-// add scroll-padding-top: height-of-nav; to body
 
 const allDeviceNav = () => {
   // Hamburger click handler
@@ -222,7 +214,7 @@ const allDeviceNav = () => {
   // Menu close functionalities
   menuCloseHandler();
   // Show & Hide Menu on Scroll
-  stickyHideReveal();
+  // stickyHideReveal();
 };
 
 export default allDeviceNav;
