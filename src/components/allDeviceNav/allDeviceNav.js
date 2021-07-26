@@ -184,9 +184,10 @@ const stickyHideReveal = () => {
     }
     if (currentScroll > lastScroll && !$mainNav.hasClass(inactiveNav)) {
       // down
+      //prettier-ignore
       $mainNav.removeClass(activeNav).addClass(inactiveNav).velocity(
         {
-          transform: 'translateY(-100%)',
+          transform: ['translateY(100%)', 'translateY(-100%)'],
         },
         {
           duration: 300,
@@ -199,7 +200,7 @@ const stickyHideReveal = () => {
       $mainNav.addClass(activeNav);
       $mainNav.velocity(
         {
-          transform: 'translateY(0)',
+          transform: ['translateY(-100%)', 'translateY(0)'],
         },
         {
           duration: 300,
