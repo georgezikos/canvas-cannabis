@@ -38,9 +38,7 @@ const windowNavClose = 991; // If the mobile menu is left open, this width will 
 const navHandler = () => {
   $html.toggleClass(disableScroll);
   $body.toggleClass(disableScroll);
-  $linksList.toggleClass(activeMobileNav).velocity({
-    top: $window.scrollTop() + 104,
-  });
+  $linksList.toggleClass(activeMobileNav);
   // Handling dependent on UI theme
   if (!$mainNav.hasClass(mainNavDark)) {
     $mainNav.toggleClass(mainNavActiveMobile);
