@@ -39,6 +39,7 @@ const navHandler = () => {
   $html.toggleClass(disableScroll);
   $body.toggleClass(disableScroll);
   $linksList.toggleClass(activeMobileNav);
+  $mainNav.css('position', 'static');
   // Handling dependent on UI theme
   if (!$mainNav.hasClass(mainNavDark)) {
     $mainNav.toggleClass(mainNavActiveMobile);
@@ -180,9 +181,6 @@ const stickyHideReveal = () => {
     let currentScroll = $window.scrollTop();
     if (currentScroll <= 0) {
       $mainNav.removeClass(activeNav);
-      // $mainNav.velocity({
-      //   transform: ['translateY(0)', 'translateY()'],
-      // });
       return;
     }
     if (currentScroll > lastScroll && !$mainNav.hasClass(inactiveNav)) {
