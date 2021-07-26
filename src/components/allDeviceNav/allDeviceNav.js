@@ -31,10 +31,6 @@ const mainNavDark = 'main-nav--dark';
 const activeDropdownIcon = 'main-nav__dropdown-icon--active';
 const activeSubMenu = 'main-nav__sub-menu--active';
 
-const scrollUp = 'scroll-up';
-const scrollDown = 'scroll-down';
-let lastScroll = 0;
-
 // Other
 const windowNavClose = 991; // If the mobile menu is left open, this width will trigger a menu close
 
@@ -177,31 +173,14 @@ const menuCloseHandler = () => {
 
 // Sticky Hide and Reveal Handler
 const stickyHideReveal = () => {
-  $window.on('scroll', function () {
-    const currentScroll = $window.scrollTop();
-    if (currentScroll <= 0) {
-      $body.addClass(scrollUp);
-      $mainNav.velocity({
-        transform: ['translate3d(0, 0, 0)', 'translate3d(0, -100%, 0)'],
-      });
-      return;
+  $window.scroll(function () {
+    let scroll = $window.scrollTop();
+    if (scroll > position) {
+      console.log('scroll down');
+    } else {
+      console.log('scrollUp');
     }
-    if (currentScroll > lastScroll && !$body.hasClass(scrollDown)) {
-      // down
-      $body.removeClass(scrollUp);
-      $body.addClass(scrollDown);
-      $mainNav.velocity({
-        transform: ['translate3d(0, -100%, 0)', 'translate3d(0, 0, 0)'],
-      });
-    } else if (currentScroll < lastScroll && $body.hasClass(scrollDown)) {
-      // up
-      $body.removeClass(scrollDown);
-      $body.addClass(scrollUp);
-      $mainNav.velocity({
-        transform: ['translate3d(0, 0, 0)', 'translate3d(0, -100%, 0)'],
-      });
-    }
-    lastScroll = currentScroll;
+    position = scroll;
   });
 };
 
