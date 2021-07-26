@@ -191,23 +191,13 @@ const stickyHideReveal = () => {
         transform: ['translateY(-100%)', 'translateY(0)'],
       });
       return;
+    } else if (currentScroll < lastScroll && !$mainNav.hasClass(activeNav)) {
+      $mainNav.toggleClass(activeNav).velocity({
+        transform: ['translateY(0)', 'translateY(-100%)'],
+      });
+      return;
     }
-
-    //   } else if (currentScroll < lastScroll && $mainNav.hasClass(inactiveNav)) {
-    //     // up
-    //     $mainNav.removeClass(inactiveNav);
-    //     $mainNav.addClass(activeNav);
-    //     $mainNav.velocity(
-    //       {
-    //         transform: ['translateY(0)', 'translateY(-100%)'],
-    //       },
-    //       {
-    //         duration: 300,
-    //         easing: 'ease-out',
-    //       }
-    //     );
-    //   }
-    //   lastScroll = currentScroll;
+    lastScroll = currentScroll;
   });
 };
 
