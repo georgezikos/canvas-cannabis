@@ -183,7 +183,8 @@ const stickyHideReveal = () => {
     }
     if (currentScroll === 0 && !$mainNav.hasClass(activeNav)) {
       $mainNav.toggleClass(activeNav).velocity({
-        transform: ['translateY(0)', 'translateY(-100%)'],
+        // transform: ['translateY(0)', 'translateY(-100%)'],
+        top: '0',
       });
       return;
     }
@@ -191,12 +192,14 @@ const stickyHideReveal = () => {
       // down
       //prettier-ignore
       $mainNav.toggleClass(activeNav).velocity({
-        transform: ['translateY(-100%)', 'translateY(0)'],
+        // transform: ['translateY(-100%)', 'translateY(0)'],
+        top: '-100%',
       });
       return;
     } else if (currentScroll < lastScroll && !$mainNav.hasClass(activeNav)) {
       $mainNav.toggleClass(activeNav).velocity({
-        transform: ['translateY(0)', 'translateY(-100%)'],
+        // transform: ['translateY(0)', 'translateY(-100%)'],
+        top: '0',
       });
       return;
     }
