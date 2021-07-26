@@ -1,6 +1,7 @@
 import './allDeviceNav.css';
 import 'velocity-animate';
 import Headroom from 'headroom.js';
+import iosInnerHeight from 'ios-inner-height';
 
 // Selectors
 const $window = $(window);
@@ -209,8 +210,11 @@ const menuCloseHandler = () => {
 //     lastScroll = currentScroll;
 //   });
 // };
+// const setLinksHeight = () => {
+//   $linksList.height(`${$window.innerHeight()}px`);
+// };
 const setLinksHeight = () => {
-  $linksList.height(`${$window.innerHeight()}px`);
+  $linksList.height(`${$iosInnerHeight()}px`);
 };
 $window.on('resize', setLinksHeight);
 
