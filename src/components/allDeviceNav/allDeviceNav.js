@@ -179,6 +179,11 @@ const stickyHideReveal = () => {
   $window.scroll(function () {
     let currentScroll = $window.scrollTop();
     if (currentScroll < 0) {
+      $mainNav.toggleClass(activeNav).velocity({
+        // transform: ['translateY(0)', 'translateY(-100%)'],
+        top: '0',
+        position: 'fixed',
+      });
       return;
     }
     if (currentScroll === 0 && !$mainNav.hasClass(activeNav)) {
