@@ -209,10 +209,15 @@ const menuCloseHandler = () => {
 //     lastScroll = currentScroll;
 //   });
 // };
+const setLinksHeight = () => {
+  $linksList.height(`${$window.innerHeight() - 104}px`);
+};
+$window.on('resize', setLinksHeight);
 
 const stickyHideReveal = () => {
   let headroom = new Headroom(mainNav);
   headroom.init();
+  setLinksHeight();
 };
 
 const allDeviceNav = () => {

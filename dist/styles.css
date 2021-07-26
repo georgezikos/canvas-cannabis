@@ -16,12 +16,6 @@
 .active-nav {
   overflow: hidden;
   /* position: fixed; may not be necessary for what I'm trying to prevent – does nothing really */
-  /*
-  top: 0%;
-  left: 0%;
-  right: 0%;
-  bottom: 0%;
-  */
   width: 100%;
 }
 
