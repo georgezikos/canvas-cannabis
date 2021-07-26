@@ -38,24 +38,11 @@ const activeSubMenu = 'main-nav__sub-menu--active';
 // Other
 const windowNavClose = 991; // If the mobile menu is left open, this width will trigger a menu close
 
-// toggle mobile nav
-const toggleMobileNav = () => {
-  $linksList.toggleClass(activeMobileNav);
-  $document.height(`${$window.innerHeight()}px`);
-  $linksList.height(`${$window.innerHeight() - 104}px`);
-  $window.on('resize', function () {
-    $document.height(`${$window.innerHeight()}px`);
-  });
-
-  // When mobile menu is open, set the document height to window innerheight
-  // Set mobile menu height to 100vh - nav height
-};
-
 // Functions
 const navHandler = () => {
   $html.toggleClass(disableScroll);
   $body.toggleClass(disableScroll);
-  toggleMobileNav();
+  $linksList.toggleClass(activeMobileNav);
   // Handling dependent on UI theme
   if (!$mainNav.hasClass(mainNavDark)) {
     $mainNav.toggleClass(mainNavActiveMobile);
@@ -223,10 +210,15 @@ const menuCloseHandler = () => {
 //     lastScroll = currentScroll;
 //   });
 // };
+// const setLinksHeight = () => {
+//   $linksList.height(`${$window.innerHeight()}px`);
+// };
+// $window.on('resize', setLinksHeight);
 
 const stickyHideReveal = () => {
   let headroom = new Headroom(mainNav);
   headroom.init();
+  setLinksHeight();
 };
 
 const allDeviceNav = () => {
