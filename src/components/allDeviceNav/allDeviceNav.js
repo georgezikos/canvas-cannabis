@@ -204,9 +204,10 @@ const menuCloseHandler = () => {
 //     lastScroll = currentScroll;
 //   });
 // };
-
+const mainNav = document.querySelector('.main-nav');
 const stickyHideReveal = () => {
-  $mainNav.headroom();
+  const headroom = new Headroom(mainNav);
+  headroom.init();
 };
 
 // add scroll-padding-top: height-of-nav; to body
