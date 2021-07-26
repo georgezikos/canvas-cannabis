@@ -179,27 +179,17 @@ const stickyHideReveal = () => {
   $window.scroll(function () {
     let currentScroll = $window.scrollTop();
     if (currentScroll <= 0 && !$mainNav.hasClass(activeNav)) {
-      $mainNav.toggleClass(activeNav).velocity(
-        {
-          transform: ['translateY(0)', 'translateY(-100%)'],
-        },
-        {
-          easing: 'ease-out',
-        }
-      );
+      $mainNav.toggleClass(activeNav).velocity({
+        transform: ['translateY(0)', 'translateY(-100%)'],
+      });
       return;
     }
     if (currentScroll > lastScroll && $mainNav.hasClass(activeNav)) {
       // down
       //prettier-ignore
-      $mainNav.toggleClass(activeNav).velocity(
-        {
-          transform: ['translateY(-100%)', 'translateY(0)'],
-        },
-        {
-          easing: 'ease-out',
-        }
-      );
+      $mainNav.toggleClass(activeNav).velocity({
+        transform: ['translateY(-100%)', 'translateY(0)'],
+      });
       return;
     }
 
