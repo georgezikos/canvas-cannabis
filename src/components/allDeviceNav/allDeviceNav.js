@@ -190,7 +190,6 @@ const stickyHideReveal = () => {
           transform: ['translateY(-104px)', 'translateY(0)'],
         },
         {
-          duration: 300,
           easing: 'ease-out',
         }
       );
