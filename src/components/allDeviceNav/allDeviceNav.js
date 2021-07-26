@@ -171,19 +171,29 @@ const menuCloseHandler = () => {
   });
 };
 
+const activeNav = 'main-nav--active';
+const inactiveNav = 'main-nav--inactive';
+
 // Sticky Hide and Reveal Handler
 const stickyHideReveal = () => {
   let position = $window.scrollTop();
   $window.scroll(function () {
     let scroll = $window.scrollTop();
-    if (scroll > position) {
+    if (scroll > position && !$mainNav.hasClass(inactiveNav)) {
       console.log('scroll down');
       // scroll down
       $mainNav.velocity({
         transform: ['translateY(-100%)', 'translateY(0)'],
       });
+      $mainNav.addClass(inactiveNav);
     } else {
       console.log('scrollUp');
+      // scroll up
+      $mainNav.removeClass(inactiveNav);
+      $mainNav.addClass(activeNav);
+      $mainNav.velocity({
+        transform: ['translateY(0)', 'translateY(-100%)'],
+      });
     }
     position = scroll;
   });
