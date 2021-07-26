@@ -214,7 +214,7 @@ const allDeviceNav = () => {
   // Menu close functionalities
   menuCloseHandler();
   // Show & Hide Menu on Scroll
-  // stickyHideReveal();
+  stickyHideReveal();
 };
 
 export default allDeviceNav;
