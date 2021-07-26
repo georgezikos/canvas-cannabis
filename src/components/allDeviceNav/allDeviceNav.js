@@ -31,6 +31,10 @@ const mainNavDark = 'main-nav--dark';
 const activeDropdownIcon = 'main-nav__dropdown-icon--active';
 const activeSubMenu = 'main-nav__sub-menu--active';
 
+const scrollUp = 'scroll-up';
+const scrollDown = 'scroll-down';
+let lastScroll = 0;
+
 // Other
 const windowNavClose = 991; // If the mobile menu is left open, this width will trigger a menu close
 
@@ -69,7 +73,7 @@ const subMenuHandler = () => {
     // prettier-ignore
     const $openSubMenus = $(this).parent().siblings($linkListContainer); // Other open submenus
     if ($openSubMenus.find($dropdownSubMenu).hasClass(activeSubMenu)) {
-      // Collapse other submenus that are open
+      // Collapse other submenus that are open -- rethink if this is too rigid in terms of UX
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
       // prettier-ignore
       $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon).velocity({
@@ -171,6 +175,36 @@ const menuCloseHandler = () => {
   });
 };
 
+// Sticky Hide and Reveal Handler
+const stickyHideReveal = () => {
+  $window.on('scroll', function () {
+    const currentScroll = $window.scrollTop();
+    if (currentScroll <= 0) {
+      $body.addClass(scrollUp);
+      $mainNav.velocity({
+        transform: ['translate3d(0, 0, 0)', 'translate3d(0, -100%, 0)'],
+      });
+      return;
+    }
+    if (currentScroll > lastScroll && !$body.hasClass(scrollDown)) {
+      // down
+      $body.removeClass(scrollUp);
+      $body.addClass(scrollDown);
+      $mainNav.velocity({
+        transform: ['translate3d(0, -100%, 0)', 'translate3d(0, 0, 0)'],
+      });
+    } else if (currentScroll < lastScroll && $body.hasClass(scrollDown)) {
+      // up
+      $body.removeClass(scrollDown);
+      $body.addClass(scrollUp);
+      $mainNav.velocity({
+        transform: ['translate3d(0, 0, 0)', 'translate3d(0, -100%, 0)'],
+      });
+    }
+    lastScroll = currentScroll;
+  });
+};
+
 const allDeviceNav = () => {
   // Hamburger click handler
   $hamburger.on('click', () => {
@@ -181,6 +215,7 @@ const allDeviceNav = () => {
   // Menu close functionalities
   menuCloseHandler();
   // Show & Hide Menu on Scroll
+  stickyHideReveal();
 };
 
 export default allDeviceNav;
