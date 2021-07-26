@@ -187,7 +187,7 @@ const stickyHideReveal = () => {
       //prettier-ignore
       $mainNav.toggleClass(activeNav).velocity(
         {
-          transform: ['translateY(-104px)', 'translateY(0)'],
+          transform: ['translateY(-100%)', 'translateY(0)'],
         },
         {
           easing: 'ease-out',
