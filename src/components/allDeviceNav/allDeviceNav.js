@@ -212,7 +212,11 @@ const menuCloseHandler = () => {
 // };
 
 const setLinksHeight = () => {
-  $linksList.height(`${$window.innerHeight() - 80}px`);
+  if ($window.width() < 479) {
+    $linksList.height(`${$window.innerHeight() - 80}px`);
+  } else {
+    $linksList.height(`${$window.innerHeight() - 104}px`);
+  }
 };
 $window.on('resize', setLinksHeight);
 
