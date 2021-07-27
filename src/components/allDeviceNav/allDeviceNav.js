@@ -211,17 +211,15 @@ const menuCloseHandler = () => {
 //   });
 // };
 
-// const setLinksHeight = () => {
-//   $linksList.height(`${$window.innerHeight()}px`);
-// };
-// $window.on('resize', setLinksHeight);
-
-// When hamburger is clicked make .main-nav__container position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+const setLinksHeight = () => {
+  $linksList.height(`${$window.innerHeight()}px`);
+};
+$window.on('resize', setLinksHeight);
 
 const stickyHideReveal = () => {
   let headroom = new Headroom(mainNav);
   headroom.init();
-  // setLinksHeight();
+  setLinksHeight();
 };
 
 const allDeviceNav = () => {
