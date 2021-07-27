@@ -52,7 +52,7 @@
 }
 
 /* Nav Show and Hide */
-.headroom {
+/* .headroom {
   will-change: transform;
   transition: transform 200ms linear;
 }
@@ -62,4 +62,4 @@
 }
 .headroom--pinned {
   transform: translateY(0%);
-}
+} */

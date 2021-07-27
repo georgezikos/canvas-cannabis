@@ -1,7 +1,6 @@
 import './allDeviceNav.css';
 import 'velocity-animate';
-import Headroom from 'headroom.js';
-import iosInnerHeight from 'ios-inner-height';
+// import Headroom from 'headroom.js';
 
 // Selectors
 const $window = $(window);
@@ -211,16 +210,16 @@ const menuCloseHandler = () => {
 //   });
 // };
 
-const setLinksHeight = () => {
-  $linksList.height(`${$window.innerHeight()}px`);
-};
-$window.on('resize', setLinksHeight);
+// const setLinksHeight = () => {
+//   $linksList.height(`${$window.innerHeight()}px`);
+// };
+// $window.on('resize', setLinksHeight);
 
-const stickyHideReveal = () => {
-  let headroom = new Headroom(mainNav);
-  headroom.init();
-  setLinksHeight();
-};
+// const stickyHideReveal = () => {
+//   let headroom = new Headroom(mainNav);
+//   headroom.init();
+//   setLinksHeight();
+// };
 
 const allDeviceNav = () => {
   // Hamburger click handler
@@ -232,7 +231,7 @@ const allDeviceNav = () => {
   // Menu close functionalities
   menuCloseHandler();
   // Show & Hide Menu on Scroll
-  stickyHideReveal();
+  // stickyHideReveal();
 };
 
 export default allDeviceNav;
