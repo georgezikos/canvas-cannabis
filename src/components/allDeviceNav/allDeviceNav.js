@@ -226,6 +226,7 @@ const menuCloseHandler = () => {
         return;
       }
       lastScroll = currentScroll;
+      console.log(lastScroll);
     });
   };
   scrollAwayClose();
