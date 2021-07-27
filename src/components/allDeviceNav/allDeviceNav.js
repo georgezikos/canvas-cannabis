@@ -225,7 +225,7 @@ const menuCloseHandler = () => {
       ) {
         return;
       } else if (
-        currentScroll < lastScroll &&
+        currentScroll > lastScroll &&
         currentScroll <= 0 &&
         $dropdownSubMenu.hasClass(activeSubMenu)
       ) {
