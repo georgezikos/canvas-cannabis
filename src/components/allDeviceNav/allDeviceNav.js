@@ -218,7 +218,7 @@ const menuCloseHandler = () => {
 const stickyHideReveal = () => {
   let headroom = new Headroom(mainNav);
   headroom.init();
-  setLinksHeight();
+  // setLinksHeight();
 };
 
 const allDeviceNav = () => {
