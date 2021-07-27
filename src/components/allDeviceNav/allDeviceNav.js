@@ -198,6 +198,18 @@ const menuCloseHandler = () => {
         return;
       }
       if (currentScroll === 0 && $dropdownSubMenu.hasClass(activeSubMenu)) {
+        $dropdownSubMenu.removeClass(activeSubMenu);
+        $('.main-nav__dropdown-icon--active')
+          .removeClass(activeDropdownIcon)
+          .velocity(
+            {
+              transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+            },
+            {
+              duration: 200,
+              easing: 'ease-out',
+            }
+          );
         return;
       }
       if (
@@ -223,24 +235,6 @@ const menuCloseHandler = () => {
         currentScroll < lastScroll &&
         $dropdownSubMenu.hasClass(activeSubMenu)
       ) {
-        return;
-      } else if (
-        currentScroll > lastScroll &&
-        currentScroll <= 0 &&
-        $dropdownSubMenu.hasClass(activeSubMenu)
-      ) {
-        $dropdownSubMenu.removeClass(activeSubMenu);
-        $('.main-nav__dropdown-icon--active')
-          .removeClass(activeDropdownIcon)
-          .velocity(
-            {
-              transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-            },
-            {
-              duration: 200,
-              easing: 'ease-out',
-            }
-          );
         return;
       }
       lastScroll = currentScroll;
