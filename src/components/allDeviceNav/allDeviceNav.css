@@ -21,15 +21,15 @@
 }
 
 .main-nav--active-mobile {
-  background-color: #f2efed;
+  background-color: #f2efed !important;
 }
 
 .main-nav__logo--active-mobile {
-  filter: invert();
+  filter: invert() !important;
 }
 
 .hamburger--active-mobile {
-  background-color: black;
+  background-color: black !important;
 }
 
 /* Applied via Velocity instead */
