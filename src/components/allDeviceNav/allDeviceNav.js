@@ -220,7 +220,7 @@ const menuCloseHandler = () => {
           );
         return;
       } else if (
-        currrentScroll &&
+        currentScroll &&
         currentScroll < lastScroll &&
         $dropdownSubMenu.hasClass(activeSubMenu)
       ) {
