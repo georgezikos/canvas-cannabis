@@ -35,7 +35,7 @@
 }
 
 .main-nav--active-mobile {
-  background-color: #f2efed !important;
+  background-color: #f2efed !important; /* Fix all of these statements */
 }
 
 .main-nav__logo--active-mobile {

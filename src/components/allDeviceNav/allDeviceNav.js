@@ -172,6 +172,23 @@ const menuCloseHandler = () => {
       return;
     }
   });
+  // Scroll handler
+  $window.on('scroll', function () {
+    if ($dropdownSubMenu.hasClass(activeSubMenu)) {
+      $dropdownSubMenu.removeClass(activeSubMenu);
+      $('.main-nav__dropdown-icon--active')
+        .removeClass(activeDropdownIcon)
+        .velocity(
+          {
+            transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+          },
+          {
+            duration: 200,
+            easing: 'ease-out',
+          }
+        );
+    }
+  });
 };
 
 // Sticky Hide and Reveal Handler
