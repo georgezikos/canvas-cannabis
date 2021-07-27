@@ -201,8 +201,8 @@ const menuCloseHandler = () => {
         return;
       }
       if (
-        currentScroll > lastScroll ||
-        (currentScroll > 0 && $dropdownSubMenu.hasClass(activeSubMenu))
+        currentScroll > lastScroll &&
+        $dropdownSubMenu.hasClass(activeSubMenu)
       ) {
         // down
         //prettier-ignore
