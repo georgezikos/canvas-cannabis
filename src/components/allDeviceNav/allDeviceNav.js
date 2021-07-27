@@ -173,59 +173,63 @@ const menuCloseHandler = () => {
     }
   });
   // Scroll handler
-  $window.on('scroll', function () {
-    if ($dropdownSubMenu.hasClass(activeSubMenu)) {
-      $dropdownSubMenu.removeClass(activeSubMenu);
-      $('.main-nav__dropdown-icon--active')
-        .removeClass(activeDropdownIcon)
-        .velocity(
-          {
-            transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-          },
-          {
-            duration: 200,
-            easing: 'ease-out',
-          }
-        );
-    }
-  });
+  // $window.on('scroll', function () {
+  //   if ($dropdownSubMenu.hasClass(activeSubMenu)) {
+  //     $dropdownSubMenu.removeClass(activeSubMenu);
+  //     $('.main-nav__dropdown-icon--active')
+  //       .removeClass(activeDropdownIcon)
+  //       .velocity(
+  //         {
+  //           transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+  //         },
+  //         {
+  //           duration: 200,
+  //           easing: 'ease-out',
+  //         }
+  //       );
+  //   }
+  // });
+  // Scroll away handler
+  const scrollAwayClose = () => {
+    let lastScroll = 0;
+    $window.scroll(function () {
+      let currentScroll = $window.scrollTop();
+      if (currentScroll < 0) {
+        return;
+      }
+      if (currentScroll === 0 && $dropdownSubMenu.hasClass(activeSubMenu)) {
+        return;
+      }
+      if (
+        currentScroll > lastScroll &&
+        $dropdownSubMenu.hasClass(activeSubMenu)
+      ) {
+        // down
+        //prettier-ignore
+        $dropdownSubMenu.removeClass(activeSubMenu);
+        $('.main-nav__dropdown-icon--active')
+          .removeClass(activeDropdownIcon)
+          .velocity(
+            {
+              transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+            },
+            {
+              duration: 200,
+              easing: 'ease-out',
+            }
+          );
+        return;
+      } else if (
+        currentScroll < lastScroll &&
+        $dropdownSubMenu.hasClass(activeSubMenu)
+      ) {
+        return;
+      }
+      lastScroll = currentScroll;
+    });
+  };
+  scrollAwayClose();
 };
-
-// Sticky Hide and Reveal Handler
-// const stickyHideReveal = () => {
-//   const activeNav = 'main-nav--active';
-//   // const inactiveNav = 'main-nav--inactive';
-//   let lastScroll = 0;
-//   $window.scroll(function () {
-//     let currentScroll = $window.scrollTop();
-//     if (currentScroll < 0) {
-//       return;
-//     }
-//     if (currentScroll === 0 && !$mainNav.hasClass(activeNav)) {
-//       $mainNav.toggleClass(activeNav).velocity({
-//         // transform: ['translateY(0)', 'translateY(-100%)'],
-//         top: '0',
-//       });
-//       return;
-//     }
-//     if (currentScroll > lastScroll && $mainNav.hasClass(activeNav)) {
-//       // down
-//       //prettier-ignore
-//       $mainNav.toggleClass(activeNav).velocity({
-//         // transform: ['translateY(-100%)', 'translateY(0)'],
-//         top: '-100%',
-//       });
-//       return;
-//     } else if (currentScroll < lastScroll && !$mainNav.hasClass(activeNav)) {
-//       $mainNav.toggleClass(activeNav).velocity({
-//         // transform: ['translateY(0)', 'translateY(-100%)'],
-//         top: '0',
-//       });
-//       return;
-//     }
-//     lastScroll = currentScroll;
-//   });
-// };
 
 // const setLinksHeight = () => {
 //   $linksList.height(`${$window.innerHeight()}px`);
