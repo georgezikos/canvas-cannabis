@@ -4,7 +4,6 @@ import './ageGate.css';
 // Selectors
 const $body = $('body');
 const $html = $('html');
-const $window = $(window);
 const $ageGate = $('.age-gate');
 const $ageGateForm = $('.age-gate__form');
 const $verifyAge = $('#verify-age');
@@ -23,9 +22,10 @@ const ageGate = () => {
   if (
     Cookies.get(rememberMeCookie) ||
     Cookies.get(defaultCookie) ||
-    $window.location.href.indexOf('legal') > -1
+    window.location.href.indexOf('legal') > -1
   ) {
     // Does nothing if they have an active cookies
+    console.log(window.location.href);
     return;
   } else {
     // Shows the age gate otherwise
