@@ -42,13 +42,17 @@ const navHandler = () => {
   $html.toggleClass(disableScroll);
   $body.toggleClass(disableScroll);
   $linksList.toggleClass(activeMobileNav);
+  $mainNav.toggleClass(mainNavActiveMobile);
+  $navLogo.toggleClass(navLogoActiveMobile);
+  $hamburgerBottom.toggleClass(hamburgerBunsActiveMobile);
+  $hamburgerTop.toggleClass(hamburgerBunsActiveMobile);
   // Handling dependent on UI theme
-  if (!$mainNav.hasClass(mainNavDark)) {
-    $mainNav.toggleClass(mainNavActiveMobile);
-    $navLogo.toggleClass(navLogoActiveMobile);
-    $hamburgerBottom.toggleClass(hamburgerBunsActiveMobile);
-    $hamburgerTop.toggleClass(hamburgerBunsActiveMobile);
-  }
+  // if (!$mainNav.hasClass(mainNavDark)) {
+  //   $mainNav.toggleClass(mainNavActiveMobile);
+  //   $navLogo.toggleClass(navLogoActiveMobile);
+  //   $hamburgerBottom.toggleClass(hamburgerBunsActiveMobile);
+  //   $hamburgerTop.toggleClass(hamburgerBunsActiveMobile);
+  // }
   // Collapsing submenus
   if ($dropdownSubMenu.hasClass(activeSubMenu)) {
     $dropdownSubMenu.removeClass(activeSubMenu);
