@@ -13,14 +13,14 @@ const socialShare = () => {
   let tweet = encodeURIComponent(
     $("meta[property='og:description']").attr('content')
   );
-  $('blog-post__share-link.blog-post__share-link--facebook').on(
+  $('.blog-post__share-link.blog-post__share-link--facebook').on(
     'click',
     function () {
       url = 'https://www.facebook.com/sharer.php?u=' + pageUrl;
       socialWindow(url);
     }
   );
-  $('blog-post__share-link.blog-post__share-link--instagram').on(
+  $('.blog-post__share-link.blog-post__share-link--instagram').on(
     'click',
     function () {
       url =
@@ -28,7 +28,7 @@ const socialShare = () => {
       socialWindow(url);
     }
   );
-  $('blog-post__share-link.blog-post__share-link--facebook').on(
+  $('.blog-post__share-link.blog-post__share-link--facebook').on(
     'click',
     function () {
       url = 'mailto:?Subject=' + tweet + '&amp;Body=' + pageurl;
