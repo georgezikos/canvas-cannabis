@@ -82,9 +82,6 @@ const subMenuHandler = () => {
         easing: 'ease-out',
       });
     }
-    $mainNav.velocity({
-      backgroundColor: 'red',
-    });
     $(this).next().toggleClass(activeSubMenu);
     // prettier-ignore
     if ($(this).find($dropdownIcon).hasClass(activeDropdownIcon)) {
