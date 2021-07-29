@@ -83,7 +83,7 @@ const subMenuHandler = () => {
       });
     }
     $mainNav.velocity({
-      backgroundColor: red,
+      backgroundColor: 'red',
     });
     $(this).next().toggleClass(activeSubMenu);
     // prettier-ignore
