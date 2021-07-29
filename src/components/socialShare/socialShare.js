@@ -1,15 +1,14 @@
-function socialWindow(url) {
-  let left = (screen.width - 570) / 2;
-  let top = (screen.height - 570) / 2;
-  let params =
-    'menubar=no,toolbar=no,status=no,width=570,height=570,top=' +
-    top +
-    ',left=' +
-    left;
-  window.open(url, 'NewWindow', params);
-}
-
 const socialShare = () => {
+  const socialWindow = (url) => {
+    let left = (screen.width - 570) / 2;
+    let top = (screen.height - 570) / 2;
+    let params =
+      'menubar=no,toolbar=no,status=no,width=570,height=570,top=' +
+      top +
+      ',left=' +
+      left;
+    window.open(url, 'NewWindow', params);
+  };
   let pageUrl = encodeURIComponent(document.URL);
   let tweet = encodeURIComponent(
     $("meta[property='og:description']").attr('content')
