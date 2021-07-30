@@ -1,4 +1,4 @@
-import './frequentlyAskedQuestions.css';
+import './faq.css';
 import 'velocity-animate';
 
 // Selectors
@@ -10,7 +10,7 @@ const activeToggleButton = 'customer-support__faq-question-container--active';
 const activeAnswer = 'customer-support__faq-answer-container--active';
 const activeToggleIcon = 'customer-support__faq-toggle-icon--active';
 
-const questionAnswerToggle = () => {
+const faq = () => {
   $toggleButton.on('click', function (e) {
     e.stopPropagation();
     const $this = $(this);
@@ -35,4 +35,4 @@ const questionAnswerToggle = () => {
   });
 };
 
-export default questionAnswerToggle;
+export default faq;

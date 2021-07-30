@@ -1,13 +1,13 @@
 import ageGate from './components/ageGate/ageGate';
 import nav from './components/nav/nav';
 import dailySpecials from './components/dailySpecials/dailySpecials';
-import questionAnswerToggle from './components/frequentlyAskedQuestions/frequentlyAskedQuestions';
+import faq from './components/faq/faq';
 
 const init = () => {
   ageGate();
   nav();
   dailySpecials();
-  questionAnswerToggle();
+  faq();
 };
 
 $(function () {
