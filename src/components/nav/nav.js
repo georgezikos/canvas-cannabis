@@ -1,4 +1,4 @@
-import './allDeviceNav.css';
+import './nav.css';
 import 'velocity-animate';
 // import Headroom from 'headroom.js';
 
@@ -255,7 +255,7 @@ const menuCloseHandler = () => {
 //   setLinksHeight();
 // };
 
-const allDeviceNav = () => {
+const nav = () => {
   // Hamburger click handler
   $hamburger.on('click', () => {
     navHandler();
@@ -268,4 +268,4 @@ const allDeviceNav = () => {
   // stickyHideReveal();
 };
 
-export default allDeviceNav;
+export default nav;

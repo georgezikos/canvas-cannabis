@@ -1,15 +1,13 @@
-import dailySpecials from './components/dailySpecials/dailySpecials';
 import ageGate from './components/ageGate/ageGate';
-import allDeviceNav from './components/allDeviceNav/allDeviceNav';
+import nav from './components/nav/nav';
+import dailySpecials from './components/dailySpecials/dailySpecials';
 import questionAnswerToggle from './components/frequentlyAskedQuestions/frequentlyAskedQuestions';
-// import socialShare from './components/socialShare/socialShare';
 
 const init = () => {
-  dailySpecials();
   ageGate();
-  allDeviceNav();
+  nav();
+  dailySpecials();
   questionAnswerToggle();
-  // socialShare();
 };
 
 $(function () {
