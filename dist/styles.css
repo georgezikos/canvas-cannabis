@@ -78,7 +78,7 @@
   transform: translateY(0%);
 } */
 
-.customer-support__faq-answer-container--active {
+.faq__answer-container--active {
   display: block;
 }
 

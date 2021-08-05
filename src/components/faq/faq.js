@@ -2,13 +2,13 @@ import './faq.css';
 import 'velocity-animate';
 
 // Selectors
-const $toggleButton = $('.customer-support__faq-question-container'); // container with question and toggle icon - triggers the whole thing
-const $toggleIcon = $('.customer-support__faq-toggle-icon'); // toggle icon needs to rotate
+const $toggleButton = $('.faq__question-container'); // container with question and toggle icon - triggers the whole thing
+const $toggleIcon = $('.faq__toggle-icon'); // toggle icon needs to rotate
 
 // Classes
-const activeToggleButton = 'customer-support__faq-question-container--active';
-const activeAnswer = 'customer-support__faq-answer-container--active';
-const activeToggleIcon = 'customer-support__faq-toggle-icon--active';
+const activeToggleButton = 'faq__question-container--active';
+const activeAnswer = 'faq__answer-container--active';
+const activeToggleIcon = 'faq__toggle-icon--active';
 
 const faq = () => {
   $toggleButton.on('click', function (e) {
