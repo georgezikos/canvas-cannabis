@@ -17,7 +17,7 @@ const $hamburgerTop = $('div.hamburger__top');
 const mainNav = document.querySelector('nav.main-nav');
 
 // Parent
-const $dropdownLink = $('.main-nav__links-item--container');
+const $dropdownLink = $('.links-item__container');
 const $linkListContainer = $('.main-nav__links-item--dropdown');
 
 // Children
