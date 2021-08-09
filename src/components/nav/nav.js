@@ -123,6 +123,7 @@ const subMenuHandler = () => {
     if ($(this).find($dropdownIcon).hasClass(activeDropdownIcon)) {
       $(this).find($dropdownIcon).removeClass(activeDropdownIcon).velocity({
         transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+        color: [canvasWhite, 'black'],
       }, {
         duration: 200,
         easing: 'ease-out',
