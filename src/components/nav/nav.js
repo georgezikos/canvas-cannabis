@@ -91,43 +91,44 @@ const subMenuHandler = () => {
     $(this).next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the link
 
     const canvasWhite = '#f2efed';
-    $('.main-nav__outer').velocity(
-      {
-        backgroundColor: canvasWhite,
-      },
-      {
-        duration: 200,
-        easing: 'ease-out',
-      }
-    );
-    $('.main-nav__logo-bounding').velocity(
-      {
-        color: 'black',
-      },
-      {
-        duration: 200,
-        easing: 'ease-out',
-      }
-    );
-    $('.main-nav__link').velocity(
-      {
-        color: 'black',
-      },
-      {
-        duration: 200,
-        easing: 'ease-out',
-      }
-    );
 
-    // Deals changes that happen when you click the same link to then close the sub-menu
+    // Deals with changes that happen when you click the same link to then close the sub-menu
     // prettier-ignore
     if ($(this).find($dropdownIcon).hasClass(activeDropdownIcon)) {
       $(this).find($dropdownIcon).removeClass(activeDropdownIcon).velocity({
         transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+        color: canvasWhite,
       }, {
         duration: 200,
         easing: 'ease-out',
       });
+      $('.main-nav__outer').velocity(
+        {
+          backgroundColor: 'transparent',
+        },
+        {
+          duration: 200,
+          easing: 'ease-out',
+        }
+      );
+      $('.main-nav__logo-bounding').velocity(
+        {
+          color: canvasWhite,
+        },
+        {
+          duration: 200,
+          easing: 'ease-out',
+        }
+      );
+      $('.main-nav__link').velocity(
+        {
+          color: canvasWhite,
+        },
+        {
+          duration: 200,
+          easing: 'ease-out',
+        }
+      );
     } else {
       $(this).find($dropdownIcon).addClass(activeDropdownIcon).velocity({
         transform: ['rotateZ(-180deg)', 'rotateZ(0deg)'],
@@ -136,6 +137,33 @@ const subMenuHandler = () => {
         duration: 200,
         easing: 'ease-out',
       });
+      $('.main-nav__outer').velocity(
+        {
+          backgroundColor: canvasWhite,
+        },
+        {
+          duration: 200,
+          easing: 'ease-out',
+        }
+      );
+      $('.main-nav__logo-bounding').velocity(
+        {
+          color: 'black',
+        },
+        {
+          duration: 200,
+          easing: 'ease-out',
+        }
+      );
+      $('.main-nav__link').velocity(
+        {
+          color: 'black',
+        },
+        {
+          duration: 200,
+          easing: 'ease-out',
+        }
+      );
     }
   });
 };
