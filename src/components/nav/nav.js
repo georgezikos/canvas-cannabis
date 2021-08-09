@@ -48,10 +48,7 @@ const navHandler = () => {
 
   // Handling dependent on UI theme
   if ($mainNav.hasClass(mainNavDark)) {
-    // $mainNav.toggleClass(mainNavActiveMobile);
-    $mainNav.velocity({
-      backgroundColor: 'white',
-    });
+    $mainNav.toggleClass(mainNavActiveMobile);
     $navLogo.toggleClass(navLogoActiveMobile);
     $hamburgerBottom.toggleClass(hamburgerBunsActiveMobile);
     $hamburgerTop.toggleClass(hamburgerBunsActiveMobile);
@@ -76,10 +73,11 @@ const navHandler = () => {
 
 const subMenuHandler = () => {
   $dropdownChildren.on('click', function () {
+    // Checking for any open sub-menus
     // prettier-ignore
-    const $openSubMenus = $(this).parent().siblings($dropdownParent); // Other open submenus
+    const $openSubMenus = $(this).parent().siblings($dropdownParent); // Siblings that also have sub-menu functionality
     if ($openSubMenus.find($dropdownSubMenu).hasClass(activeSubMenu)) {
-      // Collapse other submenus that are open -- rethink if this is too rigid in terms of UX
+      // If there are other open sub-menus, collapse them
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
       // prettier-ignore
       $openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon).removeClass(activeDropdownIcon).velocity({
@@ -89,7 +87,24 @@ const subMenuHandler = () => {
         easing: 'ease-out',
       });
     }
-    $(this).next().toggleClass(activeSubMenu);
+
+    $(this).next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the link
+
+    const canvasWhite = '#f2efed';
+    $mainNav.velocity({
+      backgroundColor: canvasWhite,
+    });
+    $('.main-nav__logo-bounding').velocity({
+      color: 'black',
+    });
+    $('.main-nav__links-item').velocity({
+      color: 'black',
+    });
+    $('.main-nav__dropdown-icon-bounding').velocity({
+      color: 'black',
+    });
+
+    // Deals changes that happen when you click the same link to then close the sub-menu
     // prettier-ignore
     if ($(this).find($dropdownIcon).hasClass(activeDropdownIcon)) {
       $(this).find($dropdownIcon).removeClass(activeDropdownIcon).velocity({
