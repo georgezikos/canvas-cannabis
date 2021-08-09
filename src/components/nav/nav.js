@@ -91,18 +91,42 @@ const subMenuHandler = () => {
     $(this).next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the link
 
     const canvasWhite = '#f2efed';
-    $('.main-nav__outer').velocity({
-      backgroundColor: canvasWhite,
-    });
-    $('.main-nav__logo-bounding').velocity({
-      color: 'black',
-    });
-    $('.main-nav__link').velocity({
-      color: 'black',
-    });
-    $('.main-nav__dropdown-icon-bounding').velocity({
-      color: 'black',
-    });
+    $('.main-nav__outer').velocity(
+      {
+        backgroundColor: canvasWhite,
+      },
+      {
+        duration: 200,
+        easing: 'ease-out',
+      }
+    );
+    $('.main-nav__logo-bounding').velocity(
+      {
+        color: 'black',
+      },
+      {
+        duration: 200,
+        easing: 'ease-out',
+      }
+    );
+    $('.main-nav__link').velocity(
+      {
+        color: 'black',
+      },
+      {
+        duration: 200,
+        easing: 'ease-out',
+      }
+    );
+    $('.main-nav__dropdown-icon-bounding').velocity(
+      {
+        color: 'black',
+      },
+      {
+        duration: 200,
+        easing: 'ease-out',
+      }
+    );
 
     // Deals changes that happen when you click the same link to then close the sub-menu
     // prettier-ignore
