@@ -90,15 +90,6 @@ const subMenuHandler = () => {
     const canvasWhite = '#f2efed';
 
     $(this).next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the link
-    $(this).find($dropdownIcon).velocity(
-      {
-        color: 'black',
-      },
-      {
-        duration: 200,
-        easing: 'ease-out',
-      }
-    );
 
     // Deals with changes that happen when you click the same link to then close the sub-menu
     // prettier-ignore
@@ -141,6 +132,7 @@ const subMenuHandler = () => {
     } else {
       $(this).find($dropdownIcon).addClass(activeDropdownIcon).velocity({
         transform: ['rotateZ(-180deg)', 'rotateZ(0deg)'],
+        color: 'black',
       }, {
         duration: 200,
         easing: 'ease-out',
