@@ -1,5 +1,5 @@
 import './nav.css';
-import 'velocity-animate';
+// import 'velocity-animate';
 // import Headroom from 'headroom.js';
 
 // Selectors
@@ -57,17 +57,9 @@ const navHandler = () => {
   if ($dropdownSubMenu.hasClass(activeSubMenu)) {
     $dropdownSubMenu.removeClass(activeSubMenu);
     // All of these implementations with this direct selector work, but not if the selector is cached – get to the bottom of why this is the case
-    $('.main-nav__dropdown-icon-bounding--active')
-      .removeClass(activeDropdownIcon)
-      .velocity(
-        {
-          transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-        },
-        {
-          duration: 200,
-          easing: 'ease-out',
-        }
-      );
+    $('.main-nav__dropdown-icon-bounding--active').removeClass(
+      activeDropdownIcon
+    );
   }
 };
 
@@ -82,119 +74,15 @@ const subMenuHandler = () => {
       // If there are other open sub-menus, collapse them
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
       // prettier-ignore
-      $openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon).removeClass(activeDropdownIcon).velocity({
-        transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-        color: canvasWhite,
-      }, {
-        duration: 200,
-        easing: 'ease-out',
-      });
+      $openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon).removeClass(activeDropdownIcon);
     }
-
-    // $(this).next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the link
-    if ($(this).next().hasClass(activeSubMenu)) {
-      return;
-    } else {
-      $(this).next().addClass(activeSubMenu); // Open the sub-menu corresponding with the link
-      $('.main-nav__outer').velocity(
-        {
-          backgroundColor: canvasWhite,
-        },
-        {
-          duration: 200,
-          easing: 'ease-out',
-        }
-      );
-      $('.main-nav__logo-bounding').velocity(
-        {
-          color: 'black',
-        },
-        {
-          duration: 200,
-          easing: 'ease-out',
-        }
-      );
-      $('.main-nav__link').velocity(
-        {
-          color: 'black',
-        },
-        {
-          duration: 200,
-          easing: 'ease-out',
-        }
-      );
-    }
+    $(this).next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the link
     // Deals with changes that happen when you click the same link to then close the sub-menu
     // prettier-ignore
     if ($(this).find($dropdownIcon).hasClass(activeDropdownIcon)) {
-      $(this).find($dropdownIcon).removeClass(activeDropdownIcon).velocity({
-        transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-      }, {
-        duration: 200,
-        easing: 'ease-out',
-      });
-      $('.main-nav__outer').velocity(
-        {
-          backgroundColor: 'transparent',
-        },
-        {
-          duration: 200,
-          easing: 'ease-out',
-        }
-      );
-      $('.main-nav__logo-bounding').velocity(
-        {
-          color: canvasWhite,
-        },
-        {
-          duration: 200,
-          easing: 'ease-out',
-        }
-      );
-      $('.main-nav__link').velocity(
-        {
-          color: canvasWhite,
-        },
-        {
-          duration: 200,
-          easing: 'ease-out',
-        }
-      );
+      $(this).find($dropdownIcon).removeClass(activeDropdownIcon);
     } else {
-      $(this).find($dropdownIcon).addClass(activeDropdownIcon).velocity({
-        transform: ['rotateZ(-180deg)', 'rotateZ(0deg)'],
-        color: 'black',
-      }, {
-        duration: 200,
-        easing: 'ease-out',
-      });
-      $('.main-nav__outer').velocity(
-        {
-          backgroundColor: canvasWhite,
-        },
-        {
-          duration: 200,
-          easing: 'ease-out',
-        }
-      );
-      $('.main-nav__logo-bounding').velocity(
-        {
-          color: 'black',
-        },
-        {
-          duration: 200,
-          easing: 'ease-out',
-        }
-      );
-      $('.main-nav__link').velocity(
-        {
-          color: 'black',
-        },
-        {
-          duration: 200,
-          easing: 'ease-out',
-        }
-      );
+      $(this).find($dropdownIcon).addClass(activeDropdownIcon);
     }
   });
 };
@@ -206,17 +94,9 @@ const menuCloseHandler = () => {
       navHandler();
     } else if ($dropdownSubMenu.hasClass(activeSubMenu) && e.keyCode === 27) {
       $dropdownSubMenu.removeClass(activeSubMenu);
-      $('.main-nav__dropdown-icon-bounding--active')
-        .removeClass(activeDropdownIcon)
-        .velocity(
-          {
-            transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-          },
-          {
-            duration: 200,
-            easing: 'ease-out',
-          }
-        );
+      $('.main-nav__dropdown-icon-bounding--active').removeClass(
+        activeDropdownIcon
+      );
     }
   });
   // Window resize handler
@@ -231,17 +111,9 @@ const menuCloseHandler = () => {
       $window.width() <= windowNavClose // and not an orientation change, currently collapses submenus on orientation change
     ) {
       $dropdownSubMenu.removeClass(activeSubMenu);
-      $('.main-nav__dropdown-icon-bounding--active')
-        .removeClass(activeDropdownIcon)
-        .velocity(
-          {
-            transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-          },
-          {
-            duration: 200,
-            easing: 'ease-out',
-          }
-        );
+      $('.main-nav__dropdown-icon-bounding--active').removeClass(
+        activeDropdownIcon
+      );
     }
   });
   // Clicking away from element
@@ -253,17 +125,9 @@ const menuCloseHandler = () => {
       !$target.closest($mainNav).length
     ) {
       $dropdownSubMenu.removeClass(activeSubMenu);
-      $('.main-nav__dropdown-icon-bounding--active')
-        .removeClass(activeDropdownIcon)
-        .velocity(
-          {
-            transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-          },
-          {
-            duration: 200,
-            easing: 'ease-out',
-          }
-        );
+      $('.main-nav__dropdown-icon-bounding--active').removeClass(
+        activeDropdownIcon
+      );
       console.log('Clicked away');
     } else {
       return;
@@ -304,17 +168,9 @@ const menuCloseHandler = () => {
         // down
         //prettier-ignore
         $dropdownSubMenu.removeClass(activeSubMenu);
-        $('.main-nav__dropdown-icon-bounding--active')
-          .removeClass(activeDropdownIcon)
-          .velocity(
-            {
-              transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-            },
-            {
-              duration: 200,
-              easing: 'ease-out',
-            }
-          );
+        $('.main-nav__dropdown-icon-bounding--active').removeClass(
+          activeDropdownIcon
+        );
         return;
       } else if (
         currentScroll < lastScroll &&
@@ -322,17 +178,9 @@ const menuCloseHandler = () => {
         currentScroll === 0
       ) {
         $dropdownSubMenu.removeClass(activeSubMenu);
-        $('.main-nav__dropdown-icon-bounding--active')
-          .removeClass(activeDropdownIcon)
-          .velocity(
-            {
-              transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-            },
-            {
-              duration: 200,
-              easing: 'ease-out',
-            }
-          );
+        $('.main-nav__dropdown-icon-bounding--active').removeClass(
+          activeDropdownIcon
+        );
         return;
       }
       lastScroll = currentScroll;
