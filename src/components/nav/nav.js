@@ -92,7 +92,7 @@ const subMenuHandler = () => {
     $(this).next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the link
     $('.main-nav__outer').velocity(
       {
-        backgroundColor: [canvasWhite, 'transparent'],
+        backgroundColor: canvasWhite,
       },
       {
         duration: 200,
