@@ -139,7 +139,7 @@ const subMenuHandler = () => {
       );
       $('.main-nav__logo-bounding').velocity(
         {
-          color: [canvasWhite, 'black'],
+          color: canvasWhite,
         },
         {
           duration: 200,
@@ -148,7 +148,7 @@ const subMenuHandler = () => {
       );
       $('.main-nav__link').velocity(
         {
-          color: [canvasWhite, 'black'],
+          color: canvasWhite,
         },
         {
           duration: 200,
