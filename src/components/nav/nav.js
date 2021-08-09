@@ -108,15 +108,15 @@ const subMenuHandler = () => {
         easing: 'ease-out',
       }
     );
-    // $('.main-nav__link').velocity(
-    //   {
-    //     color: ['black', canvasWhite],
-    //   },
-    //   {
-    //     duration: 200,
-    //     easing: 'ease-out',
-    //   }
-    // );
+    $('.main-nav__link').velocity(
+      {
+        color: ['black', canvasWhite],
+      },
+      {
+        duration: 200,
+        easing: 'ease-out',
+      }
+    );
 
     // Deals with changes that happen when you click the same link to then close the sub-menu
     // prettier-ignore
