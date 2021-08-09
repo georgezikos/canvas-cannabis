@@ -90,6 +90,33 @@ const subMenuHandler = () => {
     const canvasWhite = '#f2efed';
 
     $(this).next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the link
+    $('.main-nav__outer').velocity(
+      {
+        backgroundColor: [canvasWhite, 'transparent'],
+      },
+      {
+        duration: 200,
+        easing: 'ease-out',
+      }
+    );
+    $('.main-nav__logo-bounding').velocity(
+      {
+        color: ['black', canvasWhite],
+      },
+      {
+        duration: 200,
+        easing: 'ease-out',
+      }
+    );
+    $('.main-nav__link').velocity(
+      {
+        color: ['black', canvasWhite],
+      },
+      {
+        duration: 200,
+        easing: 'ease-out',
+      }
+    );
 
     // Deals with changes that happen when you click the same link to then close the sub-menu
     // prettier-ignore
@@ -137,35 +164,6 @@ const subMenuHandler = () => {
         duration: 200,
         easing: 'ease-out',
       });
-      /*
-      $('.main-nav__outer').velocity(
-        {
-          backgroundColor: canvasWhite,
-        },
-        {
-          duration: 200,
-          easing: 'ease-out',
-        }
-      );
-      $('.main-nav__logo-bounding').velocity(
-        {
-          color: 'black',
-        },
-        {
-          duration: 200,
-          easing: 'ease-out',
-        }
-      );
-      $('.main-nav__link').velocity(
-        {
-          color: 'black',
-        },
-        {
-          duration: 200,
-          easing: 'ease-out',
-        }
-      );
-      */
     }
   });
 };
