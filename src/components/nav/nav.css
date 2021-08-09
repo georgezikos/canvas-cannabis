@@ -28,12 +28,19 @@
   filter: invert() !important;
 }
 
+.main-nav__logo {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .hamburger--active-mobile {
   background-color: black !important;
 }
 
 /* Applied via Velocity instead */
-/* .main-nav__dropdown-icon--active {
+/* .main-nav__dropdown-icon-bounding--active {
   transform: rotateZ(-180deg);
 } */
 

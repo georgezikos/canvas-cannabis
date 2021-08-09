@@ -22,7 +22,7 @@ const $linkListContainer = $('.main-nav__links-item--dropdown');
 
 // Children
 const $dropdownSubMenu = $('.main-nav__sub-menu');
-const $dropdownIcon = $('.main-nav__dropdown-icon');
+const $dropdownIcon = $('.main-nav__dropdown-icon-bounding');
 
 // Classes
 const activeMobileNav = 'main-nav__links-list--active';
@@ -31,7 +31,7 @@ const mainNavActiveMobile = 'main-nav--active-mobile';
 const navLogoActiveMobile = 'main-nav__logo--active-mobile';
 const hamburgerBunsActiveMobile = 'hamburger--active-mobile';
 const mainNavDark = 'main-nav--dark';
-const activeDropdownIcon = 'main-nav__dropdown-icon--active';
+const activeDropdownIcon = 'main-nav__dropdown-icon-bounding--active';
 const activeSubMenu = 'main-nav__sub-menu--active';
 
 // Other
@@ -53,7 +53,7 @@ const navHandler = () => {
   if ($dropdownSubMenu.hasClass(activeSubMenu)) {
     $dropdownSubMenu.removeClass(activeSubMenu);
     // All of these implementations with this direct selector work, but not if the selector is cached – get to the bottom of why this is the case
-    $('.main-nav__dropdown-icon--active')
+    $('.main-nav__dropdown-icon-bounding--active')
       .removeClass(activeDropdownIcon)
       .velocity(
         {
@@ -109,7 +109,7 @@ const menuCloseHandler = () => {
       navHandler();
     } else if ($dropdownSubMenu.hasClass(activeSubMenu) && e.keyCode === 27) {
       $dropdownSubMenu.removeClass(activeSubMenu);
-      $('.main-nav__dropdown-icon--active')
+      $('.main-nav__dropdown-icon-bounding--active')
         .removeClass(activeDropdownIcon)
         .velocity(
           {
@@ -134,7 +134,7 @@ const menuCloseHandler = () => {
       $window.width() <= windowNavClose // and not an orientation change, currently collapses submenus on orientation change
     ) {
       $dropdownSubMenu.removeClass(activeSubMenu);
-      $('.main-nav__dropdown-icon--active')
+      $('.main-nav__dropdown-icon-bounding--active')
         .removeClass(activeDropdownIcon)
         .velocity(
           {
@@ -156,7 +156,7 @@ const menuCloseHandler = () => {
       !$target.closest($mainNav).length
     ) {
       $dropdownSubMenu.removeClass(activeSubMenu);
-      $('.main-nav__dropdown-icon--active')
+      $('.main-nav__dropdown-icon-bounding--active')
         .removeClass(activeDropdownIcon)
         .velocity(
           {
@@ -176,7 +176,7 @@ const menuCloseHandler = () => {
   // $window.on('scroll', function () {
   //   if ($dropdownSubMenu.hasClass(activeSubMenu)) {
   //     $dropdownSubMenu.removeClass(activeSubMenu);
-  //     $('.main-nav__dropdown-icon--active')
+  //     $('.main-nav__dropdown-icon-bounding--active')
   //       .removeClass(activeDropdownIcon)
   //       .velocity(
   //         {
@@ -207,7 +207,7 @@ const menuCloseHandler = () => {
         // down
         //prettier-ignore
         $dropdownSubMenu.removeClass(activeSubMenu);
-        $('.main-nav__dropdown-icon--active')
+        $('.main-nav__dropdown-icon-bounding--active')
           .removeClass(activeDropdownIcon)
           .velocity(
             {
@@ -225,7 +225,7 @@ const menuCloseHandler = () => {
         currentScroll === 0
       ) {
         $dropdownSubMenu.removeClass(activeSubMenu);
-        $('.main-nav__dropdown-icon--active')
+        $('.main-nav__dropdown-icon-bounding--active')
           .removeClass(activeDropdownIcon)
           .velocity(
             {
