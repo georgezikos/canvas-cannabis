@@ -1,6 +1,3 @@
-// reset inline display flex for off days?
-// correct this code + opt for dynamic class vs. inline-styling
-
 const $mondaySpecials = $('#monday-specials');
 const $tuesdaySpecials = $('#tuesday-specials');
 const $wednesdaySpecials = $('#wednesday-specials');

@@ -28,10 +28,6 @@
   left: 0;
 }
 
-.hamburger--active-mobile {
-  /* background-color: black !important; */
-}
-
 /* Desktop */
 @media (min-width: 992px) {
   .main-nav__sub-menu--active {
