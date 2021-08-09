@@ -3,26 +3,32 @@ import 'velocity-animate';
 // import Headroom from 'headroom.js';
 
 // Selectors
+// Global
 const $window = $(window);
 const $document = $(document);
 const $body = $('body');
 const $html = $('html');
-const $hamburger = $('.main-nav__hamburger');
-const $linksList = $('.main-nav__links-list');
-const $mainNav = $('nav.main-nav');
-const $navLogo = $('img.main-nav__logo');
-const $hamburgerBottom = $('div.hamburger__bottom');
-const $hamburgerTop = $('div.hamburger__top');
 
-const mainNav = document.querySelector('nav.main-nav');
+// Nav
+const $mainNav = $('nav.main-nav'); // Nav element
+const $navLogo = $('img.main-nav__logo'); // Review this!!
 
-// Parent
-const $dropdownLink = $('.links-item__container');
-const $linkListContainer = $('.main-nav__links-item--dropdown');
+// Hamburger Elements
+const $hamburger = $('.main-nav__hamburger'); // Containing element
+const $hamburgerTop = $('div.hamburger__top'); // Top bun
+const $hamburgerBottom = $('div.hamburger__bottom'); // Bottom bun
 
-// Children
-const $dropdownSubMenu = $('.main-nav__sub-menu');
-const $dropdownIcon = $('.main-nav__dropdown-icon-bounding');
+// Links
+const $linksList = $('.main-nav__links-list'); // Containing element
+
+// $linkListContainer – clear
+const $dropdownParent = $('.main-nav__links-item--dropdown'); // Links with dropdown navigation modifier
+
+// $dropdownLink – clear
+const $dropdownChildren = $('.links-item__container'); // Link and chevron container
+
+const $dropdownIcon = $('.main-nav__dropdown-icon-bounding'); // Dropdown chevron icon
+const $dropdownSubMenu = $('.main-nav__sub-menu'); // Containing element of sub-menu link lists
 
 // Classes
 const activeMobileNav = 'main-nav__links-list--active';
@@ -68,14 +74,14 @@ const navHandler = () => {
 };
 
 const subMenuHandler = () => {
-  $dropdownLink.on('click', function () {
+  $dropdownChildren.on('click', function () {
     // prettier-ignore
-    const $openSubMenus = $(this).parent().siblings($linkListContainer); // Other open submenus
+    const $openSubMenus = $(this).parent().siblings($dropdownParent); // Other open submenus
     if ($openSubMenus.find($dropdownSubMenu).hasClass(activeSubMenu)) {
       // Collapse other submenus that are open -- rethink if this is too rigid in terms of UX
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
       // prettier-ignore
-      $openSubMenus.find($dropdownSubMenu).prev($dropdownLink).find($dropdownIcon).removeClass(activeDropdownIcon).velocity({
+      $openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon).removeClass(activeDropdownIcon).velocity({
         transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
       }, {
         duration: 200,
