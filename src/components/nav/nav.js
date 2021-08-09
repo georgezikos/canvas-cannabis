@@ -128,6 +128,33 @@ const subMenuHandler = () => {
         duration: 200,
         easing: 'ease-out',
       });
+      $('.main-nav__outer').velocity(
+        {
+          backgroundColor: 'transparent',
+        },
+        {
+          duration: 200,
+          easing: 'ease-out',
+        }
+      );
+      $('.main-nav__logo-bounding').velocity(
+        {
+          color: [canvasWhite, 'black'],
+        },
+        {
+          duration: 200,
+          easing: 'ease-out',
+        }
+      );
+      $('.main-nav__link').velocity(
+        {
+          color: [canvasWhite, 'black'],
+        },
+        {
+          duration: 200,
+          easing: 'ease-out',
+        }
+      );
     } else {
       $(this).find($dropdownIcon).addClass(activeDropdownIcon).velocity({
         transform: ['rotateZ(-180deg)', 'rotateZ(0deg)'],
