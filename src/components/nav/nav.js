@@ -71,6 +71,8 @@ const navHandler = () => {
   }
 };
 
+const canvasWhite = '#f2efed';
+
 const subMenuHandler = () => {
   $dropdownChildren.on('click', function () {
     // Checking for any open sub-menus
@@ -82,12 +84,12 @@ const subMenuHandler = () => {
       // prettier-ignore
       $openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon).removeClass(activeDropdownIcon).velocity({
         transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
+        color: canvasWhite,
       }, {
         duration: 200,
         easing: 'ease-out',
       });
     }
-    const canvasWhite = '#f2efed';
 
     $(this).next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the link
     $('.main-nav__outer').velocity(
@@ -101,7 +103,7 @@ const subMenuHandler = () => {
     );
     $('.main-nav__logo-bounding').velocity(
       {
-        color: ['black', canvasWhite],
+        color: 'black',
       },
       {
         duration: 200,
@@ -110,7 +112,7 @@ const subMenuHandler = () => {
     );
     $('.main-nav__link').velocity(
       {
-        color: ['black', canvasWhite],
+        color: 'black',
       },
       {
         duration: 200,
@@ -123,7 +125,6 @@ const subMenuHandler = () => {
     if ($(this).find($dropdownIcon).hasClass(activeDropdownIcon)) {
       $(this).find($dropdownIcon).removeClass(activeDropdownIcon).velocity({
         transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-        color: [canvasWhite, 'black'],
       }, {
         duration: 200,
         easing: 'ease-out',
@@ -163,6 +164,33 @@ const subMenuHandler = () => {
         duration: 200,
         easing: 'ease-out',
       });
+      $('.main-nav__outer').velocity(
+        {
+          backgroundColor: canvasWhite,
+        },
+        {
+          duration: 200,
+          easing: 'ease-out',
+        }
+      );
+      $('.main-nav__logo-bounding').velocity(
+        {
+          color: 'black',
+        },
+        {
+          duration: 200,
+          easing: 'ease-out',
+        }
+      );
+      $('.main-nav__link').velocity(
+        {
+          color: 'black',
+        },
+        {
+          duration: 200,
+          easing: 'ease-out',
+        }
+      );
     }
   });
 };
