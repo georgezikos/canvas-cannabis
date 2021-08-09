@@ -87,17 +87,24 @@ const subMenuHandler = () => {
         easing: 'ease-out',
       });
     }
+    const canvasWhite = '#f2efed';
 
     $(this).next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the link
-
-    const canvasWhite = '#f2efed';
+    $(this).find($dropdownIcon).velocity(
+      {
+        color: 'black',
+      },
+      {
+        duration: 200,
+        easing: 'ease-out',
+      }
+    );
 
     // Deals with changes that happen when you click the same link to then close the sub-menu
     // prettier-ignore
     if ($(this).find($dropdownIcon).hasClass(activeDropdownIcon)) {
       $(this).find($dropdownIcon).removeClass(activeDropdownIcon).velocity({
         transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-        color: canvasWhite,
       }, {
         duration: 200,
         easing: 'ease-out',
@@ -134,7 +141,6 @@ const subMenuHandler = () => {
     } else {
       $(this).find($dropdownIcon).addClass(activeDropdownIcon).velocity({
         transform: ['rotateZ(-180deg)', 'rotateZ(0deg)'],
-        color: 'black',
       }, {
         duration: 200,
         easing: 'ease-out',
