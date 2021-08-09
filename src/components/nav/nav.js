@@ -91,13 +91,13 @@ const subMenuHandler = () => {
     $(this).next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the link
 
     const canvasWhite = '#f2efed';
-    $mainNav.velocity({
+    $('.main-nav__outer').velocity({
       backgroundColor: canvasWhite,
     });
     $('.main-nav__logo-bounding').velocity({
       color: 'black',
     });
-    $('.main-nav__links-item').velocity({
+    $('.main-nav__link').velocity({
       color: 'black',
     });
     $('.main-nav__dropdown-icon-bounding').velocity({
