@@ -20,23 +20,20 @@ const $hamburgerBottom = $('div.hamburger__bottom'); // Bottom bun
 
 // Links
 const $linksList = $('.main-nav__links-list'); // Containing element
-
-// $linkListContainer – clear
 const $dropdownParent = $('.main-nav__links-item--dropdown'); // Links with dropdown navigation modifier
-
-// $dropdownLink – clear
 const $dropdownChildren = $('.links-item__container'); // Link and chevron container
-
 const $dropdownIcon = $('.main-nav__dropdown-icon-bounding'); // Dropdown chevron icon
 const $dropdownSubMenu = $('.main-nav__sub-menu'); // Containing element of sub-menu link lists
 
 // Classes
-const activeMobileNav = 'main-nav__links-list--active';
 const disableScroll = 'active-nav';
+const activeMobileNav = 'main-nav__links-list--active';
+
 const mainNavActiveMobile = 'main-nav--active-mobile';
 const navLogoActiveMobile = 'main-nav__logo--active-mobile';
-const hamburgerBunsActiveMobile = 'hamburger--active-mobile';
 const mainNavDark = 'main-nav--dark';
+
+const hamburgerBunsActiveMobile = 'hamburger--active-mobile';
 const activeDropdownIcon = 'main-nav__dropdown-icon-bounding--active';
 const activeSubMenu = 'main-nav__sub-menu--active';
 
@@ -48,9 +45,13 @@ const navHandler = () => {
   $html.toggleClass(disableScroll);
   $body.toggleClass(disableScroll);
   $linksList.toggleClass(activeMobileNav);
+
   // Handling dependent on UI theme
-  if (!$mainNav.hasClass(mainNavDark)) {
-    $mainNav.toggleClass(mainNavActiveMobile);
+  if ($mainNav.hasClass(mainNavDark)) {
+    // $mainNav.toggleClass(mainNavActiveMobile);
+    $mainNav.velocity({
+      backgroundColor: 'white',
+    });
     $navLogo.toggleClass(navLogoActiveMobile);
     $hamburgerBottom.toggleClass(hamburgerBunsActiveMobile);
     $hamburgerTop.toggleClass(hamburgerBunsActiveMobile);

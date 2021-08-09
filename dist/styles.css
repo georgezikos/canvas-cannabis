@@ -15,7 +15,7 @@
 /* For the body and html elements */
 .active-nav {
   overflow: hidden;
-  /* position: fixed; may not be necessary for what I'm trying to prevent – does nothing really */
+  position: fixed; /* May not be necessary */
   width: 100%;
 }
 
@@ -34,14 +34,7 @@
   display: none;
 }
 
-.main-nav--active-mobile {
-  background-color: #f2efed !important; /* Fix all of these statements */
-}
-
-.main-nav__logo--active-mobile {
-  filter: invert() !important;
-}
-
+/* Styling for nav SVG branding */
 .main-nav__logo {
   display: inline-block;
   position: absolute;
@@ -52,11 +45,6 @@
 .hamburger--active-mobile {
   background-color: black !important;
 }
-
-/* Applied via Velocity instead */
-/* .main-nav__dropdown-icon-bounding--active {
-  transform: rotateZ(-180deg);
-} */
 
 /* Desktop */
 @media (min-width: 992px) {
@@ -71,19 +59,6 @@
     display: block;
   }
 }
-
-/* Nav Show and Hide */
-/* .headroom {
-  will-change: transform;
-  transition: transform 200ms linear;
-}
-
-.headroom--unpinned {
-  transform: translateY(-100%);
-}
-.headroom--pinned {
-  transform: translateY(0%);
-} */
 
 .faq__answer-container--active {
   display: block;
