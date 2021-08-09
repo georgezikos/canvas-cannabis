@@ -102,6 +102,7 @@ const subMenuHandler = () => {
         duration: 200,
         easing: 'ease-out',
       });
+      /*
       $('.main-nav__outer').velocity(
         {
           backgroundColor: 'transparent',
@@ -129,6 +130,7 @@ const subMenuHandler = () => {
           easing: 'ease-out',
         }
       );
+      */
     } else {
       $(this).find($dropdownIcon).addClass(activeDropdownIcon).velocity({
         transform: ['rotateZ(-180deg)', 'rotateZ(0deg)'],
@@ -137,6 +139,7 @@ const subMenuHandler = () => {
         duration: 200,
         easing: 'ease-out',
       });
+      /*
       $('.main-nav__outer').velocity(
         {
           backgroundColor: canvasWhite,
@@ -164,6 +167,7 @@ const subMenuHandler = () => {
           easing: 'ease-out',
         }
       );
+      */
     }
   });
 };
