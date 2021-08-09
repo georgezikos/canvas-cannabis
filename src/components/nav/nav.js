@@ -159,7 +159,7 @@ const subMenuHandler = () => {
     } else {
       $(this).find($dropdownIcon).addClass(activeDropdownIcon).velocity({
         transform: ['rotateZ(-180deg)', 'rotateZ(0deg)'],
-        color: ['black', canvasWhite],
+        color: 'black',
       }, {
         duration: 200,
         easing: 'ease-out',
