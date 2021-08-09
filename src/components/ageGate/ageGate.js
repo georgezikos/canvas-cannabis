@@ -17,42 +17,51 @@ const disableScroll = 'active-modal';
 const defaultCookie = 'default';
 const rememberMeCookie = 'rememberMe';
 
-const ageGate = () => {
-  // Checks for the existence of cookies
+// Functions
+const cookiesOrLegal = () => {
   if (
     Cookies.get(rememberMeCookie) ||
     Cookies.get(defaultCookie) ||
     window.location.href.indexOf('legal') > -1
   ) {
-    // Does nothing if they have an active cookies
-    console.log(window.location.href);
+    // If either case returns true, we won't show the age gate
     return;
   } else {
-    // Shows the age gate otherwise
+    // If either case returns false, we age gate the website
     $ageGate.addClass(activeAgeGate);
     $html.addClass(disableScroll);
     $body.addClass(disableScroll);
   }
+};
+
+const validateAge = () => {
+  if (!$verifyAge.prop('checked')) {
+    // If they haven't verified their age, they are unable to clear the age gate
+    return;
+  } else if ($verifyAge.prop('checked') && !$rememberMe.prop('checked')) {
+    // If they only verify their age, but do not wanted to be remembered, let them in and create a cookie to account for repeat visits within a 24-hour period and clear the age gate
+    Cookies.set(defaultCookie, true, { expires: 1 });
+    $ageGate.removeClass(activeAgeGate);
+    $html.removeClass(disableScroll);
+    $body.removeClass(disableScroll);
+    return;
+  } else if ($verifyAge.prop('checked') && $rememberMe.prop('checked')) {
+    // If they verify their age and also want to be remembered, create a cookie for a 30-day period and clear the age gate
+    Cookies.set(rememberMeCookie, true, { expires: 30 });
+    $ageGate.removeClass(activeAgeGate);
+    $html.removeClass(disableScroll);
+    $body.removeClass(disableScroll);
+    return;
+  }
+};
+
+const ageGate = () => {
+  // Checks for the existence of cookies and whether or not the user is on the Legal page
+  cookiesOrLegal();
+  // Deals with the age verification and cookie creation logic
   $ageGateForm.submit((e) => {
     e.preventDefault();
-    if (!$verifyAge.prop('checked')) {
-      // If they haven't verified their age, nothing happens on submit
-      return;
-    } else if ($verifyAge.prop('checked') && !$rememberMe.prop('checked')) {
-      // If they only verify their age, but do not wanted to be remembered, let them in and create a 24-hour cookie
-      Cookies.set(defaultCookie, true, { expires: 1 });
-      $ageGate.removeClass(activeAgeGate);
-      $html.removeClass(disableScroll);
-      $body.removeClass(disableScroll);
-      return;
-    } else if ($verifyAge.prop('checked') && $rememberMe.prop('checked')) {
-      // If they verify their age and also want to be remembered, let them in and create a 30-day cookie
-      Cookies.set(rememberMeCookie, true, { expires: 30 });
-      $ageGate.removeClass(activeAgeGate);
-      $html.removeClass(disableScroll);
-      $body.removeClass(disableScroll);
-      return;
-    }
+    validateAge();
   });
 };
 

@@ -1,11 +1,11 @@
-/* For the body and html elements */
+/* Body and HTML elements */
 .active-modal {
   overflow: hidden;
   position: fixed;
   width: 100%;
 }
 
-/* For the age gate's containing element */
+/* Age gate's containing element */
 .age-gate--active {
   display: flex;
   overflow-y: auto;
