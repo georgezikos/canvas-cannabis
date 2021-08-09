@@ -99,15 +99,15 @@ const subMenuHandler = () => {
         easing: 'ease-out',
       }
     );
-    // $('.main-nav__logo-bounding').velocity(
-    //   {
-    //     color: ['black', canvasWhite],
-    //   },
-    //   {
-    //     duration: 200,
-    //     easing: 'ease-out',
-    //   }
-    // );
+    $('.main-nav__logo-bounding').velocity(
+      {
+        color: ['black', canvasWhite],
+      },
+      {
+        duration: 200,
+        easing: 'ease-out',
+      }
+    );
     // $('.main-nav__link').velocity(
     //   {
     //     color: ['black', canvasWhite],
