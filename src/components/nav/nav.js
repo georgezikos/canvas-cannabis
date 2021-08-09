@@ -118,15 +118,6 @@ const subMenuHandler = () => {
         easing: 'ease-out',
       }
     );
-    $('.main-nav__dropdown-icon-bounding').velocity(
-      {
-        color: 'black',
-      },
-      {
-        duration: 200,
-        easing: 'ease-out',
-      }
-    );
 
     // Deals changes that happen when you click the same link to then close the sub-menu
     // prettier-ignore
@@ -140,6 +131,7 @@ const subMenuHandler = () => {
     } else {
       $(this).find($dropdownIcon).addClass(activeDropdownIcon).velocity({
         transform: ['rotateZ(-180deg)', 'rotateZ(0deg)'],
+        color: 'black',
       }, {
         duration: 200,
         easing: 'ease-out',
