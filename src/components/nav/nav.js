@@ -54,7 +54,7 @@ const mobileNavHandler = () => {
     $linksList.addClass(activeMobileNav);
     gsap.to('.main-nav__outer', { duration: 0.25, backgroundColor: '#f2efed' });
     gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: 'black' });
-    gsap.to($hamburgerTop, { duration: 0.25, backroundColor: 'black' });
+    gsap.to($hamburgerTop, { duration: 0.25, backgroundColor: 'black' });
     gsap.to($hamburgerBottom, { duration: 0.25, backgroundColor: 'black' });
   } else if ($linksList.hasClass(activeMobileNav)) {
     $linksList.removeClass(activeMobileNav);
