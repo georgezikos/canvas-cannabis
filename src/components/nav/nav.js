@@ -74,23 +74,17 @@ const subMenuHandler = () => {
       gsap.fromTo($openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon), { duration: 0.25, rotation: 180 }, { duration: 0.25, rotation: 360 });
     }
     $this.next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the clicked link
-    gsap.fromTo(
-      '.main-nav__outer',
-      { duration: 0.25, backgroundColor: 'transparent' },
-      { duration: 0.25, backgroundColor: '#f2efed' }
-    );
     // Deals with changes that happen when you click the same link to close its sub-menu
     // prettier-ignore
     if ($this.find($dropdownIcon).hasClass(activeDropdownIcon)) {
       $this.find($dropdownIcon).removeClass(activeDropdownIcon);
       gsap.set($this.find($dropdownIcon), { transformOrigin: 'center' });
       gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 180 }, { duration: 0.25, rotation: 360 });
-      gsap.set('.main-nav__outer', { backgroundColor: '#f2efed' });
-      // gsap.fromTo('.main-nav__outer', { duration: 0.25, backgroundColor: '#f2efed' }, { duration: 0.25, backgroundColor: 'transparent' });
     } else {
       $this.find($dropdownIcon).addClass(activeDropdownIcon);
       gsap.set($this.find($dropdownIcon), { transformOrigin: 'center' });
       gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 0 }, { duration: 0.25, rotation: 180 });
+      gsap.fromTo('.main-nav__outer', { duration: 0.25, backgroundColor: 'transparent' }, { duration: 0.25, backgroundColor: '#f2efed' });
     }
   });
 };
