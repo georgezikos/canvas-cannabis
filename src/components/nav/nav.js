@@ -20,6 +20,7 @@ const $linksList = $('.main-nav__links-list'); // Containing element
 const $dropdownParent = $('.main-nav__links-item--dropdown'); // Links with dropdown navigation modifier
 const $dropdownChildren = $('.links-item__container'); // Link and chevron container
 const $dropdownIcon = $('.main-nav__dropdown-icon-bounding'); // Dropdown chevron icon
+const $activeDropdownIcon = $('.main-nav__dropdown-icon-bounding--active');
 const $dropdownSubMenu = $('.main-nav__sub-menu'); // Containing element of sub-menu link lists
 
 // Classes
@@ -75,38 +76,41 @@ const subMenuHandler = () => {
 
 const closeMenuHandler = () => {
   // ESC key to close menu
-  $document.keyup((e) => {
-    const escKey = 27;
-    if ($linksList.hasClass(activeMobileNav) && e.keyCode === escKey) {
-      mobileNavHandler();
-    } else if (
-      $dropdownSubMenu.hasClass(activeSubMenu) &&
-      e.keyCode === escKey
-    ) {
-      $dropdownSubMenu.removeClass(activeSubMenu);
-      $('.main-nav__dropdown-icon-bounding--active').removeClass(
-        activeDropdownIcon
-      );
-    }
-  });
+  const escClose = () => {
+    $document.keyup((e) => {
+      const escKey = 27;
+      if ($linksList.hasClass(activeMobileNav) && e.keyCode === escKey) {
+        mobileNavHandler();
+      } else if (
+        $dropdownSubMenu.hasClass(activeSubMenu) &&
+        e.keyCode === escKey
+      ) {
+        $dropdownSubMenu.removeClass(activeSubMenu);
+        $activeDropdownIcon.removeClass(activeDropdownIcon);
+      }
+    });
+  };
 
-  // Window resize handler
-  $window.on('resize', () => {
-    if (
-      $linksList.hasClass(activeMobileNav) &&
-      $window.width() > windowNavClose
-    ) {
-      mobileNavHandler();
-    } else if (
-      $dropdownSubMenu.hasClass(activeSubMenu) &&
-      $window.width() <= windowNavClose // and not an orientation change, currently collapses submenus on orientation change
-    ) {
-      $dropdownSubMenu.removeClass(activeSubMenu);
-      $('.main-nav__dropdown-icon-bounding--active').removeClass(
-        activeDropdownIcon
-      );
-    }
-  });
+  // Window resize to close menu
+  const windowResizeClose = () => {
+    $window.on('resize', () => {
+      if (
+        $linksList.hasClass(activeMobileNav) &&
+        $window.width() > windowNavClose
+      ) {
+        mobileNavHandler();
+      } else if (
+        $dropdownSubMenu.hasClass(activeSubMenu) &&
+        $window.width() <= windowNavClose // Also collapses an open menu on orientation change
+      ) {
+        $dropdownSubMenu.removeClass(activeSubMenu);
+        $activeDropdownIcon.removeClass(activeDropdownIcon);
+      }
+    });
+  };
+
+  escClose(); // remove both
+  windowResizeClose();
 
   // Clicking away from element
   $document.on('click', (e) => {
