@@ -71,8 +71,7 @@ const subMenuHandler = () => {
       // prettier-ignore
       gsap.set($openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon), { transformOrigin: 'center' });
       // prettier-ignore
-      gsap.fromTo($openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon), { duration: 0.25, rotation: 180 }, { duration: 0.25, rotation: 360 });
-      // gsap.set('.main-nav__outer', { backgroundColor: '#f2efed' }); // sets background to white when toggling between menus
+      gsap.fromTo($openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon), { duration: 0.25, rotation: 180, color: 'black' }, { duration: 0.25, rotation: 360, color: '#f2efed' });
     }
 
     $this.next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the clicked link
@@ -81,13 +80,15 @@ const subMenuHandler = () => {
     if ($this.find($dropdownIcon).hasClass(activeDropdownIcon)) {
       $this.find($dropdownIcon).removeClass(activeDropdownIcon);
       gsap.set($this.find($dropdownIcon), { transformOrigin: 'center' });
-      gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 180 }, { duration: 0.25, rotation: 360 });
+      gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 180, color: 'black' }, { duration: 0.25, rotation: 360, color: 'black' });
       gsap.to('.main-nav__outer', { duration: 0.25, backgroundColor: 'transparent' });
     } else {
       $this.find($dropdownIcon).addClass(activeDropdownIcon);
       gsap.set($this.find($dropdownIcon), { transformOrigin: 'center' });
-      gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 0 }, { duration: 0.25, rotation: 180 });
-      gsap.to('.main-nav__outer', { duration: 0.25, backgroundColor: '#f2efed' });
+      gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 0, color: '#f2efed' }, { duration: 0.25, rotation: 180, color: 'black' });
+      // gsap.to('.main-nav__outer', { duration: 0.25, backgroundColor: '#f2efed' });
+      // gsap.to('.logo', { duration: 0.25, color: 'black' });
+      // gsap.to('.links', { duration: 0.25, color: 'black' });
     }
   });
 };
