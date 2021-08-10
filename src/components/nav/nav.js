@@ -52,22 +52,23 @@ const mobileNavHandler = () => {
 
 const subMenuHandler = () => {
   $dropdownChildren.on('click', function () {
+    const $this = $(this);
     // Checking for any open sub-menus
     // prettier-ignore
-    const $openSubMenus = $(this).parent().siblings($dropdownParent); // Siblings that also have sub-menu functionality
+    const $openSubMenus = $this.parent().siblings($dropdownParent); // Siblings that also have sub-menu functionality
     if ($openSubMenus.find($dropdownSubMenu).hasClass(activeSubMenu)) {
       // If there are other open sub-menus, collapse them
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
       // prettier-ignore
       $openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon).removeClass(activeDropdownIcon);
     }
-    $(this).next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the link
+    $this.next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the link
     // Deals with changes that happen when you click the same link to then close the sub-menu
     // prettier-ignore
-    if ($(this).find($dropdownIcon).hasClass(activeDropdownIcon)) {
-      $(this).find($dropdownIcon).removeClass(activeDropdownIcon);
+    if ($this.find($dropdownIcon).hasClass(activeDropdownIcon)) {
+      $this.find($dropdownIcon).removeClass(activeDropdownIcon);
     } else {
-      $(this).find($dropdownIcon).addClass(activeDropdownIcon);
+      $this.find($dropdownIcon).addClass(activeDropdownIcon);
     }
   });
 };
