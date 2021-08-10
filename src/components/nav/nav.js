@@ -133,6 +133,17 @@ const closeMenuHandler = () => {
       ) {
         $dropdownSubMenu.removeClass(activeSubMenu);
         $activeDropdownIcon.removeClass(activeDropdownIcon);
+        // here
+        gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
+        gsap.to('.main-nav__logo-bounding', {
+          duration: 0.25,
+          color: '#f2efed',
+        });
+        gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
+        gsap.to('.main-nav__outer', {
+          duration: 0.25,
+          backgroundColor: 'transparent',
+        });
       }
     });
   };
