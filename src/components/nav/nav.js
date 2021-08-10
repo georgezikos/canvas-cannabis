@@ -81,14 +81,15 @@ const subMenuHandler = () => {
       $this.find($dropdownIcon).removeClass(activeDropdownIcon);
       gsap.set($this.find($dropdownIcon), { transformOrigin: 'center' });
       gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 180}, { duration: 0.25, rotation: 360,});
-      gsap.fromTo($dropdownIcon, { duration: 0.25, color: 'black' }, { duration: 0.25, color: '#f2efed' });
+      gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
       gsap.to('.main-nav__outer', { duration: 0.25, backgroundColor: 'transparent' });
     } else {
       $this.find($dropdownIcon).addClass(activeDropdownIcon);
       gsap.set($this.find($dropdownIcon), { transformOrigin: 'center' });
       gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 0}, { duration: 0.25, rotation: 180});
       gsap.to('.main-nav__outer', { duration: 0.25, backgroundColor: '#f2efed' });
-      gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 0, color: '#f2efed'}, { duration: 0.25, rotation: 180, color: 'black'});
+      gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 0 }, { duration: 0.25, rotation: 180 });
+      gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
       // gsap.to('.logo', { duration: 0.25, color: 'black' });
       // gsap.to('.links', { duration: 0.25, color: 'black' });
     }
