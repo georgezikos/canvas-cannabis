@@ -132,7 +132,6 @@ const closeMenuHandler = () => {
         e.keyCode === escKey
       ) {
         $dropdownSubMenu.removeClass(activeSubMenu);
-
         if ($dropdownIcon.hasClass(activeDropdownIcon)) {
           $dropdownIcon.removeClass(activeDropdownIcon);
           gsap.to($dropdownIcon, { duration: 0.25, rotation: 360 });
@@ -164,7 +163,21 @@ const closeMenuHandler = () => {
         $window.width() <= tabletBreakpoint // Also collapses an open menu on orientation change
       ) {
         $dropdownSubMenu.removeClass(activeSubMenu);
-        $activeDropdownIcon.removeClass(activeDropdownIcon);
+        // $activeDropdownIcon.removeClass(activeDropdownIcon);
+        if ($dropdownIcon.hasClass(activeDropdownIcon)) {
+          $dropdownIcon.removeClass(activeDropdownIcon);
+          gsap.to($dropdownIcon, { duration: 0.25, rotation: 360 });
+        }
+        gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
+        gsap.to('.main-nav__logo-bounding', {
+          duration: 0.25,
+          color: '#f2efed',
+        });
+        gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
+        gsap.to('.main-nav__outer', {
+          duration: 0.25,
+          backgroundColor: 'transparent',
+        });
       }
     });
   };
