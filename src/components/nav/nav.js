@@ -184,7 +184,7 @@ const closeMenuHandler = () => {
       } else if ($window.width() > tabletBreakpoint) {
         gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
         gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
-      } else if ($window.width() > tabletBreakpoint) {
+      } else if ($window.width() < tabletBreakpoint) {
         gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
         gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
       }
