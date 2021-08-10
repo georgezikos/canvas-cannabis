@@ -146,16 +146,18 @@ const closeMenuHandler = () => {
           $dropdownIcon.removeClass(activeDropdownIcon);
           gsap.to($dropdownIcon, { duration: 0.25, rotation: 360 });
         }
-        gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
-        gsap.to('.main-nav__logo-bounding', {
-          duration: 0.25,
-          color: '#f2efed',
-        });
-        gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
-        gsap.to('.main-nav__outer', {
-          duration: 0.25,
-          backgroundColor: 'transparent',
-        });
+        if ($mainNav.hasClass('main-nav--dark-ui')) {
+          gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
+          gsap.to('.main-nav__logo-bounding', {
+            duration: 0.25,
+            color: '#f2efed',
+          });
+          gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
+          gsap.to('.main-nav__outer', {
+            duration: 0.25,
+            backgroundColor: 'transparent',
+          });
+        }
       }
     });
   };
@@ -177,18 +179,23 @@ const closeMenuHandler = () => {
           $dropdownIcon.removeClass(activeDropdownIcon);
           gsap.to($dropdownIcon, { duration: 0.25, rotation: 360 });
         }
-        gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
-        gsap.to('.main-nav__logo-bounding', {
-          duration: 0.25,
-          color: '#f2efed',
-        });
-        gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
-        gsap.to('.main-nav__outer', {
-          duration: 0.25,
-          backgroundColor: 'transparent',
-        });
+        if ($mainNav.hasClass('main-nav--dark-ui')) {
+          gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
+          gsap.to('.main-nav__logo-bounding', {
+            duration: 0.25,
+            color: '#f2efed',
+          });
+          gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
+          gsap.to('.main-nav__outer', {
+            duration: 0.25,
+            backgroundColor: 'transparent',
+          });
+        }
         // both of these branches deal with resetting leftover styles if the screen size changes even if the menu was not left open
-      } else if ($window.width() > tabletBreakpoint) {
+      } else if (
+        $window.width() > tabletBreakpoint &&
+        $mainNav.hasClass('main-nav--dark-ui')
+      ) {
         gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
         gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
       } else if ($window.width() < tabletBreakpoint) {
@@ -212,16 +219,18 @@ const closeMenuHandler = () => {
           $dropdownIcon.removeClass(activeDropdownIcon);
           gsap.to($dropdownIcon, { duration: 0.25, rotation: 360 });
         }
-        gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
-        gsap.to('.main-nav__logo-bounding', {
-          duration: 0.25,
-          color: '#f2efed',
-        });
-        gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
-        gsap.to('.main-nav__outer', {
-          duration: 0.25,
-          backgroundColor: 'transparent',
-        });
+        if ($mainNav.hasClass('main-nav--dark-ui')) {
+          gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
+          gsap.to('.main-nav__logo-bounding', {
+            duration: 0.25,
+            color: '#f2efed',
+          });
+          gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
+          gsap.to('.main-nav__outer', {
+            duration: 0.25,
+            backgroundColor: 'transparent',
+          });
+        }
       } else {
         return;
       }
@@ -250,16 +259,18 @@ const closeMenuHandler = () => {
           $dropdownIcon.removeClass(activeDropdownIcon);
           gsap.to($dropdownIcon, { duration: 0.25, rotation: 360 });
         }
-        gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
-        gsap.to('.main-nav__logo-bounding', {
-          duration: 0.25,
-          color: '#f2efed',
-        });
-        gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
-        gsap.to('.main-nav__outer', {
-          duration: 0.25,
-          backgroundColor: 'transparent',
-        });
+        if ($mainNav.hasClass('main-nav--dark-ui')) {
+          gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
+          gsap.to('.main-nav__logo-bounding', {
+            duration: 0.25,
+            color: '#f2efed',
+          });
+          gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
+          gsap.to('.main-nav__outer', {
+            duration: 0.25,
+            backgroundColor: 'transparent',
+          });
+        }
         return;
       } else if (
         currentScroll < lastScroll &&
@@ -271,16 +282,18 @@ const closeMenuHandler = () => {
           $dropdownIcon.removeClass(activeDropdownIcon);
           gsap.to($dropdownIcon, { duration: 0.25, rotation: 360 });
         }
-        gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
-        gsap.to('.main-nav__logo-bounding', {
-          duration: 0.25,
-          color: '#f2efed',
-        });
-        gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
-        gsap.to('.main-nav__outer', {
-          duration: 0.25,
-          backgroundColor: 'transparent',
-        });
+        if ($mainNav.hasClass('main-nav--dark-ui')) {
+          gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
+          gsap.to('.main-nav__logo-bounding', {
+            duration: 0.25,
+            color: '#f2efed',
+          });
+          gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
+          gsap.to('.main-nav__outer', {
+            duration: 0.25,
+            backgroundColor: 'transparent',
+          });
+        }
         return;
       }
       lastScroll = currentScroll;
