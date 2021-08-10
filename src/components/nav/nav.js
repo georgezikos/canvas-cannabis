@@ -74,12 +74,18 @@ const subMenuHandler = () => {
       gsap.fromTo($openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon), { duration: 0.25, rotation: 180 }, { duration: 0.25, rotation: 360 });
     }
     $this.next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the clicked link
+    gsap.fromTo(
+      '.main-nav__outer',
+      { duration: 0.25, backgroundColor: 'transparent' },
+      { duration: 0.25, backgroundColor: '#f2efed' }
+    ); // change nav parent background color to canvaswhite from transparent
     // Deals with changes that happen when you click the same link to close its sub-menu
     // prettier-ignore
     if ($this.find($dropdownIcon).hasClass(activeDropdownIcon)) {
       $this.find($dropdownIcon).removeClass(activeDropdownIcon);
       gsap.set($this.find($dropdownIcon), { transformOrigin: 'center' });
       gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 180 }, { duration: 0.25, rotation: 360 });
+      gsap.fromTo('.main-nav__outer', { duration: 0.25, backgroundColor: '#f2efed' }, { duration: 0.25, backgroundColor: 'transparent' }); // change background color back to transparent from canvaswhite
     } else {
       $this.find($dropdownIcon).addClass(activeDropdownIcon);
       gsap.set($this.find($dropdownIcon), { transformOrigin: 'center' });
