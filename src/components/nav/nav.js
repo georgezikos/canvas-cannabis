@@ -38,11 +38,12 @@ const activeSubMenu = 'main-nav__sub-menu--active';
 const windowNavClose = 991; // If the mobile menu is left open, growing the window beyond this width will trigger a menu close
 
 // Functions
-const navHandler = () => {
+// Deals with showing and hiding the menu on smaller viewports
+const mobileNavHandler = () => {
   $html.toggleClass(disableScroll);
   $body.toggleClass(disableScroll);
   $linksList.toggleClass(activeMobileNav);
-  // Collapsing submenus
+  // Collapsing open submenus
   if ($dropdownSubMenu.hasClass(activeSubMenu)) {
     $dropdownSubMenu.removeClass(activeSubMenu);
     $dropdownIcon.removeClass(activeDropdownIcon);
@@ -75,7 +76,7 @@ const menuCloseHandler = () => {
   // Esc key to close menu
   $document.keyup((e) => {
     if ($linksList.hasClass(activeMobileNav) && e.keyCode === 27) {
-      navHandler();
+      mobileNavHandler();
     } else if ($dropdownSubMenu.hasClass(activeSubMenu) && e.keyCode === 27) {
       $dropdownSubMenu.removeClass(activeSubMenu);
       $('.main-nav__dropdown-icon-bounding--active').removeClass(
@@ -90,7 +91,7 @@ const menuCloseHandler = () => {
       $linksList.hasClass(activeMobileNav) &&
       $window.width() > windowNavClose
     ) {
-      navHandler();
+      mobileNavHandler();
     } else if (
       $dropdownSubMenu.hasClass(activeSubMenu) &&
       $window.width() <= windowNavClose // and not an orientation change, currently collapses submenus on orientation change
@@ -162,7 +163,7 @@ const menuCloseHandler = () => {
 const nav = () => {
   // Hamburger click handler
   $hamburger.on('click', () => {
-    navHandler();
+    mobileNavHandler();
   });
   // Submenu functionality
   subMenuHandler();
