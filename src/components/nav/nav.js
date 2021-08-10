@@ -81,19 +81,26 @@ const subMenuHandler = () => {
       $this.find($dropdownIcon).removeClass(activeDropdownIcon);
       gsap.set($this.find($dropdownIcon), { transformOrigin: 'center' });
       gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 180}, { duration: 0.25, rotation: 360,});
-      gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
-      gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: '#f2efed' });
-      gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
-      gsap.to('.main-nav__outer', { duration: 0.25, backgroundColor: 'transparent' });
+
+      if ($window.width() > tabletBreakpoint) {
+        gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
+        gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: '#f2efed' });
+        gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
+        gsap.to('.main-nav__outer', { duration: 0.25, backgroundColor: 'transparent' });
+      }
+
     } else {
       $this.find($dropdownIcon).addClass(activeDropdownIcon);
       gsap.set($this.find($dropdownIcon), { transformOrigin: 'center' });
       gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 0}, { duration: 0.25, rotation: 180});
-      gsap.to('.main-nav__outer', { duration: 0.25, backgroundColor: '#f2efed' });
-      gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 0 }, { duration: 0.25, rotation: 180 });
-      gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
-      gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: 'black' });
-      gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
+      // gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 0 }, { duration: 0.25, rotation: 180 });
+
+      if ($window.width() > tabletBreakpoint) {
+        gsap.to('.main-nav__outer', { duration: 0.25, backgroundColor: '#f2efed' });
+        gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
+        gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: 'black' });
+        gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
+      }
     }
   });
 };
