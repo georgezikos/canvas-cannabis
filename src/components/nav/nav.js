@@ -1,4 +1,4 @@
-import { gsap } from 'gsap';
+import { gsap } from 'gsap'; // remove?
 import './nav.css';
 
 // Selectors
@@ -77,6 +77,7 @@ const subMenuHandler = () => {
       $this.find($dropdownIcon).removeClass(activeDropdownIcon);
     } else {
       $this.find($dropdownIcon).addClass(activeDropdownIcon);
+      gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 0 }, { duration: 0.25, rotation: 180 });
     }
   });
 };
