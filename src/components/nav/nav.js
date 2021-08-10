@@ -74,11 +74,15 @@ const subMenuHandler = () => {
 };
 
 const closeMenuHandler = () => {
-  // Esc key to close menu
+  // ESC key to close menu
   $document.keyup((e) => {
-    if ($linksList.hasClass(activeMobileNav) && e.keyCode === 27) {
+    const escKey = 27;
+    if ($linksList.hasClass(activeMobileNav) && e.keyCode === escKey) {
       mobileNavHandler();
-    } else if ($dropdownSubMenu.hasClass(activeSubMenu) && e.keyCode === 27) {
+    } else if (
+      $dropdownSubMenu.hasClass(activeSubMenu) &&
+      e.keyCode === escKey
+    ) {
       $dropdownSubMenu.removeClass(activeSubMenu);
       $('.main-nav__dropdown-icon-bounding--active').removeClass(
         activeDropdownIcon
