@@ -84,7 +84,6 @@ const subMenuHandler = () => {
       $this.find($dropdownIcon).addClass(activeDropdownIcon);
       gsap.set($this.find($dropdownIcon), { transformOrigin: 'center' });
       gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 0 }, { duration: 0.25, rotation: 180 });
-      gsap.fromTo('.main-nav__outer', { duration: 0.25, backgroundColor: 'transparent' }, { duration: 0.25, backgroundColor: '#f2efed' });
     }
   });
 };
