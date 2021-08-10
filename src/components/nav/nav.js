@@ -66,7 +66,6 @@ const subMenuHandler = () => {
     if ($openSubMenus.find($dropdownSubMenu).hasClass(activeSubMenu)) {
       // If there are other open sub-menus, collapse them
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
-      gsap.set('.main-nav__outer', { backgroundColor: '#f2efed' });
       // prettier-ignore
       $openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon).removeClass(activeDropdownIcon);
       // prettier-ignore
@@ -75,6 +74,7 @@ const subMenuHandler = () => {
       gsap.fromTo($openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon), { duration: 0.25, rotation: 180 }, { duration: 0.25, rotation: 360 });
     }
     $this.next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the clicked link
+    gsap.set('.main-nav__outer', { backgroundColor: '#f2efed' });
     gsap.fromTo(
       '.main-nav__outer',
       { duration: 0.25, backgroundColor: 'transparent' },
