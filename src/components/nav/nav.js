@@ -69,7 +69,11 @@ const mobileNavHandler = () => {
   // Collapsing open submenus
   if ($dropdownSubMenu.hasClass(activeSubMenu)) {
     $dropdownSubMenu.removeClass(activeSubMenu);
-    $dropdownIcon.removeClass(activeDropdownIcon);
+    // $dropdownIcon.removeClass(activeDropdownIcon);
+    if ($dropdownIcon.hasClass(activeDropdownIcon)) {
+      $dropdownIcon.removeClass(activeDropdownIcon);
+      gsap.to($dropdownIcon, { duration: 0.25, rotation: 360 });
+    }
   }
 };
 
@@ -163,7 +167,7 @@ const closeMenuHandler = () => {
         $window.width() <= tabletBreakpoint // Also collapses an open menu on orientation change
       ) {
         $dropdownSubMenu.removeClass(activeSubMenu);
-        // $activeDropdownIcon.removeClass(activeDropdownIcon);
+        // $activeDropdownIcon.removeClass(activeDropdownIcon); // remove if it works
         if ($dropdownIcon.hasClass(activeDropdownIcon)) {
           $dropdownIcon.removeClass(activeDropdownIcon);
           gsap.to($dropdownIcon, { duration: 0.25, rotation: 360 });
