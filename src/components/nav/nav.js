@@ -69,26 +69,14 @@ const subMenuHandler = () => {
       // prettier-ignore
       $openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon).removeClass(activeDropdownIcon);
       // prettier-ignore
-      gsap.from($openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon), {
-        rotation: 180,
-      });
     }
     $this.next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the clicked link
-    gsap.to($this.next(), {
-      rotation: 180,
-    });
     // Deals with changes that happen when you click the same link to close its sub-menu
     // prettier-ignore
     if ($this.find($dropdownIcon).hasClass(activeDropdownIcon)) {
       $this.find($dropdownIcon).removeClass(activeDropdownIcon);
-      gsap.from($this.find($dropdownIcon), {
-        rotation: 180,
-      });
     } else {
       $this.find($dropdownIcon).addClass(activeDropdownIcon);
-      gsap.to($this.find($dropdownIcon), {
-        rotation: 180,
-      });
     }
   });
 };
