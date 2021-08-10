@@ -71,6 +71,7 @@ const subMenuHandler = () => {
     }
     $this.next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the clicked link
     gsap.to($this.find($dropdownIcon), { rotation: 180 });
+    gsap.to('.main-nav__outer', { backgroundColor: 'white' });
     // Deals with changes that happen when you click the same link to close its sub-menu
     // prettier-ignore
     if ($this.find($dropdownIcon).hasClass(activeDropdownIcon)) {
