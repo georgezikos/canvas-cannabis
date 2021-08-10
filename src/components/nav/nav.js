@@ -109,27 +109,25 @@ const closeMenuHandler = () => {
     });
   };
 
-  escClose(); // remove both
+  // Clicking away from nav to close open sub-menus
+  const clickAwayClose = () => {
+    $document.on('click', (e) => {
+      let $target = $(e.target);
+      if (
+        $window.width() > windowNavClose &&
+        $dropdownSubMenu.hasClass(activeSubMenu) &&
+        !$target.closest($mainNav).length
+      ) {
+        $dropdownSubMenu.removeClass(activeSubMenu);
+        $activeDropdownIcon.removeClass(activeDropdownIcon);
+      } else {
+        return;
+      }
+    });
+  };
+  escClose();
   windowResizeClose();
-
-  // Clicking away from element
-  $document.on('click', (e) => {
-    let $target = $(e.target);
-    if (
-      $window.width() > windowNavClose &&
-      $dropdownSubMenu.hasClass(activeSubMenu) &&
-      !$target.closest($mainNav).length
-    ) {
-      $dropdownSubMenu.removeClass(activeSubMenu);
-      $('.main-nav__dropdown-icon-bounding--active').removeClass(
-        activeDropdownIcon
-      );
-      console.log('Clicked away');
-    } else {
-      return;
-    }
-  });
-
+  clickAwayClose();
   // Scroll away handler
   const scrollAwayClose = () => {
     let lastScroll = 0;
