@@ -12,8 +12,11 @@ const $mainNav = $('nav.main-nav'); // Nav element
 
 // Hamburger Elements
 const $hamburger = $('.main-nav__hamburger'); // Containing element
+
+// Unused
 const $hamburgerTop = $('div.hamburger__top'); // Top bun
 const $hamburgerBottom = $('div.hamburger__bottom'); // Bottom bun
+// Unused
 
 // Links
 const $linksList = $('.main-nav__links-list'); // Containing element
@@ -27,11 +30,13 @@ const $dropdownSubMenu = $('.main-nav__sub-menu'); // Containing element of sub-
 const disableScroll = 'active-nav';
 const activeMobileNav = 'main-nav__links-list--active';
 
+// Unused
 const mainNavActiveMobile = 'main-nav--active-mobile';
 const navLogoActiveMobile = 'main-nav__logo--active-mobile';
 const mainNavDark = 'main-nav--dark';
-
 const hamburgerBunsActiveMobile = 'hamburger--active-mobile';
+// Unused
+
 const activeDropdownIcon = 'main-nav__dropdown-icon-bounding--active';
 const activeSubMenu = 'main-nav__sub-menu--active';
 
