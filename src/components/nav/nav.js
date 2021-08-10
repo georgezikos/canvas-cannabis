@@ -232,7 +232,21 @@ const closeMenuHandler = () => {
         // Scrolling down
         //prettier-ignore
         $dropdownSubMenu.removeClass(activeSubMenu);
-        $activeDropdownIcon.removeClass(activeDropdownIcon);
+        // $activeDropdownIcon.removeClass(activeDropdownIcon); // remove if everything works
+        if ($dropdownIcon.hasClass(activeDropdownIcon)) {
+          $dropdownIcon.removeClass(activeDropdownIcon);
+          gsap.to($dropdownIcon, { duration: 0.25, rotation: 360 });
+        }
+        gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
+        gsap.to('.main-nav__logo-bounding', {
+          duration: 0.25,
+          color: '#f2efed',
+        });
+        gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
+        gsap.to('.main-nav__outer', {
+          duration: 0.25,
+          backgroundColor: 'transparent',
+        });
         return;
       } else if (
         currentScroll < lastScroll &&
@@ -240,7 +254,21 @@ const closeMenuHandler = () => {
         currentScroll === 0
       ) {
         $dropdownSubMenu.removeClass(activeSubMenu);
-        $activeDropdownIcon.removeClass(activeDropdownIcon);
+        // $activeDropdownIcon.removeClass(activeDropdownIcon); // remove if everything works
+        if ($dropdownIcon.hasClass(activeDropdownIcon)) {
+          $dropdownIcon.removeClass(activeDropdownIcon);
+          gsap.to($dropdownIcon, { duration: 0.25, rotation: 360 });
+        }
+        gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
+        gsap.to('.main-nav__logo-bounding', {
+          duration: 0.25,
+          color: '#f2efed',
+        });
+        gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
+        gsap.to('.main-nav__outer', {
+          duration: 0.25,
+          backgroundColor: 'transparent',
+        });
         return;
       }
       lastScroll = currentScroll;
