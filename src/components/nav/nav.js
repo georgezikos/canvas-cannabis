@@ -42,7 +42,7 @@ const activeDropdownIcon = 'main-nav__dropdown-icon-bounding--active';
 const activeSubMenu = 'main-nav__sub-menu--active';
 
 // Other
-const windowNavClose = 991; // If the mobile menu is left open, growing the window beyond this width will trigger a menu close
+const tabletBreakpoint = 991; // If the mobile menu is left open, growing the window beyond this width will trigger a menu close
 
 // Functions
 // Deals with showing and hiding the menu on smaller viewports
@@ -120,12 +120,12 @@ const closeMenuHandler = () => {
     $window.on('resize', () => {
       if (
         $linksList.hasClass(activeMobileNav) &&
-        $window.width() > windowNavClose
+        $window.width() > tabletBreakpoint
       ) {
         mobileNavHandler();
       } else if (
         $dropdownSubMenu.hasClass(activeSubMenu) &&
-        $window.width() <= windowNavClose // Also collapses an open menu on orientation change
+        $window.width() <= tabletBreakpoint // Also collapses an open menu on orientation change
       ) {
         $dropdownSubMenu.removeClass(activeSubMenu);
         $activeDropdownIcon.removeClass(activeDropdownIcon);
@@ -138,7 +138,7 @@ const closeMenuHandler = () => {
     $document.on('click', (e) => {
       let $target = $(e.target);
       if (
-        $window.width() > windowNavClose &&
+        $window.width() > tabletBreakpoint &&
         $dropdownSubMenu.hasClass(activeSubMenu) &&
         !$target.closest($mainNav).length
       ) {
