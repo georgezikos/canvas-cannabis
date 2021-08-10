@@ -53,12 +53,14 @@ const mobileNavHandler = () => {
   if (!$linksList.hasClass(activeMobileNav)) {
     $linksList.addClass(activeMobileNav);
     gsap.to('.main-nav__outer', { duration: 0.25, backgroundColor: '#f2efed' });
+    gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: 'black' });
   } else if ($linksList.hasClass(activeMobileNav)) {
     $linksList.removeClass(activeMobileNav);
     gsap.to('.main-nav__outer', {
       duration: 0.25,
       backgroundColor: 'transparent',
     });
+    gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: '#f2efed' });
   }
   // Collapsing open submenus
   if ($dropdownSubMenu.hasClass(activeSubMenu)) {
