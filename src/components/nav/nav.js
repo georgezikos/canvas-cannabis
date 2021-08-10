@@ -75,10 +75,10 @@ const subMenuHandler = () => {
     // prettier-ignore
     if ($this.find($dropdownIcon).hasClass(activeDropdownIcon)) {
       $this.find($dropdownIcon).removeClass(activeDropdownIcon);
-      gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 180 }, { duration: 0.25, rotation: 360 });
+      gsap.set($this.find($dropdownIcon), { transformOrigin: 'center' }).fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 180 }, { duration: 0.25, rotation: 360 });
     } else {
       $this.find($dropdownIcon).addClass(activeDropdownIcon);
-      gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 0 }, { duration: 0.25, rotation: 180 });
+      gsap.set($this.find($dropdownIcon), { transformOrigin: 'center' }).fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 0 }, { duration: 0.25, rotation: 180 });
     }
   });
 };
