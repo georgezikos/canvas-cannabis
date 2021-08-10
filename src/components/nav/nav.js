@@ -69,6 +69,9 @@ const subMenuHandler = () => {
       // prettier-ignore
       $openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon).removeClass(activeDropdownIcon);
       // prettier-ignore
+      gsap.set($openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon), { transformOrigin: 'center' });
+      // prettier-ignore
+      gsap.fromTo($openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon), { duration: 0.25, rotation: 180 }, { duration: 0.25, rotation: 360 });
     }
     $this.next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the clicked link
     // Deals with changes that happen when you click the same link to close its sub-menu
