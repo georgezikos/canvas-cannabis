@@ -135,7 +135,7 @@ const closeMenuHandler = () => {
 
         if ($dropdownIcon.hasClass(activeDropdownIcon)) {
           $dropdownIcon.removeClass(activeDropdownIcon);
-          gsap.to($activeDropdownIcon, { duration: 0.25, rotation: 360 });
+          gsap.to($dropdownIcon, { duration: 0.25, rotation: 360 });
         }
         gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
         gsap.to('.main-nav__logo-bounding', {
