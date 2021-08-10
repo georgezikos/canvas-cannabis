@@ -49,8 +49,17 @@ const tabletBreakpoint = 991; // If the mobile menu is left open, growing the wi
 const mobileNavHandler = () => {
   $html.toggleClass(disableScroll);
   $body.toggleClass(disableScroll);
-  $linksList.toggleClass(activeMobileNav);
-  gsap.to('.main-nav__outer', { duration: 0.25, backgroundColor: '#f2efed' });
+  // $linksList.toggleClass(activeMobileNav);
+  if (!$linksList.hasClass(activeMobileNav)) {
+    $linksList.addClass(activeMobileNav);
+    gsap.to('.main-nav__outer', { duration: 0.25, backgroundColor: '#f2efed' });
+  } else if ($linksList.hasClass(activeMobileNav)) {
+    $linksList.removeClass(activeMobileNav);
+    gsap.to('.main-nav__outer', {
+      duration: 0.25,
+      backgroundColor: 'transparent',
+    });
+  }
   // Collapsing open submenus
   if ($dropdownSubMenu.hasClass(activeSubMenu)) {
     $dropdownSubMenu.removeClass(activeSubMenu);
