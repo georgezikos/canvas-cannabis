@@ -60,9 +60,6 @@ const mobileNavHandler = () => {
 const subMenuHandler = () => {
   $dropdownChildren.on('click', function () {
     const $this = $(this);
-    const chevronToggleTween = gsap.to($this.find($dropdownIcon), {
-      rotation: 180,
-    });
     // Checking for any open sub-menus
     // prettier-ignore
     const $openSubMenus = $this.parent().siblings($dropdownParent); // Siblings that also have sub-menu functionality
@@ -71,18 +68,27 @@ const subMenuHandler = () => {
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
       // prettier-ignore
       $openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon).removeClass(activeDropdownIcon);
-      chevronToggleTween.reverse();
+      // prettier-ignore
+      gsap.from($openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon), {
+        rotation: 180,
+      });
     }
     $this.next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the clicked link
-    chevronToggleTween.play();
+    gsap.to($this.next(), {
+      rotation: 180,
+    });
     // Deals with changes that happen when you click the same link to close its sub-menu
     // prettier-ignore
     if ($this.find($dropdownIcon).hasClass(activeDropdownIcon)) {
       $this.find($dropdownIcon).removeClass(activeDropdownIcon);
-      chevronToggleTween.reverse();
+      gsap.from($this.find($dropdownIcon), {
+        rotation: 180,
+      });
     } else {
       $this.find($dropdownIcon).addClass(activeDropdownIcon);
-      chevronToggleTween.play();
+      gsap.to($this.find($dropdownIcon), {
+        rotation: 180,
+      });
     }
   });
 };
