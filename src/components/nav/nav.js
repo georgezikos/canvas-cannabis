@@ -62,8 +62,8 @@ const subMenuHandler = () => {
       // prettier-ignore
       $openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon).removeClass(activeDropdownIcon);
     }
-    $this.next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the link
-    // Deals with changes that happen when you click the same link to then close the sub-menu
+    $this.next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the clicked link
+    // Deals with changes that happen when you click the same link to close its sub-menu
     // prettier-ignore
     if ($this.find($dropdownIcon).hasClass(activeDropdownIcon)) {
       $this.find($dropdownIcon).removeClass(activeDropdownIcon);
@@ -73,7 +73,7 @@ const subMenuHandler = () => {
   });
 };
 
-const menuCloseHandler = () => {
+const closeMenuHandler = () => {
   // Esc key to close menu
   $document.keyup((e) => {
     if ($linksList.hasClass(activeMobileNav) && e.keyCode === 27) {
@@ -169,7 +169,7 @@ const nav = () => {
   // Submenu functionality
   subMenuHandler();
   // Menu close functionalities
-  menuCloseHandler();
+  closeMenuHandler();
 };
 
 export default nav;
