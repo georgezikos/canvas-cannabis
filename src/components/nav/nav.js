@@ -1,6 +1,4 @@
 import './nav.css';
-// import 'velocity-animate';
-// import Headroom from 'headroom.js';
 
 // Selectors
 // Global
@@ -11,7 +9,6 @@ const $html = $('html');
 
 // Nav
 const $mainNav = $('nav.main-nav'); // Nav element
-const $navLogo = $('img.main-nav__logo'); // Review this!!
 
 // Hamburger Elements
 const $hamburger = $('.main-nav__hamburger'); // Containing element
@@ -38,32 +35,19 @@ const activeDropdownIcon = 'main-nav__dropdown-icon-bounding--active';
 const activeSubMenu = 'main-nav__sub-menu--active';
 
 // Other
-const windowNavClose = 991; // If the mobile menu is left open, this width will trigger a menu close
+const windowNavClose = 991; // If the mobile menu is left open, growing the window beyond this width will trigger a menu close
 
 // Functions
 const navHandler = () => {
   $html.toggleClass(disableScroll);
   $body.toggleClass(disableScroll);
   $linksList.toggleClass(activeMobileNav);
-
-  // Handling dependent on UI theme
-  if ($mainNav.hasClass(mainNavDark)) {
-    $mainNav.toggleClass(mainNavActiveMobile);
-    $navLogo.toggleClass(navLogoActiveMobile);
-    $hamburgerBottom.toggleClass(hamburgerBunsActiveMobile);
-    $hamburgerTop.toggleClass(hamburgerBunsActiveMobile);
-  }
   // Collapsing submenus
   if ($dropdownSubMenu.hasClass(activeSubMenu)) {
     $dropdownSubMenu.removeClass(activeSubMenu);
-    // All of these implementations with this direct selector work, but not if the selector is cached – get to the bottom of why this is the case
-    $('.main-nav__dropdown-icon-bounding--active').removeClass(
-      activeDropdownIcon
-    );
+    $dropdownIcon.removeClass(activeDropdownIcon);
   }
 };
-
-const canvasWhite = '#f2efed';
 
 const subMenuHandler = () => {
   $dropdownChildren.on('click', function () {
@@ -99,6 +83,7 @@ const menuCloseHandler = () => {
       );
     }
   });
+
   // Window resize handler
   $window.on('resize', () => {
     if (
@@ -116,6 +101,7 @@ const menuCloseHandler = () => {
       );
     }
   });
+
   // Clicking away from element
   $document.on('click', (e) => {
     let $target = $(e.target);
@@ -133,23 +119,7 @@ const menuCloseHandler = () => {
       return;
     }
   });
-  // Scroll handler
-  // $window.on('scroll', function () {
-  //   if ($dropdownSubMenu.hasClass(activeSubMenu)) {
-  //     $dropdownSubMenu.removeClass(activeSubMenu);
-  //     $('.main-nav__dropdown-icon-bounding--active')
-  //       .removeClass(activeDropdownIcon)
-  //       .velocity(
-  //         {
-  //           transform: ['rotateZ(-360deg)', 'rotateZ(-180deg)'],
-  //         },
-  //         {
-  //           duration: 200,
-  //           easing: 'ease-out',
-  //         }
-  //       );
-  //   }
-  // });
+
   // Scroll away handler
   const scrollAwayClose = () => {
     let lastScroll = 0;
@@ -189,17 +159,6 @@ const menuCloseHandler = () => {
   scrollAwayClose();
 };
 
-// const setLinksHeight = () => {
-//   $linksList.height(`${$window.innerHeight()}px`);
-// };
-// $window.on('resize', setLinksHeight);
-
-// const stickyHideReveal = () => {
-//   let headroom = new Headroom(mainNav);
-//   headroom.init();
-//   setLinksHeight();
-// };
-
 const nav = () => {
   // Hamburger click handler
   $hamburger.on('click', () => {
@@ -209,8 +168,6 @@ const nav = () => {
   subMenuHandler();
   // Menu close functionalities
   menuCloseHandler();
-  // Show & Hide Menu on Scroll
-  // stickyHideReveal();
 };
 
 export default nav;
