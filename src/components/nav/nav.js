@@ -50,6 +50,7 @@ const mobileNavHandler = () => {
   $html.toggleClass(disableScroll);
   $body.toggleClass(disableScroll);
   $linksList.toggleClass(activeMobileNav);
+  gsap.to('.main-nav__outer', { duration: 0.25, backgroundColor: '#f2efed' });
   // Collapsing open submenus
   if ($dropdownSubMenu.hasClass(activeSubMenu)) {
     $dropdownSubMenu.removeClass(activeSubMenu);
@@ -93,7 +94,6 @@ const subMenuHandler = () => {
       $this.find($dropdownIcon).addClass(activeDropdownIcon);
       gsap.set($this.find($dropdownIcon), { transformOrigin: 'center' });
       gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 0}, { duration: 0.25, rotation: 180});
-      // gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 0 }, { duration: 0.25, rotation: 180 });
 
       if ($window.width() > tabletBreakpoint) {
         gsap.to('.main-nav__outer', { duration: 0.25, backgroundColor: '#f2efed' });
