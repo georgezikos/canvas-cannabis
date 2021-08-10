@@ -132,7 +132,7 @@ const closeMenuHandler = () => {
         e.keyCode === escKey
       ) {
         $dropdownSubMenu.removeClass(activeSubMenu);
-        gsap.to($activeDropdownIcon, { duration: 0.25, rotation: 360 });
+        // gsap.to($activeDropdownIcon, { duration: 0.25, rotation: 360 });
         $activeDropdownIcon.removeClass(activeDropdownIcon);
         gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
         gsap.to('.main-nav__logo-bounding', {
