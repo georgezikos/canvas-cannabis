@@ -72,7 +72,11 @@ const subMenuHandler = () => {
       gsap.set($openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon), { transformOrigin: 'center' });
       // prettier-ignore
       gsap.fromTo($openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon), { duration: 0.25, rotation: 180 }, { duration: 0.25, rotation: 360 });
+      gsap.set('.main-nav__outer', { backgroundColor: '#f2efed' });
     }
+
+    // gsap.fromTo('.main-nav__outer', { duration: 0.25, backgroundColor: '#f2efed' }, { duration: 0.25, backgroundColor: 'transparent' });
+
     $this.next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the clicked link
     // Deals with changes that happen when you click the same link to close its sub-menu
     // prettier-ignore
