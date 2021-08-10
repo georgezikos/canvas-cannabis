@@ -132,18 +132,18 @@ const closeMenuHandler = () => {
         e.keyCode === escKey
       ) {
         $dropdownSubMenu.removeClass(activeSubMenu);
+        gsap.to($activeDropdownIcon, { duration: 0.25, rotation: 360 });
         $activeDropdownIcon.removeClass(activeDropdownIcon);
-        // here
-        // gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
-        // gsap.to('.main-nav__logo-bounding', {
-        //   duration: 0.25,
-        //   color: '#f2efed',
-        // });
-        // gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
-        // gsap.to('.main-nav__outer', {
-        //   duration: 0.25,
-        //   backgroundColor: 'transparent',
-        // });
+        gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
+        gsap.to('.main-nav__logo-bounding', {
+          duration: 0.25,
+          color: '#f2efed',
+        });
+        gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
+        gsap.to('.main-nav__outer', {
+          duration: 0.25,
+          backgroundColor: 'transparent',
+        });
       }
     });
   };
