@@ -20,7 +20,7 @@ const $linksList = $('.main-nav__links-list'); // Containing element
 const $dropdownParent = $('.main-nav__links-item--dropdown'); // Links with dropdown navigation modifier
 const $dropdownChildren = $('.links-item__container'); // Link and chevron container
 const $dropdownIcon = $('.main-nav__dropdown-icon-bounding'); // Dropdown chevron icon
-const $activeDropdownIcon = $('.main-nav__dropdown-icon-bounding--active');
+const $activeDropdownIcon = $('.main-nav__dropdown-icon-bounding--active'); // Active dropdown chevron icons
 const $dropdownSubMenu = $('.main-nav__sub-menu'); // Containing element of sub-menu link lists
 
 // Classes
@@ -125,10 +125,8 @@ const closeMenuHandler = () => {
       }
     });
   };
-  escClose();
-  windowResizeClose();
-  clickAwayClose();
-  // Scroll away handler
+
+  // Scroll away to close open sub-menus
   const scrollAwayClose = () => {
     let lastScroll = 0;
     $window.scroll(function () {
@@ -143,12 +141,10 @@ const closeMenuHandler = () => {
         currentScroll > lastScroll &&
         $dropdownSubMenu.hasClass(activeSubMenu)
       ) {
-        // down
+        // Scrolling down
         //prettier-ignore
         $dropdownSubMenu.removeClass(activeSubMenu);
-        $('.main-nav__dropdown-icon-bounding--active').removeClass(
-          activeDropdownIcon
-        );
+        $activeDropdownIcon.removeClass(activeDropdownIcon);
         return;
       } else if (
         currentScroll < lastScroll &&
@@ -156,14 +152,18 @@ const closeMenuHandler = () => {
         currentScroll === 0
       ) {
         $dropdownSubMenu.removeClass(activeSubMenu);
-        $('.main-nav__dropdown-icon-bounding--active').removeClass(
-          activeDropdownIcon
-        );
+        $activeDropdownIcon.removeClass(activeDropdownIcon);
         return;
       }
       lastScroll = currentScroll;
     });
   };
+  escClose();
+  windowResizeClose();
+  clickAwayClose();
+  escClose();
+  windowResizeClose();
+  clickAwayClose();
   scrollAwayClose();
 };
 
