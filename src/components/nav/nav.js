@@ -112,11 +112,7 @@ const subMenuHandler = () => {
 
     $this.next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the clicked link
 
-    gsap.fromTo(
-      $this.next(),
-      { duration: 0.25, opacity: 0 },
-      { duration: 0.25, opacity: 1 }
-    );
+    gsap.to($this.next(), { duration: 0.25, opacity: 1 });
 
     // Deals with changes that happen when you click the same link to close its sub-menu
     // prettier-ignore
