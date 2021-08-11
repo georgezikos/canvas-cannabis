@@ -93,10 +93,14 @@ const subMenuHandler = () => {
       // If there are other open sub-menus, collapse them
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
 
-      gsap.to($openSubMenus.find($dropdownSubMenu), {
-        duration: 0.25,
-        opacity: 0,
-      });
+      gsap.fromTo(
+        $openSubMenus.find($dropdownSubMenu),
+        {
+          duration: 0.25,
+          opacity: 1,
+        },
+        { duration: 0.25, opacity: 0 }
+      );
 
       // prettier-ignore
       $openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon).removeClass(activeDropdownIcon);
@@ -108,7 +112,11 @@ const subMenuHandler = () => {
 
     $this.next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the clicked link
 
-    gsap.to($this.next(), { duration: 0.25, opacity: 1 });
+    gsap.fromTo(
+      $this.next(),
+      { duration: 0.25, opacity: 0 },
+      { duration: 0.25, opacity: 1 }
+    );
 
     // Deals with changes that happen when you click the same link to close its sub-menu
     // prettier-ignore
