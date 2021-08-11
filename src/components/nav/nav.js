@@ -54,7 +54,7 @@ const mobileNavHandler = () => {
   if (!$linksList.hasClass(activeMobileNav)) {
     $linksList.addClass(activeMobileNav);
     if ($mainNav.hasClass('main-nav--dark-ui')) {
-      gsap.to('.main-nav__outer', {
+      gsap.to('$mainNav', {
         duration: 0.25,
         backgroundColor: '#f2efed',
       });
@@ -65,7 +65,7 @@ const mobileNavHandler = () => {
   } else if ($linksList.hasClass(activeMobileNav)) {
     $linksList.removeClass(activeMobileNav);
     if ($mainNav.hasClass('main-nav--dark-ui')) {
-      gsap.to('.main-nav__outer', {
+      gsap.to($mainNav, {
         duration: 0.25,
         backgroundColor: 'transparent',
       });
@@ -126,7 +126,7 @@ const subMenuHandler = () => {
         gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
         gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: '#f2efed' });
         gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
-        gsap.to('.main-nav__outer', { duration: 0.25, backgroundColor: 'transparent' });
+        gsap.to($mainNav, { duration: 0.25, backgroundColor: 'transparent' });
       }
 
     } else {
@@ -135,7 +135,7 @@ const subMenuHandler = () => {
       gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 0}, { duration: 0.25, rotation: 180});
 
       if ($window.width() > tabletBreakpoint && $mainNav.hasClass('main-nav--dark-ui')) {
-        gsap.to('.main-nav__outer', { duration: 0.25, backgroundColor: '#f2efed' });
+        gsap.to($mainNav, { duration: 0.25, backgroundColor: '#f2efed' });
         gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
         gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: 'black' });
         gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
@@ -167,7 +167,7 @@ const closeMenuHandler = () => {
             color: '#f2efed',
           });
           gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
-          gsap.to('.main-nav__outer', {
+          gsap.to($mainNav, {
             duration: 0.25,
             backgroundColor: 'transparent',
           });
@@ -200,7 +200,7 @@ const closeMenuHandler = () => {
             color: '#f2efed',
           });
           gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
-          gsap.to('.main-nav__outer', {
+          gsap.to($mainNav, {
             duration: 0.25,
             backgroundColor: 'transparent',
           });
@@ -240,7 +240,7 @@ const closeMenuHandler = () => {
             color: '#f2efed',
           });
           gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
-          gsap.to('.main-nav__outer', {
+          gsap.to($mainNav, {
             duration: 0.25,
             backgroundColor: 'transparent',
           });
@@ -280,7 +280,7 @@ const closeMenuHandler = () => {
             color: '#f2efed',
           });
           gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
-          gsap.to('.main-nav__outer', {
+          gsap.to($mainNav, {
             duration: 0.25,
             backgroundColor: 'transparent',
           });
@@ -303,7 +303,7 @@ const closeMenuHandler = () => {
             color: '#f2efed',
           });
           gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
-          gsap.to('.main-nav__outer', {
+          gsap.to($mainNav, {
             duration: 0.25,
             backgroundColor: 'transparent',
           });
