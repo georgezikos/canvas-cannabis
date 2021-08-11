@@ -132,7 +132,7 @@ const subMenuHandler = () => {
         gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
         gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: 'black' });
         gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
-        
+
         gsap.to($this.next(), { duration: 0.25, opacity: 1 }); // sub-menu opacity
       }
     }
@@ -317,8 +317,8 @@ const closeMenuHandler = () => {
   scrollAwayClose();
 };
 
-const stickyNav = document.querySelector('nav.main-nav');
-const headroom = new Headroom(stickyNav);
+// const stickyNav = document.querySelector('nav.main-nav');
+// const headroom = new Headroom(stickyNav);
 
 const nav = () => {
   // Hamburger click handler
@@ -330,7 +330,7 @@ const nav = () => {
   // Menu close functionalities
   closeMenuHandler();
   // Hide/reveal nav
-  headroom.init();
+  // headroom.init();
 };
 
 export default nav;
