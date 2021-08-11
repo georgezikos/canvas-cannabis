@@ -54,7 +54,7 @@ const mobileNavHandler = () => {
   if (!$linksList.hasClass(activeMobileNav)) {
     $linksList.addClass(activeMobileNav);
     if ($mainNav.hasClass('main-nav--dark-ui')) {
-      gsap.to('$mainNav', {
+      gsap.to($mainNav, {
         duration: 0.25,
         backgroundColor: '#f2efed',
       });
