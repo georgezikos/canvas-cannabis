@@ -94,15 +94,6 @@ const subMenuHandler = () => {
       // If there are other open sub-menus, collapse them
       $openSubMenus.find($dropdownSubMenu).removeClass(activeSubMenu);
 
-      gsap.fromTo(
-        $openSubMenus.find($dropdownSubMenu),
-        {
-          duration: 0.25,
-          opacity: 1,
-        },
-        { duration: 0.25, opacity: 0 }
-      ); // sub-menu opacity
-
       // prettier-ignore
       $openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon).removeClass(activeDropdownIcon);
       // prettier-ignore
@@ -127,18 +118,22 @@ const subMenuHandler = () => {
         gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: '#f2efed' });
         gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
         gsap.to($mainNav, { duration: 0.25, backgroundColor: 'transparent' });
-      }
 
+        gsap.to($this.next(), { duration: 0.25, opacity: 0 }); // sub-menu opacity
+      }
+      
     } else {
       $this.find($dropdownIcon).addClass(activeDropdownIcon);
       gsap.set($this.find($dropdownIcon), { transformOrigin: 'center' });
       gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 0}, { duration: 0.25, rotation: 180});
-
+      
       if ($window.width() > tabletBreakpoint && $mainNav.hasClass('main-nav--dark-ui')) {
         gsap.to($mainNav, { duration: 0.25, backgroundColor: '#f2efed' });
         gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
         gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: 'black' });
         gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
+        
+        gsap.to($this.next(), { duration: 0.25, opacity: 1 }); // sub-menu opacity
       }
     }
   });
