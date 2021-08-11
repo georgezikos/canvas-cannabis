@@ -322,7 +322,8 @@ const closeMenuHandler = () => {
   scrollAwayClose();
 };
 
-const headroom = new Headroom($mainNav);
+const stickyNav = document.querySelector('nav.main-nav');
+const headroom = new Headroom(stickyNav);
 
 const nav = () => {
   // Hamburger click handler
