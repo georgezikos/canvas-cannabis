@@ -1,4 +1,5 @@
-import { gsap } from 'gsap'; // remove?
+import { gsap } from 'gsap';
+import Headroom from 'headroom.js';
 import './nav.css';
 
 // Selectors
@@ -100,7 +101,7 @@ const subMenuHandler = () => {
           opacity: 1,
         },
         { duration: 0.25, opacity: 0 }
-      );
+      ); // sub-menu opacity
 
       // prettier-ignore
       $openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon).removeClass(activeDropdownIcon);
@@ -112,7 +113,7 @@ const subMenuHandler = () => {
 
     $this.next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the clicked link
 
-    gsap.to($this.next(), { duration: 0.25, opacity: 1 });
+    gsap.to($this.next(), { duration: 0.25, opacity: 1 }); // sub-menu opacity
 
     // Deals with changes that happen when you click the same link to close its sub-menu
     // prettier-ignore
@@ -321,6 +322,8 @@ const closeMenuHandler = () => {
   scrollAwayClose();
 };
 
+const headroom = new Headroom($mainNav);
+
 const nav = () => {
   // Hamburger click handler
   $hamburger.on('click', () => {
@@ -330,6 +333,8 @@ const nav = () => {
   subMenuHandler();
   // Menu close functionalities
   closeMenuHandler();
+  // Hide/reveal nav
+  headroom.init();
 };
 
 export default nav;
