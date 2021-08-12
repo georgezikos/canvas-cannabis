@@ -31,6 +31,7 @@ const copyLink = () => {
     // confirm copied through a tooltip?
     tippy('.blog-post__share-link--copy', {
       content: 'Copied!',
+      trigger: 'click',
     });
   });
 };
