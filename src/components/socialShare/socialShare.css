@@ -6,12 +6,18 @@
   opacity: 0.9;
 }
 
+.tippy-content {
+  display: flex;
+}
+
 .share__link--content {
   line-height: 100%;
+  margin-right: 2px;
 }
 
 .share__link--copied {
   display: inline-block;
   height: 12px;
   width: 12px;
+  margin-bottom: 2px;
 }
