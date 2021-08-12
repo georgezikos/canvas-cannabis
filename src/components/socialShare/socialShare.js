@@ -23,7 +23,7 @@ const emailShareLink = `mailto:?subject=test&body=${$currentPost}`; // gmail on 
 // Copy functionality
 const $temp = $('<input>');
 
-// Functions .blog-post__share-link--copy
+// Functions
 const copyLink = () => {
   $copyShareBtn.on('click', () => {
     $body.append($temp);
@@ -31,13 +31,13 @@ const copyLink = () => {
     document.execCommand('copy');
     $temp.remove();
     // Confirm link copy
-    tippy(this, {
+    tippy('.blog-post__share-link--copy', {
       // cache the selector in with vanilla js
       theme: 'canvas',
       content: 'Copied!',
       trigger: 'manual',
       placement: 'right',
-      offset: [0, 16], // skidding, distance
+      offset: [0, 8], // skidding, distance
       delay: [0, 250], // in, out
       animation: 'scale',
       duration: 250,
