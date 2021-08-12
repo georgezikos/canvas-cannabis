@@ -1,4 +1,5 @@
 import tippy from 'tippy.js';
+import 'tippy.js/animations/scale.css';
 
 // Global
 const $body = $('body');
@@ -34,6 +35,7 @@ const copyLink = () => {
     // cache the selector in with vanilla js
     content: 'Copied!',
     trigger: 'click',
+    animation: 'scale',
   });
 };
 
