@@ -73,22 +73,19 @@
 }
 
 .tippy-box[data-theme~='canvas'] {
-  line-height: 100%;
   background-color: #f2efed;
   padding: 8px;
   border: 1px solid black;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  border-radius: 2px;
 }
 
 .share__link--content {
-  display: block;
+  line-height: 100%;
   border: 1px solid red;
 }
 
 .share__link--copied {
-  display: block;
+  display: inline-block;
   height: 14px;
   width: 14px;
   border: 1px solid red;
