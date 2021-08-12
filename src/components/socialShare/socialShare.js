@@ -1,5 +1,5 @@
 const socialShare = () => {
-  console.log(decodeURI($(location).attr('href')));
+  console.log(encodeURIComponent($(location).attr('href')));
 };
 
 export default socialShare;
