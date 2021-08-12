@@ -79,6 +79,10 @@
   border: 1px solid black;
 }
 
-/* .share__link--copied */
+.share__link--copied {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+}
 
 .tippy-box[data-animation=scale][data-placement^=top]{transform-origin:bottom}.tippy-box[data-animation=scale][data-placement^=bottom]{transform-origin:top}.tippy-box[data-animation=scale][data-placement^=left]{transform-origin:right}.tippy-box[data-animation=scale][data-placement^=right]{transform-origin:left}.tippy-box[data-animation=scale][data-state=hidden]{transform:scale(.5);opacity:0}

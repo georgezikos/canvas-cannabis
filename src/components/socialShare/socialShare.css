@@ -5,4 +5,8 @@
   border: 1px solid black;
 }
 
-/* .share__link--copied */
+.share__link--copied {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+}
