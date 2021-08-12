@@ -36,6 +36,7 @@ const copyLink = () => {
     content: 'Copied!',
     trigger: 'click',
     animation: 'scale',
+    duration: 250,
     inertia: 'true',
   });
 };
