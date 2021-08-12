@@ -35,6 +35,8 @@ const copyLink = () => {
     // cache the selector in with vanilla js
     content: 'Copied!',
     trigger: 'click',
+    placement: 'right',
+    // offset: [0, 16], // skidding, distance
     delay: [0, 250],
     animation: 'scale',
     duration: 250,
