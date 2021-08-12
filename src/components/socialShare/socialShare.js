@@ -28,13 +28,14 @@ const copyLink = () => {
     $temp.val(currentPost).select();
     document.execCommand('copy');
     $temp.remove();
-    // confirm copied through a tooltip?
-    tippy('.blog-post__share-link--copy', {
-      content: 'Copied!',
-      trigger: 'click',
-    });
   });
 };
+
+// Confirm copy
+tippy('.blog-post__share-link--copy', {
+  content: 'Copied!',
+  trigger: 'click',
+});
 
 const socialShare = () => {
   $facebookShareBtn.attr('href', facebookShareLink);
