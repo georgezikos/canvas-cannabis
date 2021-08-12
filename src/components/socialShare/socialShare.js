@@ -31,14 +31,13 @@ const copyLink = () => {
     $temp.val($currentPost).select();
     document.execCommand('copy');
     $temp.remove();
-    // Confirm link copy
   });
+  // Successfully copied the link tooltip confirmation
   tippy(copyShareBtn, {
-    // cache the selector in with vanilla js
     theme: 'canvas',
     allowHTML: true,
     content:
-      '<span class="share__link--content">Copied</span> <img src="https://uploads-ssl.webflow.com/60cfd1175523ac59337574a3/611590b5b841f0538ff7398a_share__link--copied.svg" class="share__link--copied">',
+      '<span class="share__link--content">Copied</span> <img src="https://uploads-ssl.webflow.com/60cfd1175523ac59337574a3/611590b5b841f0538ff7398a_share__link--copied.svg" class="share__link--copied" alt="link has been copied checkmark">',
     trigger: 'click',
     placement: 'right',
     offset: [0, 16], // skidding, distance
@@ -47,11 +46,11 @@ const copyLink = () => {
     inertia: 'true',
     arrow: false,
     hideOnClick: false,
-    // onShow(instance) {
-    //   setTimeout(() => {
-    //     instance.hide();
-    //   }, 1500);
-    // },
+    onShow(instance) {
+      setTimeout(() => {
+        instance.hide();
+      }, 1500);
+    },
   });
 };
 
