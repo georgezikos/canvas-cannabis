@@ -23,27 +23,27 @@ const emailShareLink = `mailto:?subject=test&body=${$currentPost}`; // gmail on 
 // Copy functionality
 const $temp = $('<input>');
 
-// Functions
+// Functions .blog-post__share-link--copy
 const copyLink = () => {
   $copyShareBtn.on('click', () => {
     $body.append($temp);
     $temp.val($currentPost).select();
     document.execCommand('copy');
     $temp.remove();
-  });
-  // Confirm link copy
-  tippy('.blog-post__share-link--copy', {
-    // cache the selector in with vanilla js
-    theme: 'canvas',
-    content: 'Copied!',
-    trigger: 'click mouseleave',
-    placement: 'right',
-    offset: [0, 16], // skidding, distance
-    delay: [0, 250], // in, out
-    animation: 'scale',
-    duration: 250,
-    inertia: 'true',
-    arrow: false,
+    // Confirm link copy
+    tippy(this, {
+      // cache the selector in with vanilla js
+      theme: 'canvas',
+      content: 'Copied!',
+      trigger: 'manual',
+      placement: 'right',
+      offset: [0, 16], // skidding, distance
+      delay: [0, 250], // in, out
+      animation: 'scale',
+      duration: 250,
+      inertia: 'true',
+      arrow: false,
+    });
   });
 };
 
