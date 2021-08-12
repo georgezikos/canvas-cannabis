@@ -4,8 +4,8 @@ import tippy from 'tippy.js';
 const $body = $('body');
 
 // URL
-let currentPost = $(location).attr('href'); // for copying
-let currentPostEncoded = encodeURIComponent($(location).attr('href')); // for share links
+const $currentPost = $(location).attr('href'); // for copying
+const $currentPostEncoded = encodeURIComponent($(location).attr('href')); // for share links
 
 // Share buttons
 const $facebookShareBtn = $('.blog-post__share-link--facebook');
@@ -14,9 +14,9 @@ const $emailShareBtn = $('.blog-post__share-link--email');
 const $copyShareBtn = $('.blog-post__share-link--copy');
 
 // Share links
-const facebookShareLink = `https://www.facebook.com/sharer/sharer.php?u=${currentPostEncoded}`;
-const linkedInShareLink = `https://www.linkedin.com/shareArticle?mini=true&url=${currentPostEncoded}&title=Canvas%20Cannabis&source=https%3A%2F%2Fcanvascannabis.ca%2F&summary=Short%20summary`; // make title, source and summary parameters dynamic
-const emailShareLink = `mailto:?subject=test&body=${currentPost}`; // gmail on ios is tricky with mailto in general + clean up body variable and subject
+const facebookShareLink = `https://www.facebook.com/sharer/sharer.php?u=${$currentPostEncoded}`;
+const linkedInShareLink = `https://www.linkedin.com/shareArticle?mini=true&url=${$currentPostEncoded}&title=Canvas%20Cannabis&source=https%3A%2F%2Fcanvascannabis.ca%2F&summary=Short%20summary`; // make title, source and summary parameters dynamic
+const emailShareLink = `mailto:?subject=test&body=${$currentPost}`; // gmail on ios is tricky with mailto in general + clean up body variable and subject
 
 // Copy functionality
 const $temp = $('<input>');
@@ -25,7 +25,7 @@ const $temp = $('<input>');
 const copyLink = () => {
   $copyShareBtn.on('click', () => {
     $body.append($temp);
-    $temp.val(currentPost).select();
+    $temp.val($currentPost).select();
     document.execCommand('copy');
     $temp.remove();
   });
