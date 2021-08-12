@@ -1,5 +1,5 @@
 import { gsap } from 'gsap';
-import Headroom from 'headroom.js';
+// import Headroom from 'headroom.js';
 import './nav.css';
 
 // Selectors
@@ -14,11 +14,8 @@ const $mainNav = $('nav.main-nav'); // Nav element
 
 // Hamburger Elements
 const $hamburger = $('.main-nav__hamburger'); // Containing element
-
-// Unused
 const $hamburgerTop = $('div.hamburger__top'); // Top bun
 const $hamburgerBottom = $('div.hamburger__bottom'); // Bottom bun
-// Unused
 
 // Links
 const $linksList = $('.main-nav__links-list'); // Containing element
