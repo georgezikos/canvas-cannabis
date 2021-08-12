@@ -78,14 +78,17 @@
   border: 1px solid black;
   border-radius: 4px;
   opacity: 0.9;
+  display: flex;
 }
 
 .share__link--content {
+  display: inline-block;
   line-height: 100%;
 }
 
 .share__link--copied {
   display: inline-block;
+  justify-self: flex-start;
   height: 12px;
   width: 12px;
 }
