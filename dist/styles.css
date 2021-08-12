@@ -77,9 +77,10 @@
   background-color: #f2efed;
   padding: 8px;
   border: 1px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+}
+
+.share__link--content {
+  border: 1px solid red;
 }
 
 .share__link--copied {
