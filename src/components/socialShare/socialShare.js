@@ -48,7 +48,7 @@ const copyLink = () => {
     onShow(instance) {
       setTimeout(() => {
         instance.hide();
-      }, 2000);
+      }, 1500);
     },
   });
 };
