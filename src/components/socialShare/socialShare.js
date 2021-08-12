@@ -32,7 +32,7 @@ const socialShare = () => {
   $emailShareBtn.attr('href', `${emailShareLink}${currentPost}`);
   $('.blog-post__share-link--copy').on('click', function () {
     $('body').append($temp);
-    $temp.val(currentPost).select();
+    $temp.val($(location).attr('href')).select();
     document.execCommand('copy');
     $temp.remove();
     // $("p").text("URL copied!");
