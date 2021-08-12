@@ -25,6 +25,7 @@ const copyLink = () => {
     $body.append($temp);
     $temp.val(currentPost).select();
     document.execCommand('copy');
+    $temp.remove();
     // confirm copied through a tooltip?
   });
 };
