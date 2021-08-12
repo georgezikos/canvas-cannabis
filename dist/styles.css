@@ -77,7 +77,7 @@
   padding: 8px 16px;
   border: 1px solid black;
   border-radius: 4px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .share__link--content {
@@ -86,8 +86,8 @@
 
 .share__link--copied {
   display: inline-block;
-  height: 14px;
-  width: 14px;
+  height: 12px;
+  width: 12px;
 }
 
 .tippy-box[data-animation=scale][data-placement^=top]{transform-origin:bottom}.tippy-box[data-animation=scale][data-placement^=bottom]{transform-origin:top}.tippy-box[data-animation=scale][data-placement^=left]{transform-origin:right}.tippy-box[data-animation=scale][data-placement^=right]{transform-origin:left}.tippy-box[data-animation=scale][data-state=hidden]{transform:scale(.5);opacity:0}
