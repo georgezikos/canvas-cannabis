@@ -29,13 +29,13 @@ const copyLink = () => {
     document.execCommand('copy');
     $temp.remove();
   });
+  // Confirm link copy
+  tippy('.blog-post__share-link--copy', {
+    // cache the selector in with vanilla js
+    content: 'Copied!',
+    trigger: 'click',
+  });
 };
-
-// Confirm copy
-tippy('.blog-post__share-link--copy', {
-  content: 'Copied!',
-  trigger: 'click',
-});
 
 const socialShare = () => {
   $facebookShareBtn.attr('href', facebookShareLink);
