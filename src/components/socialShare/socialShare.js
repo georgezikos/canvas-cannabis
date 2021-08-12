@@ -12,6 +12,7 @@ const linkedInShareLinkSource = '&source=https%3A%2F%2Fcanvascannabis.ca%2F';
 const linkedInShareLinkSummary = '&summary=Short%20summary';
 
 const emailShareLink = 'mailto:?subject=test&body=';
+let gmailShareLink = `https://mail.google.com/mail/?view=cm&to=&su={title}&body=${currentPost}`;
 
 // const linkedInShareLink = {
 //   base: ,
@@ -27,7 +28,7 @@ const socialShare = () => {
     'href',
     `${linkedInShareLinkBase}${currentPost}${linkedInShareLinkTitle}${linkedInShareLinkSource}${linkedInShareLinkSummary}`
   );
-  $emailShareBtn.attr('href', `${emailShareLink}${currentPost}`);
+  $emailShareBtn.attr('href', gmailShareLink);
 };
 
 export default socialShare;
