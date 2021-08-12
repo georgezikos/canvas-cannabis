@@ -14,6 +14,7 @@ const $facebookShareBtn = $('.blog-post__share-link--facebook');
 const $linkedInShareBtn = $('.blog-post__share-link--linkedin');
 const $emailShareBtn = $('.blog-post__share-link--email');
 const $copyShareBtn = $('.blog-post__share-link--copy');
+const copyShareBtn = document.querySelector('.blog-post__share-link--copy');
 
 // Share links
 const facebookShareLink = `https://www.facebook.com/sharer/sharer.php?u=${$currentPostEncoded}`;
@@ -32,14 +33,13 @@ const copyLink = () => {
     $temp.remove();
     // Confirm link copy
   });
-  tippy('.blog-post__share-link--copy', {
+  tippy(copyShareBtn, {
     // cache the selector in with vanilla js
     theme: 'canvas',
-    content: 'Copied!',
+    content: 'Copied',
     trigger: 'click',
     placement: 'right',
     offset: [0, 8], // skidding, distance
-    // delay: [0, 250], // in, out
     animation: 'scale',
     duration: 250,
     inertia: 'true',
