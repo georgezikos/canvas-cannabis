@@ -36,7 +36,7 @@ const copyLink = () => {
     // cache the selector in with vanilla js
     theme: 'canvas',
     content: 'Copied!',
-    trigger: 'click',
+    trigger: 'click mouseleave',
     placement: 'right',
     offset: [0, 16], // skidding, distance
     delay: [0, 250], // in, out

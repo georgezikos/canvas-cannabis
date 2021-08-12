@@ -1,4 +1,3 @@
 .tippy-box[data-theme~='canvas'] {
-  background-color: black;
-  color: #f2efed;
+  line-height: 100%;
 }
