@@ -39,7 +39,7 @@ const copyLink = () => {
     trigger: 'click',
     placement: 'right',
     offset: [0, 8], // skidding, distance
-    delay: [0, 250], // in, out
+    // delay: [0, 250], // in, out
     animation: 'scale',
     duration: 250,
     inertia: 'true',
