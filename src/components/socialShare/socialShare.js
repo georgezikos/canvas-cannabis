@@ -1,4 +1,5 @@
 import tippy from 'tippy.js';
+import './socialShare.css';
 import 'tippy.js/animations/scale.css';
 
 // Global
@@ -33,6 +34,7 @@ const copyLink = () => {
   // Confirm link copy
   tippy('.blog-post__share-link--copy', {
     // cache the selector in with vanilla js
+    theme: 'canvas',
     content: 'Copied!',
     trigger: 'click',
     placement: 'right',
