@@ -74,9 +74,9 @@
 
 .tippy-box[data-theme~='canvas'] {
   background-color: #f2efed;
-  padding: 8px;
+  padding: 8px 16px;
   border: 1px solid black;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .share__link--content {
