@@ -31,19 +31,19 @@ const copyLink = () => {
     document.execCommand('copy');
     $temp.remove();
     // Confirm link copy
-    tippy('.blog-post__share-link--copy', {
-      // cache the selector in with vanilla js
-      theme: 'canvas',
-      content: 'Copied!',
-      trigger: 'manual',
-      placement: 'right',
-      offset: [0, 8], // skidding, distance
-      delay: [0, 250], // in, out
-      animation: 'scale',
-      duration: 250,
-      inertia: 'true',
-      arrow: false,
-    });
+  });
+  tippy('.blog-post__share-link--copy', {
+    // cache the selector in with vanilla js
+    theme: 'canvas',
+    content: 'Copied!',
+    trigger: 'click',
+    placement: 'right',
+    offset: [0, 8], // skidding, distance
+    delay: [0, 250], // in, out
+    animation: 'scale',
+    duration: 250,
+    inertia: 'true',
+    arrow: false,
   });
 };
 
