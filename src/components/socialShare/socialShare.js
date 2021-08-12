@@ -1,3 +1,5 @@
+import tippy from 'tippy.js';
+
 // Global
 const $body = $('body');
 
@@ -27,6 +29,9 @@ const copyLink = () => {
     document.execCommand('copy');
     $temp.remove();
     // confirm copied through a tooltip?
+    tippy($copyShareBtn, {
+      content: 'Copied!',
+    });
   });
 };
 
