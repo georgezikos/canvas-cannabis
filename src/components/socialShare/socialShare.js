@@ -36,7 +36,9 @@ const copyLink = () => {
   tippy(copyShareBtn, {
     // cache the selector in with vanilla js
     theme: 'canvas',
-    content: 'Copied',
+    allowHTML: true,
+    content:
+      'Copied <img src="https://uploads-ssl.webflow.com/60cfd1175523ac59337574a3/611590b5b841f0538ff7398a_share__link--copied.svg" class="share__link--copied">',
     trigger: 'click',
     placement: 'right',
     offset: [0, 8], // skidding, distance
