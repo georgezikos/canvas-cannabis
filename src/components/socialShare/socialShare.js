@@ -29,7 +29,7 @@ const copyLink = () => {
     document.execCommand('copy');
     $temp.remove();
     // confirm copied through a tooltip?
-    tippy($copyShareBtn, {
+    tippy('.blog-post__share-link--copy', {
       content: 'Copied!',
     });
   });
