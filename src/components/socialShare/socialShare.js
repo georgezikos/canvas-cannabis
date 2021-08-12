@@ -11,7 +11,9 @@ const linkedInShareLinkTitle = '&title=Canvas%20Cannabis';
 const linkedInShareLinkSource = '&source=https%3A%2F%2Fcanvascannabis.ca%2F';
 const linkedInShareLinkSummary = '&summary=Short%20summary';
 
-const emailShareLink = 'mailto:?subject=test&body=';
+const emailShareLink = 'mailto:?subject=test&body='; // ios gmail is a bitch
+
+let $temp = $('<input>');
 
 // const linkedInShareLink = {
 //   base: ,
@@ -28,6 +30,13 @@ const socialShare = () => {
     `${linkedInShareLinkBase}${currentPost}${linkedInShareLinkTitle}${linkedInShareLinkSource}${linkedInShareLinkSummary}`
   );
   $emailShareBtn.attr('href', `${emailShareLink}${currentPost}`);
+  $('.blog-post__share-link--copy').on('click', function () {
+    $('body').append($temp);
+    $temp.val(currentPost).select();
+    document.execCommand('copy');
+    $temp.remove();
+    // $("p").text("URL copied!");
+  });
 };
 
 export default socialShare;
