@@ -9,11 +9,12 @@
 }
 
 .share__link--content {
+  display: block;
   border: 1px solid red;
 }
 
 .share__link--copied {
-  display: inline-block;
+  display: block;
   height: 14px;
   width: 14px;
   border: 1px solid red;
