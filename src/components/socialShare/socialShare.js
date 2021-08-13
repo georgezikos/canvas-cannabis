@@ -14,10 +14,6 @@ const $currentPostEncoded = encodeURIComponent($(location).attr('href')); // for
 const $currentPostTitle = $('title').text();
 const $currentPostSummary = $meta.attr('name');
 
-if ($currentPostSummary === 'description') {
-  console.log($meta.attr('content'));
-}
-
 // Share buttons
 const $facebookShareBtn = $('.blog-post__share-link--facebook');
 const $linkedInShareBtn = $('.blog-post__share-link--linkedin');
@@ -69,6 +65,9 @@ const socialShare = () => {
   $emailShareBtn.attr('href', emailShareLink);
   copyLink();
   console.log($currentPostTitle);
+  if ($currentPostSummary === 'description') {
+    console.log($meta.attr('content'));
+  }
 };
 
 export default socialShare;
