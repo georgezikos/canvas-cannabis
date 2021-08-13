@@ -12,7 +12,11 @@ const $currentPostEncoded = encodeURIComponent($(location).attr('href')); // for
 
 // Metadata
 const $currentPostTitle = $('title').text();
-// const $currentPostSummary = $meta.attr('description', 'content');
+const $currentPostSummary = $meta.attr('name');
+
+if ($currentPostSummary === 'description') {
+  console.log($meta.attr('content'));
+}
 
 // Share buttons
 const $facebookShareBtn = $('.blog-post__share-link--facebook');
