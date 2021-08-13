@@ -48,7 +48,7 @@ const copyLink = () => {
     theme: 'canvas',
     allowHTML: true,
     content:
-      '<span class="share__link--content">Copied</span> <img src="https://uploads-ssl.webflow.com/60cfd1175523ac59337574a3/611590b5b841f0538ff7398a_share__link--copied.svg" class="share__link--copied" alt="link has been copied confirmation icon">',
+      '<span class="share__link--content">Copied</span> <img src="https://uploads-ssl.webflow.com/60cfd1175523ac59337574a3/61169089b056a46d4fb2924a_share__link--copied.svg" class="share__link--copied">',
     trigger: 'click',
     placement: 'right',
     offset: [0, 16], // skidding, distance
