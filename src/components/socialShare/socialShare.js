@@ -23,7 +23,7 @@ const emailBody = `
   
   I wanted to share this article with you on ${$currentPostTitle} from Canvas Cannabis.
   
-  You can check it out right here: ${currentPost};
+  You can check it out right here: ${$currentPost}
 `;
 
 // Share buttons
