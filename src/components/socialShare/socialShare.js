@@ -4,7 +4,7 @@ import 'tippy.js/animations/scale.css';
 
 // Global
 const $body = $('body');
-const $html = $(html);
+const $html = $('html');
 const $meta = $('meta');
 
 // URL
