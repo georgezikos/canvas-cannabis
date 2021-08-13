@@ -57,7 +57,7 @@ const dailySpecials = () => {
         specials.weekends.days.weekends.products
       } at 15% off their normal price. Shop today's deals below or visit your closest Canvas Cannabis location.`
     );
-    $dailySpecialsBtn.text(specials.weekends.cta);
+    $dailySpecialsBtn.text(`Shop ${specials.weekends.cta}`);
   }
   // if (currentDay === 0 || currentDay === 6) {
   //   console.log('Not today, freak!');
