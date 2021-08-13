@@ -7,7 +7,7 @@ const $body = $('body');
 const $metaDesc = $('meta[name=description]');
 
 // URL
-const $currentPost = $(location).attr('href'); // for copying
+const $currentPost = $(location).attr('href'); // for copying and emails
 const $currentPostEncoded = encodeURIComponent($(location).attr('href')); // for share links
 
 // Metadata
@@ -48,7 +48,7 @@ const copyLink = () => {
     theme: 'canvas',
     allowHTML: true,
     content:
-      '<span class="share__link--content">Copied</span> <img src="https://uploads-ssl.webflow.com/60cfd1175523ac59337574a3/611590b5b841f0538ff7398a_share__link--copied.svg" class="share__link--copied" alt="link has been copied checkmark">',
+      '<span class="share__link--content">Copied</span> <img src="https://uploads-ssl.webflow.com/60cfd1175523ac59337574a3/611590b5b841f0538ff7398a_share__link--copied.svg" class="share__link--copied" alt="link has been copied confirmation icon">',
     trigger: 'click',
     placement: 'right',
     offset: [0, 16], // skidding, distance
