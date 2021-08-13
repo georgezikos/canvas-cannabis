@@ -4,10 +4,16 @@ import 'tippy.js/animations/scale.css';
 
 // Global
 const $body = $('body');
+const $html = $(html);
+const $meta = $('meta');
 
 // URL
 const $currentPost = $(location).attr('href'); // for copying
 const $currentPostEncoded = encodeURIComponent($(location).attr('href')); // for share links
+
+// Metadata
+const $currentPostTitle = $html.filter('title').text();
+const $currentPostSummary = $meta.attr('description', 'content');
 
 // Share buttons
 const $facebookShareBtn = $('.blog-post__share-link--facebook');
@@ -18,10 +24,10 @@ const copyShareBtn = document.querySelector('.blog-post__share-link--copy');
 
 // Share links
 const facebookShareLink = `https://www.facebook.com/sharer/sharer.php?u=${$currentPostEncoded}`;
-const linkedInShareLink = `https://www.linkedin.com/shareArticle?mini=true&url=${$currentPostEncoded}&title=Canvas%20Cannabis&source=https%3A%2F%2Fcanvascannabis.ca%2F&summary=Short%20summary`; // make title, source and summary parameters dynamic
+const linkedInShareLink = `https://www.linkedin.com/shareArticle?mini=true&url=${$currentPostEncoded}&title=${$currentPostTitle}&source=https%3A%2F%2Fcanvascannabis.ca%2F&summary=${$currentPostSummary}`; // make title, source and summary parameters dynamic
 const emailShareLink = `mailto:?subject=test&body=${$currentPost}`; // gmail on ios is tricky with mailto in general + clean up body variable and subject
 
-// Copy functionality
+// Copy link related
 const $temp = $('<input>');
 
 // Functions
@@ -32,7 +38,7 @@ const copyLink = () => {
     document.execCommand('copy');
     $temp.remove();
   });
-  // Successfully copied the link tooltip confirmation
+  // Tooltip confirmation
   tippy(copyShareBtn, {
     theme: 'canvas',
     allowHTML: true,
