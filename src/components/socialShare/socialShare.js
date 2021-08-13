@@ -23,7 +23,7 @@ const copyShareBtn = document.querySelector('.blog-post__share-link--copy');
 
 // Share links
 const facebookShareLink = `https://www.facebook.com/sharer/sharer.php?u=${$currentPostEncoded}`;
-const linkedInShareLink = `https://www.linkedin.com/shareArticle?mini=true&url=${$currentPostEncoded}&title=${$currentPostTitle}&source=https%3A%2F%2Fcanvascannabis.ca%2F&summary=${$currentPostSummary}`; // make title, source and summary parameters dynamic
+const linkedInShareLink = `https://www.linkedin.com/shareArticle?mini=true&url=${$currentPostEncoded}&title=${$currentPostTitle}&source=https%3A%2F%2Fcanvascannabis.ca%2F&summary=summary`; // make title, source and summary parameters dynamic
 const emailShareLink = `mailto:?subject=test&body=${$currentPost}`; // gmail on ios is tricky with mailto in general + clean up body variable and subject
 
 // Copy link related
