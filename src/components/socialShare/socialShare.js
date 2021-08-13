@@ -4,7 +4,6 @@ import 'tippy.js/animations/scale.css';
 
 // Global
 const $body = $('body');
-const $html = $('html');
 const $meta = $('meta');
 
 // URL
@@ -12,8 +11,8 @@ const $currentPost = $(location).attr('href'); // for copying
 const $currentPostEncoded = encodeURIComponent($(location).attr('href')); // for share links
 
 // Metadata
-const $currentPostTitle = $html.filter('title').text();
-const $currentPostSummary = $meta.attr('description', 'content');
+const $currentPostTitle = $('title').text();
+// const $currentPostSummary = $meta.attr('description', 'content');
 
 // Share buttons
 const $facebookShareBtn = $('.blog-post__share-link--facebook');
@@ -65,6 +64,7 @@ const socialShare = () => {
   $linkedInShareBtn.attr('href', linkedInShareLink);
   $emailShareBtn.attr('href', emailShareLink);
   copyLink();
+  console.log($currentPostTitle);
 };
 
 export default socialShare;
