@@ -14,9 +14,17 @@ const $currentPostEncoded = encodeURIComponent($(location).attr('href')); // for
 const $currentPostTitle = $('title').text();
 const $currentPostTitleEncoded = encodeURIComponent($('title').text());
 const $currentPostSummary = $metaDesc.attr('content');
-const $currentPostSummaryEncoded = encodeURIComponent(
-  $metaDesc.attr('content')
-);
+const $currentPostSummaryEncoded = encodeURIComponent($currentPostSummary);
+
+// Emails
+const emailSubject = `Canvas Cannabis Blog: ${$currentPostTitle}`;
+const emailBody = `
+  Hi, 
+  
+  I wanted to share this article with you on ${$currentPostTitle} from Canvas Cannabis.
+  
+  You can check it out right here: ${currentPost};
+`;
 
 // Share buttons
 const $facebookShareBtn = $('.blog-post__share-link--facebook');
@@ -28,7 +36,7 @@ const copyShareBtn = document.querySelector('.blog-post__share-link--copy');
 // Share links
 const facebookShareLink = `https://www.facebook.com/sharer/sharer.php?u=${$currentPostEncoded}`;
 const linkedInShareLink = `https://www.linkedin.com/shareArticle?mini=true&url=${$currentPostEncoded}&title=${$currentPostTitleEncoded}&source=https%3A%2F%2Fcanvascannabis.ca%2F&summary=${$currentPostSummaryEncoded}`;
-const emailShareLink = `mailto:?subject=test&body=${$currentPost}`; // gmail on ios is tricky with mailto in general + clean up body variable and subject
+const emailShareLink = `mailto:?subject=${emailSubject}&body=${emailBody}`; // gmail on ios is tricky with mailto in general + clean up body variable and subject
 
 // Copy link related
 const $temp = $('<input>');
