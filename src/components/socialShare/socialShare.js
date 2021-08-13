@@ -36,6 +36,26 @@ const emailShareLink = `mailto:?subject=${emailSubject}&body=${emailBody}`; // g
 const $temp = $('<input>');
 
 // Functions
+const windowPopup = (url, width, height) => {
+  // Calculate the position of the popup so
+  // it’s centered on the screen.
+  const left = screen.width / 2 - width / 2;
+  const top = screen.height / 2 - height / 2;
+
+  window.open(
+    url,
+    '',
+    'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=' +
+      width +
+      ',height=' +
+      height +
+      ',top=' +
+      top +
+      'left=' +
+      left
+  );
+};
+
 const copyLink = () => {
   $copyShareBtn.on('click', (e) => {
     e.preventDefault();
@@ -67,7 +87,12 @@ const copyLink = () => {
 };
 
 const socialShare = () => {
-  $facebookShareBtn.attr('href', facebookShareLink);
+  // $facebookShareBtn.attr('href', facebookShareLink);
+  $facebookShareBtn.on('click', (e) => {
+    e.preventDefault();
+    const $this = $(this);
+    windowPopup($this.attr('href', facebookShareLink), 500, 300);
+  });
   $linkedInShareBtn.attr('href', linkedInShareLink);
   $emailShareBtn.attr('href', emailShareLink);
   copyLink();
