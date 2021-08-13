@@ -18,15 +18,7 @@ const $currentPostSummaryEncoded = encodeURIComponent($currentPostSummary);
 
 // Emails
 const emailSubject = `Canvas Cannabis Blog: ${$currentPostTitle}`;
-const emailBody = `
-  Hey, 
-  %0D%0A
-  %0D%0A
-  I wanted to share this article with you on ${$currentPostTitle} from Canvas Cannabis.
-  %0D%0A
-  %0D%0A
-  You can check it out right here: <a href="${$currentPost}">${$currentPost}</a>
-`;
+const emailBody = `Hey,%0D%0A%0D%0A I wanted to share this article with you on ${$currentPostTitle} from Canvas Cannabis.%0D%0A%0D%0AYou can check it out right here: ${$currentPost}%0D%0A%0D%0AEnjoy!`;
 
 // Share buttons
 const $facebookShareBtn = $('.blog-post__share-link--facebook');
