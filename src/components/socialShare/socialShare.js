@@ -12,7 +12,11 @@ const $currentPostEncoded = encodeURIComponent($(location).attr('href')); // for
 
 // Metadata
 const $currentPostTitle = $('title').text();
+const $currentPostTitleEncoded = encodeURIComponent($('title').text());
 const $currentPostSummary = $metaDesc.attr('content');
+const $currentPostSummaryEncoded = encodeURIComponent(
+  $metaDesc.attr('content')
+);
 
 // Share buttons
 const $facebookShareBtn = $('.blog-post__share-link--facebook');
@@ -23,7 +27,7 @@ const copyShareBtn = document.querySelector('.blog-post__share-link--copy');
 
 // Share links
 const facebookShareLink = `https://www.facebook.com/sharer/sharer.php?u=${$currentPostEncoded}`;
-const linkedInShareLink = `https://www.linkedin.com/shareArticle?mini=true&url=${$currentPostEncoded}&title=${$currentPostTitle}&source=https%3A%2F%2Fcanvascannabis.ca%2F&summary=summary`; // make title, source and summary parameters dynamic
+const linkedInShareLink = `https://www.linkedin.com/shareArticle?mini=true&url=${$currentPostEncoded}&title=${$currentPostTitleEncoded}&source=https%3A%2F%2Fcanvascannabis.ca%2F&summary=${$currentPostSummaryEncoded}`;
 const emailShareLink = `mailto:?subject=test&body=${$currentPost}`; // gmail on ios is tricky with mailto in general + clean up body variable and subject
 
 // Copy link related
@@ -64,8 +68,6 @@ const socialShare = () => {
   $linkedInShareBtn.attr('href', linkedInShareLink);
   $emailShareBtn.attr('href', emailShareLink);
   copyLink();
-  console.log($currentPostTitle);
-  console.log($currentPostSummary);
 };
 
 export default socialShare;
