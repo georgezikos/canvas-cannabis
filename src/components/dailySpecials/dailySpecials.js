@@ -51,7 +51,7 @@ const dailySpecials = () => {
   if (currentDay === 0 || currentDay === 6 || currentDay === 5) {
     for (const special in specials) {
       if (special === 'weekends') {
-        console.log(special);
+        console.log(specials[special]);
       }
     }
   }
