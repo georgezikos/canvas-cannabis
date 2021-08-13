@@ -19,10 +19,10 @@ const $currentPostSummaryEncoded = encodeURIComponent($currentPostSummary);
 // Emails
 const emailSubject = `Canvas Cannabis Blog: ${$currentPostTitle}`;
 const emailBody = `
-  Hi, 
-  
+  Hey, 
+  %0D%0A
   I wanted to share this article with you on ${$currentPostTitle} from Canvas Cannabis.
-  
+  %0D%0A
   You can check it out right here: ${$currentPost}
 `;
 
