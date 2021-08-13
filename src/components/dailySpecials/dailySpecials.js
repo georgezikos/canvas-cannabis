@@ -49,11 +49,15 @@ const currentDay = currentDate.getDay();
 
 const dailySpecials = () => {
   if (currentDay === 0 || currentDay === 6 || currentDay === 5) {
-    for (const special in specials) {
-      if (special === 'weekends') {
-        console.log(specials[special]);
-      }
-    }
+    $dailySpecialsHeading.text(specials.weekends.heading);
+    $dailySpecialsBody.text(
+      `${
+        specials.weekends.prefix
+      } ${specials.weekends.days.weekends.label.toLowerCase()} we feature our favourite ${
+        specials.weekends.days.weekends.products
+      } at 15% off their normal price. Shop today's deals below or visit your closest Canvas Cannabis location.`
+    );
+    $dailySpecialsBtn.text(specials.weekends.cta);
   }
   // if (currentDay === 0 || currentDay === 6) {
   //   console.log('Not today, freak!');
