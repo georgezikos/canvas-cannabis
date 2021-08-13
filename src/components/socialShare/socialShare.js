@@ -37,7 +37,8 @@ const $temp = $('<input>');
 
 // Functions
 const copyLink = () => {
-  $copyShareBtn.on('click', () => {
+  $copyShareBtn.on('click', (e) => {
+    e.preventDefault();
     $body.append($temp);
     $temp.val($currentPost).select();
     document.execCommand('copy');
