@@ -57,11 +57,11 @@ const copyLink = () => {
     inertia: 'true',
     arrow: false,
     hideOnClick: false,
-    onShow(instance) {
-      setTimeout(() => {
-        instance.hide();
-      }, 500);
-    },
+    // onShow(instance) {
+    //   setTimeout(() => {
+    //     instance.hide();
+    //   }, 500);
+    // },
   });
 };
 
