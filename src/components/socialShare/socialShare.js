@@ -35,10 +35,12 @@ const emailShareLink = `mailto:?subject=${emailSubject}&body=${emailBody}`; // g
 
 // Copy link related
 const $temp = $('<input>');
-let windowWidth = $window.width();
-let windowHeight = $window.height();
-let left = windowWidth / 2 - 500 / 2;
-let top = windowHeight / 2 - 300 / 2;
+
+// Pop-up window related
+const windowWidth = $window.width();
+const windowHeight = $window.height();
+const windowLeft = windowWidth / 2 - 500 / 2;
+const windowTop = windowHeight / 2 - 300 / 2;
 
 // Functions
 const copyLink = () => {
@@ -78,7 +80,7 @@ const socialShare = () => {
     window.open(
       facebookShareLink,
       'popup',
-      `menubar=no, toolbar=no, resizable=yes, scrollbars=yes, width=500, height=300, top=${top}, left=${left}`
+      `menubar=no, toolbar=no, resizable=yes, scrollbars=yes, width=500, height=300, top=${windowTop}, left=${windowLeft}`
     );
   });
   $linkedInShareBtn.attr('href', linkedInShareLink);
