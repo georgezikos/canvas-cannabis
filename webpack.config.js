@@ -1,6 +1,8 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.js',
@@ -32,8 +34,8 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/env'],
-            plugins: ['@babel/plugin-proposal-class-properties'],
+            presets: ['@babel/env', { modules: false, targets: { node: 4 } }],
+            plugins: ['@babel/plugin-proposal-class-properties', 'lodash'],
           },
         },
       },
@@ -43,5 +45,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'styles.css',
     }),
+    // prettier-ignore
+    new LodashModuleReplacementPlugin,
+    // prettier-ignore
+    new webpack.optimize.UglifyJsPlugin,
   ],
 };
