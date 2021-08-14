@@ -37,8 +37,8 @@ const emailShareLink = `mailto:?subject=${emailSubject}&body=${emailBody}`; // g
 const $temp = $('<input>');
 let windowWidth = $window.width();
 let windowHeight = $window.height();
-let left = windowWidth / 2 - 1000 / 2;
-let top = windowHeight / 2 - 600 / 2;
+let left = windowWidth / 2 - 500 / 2;
+let top = windowHeight / 2 - 300 / 2;
 
 // Functions
 const copyLink = () => {
