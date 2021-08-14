@@ -15,6 +15,7 @@ const activeToggleIcon = 'faq__toggle-icon--active';
 const toggleButtonHandler = () => {
   console.log('clicked');
   const $this = $(this);
+  console.log($this);
   $this.toggleClass(activeToggleButton);
   $this.next().toggleClass(activeAnswer);
   // prettier-ignore
