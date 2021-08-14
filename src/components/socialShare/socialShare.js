@@ -39,8 +39,8 @@ const $temp = $('<input>');
 // Pop-up window related
 const windowWidth = $window.width();
 const windowHeight = $window.height();
-const windowLeft = windowWidth / 2 - 500 / 2;
-const windowTop = windowHeight / 2 - 300 / 2;
+const windowLeft = windowWidth / 2 - 480 / 2;
+const windowTop = windowHeight / 2 - 608 / 2;
 
 // Functions
 const copyLink = () => {
@@ -80,7 +80,7 @@ const socialShare = () => {
     window.open(
       facebookShareLink,
       'popup',
-      `menubar=no, toolbar=no, resizable=yes, scrollbars=yes, width=500, height=300, top=${windowTop}, left=${windowLeft}`
+      `menubar=no, toolbar=no, resizable=yes, scrollbars=yes, width=480, height=608, top=${windowTop}, left=${windowLeft}`
     );
   });
   $linkedInShareBtn.attr('href', linkedInShareLink);
@@ -89,7 +89,7 @@ const socialShare = () => {
     window.open(
       linkedInShareLink,
       'popup',
-      `menubar=no, toolbar=no, resizable=yes, scrollbars=yes, width=500, height=300, top=${windowTop}, left=${windowLeft}`
+      `menubar=no, toolbar=no, resizable=yes, scrollbars=yes, width=480, height=608, top=${windowTop}, left=${windowLeft}`
     );
   });
   $emailShareBtn.attr('href', emailShareLink);
