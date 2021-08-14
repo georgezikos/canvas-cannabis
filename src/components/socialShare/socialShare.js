@@ -76,7 +76,7 @@ const socialShare = () => {
   $facebookShareBtn.on('click', (e) => {
     e.preventDefault();
     window.open(
-      '',
+      facebookShareLink,
       'popup',
       'width=900, height=600, top=' + top + ', left=' + left
     );
