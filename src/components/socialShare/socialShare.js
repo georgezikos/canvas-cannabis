@@ -84,6 +84,14 @@ const socialShare = () => {
     );
   });
   $linkedInShareBtn.attr('href', linkedInShareLink);
+  $linkedInShareBtn.on('click', (e) => {
+    e.preventDefault();
+    window.open(
+      linkedInShareLink,
+      'popup',
+      `menubar=no, toolbar=no, resizable=yes, scrollbars=yes, width=500, height=300, top=${windowTop}, left=${windowLeft}`
+    );
+  });
   $emailShareBtn.attr('href', emailShareLink);
   copyLink();
 };
