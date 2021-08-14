@@ -1,4 +1,4 @@
-import { throttle as _throttle, debounce as _debounce } from 'lodash';
+// import { throttle as _throttle, debounce as _debounce } from 'lodash'; // bring these dependencies back in when I learn how to bind properly
 import gsap from 'gsap/gsap-core';
 import './faq.css';
 
@@ -13,7 +13,7 @@ const activeToggleIcon = 'faq__toggle-icon--active';
 
 const faq = () => {
   $toggleButton.on('click', function () {
-    console.log('clicked');
+    // console.log('clicked'); // temporary, while learning how to debounce/throttle properly
     const $this = $(this);
     $this.toggleClass(activeToggleButton);
     $this.next().toggleClass(activeAnswer);
