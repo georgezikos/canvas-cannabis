@@ -78,7 +78,7 @@ const socialShare = () => {
     window.open(
       facebookShareLink,
       'popup',
-      'width=900, height=600, top=' + top + ', left=' + left
+      `menubar=no, toolbar=no, resizable=yes, scrollbars=yes, width=500, height=300, top=${top}, left=${left}`
     );
   });
   $linkedInShareBtn.attr('href', linkedInShareLink);
