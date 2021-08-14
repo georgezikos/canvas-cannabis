@@ -4,6 +4,7 @@ import 'tippy.js/animations/scale.css';
 
 // Global
 const $body = $('body');
+const $window = $(window);
 const $metaDesc = $('meta[name=description]');
 
 // URL
@@ -34,6 +35,10 @@ const emailShareLink = `mailto:?subject=${emailSubject}&body=${emailBody}`; // g
 
 // Copy link related
 const $temp = $('<input>');
+let windowWidth = $window.width();
+let windowHeight = $window.height();
+let left = windowWidth / 2 - 900 / 2;
+let top = windowHeight / 2 - 600 / 2;
 
 // Functions
 const copyLink = () => {
@@ -68,6 +73,14 @@ const copyLink = () => {
 
 const socialShare = () => {
   $facebookShareBtn.attr('href', facebookShareLink);
+  $facebookShareBtn.on('click', (e) => {
+    e.preventDefault();
+    window.open(
+      '',
+      'popup',
+      'width=900, height=600, top=' + top + ', left=' + left
+    );
+  });
   $linkedInShareBtn.attr('href', linkedInShareLink);
   $emailShareBtn.attr('href', emailShareLink);
   copyLink();
