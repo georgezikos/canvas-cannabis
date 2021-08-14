@@ -11,27 +11,21 @@ const activeToggleButton = 'faq__question-container--active';
 const activeAnswer = 'faq__answer-container--active';
 const activeToggleIcon = 'faq__toggle-icon--active';
 
-// Functions
-const toggleButtonHandler = () => {
-  console.log('clicked');
-  const $this = $(this);
-  console.log($this);
-  $this.toggleClass(activeToggleButton);
-  $this.next().toggleClass(activeAnswer);
-  // prettier-ignore
-  if ($this.find($toggleIcon).hasClass(activeToggleIcon)) {
-  $this.find($toggleIcon).removeClass(activeToggleIcon);
-  gsap.fromTo($this.find($toggleIcon), { duration: 0.25, rotation: 90 }, { duration: 0.25, rotation: 0 });
-  } else {
-    $this.find($toggleIcon).addClass(activeToggleIcon);
-    gsap.fromTo($this.find($toggleIcon), { duration: 0.25, rotation: 0 }, { duration: 0.25, rotation: 90 });
-  }
-};
-
-const debouncedToggle = _debounce(toggleButtonHandler, 200);
-
 const faq = () => {
-  $toggleButton.on('click', debouncedToggle.bind($this));
+  $toggleButton.on('click', function () {
+    console.log('clicked');
+    const $this = $(this);
+    $this.toggleClass(activeToggleButton);
+    $this.next().toggleClass(activeAnswer);
+    // prettier-ignore
+    if ($this.find($toggleIcon).hasClass(activeToggleIcon)) {
+      $this.find($toggleIcon).removeClass(activeToggleIcon);
+      gsap.fromTo($this.find($toggleIcon), { duration: 0.25, rotation: 90 }, { duration: 0.25, rotation: 0 });
+    } else {
+      $this.find($toggleIcon).addClass(activeToggleIcon);
+      gsap.fromTo($this.find($toggleIcon), { duration: 0.25, rotation: 0 }, { duration: 0.25, rotation: 90 });
+    }
+  });
 };
 
 export default faq;
