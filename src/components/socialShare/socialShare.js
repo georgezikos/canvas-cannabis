@@ -73,8 +73,7 @@ const copyLink = () => {
   });
 };
 
-const socialShare = () => {
-  $facebookShareBtn.attr('href', facebookShareLink);
+const facebookShare = () => {
   $facebookShareBtn.on('click', (e) => {
     e.preventDefault();
     window.open(
@@ -83,7 +82,9 @@ const socialShare = () => {
       `menubar=no, toolbar=no, resizable=yes, scrollbars=yes, width=480, height=608, top=${windowTop}, left=${windowLeft}`
     );
   });
-  $linkedInShareBtn.attr('href', linkedInShareLink);
+};
+
+const linkedInShare = () => {
   $linkedInShareBtn.on('click', (e) => {
     e.preventDefault();
     window.open(
@@ -92,7 +93,14 @@ const socialShare = () => {
       `menubar=no, toolbar=no, resizable=yes, scrollbars=yes, width=480, height=608, top=${windowTop}, left=${windowLeft}`
     );
   });
+};
+
+const socialShare = () => {
   $emailShareBtn.attr('href', emailShareLink);
+  $facebookShareBtn.attr('href', facebookShareLink);
+  facebookShare();
+  $linkedInShareBtn.attr('href', linkedInShareLink);
+  linkedInShare();
   copyLink();
 };
 
