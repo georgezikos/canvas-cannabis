@@ -1,3 +1,4 @@
+import { throttle as _throttle, debounce as _debounce } from 'lodash';
 import gsap from 'gsap/gsap-core';
 import './faq.css';
 
@@ -12,6 +13,7 @@ const activeToggleIcon = 'faq__toggle-icon--active';
 
 const faq = () => {
   $toggleButton.on('click', function () {
+    console.log('clicked');
     const $this = $(this);
     $this.toggleClass(activeToggleButton);
     $this.next().toggleClass(activeAnswer);
