@@ -11,8 +11,7 @@ const activeAnswer = 'faq__answer-container--active';
 const activeToggleIcon = 'faq__toggle-icon--active';
 
 const faq = () => {
-  $toggleButton.on('click', function (e) {
-    // e.stopPropagation();
+  $toggleButton.on('click', function () {
     const $this = $(this);
     $this.toggleClass(activeToggleButton);
     $this.next().toggleClass(activeAnswer);
