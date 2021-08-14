@@ -31,7 +31,7 @@ const toggleButtonHandler = () => {
 const debouncedToggle = _debounce(toggleButtonHandler, 200);
 
 const faq = () => {
-  $toggleButton.on('click', debouncedToggle);
+  $toggleButton.on('click', debouncedToggle.bind($this));
 };
 
 export default faq;
