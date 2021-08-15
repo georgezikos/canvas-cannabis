@@ -8,12 +8,12 @@ const $segmentationForm = $('.modal__form--shop');
 const $chooseStore = $('#shop-segmentation-select');
 
 // Buttons
-const $navShop = '.main-nav__link--shop'; // nav 'shop' link
-const $shopNow = '#shop-now-btn'; // hero 'shop now'
-const $dailySpecialsShop = '#daily-specials-btn'; // daily specials/staff picks
-const $shopFlower = '#shop-flower-btn'; // shop flower
-const $shopEdibles = '#shop-edibles-btn'; // shop edibles
-const $shopAccessories = '#shop-accessories-btn'; // shop accessories
+const $navShop = $('.main-nav__link--shop'); // nav 'shop' link
+const $shopNow = $('#shop-now-btn'); // hero 'shop now'
+const $dailySpecialsShop = $('#daily-specials-btn'); // daily specials/staff picks
+const $shopFlower = $('#shop-flower-btn'); // shop flower
+const $shopEdibles = $('#shop-edibles-btn'); // shop edibles
+const $shopAccessories = $('#shop-accessories-btn'); // shop accessories
 
 // Classes
 const activeSegmentation = 'modal--active';
