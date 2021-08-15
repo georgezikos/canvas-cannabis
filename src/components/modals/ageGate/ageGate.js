@@ -4,8 +4,8 @@ import '../modals.css';
 // Selectors
 const $body = $('body');
 const $html = $('html');
-const $ageGate = $('div.modal--age-gate'); // containing element
-const $ageGateForm = $('form.modal__form--age-gate');
+const $ageGate = $('.modal--age-gate'); // containing element
+const $ageGateForm = $('.modal__form--age-gate');
 const $verifyAge = $('#verify-age');
 const $rememberMe = $('#remember-me');
 
