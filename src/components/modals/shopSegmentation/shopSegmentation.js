@@ -34,6 +34,11 @@ const accessories = 'accessories'; // flower category
 
 // const firstHalf;
 
+// Add click away from modal to close functionality
+// Add esc to close functionality
+// Disable the placeholder value and change it's color to 30% black
+// How to launch without repainting/scrolling to the top of the page
+
 // Functions
 // const pathConstructor = (store, path, products = false, main = false) => { // how to make some of these args optional? Only really need to know the store and if main is true
 //   const destination;
@@ -63,6 +68,7 @@ const test = () => {
     $segmentationModal.addClass(activeSegmentation);
     $html.addClass(disableScroll);
     $body.addClass(disableScroll);
+    console.log($(this));
     // construct part of the url
     // if shop now or shop link main is true
     // if the others capture the path
