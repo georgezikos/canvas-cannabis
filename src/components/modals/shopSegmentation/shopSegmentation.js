@@ -68,7 +68,7 @@ const test = () => {
     $segmentationModal.addClass(activeSegmentation);
     $html.addClass(disableScroll);
     $body.addClass(disableScroll);
-    console.log($(this).val());
+    console.log($(this).attr('data-menu'));
     // construct part of the url
     // if shop now or shop link main is true
     // if the others capture the path
