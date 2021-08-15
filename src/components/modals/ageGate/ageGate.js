@@ -1,16 +1,16 @@
 import Cookies from 'js-cookie';
-import './ageGate.css';
+import '../modals.css';
 
 // Selectors
 const $body = $('body');
 const $html = $('html');
-const $ageGate = $('.age-gate');
-const $ageGateForm = $('.age-gate__form');
+const $ageGate = $('div.modal.modal--age-gate'); // containing element
+const $ageGateForm = $('form.modal__form.modal__form--age-gate');
 const $verifyAge = $('#verify-age');
 const $rememberMe = $('#remember-me');
 
 // Classes
-const activeAgeGate = 'age-gate--active';
+const activeAgeGate = 'modal--active';
 const disableScroll = 'active-modal';
 
 // Cookie Names

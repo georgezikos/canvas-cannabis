@@ -6,7 +6,7 @@
 }
 
 /* Age gate's containing element */
-.age-gate--active {
+.modal--active {
   display: flex;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
