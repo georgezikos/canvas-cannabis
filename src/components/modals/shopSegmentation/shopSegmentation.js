@@ -56,6 +56,7 @@ const pathConstructor = (main, store, products, destination) => {
 };
 
 const shopSegmentation = () => {
+  console.log($selectPlaceholder.val());
   // Create a placeholder value in the select field
   $selectPlaceholder.attr({
     // prettier-ignore
