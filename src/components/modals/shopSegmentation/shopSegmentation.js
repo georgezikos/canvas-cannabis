@@ -212,6 +212,11 @@ const shopSegmentation = () => {
       store = danforth;
       const fullPath = pathConstructor(main, store, products, destination);
       window.open(fullPath);
+      // reset URL variables
+      main = false;
+      store = undefined;
+      products = false;
+      destination = undefined;
       $storeSelect.prop('selectedIndex', 0); // resets the select field
       // destroy the modal – convert into it's own function
       $segmentationModal.removeClass(activeSegmentation);
@@ -221,6 +226,11 @@ const shopSegmentation = () => {
       store = liberty;
       const fullPath = pathConstructor(main, store, products, destination);
       window.open(fullPath);
+      // reset URL variables
+      main = false;
+      store = undefined;
+      products = false;
+      destination = undefined;
       $storeSelect.prop('selectedIndex', 0); // resets the select field
       // destroy the modal – convert into it's own function
       $segmentationModal.removeClass(activeSegmentation);
@@ -230,6 +240,11 @@ const shopSegmentation = () => {
       store = mountDennis;
       const fullPath = pathConstructor(main, store, products, destination);
       window.open(fullPath);
+      // reset URL variables
+      main = false;
+      store = undefined;
+      products = false;
+      destination = undefined;
       $storeSelect.prop('selectedIndex', 0); // resets the select field
       // destroy the modal – convert into it's own function
       $segmentationModal.removeClass(activeSegmentation);
@@ -241,7 +256,7 @@ const shopSegmentation = () => {
 
 export default shopSegmentation;
 
-// Add 'Shop Now' mobile nav button to this mix
+// Add 'Shop Now' mobile nav button to this mix + footer 'shop' link
 // Add click away from modal to close functionality
 // Add esc to close functionality
 // Collapse open menu if the modal is triggered
