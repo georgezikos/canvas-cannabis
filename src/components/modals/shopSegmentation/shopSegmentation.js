@@ -57,6 +57,7 @@ const pathConstructor = (main, store, products, destination) => {
 
 const shopSegmentation = () => {
   // Create a placeholder value in the select field
+  console.log($selectPlaceholder);
   $selectPlaceholder.attr({
     selected: 'true',
     disabled: 'true',
