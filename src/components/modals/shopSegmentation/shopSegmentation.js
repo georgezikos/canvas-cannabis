@@ -47,7 +47,7 @@ let destination;
 const pathConstructor = (main, store, products, destination) => {
   if (main) {
     // convert to switch-case?
-    fullPath += `/${store}`;
+    fullPath += `${dutchieTopLevel}/${store}`;
   } else if (products) {
     fullPath = `${dutchieTopLevel}/${store}/${destination}`;
   } else if (!products) {
@@ -66,7 +66,6 @@ const shopSegmentation = () => {
     const dataVal = $(this).data('menu');
     // construct part of the url – turn this into it's own function and switch-case?
     if (dataVal === 'main') {
-      fullPath = dutchieTopLevel;
       main = true;
     } else if (dataVal === 'specials') {
       destination = specials;
@@ -91,7 +90,6 @@ const shopSegmentation = () => {
     const dataVal = $(this).data('menu');
     // construct part of the url – turn this into it's own function and switch-case?
     if (dataVal === 'main') {
-      fullPath = dutchieTopLevel;
       main = true;
     } else if (dataVal === 'specials') {
       destination = specials;
@@ -113,7 +111,6 @@ const shopSegmentation = () => {
     const dataVal = $(this).data('menu');
     // construct part of the url – turn this into it's own function and switch-case?
     if (dataVal === 'main') {
-      fullPath = dutchieTopLevel;
       main = true;
     } else if (dataVal === 'specials') {
       destination = specials;
@@ -135,7 +132,7 @@ const shopSegmentation = () => {
     const dataVal = $(this).data('menu');
     // construct part of the url
     if (dataVal === 'main') {
-      fullPath = dutchieTopLevel;
+      main = true;
     } else if (dataVal === 'specials') {
       destination = specials;
     } else if (dataVal === 'flower') {
@@ -159,7 +156,7 @@ const shopSegmentation = () => {
     const dataVal = $(this).data('menu');
     // construct part of the url
     if (dataVal === 'main') {
-      fullPath = dutchieTopLevel;
+      main = true;
     } else if (dataVal === 'specials') {
       destination = specials;
     } else if (dataVal === 'flower') {
@@ -183,7 +180,7 @@ const shopSegmentation = () => {
     const dataVal = $(this).data('menu');
     // construct part of the url
     if (dataVal === 'main') {
-      fullPath = dutchieTopLevel;
+      main = true;
     } else if (dataVal === 'specials') {
       destination = specials;
     } else if (dataVal === 'flower') {
@@ -205,7 +202,7 @@ const shopSegmentation = () => {
     if (storeSelect === 'danforth') {
       // put 'danforth' in a constant?
       store = danforth;
-      pathConstructor(store, destination, products, main);
+      pathConstructor(main, store, products, destination);
     }
     // redirect to the URL
   });
