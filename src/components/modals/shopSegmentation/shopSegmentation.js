@@ -57,12 +57,13 @@ const pathConstructor = (main, store, products, destination) => {
 
 const shopSegmentation = () => {
   // Create a placeholder value in the select field
+  // prettier-ignore
   $selectPlaceholder.attr({
     // prettier-ignore
     'selected': 'selected',
     // prettier-ignore
     'disabled': 'disabled',
-  });
+  }).css('color', '#b3b3b3');
   $heroShop.on('click', function () {
     // launch the modal – convert into it's own function
     $segmentationModal.addClass(activeSegmentation);
@@ -243,7 +244,4 @@ export default shopSegmentation;
 // Add 'Shop Now' mobile nav button to this mix
 // Add click away from modal to close functionality
 // Add esc to close functionality
-// Disable the placeholder value and change it's color to 30% black
 // Collapse open menu if the modal is triggered
-// Clear form at the end?
-// Prevent empty submissions? Required may take care of this
