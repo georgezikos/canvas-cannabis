@@ -37,7 +37,7 @@ const edibles = 'edibles'; // flower category
 const accessories = 'accessories'; // flower category
 
 // URL Variables
-let fullPath;
+// let fullPath;
 let main = false;
 let store;
 let products = false;
@@ -47,13 +47,14 @@ let destination;
 const pathConstructor = (main, store, products, destination) => {
   if (main) {
     // convert to switch-case?
-    fullPath = `${dutchieTopLevel}/${store}`;
+    const fullPath = `${dutchieTopLevel}/${store}`;
   } else if (!products) {
-    fullPath = `${dutchieTopLevel}/${store}/${destination}`;
+    const fullPath = `${dutchieTopLevel}/${store}/${destination}`;
   } else if (products) {
-    fullPath = `${dutchieTopLevel}/${store}/products/${destination}`; // put products in a constant?
+    const fullPath = `${dutchieTopLevel}/${store}/products/${destination}`; // put products in a constant?
   }
   console.log(fullPath);
+  return fullPath;
 };
 
 const shopSegmentation = () => {
