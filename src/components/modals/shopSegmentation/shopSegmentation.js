@@ -37,7 +37,6 @@ const edibles = 'edibles'; // flower category
 const accessories = 'accessories'; // flower category
 
 // URL Variables
-// let fullPath;
 let main = false;
 let store;
 let products = false;
@@ -48,16 +47,10 @@ const pathConstructor = (main, store, products, destination) => {
   if (main) {
     // convert to switch-case?
     return `${dutchieTopLevel}/${store}`;
-    // console.log(fullPath);
-    // return fullPath;
   } else if (!products) {
     return `${dutchieTopLevel}/${store}/${destination}`;
-    // console.log(fullPath);
-    // return fullPath;
   } else if (products) {
     return `${dutchieTopLevel}/${store}/products/${destination}`; // put products in a constant?
-    // console.log(fullPath);
-    // return fullPath;
   }
 };
 
@@ -206,18 +199,21 @@ const shopSegmentation = () => {
     const storeSelect = $storeSelect.val();
     // move this into it's own function?
     if (storeSelect === 'danforth') {
-      // put 'danforth' in a constant?
+      // put these store strings in constants?
       store = danforth;
       const fullPath = pathConstructor(main, store, products, destination);
-      console.log(fullPath);
+      window.open(fullPath);
+      // console.log(fullPath);
     } else if (storeSelect === 'liberty') {
       store = liberty;
       const fullPath = pathConstructor(main, store, products, destination);
-      console.log(fullPath);
+      window.open(fullPath);
+      // console.log(fullPath);
     } else if (storeSelect === 'mount-dennis') {
       store = mountDennis;
       const fullPath = pathConstructor(main, store, products, destination);
-      console.log(fullPath);
+      window.open(fullPath);
+      // console.log(fullPath);
     }
     // redirect to the URL
   });
