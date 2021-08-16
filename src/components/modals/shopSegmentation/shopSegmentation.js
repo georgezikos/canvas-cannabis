@@ -65,10 +65,11 @@ const accessories = 'accessories'; // flower category
 const test = () => {
   $shopNow.on('click', () => {
     // launch the modal
-    console.log($(this).data('menu'));
     $segmentationModal.addClass(activeSegmentation);
     $html.addClass(disableScroll);
     $body.addClass(disableScroll);
+    const $this = $(this);
+    console.log($this);
     // construct part of the url
     // if shop now or shop link main is true
     // if the others capture the path
