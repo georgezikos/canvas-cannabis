@@ -60,11 +60,11 @@ const shopSegmentation = () => {
   // Create a placeholder value in the select field
   $selectPlaceholder.attr({
     // prettier-ignore
-    'selected': 'selected',
+    'selected': '',
     // prettier-ignore
-    'disabled': 'disabled',
+    'disabled': '',
     // prettier-ignore
-    'hidden': 'hidden',
+    'hidden': '',
   });
   $heroShop.on('click', function () {
     // launch the modal – convert into it's own function
