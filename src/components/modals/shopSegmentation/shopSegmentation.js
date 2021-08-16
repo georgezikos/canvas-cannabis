@@ -32,10 +32,12 @@ const flower = 'flower'; // flower category
 const edibles = 'edibles'; // flower category
 const accessories = 'accessories'; // flower category
 
+// Add 'Shop Now' mobile nav button to this mix
 // Add click away from modal to close functionality
 // Add esc to close functionality
 // Disable the placeholder value and change it's color to 30% black
 // How to launch without repainting/scrolling to the top of the page
+// Collapse open menu if the modal is triggered
 
 let destination;
 let path;
@@ -62,11 +64,6 @@ let store;
 //   // clear the form? // if yes, should this logic be included in the age gate?
 //   // remove the active classes from the modal, html and body elements
 // }
-
-$segmentationForm.on('submit', () => {
-  // construct the path
-  // redirect to the URL
-});
 
 const shopSegmentation = () => {
   $shopNow.on('click', function () {
@@ -194,6 +191,15 @@ const shopSegmentation = () => {
       path = accessories;
     }
     !destination ? console.log(path) : console.log(destination);
+  });
+  $segmentationForm.on('submit', (e) => {
+    e.preventDefault();
+    // construct the path
+    const $this = $(this);
+    const $select = $($this > 'select');
+    const store = $select.val();
+    console.log(store);
+    // redirect to the URL
   });
 };
 
