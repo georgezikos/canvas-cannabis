@@ -47,17 +47,17 @@ let destination;
 const pathConstructor = (main, store, products, destination) => {
   if (main) {
     // convert to switch-case?
-    const fullPath = `${dutchieTopLevel}/${store}`;
-    console.log(fullPath);
-    return fullPath;
+    return `${dutchieTopLevel}/${store}`;
+    // console.log(fullPath);
+    // return fullPath;
   } else if (!products) {
-    const fullPath = `${dutchieTopLevel}/${store}/${destination}`;
-    console.log(fullPath);
-    return fullPath;
+    return `${dutchieTopLevel}/${store}/${destination}`;
+    // console.log(fullPath);
+    // return fullPath;
   } else if (products) {
-    const fullPath = `${dutchieTopLevel}/${store}/products/${destination}`; // put products in a constant?
-    console.log(fullPath);
-    return fullPath;
+    return `${dutchieTopLevel}/${store}/products/${destination}`; // put products in a constant?
+    // console.log(fullPath);
+    // return fullPath;
   }
 };
 
@@ -208,13 +208,16 @@ const shopSegmentation = () => {
     if (storeSelect === 'danforth') {
       // put 'danforth' in a constant?
       store = danforth;
-      pathConstructor(main, store, products, destination);
+      const fullPath = pathConstructor(main, store, products, destination);
+      console.log(fullPath);
     } else if (storeSelect === 'liberty') {
       store = liberty;
-      pathConstructor(main, store, products, destination);
+      const fullPath = pathConstructor(main, store, products, destination);
+      console.log(fullPath);
     } else if (storeSelect === 'mount-dennis') {
       store = mountDennis;
-      pathConstructor(main, store, products, destination);
+      const fullPath = pathConstructor(main, store, products, destination);
+      console.log(fullPath);
     }
     // redirect to the URL
   });
