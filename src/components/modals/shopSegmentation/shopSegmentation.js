@@ -63,7 +63,7 @@ const shopSegmentation = () => {
     'selected': 'selected',
     // prettier-ignore
     'disabled': 'disabled',
-  }).css('color', '#b3b3b3');
+  });
   $heroShop.on('click', function () {
     // launch the modal – convert into it's own function
     $segmentationModal.addClass(activeSegmentation);
