@@ -63,7 +63,7 @@ const accessories = 'accessories'; // flower category
 // }
 
 const test = () => {
-  $shopNow.on('click', () => {
+  $shopNow.on('click', function () {
     // launch the modal
     $segmentationModal.addClass(activeSegmentation);
     $html.addClass(disableScroll);
