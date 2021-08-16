@@ -69,7 +69,8 @@ const test = () => {
     $html.addClass(disableScroll);
     $body.addClass(disableScroll);
     const $this = $(this);
-    console.log($this);
+    const dataVal = $this.data('menu');
+    console.log(dataVal);
     // construct part of the url
     // if shop now or shop link main is true
     // if the others capture the path
