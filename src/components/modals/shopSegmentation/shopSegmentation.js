@@ -195,8 +195,11 @@ const shopSegmentation = () => {
   $segmentationForm.on('submit', function (e) {
     e.preventDefault();
     // construct the path
-    const store = $chooseStore.val();
-    console.log(store);
+    const storeSelect = $chooseStore.val();
+    if (storeSelect === 'danforth') {
+      store = danforth;
+      console.log(store);
+    }
     // redirect to the URL
   });
 };
