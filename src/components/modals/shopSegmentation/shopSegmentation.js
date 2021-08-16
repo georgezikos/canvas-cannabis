@@ -196,32 +196,32 @@ const shopSegmentation = () => {
   $segmentationForm.on('submit', function (e) {
     e.preventDefault();
     // construct the path
-    const $storeSelectVal = $storeSelect.val();
+    const $selectedStore = $storeSelect.val();
     // move this into it's own function?
-    if ($storeSelectVal === 'danforth') {
+    if ($selectedStore === 'danforth') {
       // put these store strings in constants?
       store = danforth;
       const fullPath = pathConstructor(main, store, products, destination);
       window.open(fullPath);
-      $storeSelectVal.val('');
+      $storeSelect.prop('selectedIndex', -1); // resets the select field
       // destroy the modal – convert into it's own function
       $segmentationModal.removeClass(activeSegmentation);
       $html.removeClass(disableScroll);
       $body.removeClass(disableScroll);
-    } else if ($storeSelectVal === 'liberty') {
+    } else if ($selectedStore === 'liberty') {
       store = liberty;
       const fullPath = pathConstructor(main, store, products, destination);
       window.open(fullPath);
-      $storeSelectVal.val('');
+      $storeSelect.prop('selectedIndex', -1); // resets the select field
       // destroy the modal – convert into it's own function
       $segmentationModal.removeClass(activeSegmentation);
       $html.removeClass(disableScroll);
       $body.removeClass(disableScroll);
-    } else if ($storeSelectVal === 'mount-dennis') {
+    } else if ($selectedStore === 'mount-dennis') {
       store = mountDennis;
       const fullPath = pathConstructor(main, store, products, destination);
       window.open(fullPath);
-      $storeSelectVal.val('');
+      $storeSelect.prop('selectedIndex', -1); // resets the select field
       // destroy the modal – convert into it's own function
       $segmentationModal.removeClass(activeSegmentation);
       $html.removeClass(disableScroll);
