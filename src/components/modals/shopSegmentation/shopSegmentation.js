@@ -42,18 +42,22 @@ const accessories = 'accessories'; // flower category
 let destination;
 let path;
 let store;
+let products = false;
+let main = false;
 
 // Functions
-// const pathConstructor = (store, path, products = false, main = false) => { // how to make some of these args optional? Only really need to know the store and if main is true
-//   if (main) { // convert to switch-case?
-//     destination = `${dutchieTopLevel}/${store}`;
-//   } else if (!products) {
-//     destination = `${dutchieTopLevel}/${store}/products/${path}`;
-//   } else if (products) {
-//     destination = `${dutchieTopLevel}/${store}/${path}`;
-//   }
-//   return destination;
-// }
+const pathConstructor = (store, path, products, main) => {
+  // how to make some of these args optional? Only really need to know the store and if main is true
+  if (main) {
+    // convert to switch-case?
+    destination += `/${store}`;
+  } else if (!products) {
+    destination = `${dutchieTopLevel}/${store}/products/${path}`;
+  } else if (products) {
+    destination = `${dutchieTopLevel}/${store}/${path}`;
+  }
+  console.log(destination);
+};
 
 // const segmentationHandler = (store, path, products, main) => {
 //   const shopPath = pathConstructor(store, path, products, main);
@@ -76,6 +80,7 @@ const shopSegmentation = () => {
     // construct part of the url
     if (dataVal === 'main') {
       destination = dutchieTopLevel;
+      main = true;
     } else if (dataVal === 'sale') {
       path = specials;
     } else if (dataVal === 'flower') {
@@ -97,6 +102,7 @@ const shopSegmentation = () => {
     // construct part of the url
     if (dataVal === 'main') {
       destination = dutchieTopLevel;
+      main = true;
     } else if (dataVal === 'sale') {
       path = specials;
     } else if (dataVal === 'flower') {
@@ -143,10 +149,13 @@ const shopSegmentation = () => {
       path = specials;
     } else if (dataVal === 'flower') {
       path = flower;
+      products = true;
     } else if (dataVal === 'edibles') {
       path = edibles;
+      products = true;
     } else if (dataVal === 'accessories') {
       path = accessories;
+      products = true;
     }
     !destination ? console.log(path) : console.log(destination);
   });
@@ -164,10 +173,13 @@ const shopSegmentation = () => {
       path = specials;
     } else if (dataVal === 'flower') {
       path = flower;
+      products = true;
     } else if (dataVal === 'edibles') {
       path = edibles;
+      products = true;
     } else if (dataVal === 'accessories') {
       path = accessories;
+      products = true;
     }
     !destination ? console.log(path) : console.log(destination);
   });
@@ -185,10 +197,13 @@ const shopSegmentation = () => {
       path = specials;
     } else if (dataVal === 'flower') {
       path = flower;
+      products = true;
     } else if (dataVal === 'edibles') {
       path = edibles;
+      products = true;
     } else if (dataVal === 'accessories') {
       path = accessories;
+      products = true;
     }
     !destination ? console.log(path) : console.log(destination);
   });
@@ -198,7 +213,7 @@ const shopSegmentation = () => {
     const storeSelect = $chooseStore.val();
     if (storeSelect === 'danforth') {
       store = danforth;
-      console.log(store);
+      pathConstructor(store, path, products, main);
     }
     // redirect to the URL
   });
