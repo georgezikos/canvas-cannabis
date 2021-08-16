@@ -47,7 +47,7 @@ let destination;
 const pathConstructor = (main, store, products, destination) => {
   if (main) {
     // convert to switch-case?
-    fullPath += `${dutchieTopLevel}/${store}`;
+    fullPath = `${dutchieTopLevel}/${store}`;
   } else if (products) {
     fullPath = `${dutchieTopLevel}/${store}/${destination}`;
   } else if (!products) {
@@ -79,7 +79,7 @@ const shopSegmentation = () => {
       products = true;
       destination = accessories;
     }
-    !fullPath ? console.log(destination) : console.log(fullPath); // remove
+    main ? console.log(dutchieTopLevel) : console.log(destination); // remove
   });
   $navShop.on('click', function () {
     // launch the modal – convert into it's own function
@@ -100,7 +100,7 @@ const shopSegmentation = () => {
     } else if (dataVal === 'accessories') {
       destination = accessories;
     }
-    !fullPath ? console.log(destination) : console.log(fullPath); // remove
+    main ? console.log(dutchieTopLevel) : console.log(destination); // remove
   });
   $dailySpecialsShop.on('click', function () {
     // launch the modal – convert into it's own function
@@ -121,7 +121,7 @@ const shopSegmentation = () => {
     } else if (dataVal === 'accessories') {
       destination = accessories;
     }
-    !fullPath ? console.log(destination) : console.log(fullPath); // remove
+    main ? console.log(dutchieTopLevel) : console.log(destination); // remove
   });
   $shopFlower.on('click', function () {
     // launch the modal
@@ -145,7 +145,7 @@ const shopSegmentation = () => {
       destination = accessories;
       products = true;
     }
-    !fullPath ? console.log(destination) : console.log(fullPath);
+    main ? console.log(dutchieTopLevel) : console.log(destination); // remove
   });
   $shopEdibles.on('click', function () {
     // launch the modal
@@ -169,7 +169,7 @@ const shopSegmentation = () => {
       destination = accessories;
       products = true;
     }
-    !fullPath ? console.log(destination) : console.log(fullPath);
+    main ? console.log(dutchieTopLevel) : console.log(destination); // remove
   });
   $shopAccessories.on('click', function () {
     // launch the modal
@@ -193,7 +193,7 @@ const shopSegmentation = () => {
       destination = accessories;
       products = true;
     }
-    !fullPath ? console.log(destination) : console.log(fullPath);
+    main ? console.log(dutchieTopLevel) : console.log(destination); // remove
   });
   $segmentationForm.on('submit', function (e) {
     e.preventDefault();
