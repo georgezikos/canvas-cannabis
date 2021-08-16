@@ -20,7 +20,7 @@ const activeSegmentation = 'modal--active';
 const disableScroll = 'active-modal';
 
 // URLs
-const dutchieMenu = 'https://dutchie.com/embedded-menu'; // top-level
+const dutchieTopLevel = 'https://dutchie.com/embedded-menu'; // top-level
 // Stores
 const danforth = 'canvas'; // danforth main
 const liberty = 'canvas-liberty'; // liberty main
@@ -32,25 +32,23 @@ const flower = 'flower'; // flower category
 const edibles = 'edibles'; // flower category
 const accessories = 'accessories'; // flower category
 
-// const firstHalf;
-
 // Add click away from modal to close functionality
 // Add esc to close functionality
 // Disable the placeholder value and change it's color to 30% black
 // How to launch without repainting/scrolling to the top of the page
 
-let destination = dutchieMenu;
+let destination;
 let path;
 let store;
 
 // Functions
 // const pathConstructor = (store, path, products = false, main = false) => { // how to make some of these args optional? Only really need to know the store and if main is true
 //   if (main) { // convert to switch-case?
-//     destination = `${dutchieMenu}/${store}`;
+//     destination = `${dutchieTopLevel}/${store}`;
 //   } else if (!products) {
-//     destination = `${dutchieMenu}/${store}/products/${path}`;
+//     destination = `${dutchieTopLevel}/${store}/products/${path}`;
 //   } else if (products) {
-//     destination = `${dutchieMenu}/${store}/${path}`;
+//     destination = `${dutchieTopLevel}/${store}/${path}`;
 //   }
 //   return destination;
 // }
@@ -80,7 +78,7 @@ const shopSegmentation = () => {
     const dataVal = $(this).data('menu');
     // construct part of the url
     if (dataVal === 'main') {
-      return;
+      destination = dutchieTopLevel;
     } else if (dataVal === 'sale') {
       path = specials;
     } else if (dataVal === 'flower') {
@@ -90,7 +88,7 @@ const shopSegmentation = () => {
     } else if (dataVal === 'accessories') {
       path = accessories;
     }
-    console.log(path);
+    !destination ? console.log(path) : console.log(destination);
   });
   $navShop.on('click', function () {
     // launch the modal
@@ -101,7 +99,7 @@ const shopSegmentation = () => {
     const dataVal = $(this).data('menu');
     // construct part of the url
     if (dataVal === 'main') {
-      return;
+      destination = dutchieTopLevel;
     } else if (dataVal === 'sale') {
       path = specials;
     } else if (dataVal === 'flower') {
@@ -111,7 +109,7 @@ const shopSegmentation = () => {
     } else if (dataVal === 'accessories') {
       path = accessories;
     }
-    console.log(path);
+    !destination ? console.log(path) : console.log(destination);
   });
   $dailySpecialsShop.on('click', function () {
     // launch the modal
@@ -122,7 +120,7 @@ const shopSegmentation = () => {
     const dataVal = $(this).data('menu');
     // construct part of the url
     if (dataVal === 'main') {
-      return;
+      destination = dutchieTopLevel;
     } else if (dataVal === 'sale') {
       path = specials;
     } else if (dataVal === 'flower') {
@@ -132,7 +130,7 @@ const shopSegmentation = () => {
     } else if (dataVal === 'accessories') {
       path = accessories;
     }
-    console.log(path);
+    !destination ? console.log(path) : console.log(destination);
   });
   $shopFlower.on('click', function () {
     // launch the modal
@@ -143,7 +141,7 @@ const shopSegmentation = () => {
     const dataVal = $(this).data('menu');
     // construct part of the url
     if (dataVal === 'main') {
-      return;
+      destination = dutchieTopLevel;
     } else if (dataVal === 'sale') {
       path = specials;
     } else if (dataVal === 'flower') {
@@ -153,7 +151,7 @@ const shopSegmentation = () => {
     } else if (dataVal === 'accessories') {
       path = accessories;
     }
-    console.log(path);
+    !destination ? console.log(path) : console.log(destination);
   });
   $shopEdibles.on('click', function () {
     // launch the modal
@@ -164,7 +162,7 @@ const shopSegmentation = () => {
     const dataVal = $(this).data('menu');
     // construct part of the url
     if (dataVal === 'main') {
-      return;
+      destination = dutchieTopLevel;
     } else if (dataVal === 'sale') {
       path = specials;
     } else if (dataVal === 'flower') {
@@ -174,7 +172,7 @@ const shopSegmentation = () => {
     } else if (dataVal === 'accessories') {
       path = accessories;
     }
-    console.log(path);
+    !destination ? console.log(path) : console.log(destination);
   });
   $shopAccessories.on('click', function () {
     // launch the modal
@@ -185,7 +183,7 @@ const shopSegmentation = () => {
     const dataVal = $(this).data('menu');
     // construct part of the url
     if (dataVal === 'main') {
-      return;
+      destination = dutchieTopLevel;
     } else if (dataVal === 'sale') {
       path = specials;
     } else if (dataVal === 'flower') {
@@ -195,7 +193,7 @@ const shopSegmentation = () => {
     } else if (dataVal === 'accessories') {
       path = accessories;
     }
-    console.log(path);
+    !destination ? console.log(path) : console.log(destination);
   });
 };
 
