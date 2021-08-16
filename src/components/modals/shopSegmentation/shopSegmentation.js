@@ -48,13 +48,17 @@ const pathConstructor = (main, store, products, destination) => {
   if (main) {
     // convert to switch-case?
     const fullPath = `${dutchieTopLevel}/${store}`;
+    console.log(fullPath);
+    return fullPath;
   } else if (!products) {
     const fullPath = `${dutchieTopLevel}/${store}/${destination}`;
+    console.log(fullPath);
+    return fullPath;
   } else if (products) {
     const fullPath = `${dutchieTopLevel}/${store}/products/${destination}`; // put products in a constant?
+    console.log(fullPath);
+    return fullPath;
   }
-  console.log(fullPath);
-  return fullPath;
 };
 
 const shopSegmentation = () => {
