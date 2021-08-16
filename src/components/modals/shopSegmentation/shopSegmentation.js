@@ -39,9 +39,11 @@ const accessories = 'accessories'; // flower category
 // Disable the placeholder value and change it's color to 30% black
 // How to launch without repainting/scrolling to the top of the page
 
+let destination;
+let store;
+
 // Functions
 // const pathConstructor = (store, path, products = false, main = false) => { // how to make some of these args optional? Only really need to know the store and if main is true
-//   const destination;
 //   if (main) { // convert to switch-case?
 //     destination = `${dutchieMenu}/${store}`;
 //   } else if (!products) {
@@ -68,10 +70,14 @@ const test = () => {
     $segmentationModal.addClass(activeSegmentation);
     $html.addClass(disableScroll);
     $body.addClass(disableScroll);
-    const $this = $(this);
-    const dataVal = $this.data('menu');
-    console.log(dataVal);
+    // capture value of data attr
+    const dataVal = $(this).data('menu');
     // construct part of the url
+    if (dataVal === 'main') {
+      destination = `${dutchieMenu}${store}`;
+    }
+    console.log(destination);
+
     // if shop now or shop link main is true
     // if the others capture the path
   });
