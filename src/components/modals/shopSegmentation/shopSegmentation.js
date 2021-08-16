@@ -203,19 +203,27 @@ const shopSegmentation = () => {
       store = danforth;
       const fullPath = pathConstructor(main, store, products, destination);
       window.open(fullPath);
-      // console.log(fullPath);
+      // destroy the modal – convert into it's own function
+      $segmentationModal.removeClass(activeSegmentation);
+      $html.removeClass(disableScroll);
+      $body.removeClass(disableScroll);
     } else if (storeSelect === 'liberty') {
       store = liberty;
       const fullPath = pathConstructor(main, store, products, destination);
       window.open(fullPath);
-      // console.log(fullPath);
+      // destroy the modal – convert into it's own function
+      $segmentationModal.removeClass(activeSegmentation);
+      $html.removeClass(disableScroll);
+      $body.removeClass(disableScroll);
     } else if (storeSelect === 'mount-dennis') {
       store = mountDennis;
       const fullPath = pathConstructor(main, store, products, destination);
       window.open(fullPath);
-      // console.log(fullPath);
+      // destroy the modal – convert into it's own function
+      $segmentationModal.removeClass(activeSegmentation);
+      $html.removeClass(disableScroll);
+      $body.removeClass(disableScroll);
     }
-    // redirect to the URL
   });
 };
 
