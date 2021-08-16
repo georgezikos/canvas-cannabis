@@ -48,9 +48,9 @@ const pathConstructor = (main, store, products, destination) => {
   if (main) {
     // convert to switch-case?
     fullPath = `${dutchieTopLevel}/${store}`;
-  } else if (products) {
-    fullPath = `${dutchieTopLevel}/${store}/${destination}`;
   } else if (!products) {
+    fullPath = `${dutchieTopLevel}/${store}/${destination}`;
+  } else if (products) {
     fullPath = `${dutchieTopLevel}/${store}/products/${destination}`; // put products in a constant?
   }
   console.log(fullPath);
@@ -223,4 +223,4 @@ export default shopSegmentation;
 // Disable the placeholder value and change it's color to 30% black
 // Collapse open menu if the modal is triggered
 // Clear form at the end?
-// Prevent empty submissions?
+// Prevent empty submissions? Required may take care of this
