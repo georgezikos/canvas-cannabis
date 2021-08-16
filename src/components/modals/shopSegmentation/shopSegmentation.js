@@ -39,7 +39,8 @@ const accessories = 'accessories'; // flower category
 // Disable the placeholder value and change it's color to 30% black
 // How to launch without repainting/scrolling to the top of the page
 
-let destination;
+let destination = dutchieMenu;
+let path;
 let store;
 
 // Functions
@@ -64,7 +65,12 @@ let store;
 //   // remove the active classes from the modal, html and body elements
 // }
 
-const test = () => {
+$segmentationForm.on('submit', () => {
+  // construct the path
+  // redirect to the URL
+});
+
+const shopSegmentation = () => {
   $shopNow.on('click', function () {
     // launch the modal
     $segmentationModal.addClass(activeSegmentation);
@@ -74,22 +80,123 @@ const test = () => {
     const dataVal = $(this).data('menu');
     // construct part of the url
     if (dataVal === 'main') {
-      destination = `${dutchieMenu}${store}`;
+      return;
+    } else if (dataVal === 'sale') {
+      path = specials;
+    } else if (dataVal === 'flowers') {
+      path = flowers;
+    } else if (dataVal === 'edibles') {
+      path = edibles;
+    } else if (dataVal === 'accessories') {
+      path = accessories;
     }
-    console.log(destination);
-
-    // if shop now or shop link main is true
-    // if the others capture the path
+    console.log(path);
   });
-};
-
-$segmentationForm.on('submit', () => {
-  // construct the path
-  // redirect to the URL
-});
-
-const shopSegmentation = () => {
-  test();
+  $navShop.on('click', function () {
+    // launch the modal
+    $segmentationModal.addClass(activeSegmentation);
+    $html.addClass(disableScroll);
+    $body.addClass(disableScroll);
+    // capture value of data attr
+    const dataVal = $(this).data('menu');
+    // construct part of the url
+    if (dataVal === 'main') {
+      return;
+    } else if (dataVal === 'sale') {
+      path = specials;
+    } else if (dataVal === 'flowers') {
+      path = flowers;
+    } else if (dataVal === 'edibles') {
+      path = edibles;
+    } else if (dataVal === 'accessories') {
+      path = accessories;
+    }
+    console.log(path);
+  });
+  $dailySpecialsShop.on('click', function () {
+    // launch the modal
+    $segmentationModal.addClass(activeSegmentation);
+    $html.addClass(disableScroll);
+    $body.addClass(disableScroll);
+    // capture value of data attr
+    const dataVal = $(this).data('menu');
+    // construct part of the url
+    if (dataVal === 'main') {
+      return;
+    } else if (dataVal === 'sale') {
+      path = specials;
+    } else if (dataVal === 'flowers') {
+      path = flowers;
+    } else if (dataVal === 'edibles') {
+      path = edibles;
+    } else if (dataVal === 'accessories') {
+      path = accessories;
+    }
+    console.log(path);
+  });
+  $shopFlower.on('click', function () {
+    // launch the modal
+    $segmentationModal.addClass(activeSegmentation);
+    $html.addClass(disableScroll);
+    $body.addClass(disableScroll);
+    // capture value of data attr
+    const dataVal = $(this).data('menu');
+    // construct part of the url
+    if (dataVal === 'main') {
+      return;
+    } else if (dataVal === 'sale') {
+      path = specials;
+    } else if (dataVal === 'flowers') {
+      path = flowers;
+    } else if (dataVal === 'edibles') {
+      path = edibles;
+    } else if (dataVal === 'accessories') {
+      path = accessories;
+    }
+    console.log(path);
+  });
+  $shopEdibles.on('click', function () {
+    // launch the modal
+    $segmentationModal.addClass(activeSegmentation);
+    $html.addClass(disableScroll);
+    $body.addClass(disableScroll);
+    // capture value of data attr
+    const dataVal = $(this).data('menu');
+    // construct part of the url
+    if (dataVal === 'main') {
+      return;
+    } else if (dataVal === 'sale') {
+      path = specials;
+    } else if (dataVal === 'flowers') {
+      path = flowers;
+    } else if (dataVal === 'edibles') {
+      path = edibles;
+    } else if (dataVal === 'accessories') {
+      path = accessories;
+    }
+    console.log(path);
+  });
+  $shopAccessories.on('click', function () {
+    // launch the modal
+    $segmentationModal.addClass(activeSegmentation);
+    $html.addClass(disableScroll);
+    $body.addClass(disableScroll);
+    // capture value of data attr
+    const dataVal = $(this).data('menu');
+    // construct part of the url
+    if (dataVal === 'main') {
+      return;
+    } else if (dataVal === 'sale') {
+      path = specials;
+    } else if (dataVal === 'flowers') {
+      path = flowers;
+    } else if (dataVal === 'edibles') {
+      path = edibles;
+    } else if (dataVal === 'accessories') {
+      path = accessories;
+    }
+    console.log(path);
+  });
 };
 
 export default shopSegmentation;
