@@ -203,6 +203,7 @@ const shopSegmentation = () => {
       store = danforth;
       const fullPath = pathConstructor(main, store, products, destination);
       window.open(fullPath);
+      $segmentationForm.reset();
       // destroy the modal – convert into it's own function
       $segmentationModal.removeClass(activeSegmentation);
       $html.removeClass(disableScroll);
@@ -211,6 +212,7 @@ const shopSegmentation = () => {
       store = liberty;
       const fullPath = pathConstructor(main, store, products, destination);
       window.open(fullPath);
+      $segmentationForm.reset();
       // destroy the modal – convert into it's own function
       $segmentationModal.removeClass(activeSegmentation);
       $html.removeClass(disableScroll);
@@ -219,6 +221,7 @@ const shopSegmentation = () => {
       store = mountDennis;
       const fullPath = pathConstructor(main, store, products, destination);
       window.open(fullPath);
+      $segmentationForm.reset();
       // destroy the modal – convert into it's own function
       $segmentationModal.removeClass(activeSegmentation);
       $html.removeClass(disableScroll);
