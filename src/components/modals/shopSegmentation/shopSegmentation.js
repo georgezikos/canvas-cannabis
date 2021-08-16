@@ -199,9 +199,16 @@ const shopSegmentation = () => {
     e.preventDefault();
     // construct the path
     const storeSelect = $storeSelect.val();
+    // move this into it's own function?
     if (storeSelect === 'danforth') {
       // put 'danforth' in a constant?
       store = danforth;
+      pathConstructor(main, store, products, destination);
+    } else if (storeSelect === 'liberty') {
+      store = liberty;
+      pathConstructor(main, store, products, destination);
+    } else if (storeSelecct === 'mount-dennis') {
+      store = mountDennis;
       pathConstructor(main, store, products, destination);
     }
     // redirect to the URL
