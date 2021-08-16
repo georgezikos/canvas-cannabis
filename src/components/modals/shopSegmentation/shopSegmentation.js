@@ -84,7 +84,7 @@ const shopSegmentation = () => {
     } else if (dataVal === 'sale') {
       path = specials;
     } else if (dataVal === 'flower') {
-      path = flowers;
+      path = flower;
     } else if (dataVal === 'edibles') {
       path = edibles;
     } else if (dataVal === 'accessories') {
@@ -105,7 +105,7 @@ const shopSegmentation = () => {
     } else if (dataVal === 'sale') {
       path = specials;
     } else if (dataVal === 'flower') {
-      path = flowers;
+      path = flower;
     } else if (dataVal === 'edibles') {
       path = edibles;
     } else if (dataVal === 'accessories') {
@@ -126,7 +126,7 @@ const shopSegmentation = () => {
     } else if (dataVal === 'sale') {
       path = specials;
     } else if (dataVal === 'flower') {
-      path = flowers;
+      path = flower;
     } else if (dataVal === 'edibles') {
       path = edibles;
     } else if (dataVal === 'accessories') {
@@ -147,7 +147,7 @@ const shopSegmentation = () => {
     } else if (dataVal === 'sale') {
       path = specials;
     } else if (dataVal === 'flower') {
-      path = flowers;
+      path = flower;
     } else if (dataVal === 'edibles') {
       path = edibles;
     } else if (dataVal === 'accessories') {
@@ -168,7 +168,7 @@ const shopSegmentation = () => {
     } else if (dataVal === 'sale') {
       path = specials;
     } else if (dataVal === 'flower') {
-      path = flowers;
+      path = flower;
     } else if (dataVal === 'edibles') {
       path = edibles;
     } else if (dataVal === 'accessories') {
@@ -189,7 +189,7 @@ const shopSegmentation = () => {
     } else if (dataVal === 'sale') {
       path = specials;
     } else if (dataVal === 'flower') {
-      path = flowers;
+      path = flower;
     } else if (dataVal === 'edibles') {
       path = edibles;
     } else if (dataVal === 'accessories') {
