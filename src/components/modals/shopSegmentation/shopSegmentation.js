@@ -65,7 +65,7 @@ const accessories = 'accessories'; // flower category
 const test = () => {
   $shopNow.on('click', () => {
     // launch the modal
-    console.log($(this).attr('data-menu'));
+    console.log($(this).data('menu'));
     $segmentationModal.addClass(activeSegmentation);
     $html.addClass(disableScroll);
     $body.addClass(disableScroll);
