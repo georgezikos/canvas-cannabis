@@ -192,7 +192,7 @@ const shopSegmentation = () => {
     }
     !destination ? console.log(path) : console.log(destination);
   });
-  $segmentationForm.on('submit', (e) => {
+  $segmentationForm.on('submit', function (e) {
     e.preventDefault();
     // construct the path
     const $this = $(this);
