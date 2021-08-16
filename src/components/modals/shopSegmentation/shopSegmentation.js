@@ -9,6 +9,7 @@ const $html = $('html');
 const $segmentationModal = $('.modal--shop'); // containing element
 const $segmentationForm = $('.modal__form--shop');
 const $storeSelect = $('#shop-segmentation-select');
+const $selectPlaceholder = $($storeSelect > 'option:first-child');
 
 // Buttons
 const $navShop = $('.main-nav__link--shop'); // nav 'shop' link
@@ -55,6 +56,12 @@ const pathConstructor = (main, store, products, destination) => {
 };
 
 const shopSegmentation = () => {
+  // Create a placeholder value in the select field
+  $selectPlaceholder.attr({
+    selected: 'true',
+    disabled: 'true',
+    hidden: 'true',
+  });
   $heroShop.on('click', function () {
     // launch the modal – convert into it's own function
     $segmentationModal.addClass(activeSegmentation);
