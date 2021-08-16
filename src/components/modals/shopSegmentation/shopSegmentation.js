@@ -195,9 +195,7 @@ const shopSegmentation = () => {
   $segmentationForm.on('submit', function (e) {
     e.preventDefault();
     // construct the path
-    const $this = $(this);
-    const $select = $($this > 'select');
-    const store = $select.val();
+    const store = $chooseStore.val();
     console.log(store);
     // redirect to the URL
   });
