@@ -9,7 +9,7 @@ const $html = $('html');
 const $segmentationModal = $('.modal--shop'); // containing element
 const $segmentationForm = $('.modal__form--shop');
 const $storeSelect = $('#shop-segmentation-select');
-const $selectPlaceholder = $($storeSelect > 'option:first-child');
+const $selectPlaceholder = $('#shop-segmentation-select > option:first-child');
 
 // Buttons
 const $navShop = $('.main-nav__link--shop'); // nav 'shop' link
