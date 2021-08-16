@@ -57,11 +57,13 @@ const pathConstructor = (main, store, products, destination) => {
 
 const shopSegmentation = () => {
   // Create a placeholder value in the select field
-  console.log($selectPlaceholder);
   $selectPlaceholder.attr({
-    selected: 'true',
-    disabled: 'true',
-    hidden: 'true',
+    // prettier-ignore
+    'selected': 'true',
+    // prettier-ignore
+    'disabled': 'true',
+    // prettier-ignore
+    'hidden': 'true',
   });
   $heroShop.on('click', function () {
     // launch the modal – convert into it's own function
