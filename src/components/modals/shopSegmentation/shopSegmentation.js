@@ -207,7 +207,7 @@ const shopSegmentation = () => {
     } else if (storeSelect === 'liberty') {
       store = liberty;
       pathConstructor(main, store, products, destination);
-    } else if (storeSelecct === 'mount-dennis') {
+    } else if (storeSelect === 'mount-dennis') {
       store = mountDennis;
       pathConstructor(main, store, products, destination);
     }
@@ -221,5 +221,6 @@ export default shopSegmentation;
 // Add click away from modal to close functionality
 // Add esc to close functionality
 // Disable the placeholder value and change it's color to 30% black
-// How to launch without repainting/scrolling to the top of the page
 // Collapse open menu if the modal is triggered
+// Clear form at the end?
+// Prevent empty submissions?
