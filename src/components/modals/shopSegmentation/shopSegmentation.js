@@ -58,7 +58,7 @@ const pathConstructor = (main, store, products, destination) => {
 };
 
 // See if I can make these functions more dynamic and import them between nav component and here
-// ESC key to close menu
+// Esc key to close modal
 const escClose = () => {
   $document.keyup((e) => {
     const escKey = 27;
@@ -72,10 +72,10 @@ const escClose = () => {
     }
   });
 };
-// Clicking away from nav to close open sub-menus
+// Clicking away from modal to close
 const clickAwayClose = () => {
   $document.on('click', (e) => {
-    let $target = $(e.target);
+    const $target = $(e.target);
     if (
       !$target.closest($modalContainer).length &&
       $segmentationModal.is(':visible')
