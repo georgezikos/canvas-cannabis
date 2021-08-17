@@ -65,10 +65,9 @@ const escClose = () => {
       $segmentationModal.hasClass(activeSegmentation) &&
       e.keyCode === escKey
     ) {
-      // $segmentationModal.removeClass(activeSegmentation);
-      // $html.removeClass(disableScroll);
-      // $body.removeClass(disableScroll);
-      console.log('escaping');
+      $segmentationModal.removeClass(activeSegmentation);
+      $html.removeClass(disableScroll);
+      $body.removeClass(disableScroll);
     }
   });
 };
