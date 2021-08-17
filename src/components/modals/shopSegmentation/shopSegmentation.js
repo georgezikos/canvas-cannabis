@@ -91,7 +91,6 @@ const clickAwayClose = () => {
       $segmentationModal.removeClass(activeSegmentation);
       $html.removeClass(disableScroll);
       $body.removeClass(disableScroll);
-      console.log('Clicking away');
     } else if (
       // clicking the modal when its active
       $target.closest($modalContainer).length &&
