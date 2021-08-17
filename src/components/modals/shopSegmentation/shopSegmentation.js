@@ -84,9 +84,10 @@ const clickAwayClose = () => {
       // $html.removeClass(disableScroll);
       // $body.removeClass(disableScroll);
       console.log('Clicking away');
+    } else if (!$segmentationModal.is(':visible')) {
+      return;
     } else {
       console.log('Clicking the modal');
-      // return;
     }
   });
 };
