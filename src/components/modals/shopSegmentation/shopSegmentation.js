@@ -290,7 +290,7 @@ const shopSegmentation = () => {
       $body.removeClass(disableScroll);
     }
   });
-  // closeModalHandler();
+  closeModalHandler();
 };
 
 export default shopSegmentation;
