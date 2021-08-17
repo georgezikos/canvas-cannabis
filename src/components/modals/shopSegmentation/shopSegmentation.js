@@ -68,6 +68,12 @@ const escClose = () => {
       $segmentationModal.hasClass(activeSegmentation) &&
       e.keyCode === escKey
     ) {
+      // resets the url variables
+      main = false;
+      store = undefined;
+      products = false;
+      destination = undefined;
+      $storeSelect.prop('selectedIndex', 0); // resets the select field
       $segmentationModal.removeClass(activeSegmentation);
       $html.removeClass(disableScroll);
       $body.removeClass(disableScroll);
@@ -90,6 +96,12 @@ const clickAwayClose = () => {
       !$target.closest($shopAccessories).length &&
       $segmentationModal.hasClass(activeSegmentation)
     ) {
+      // resets the url variables
+      main = false;
+      store = undefined;
+      products = false;
+      destination = undefined;
+      $storeSelect.prop('selectedIndex', 0); // resets the select field
       $segmentationModal.removeClass(activeSegmentation);
       $html.removeClass(disableScroll);
       $body.removeClass(disableScroll);
