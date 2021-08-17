@@ -2,7 +2,7 @@ import '../modals.css';
 
 // Selectors
 // Global
-const $document = $('document');
+const $document = $(document);
 const $html = $('html');
 const $body = $('body');
 
