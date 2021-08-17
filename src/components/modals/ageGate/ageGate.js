@@ -41,7 +41,7 @@ const validateAge = () => {
   if (!$verifyAge.prop('checked')) {
     // If they haven't verified their age, they are unable to clear the age gate
     // Invalid styling for the on-screen checkbox
-    $verifyAge.prev($onScreenCheckbox).addClass(isInvalid);
+    $verifyAge.prev('.form__checkbox').addClass(isInvalid);
     $invalidPrompt.show();
     return;
   } else if ($verifyAge.prop('checked') && !$rememberMe.prop('checked')) {
