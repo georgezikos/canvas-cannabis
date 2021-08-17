@@ -14,7 +14,7 @@ const $invalidPrompt = $('.form__caption--invalid');
 // Classes
 const activeAgeGate = 'modal--active';
 const disableScroll = 'active-modal';
-const isInvalid = $('is--invalid');
+const isInvalid = 'is--invalid';
 
 // Cookie Names
 const defaultCookie = 'default';
@@ -41,7 +41,7 @@ const validateAge = () => {
   if (!$verifyAge.prop('checked')) {
     // If they haven't verified their age, they are unable to clear the age gate
     // Invalid styling for the on-screen checkbox
-    $verifyAge.prev('.form__checkbox').addClass(isInvalid);
+    $verifyAge.prev($onScreenCheckbox).addClass(isInvalid);
     $invalidPrompt.show();
     return;
   } else if ($verifyAge.prop('checked') && !$rememberMe.prop('checked')) {
