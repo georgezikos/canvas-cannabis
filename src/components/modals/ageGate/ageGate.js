@@ -8,10 +8,13 @@ const $ageGate = $('.modal--age-gate'); // containing element
 const $ageGateForm = $('.modal__form--age-gate');
 const $verifyAge = $('#verify-age');
 const $rememberMe = $('#remember-me');
+const $onScreenCheckbox = $('.form__checkbox');
+const $invalidPrompt = $('.form__caption--invalid');
 
 // Classes
 const activeAgeGate = 'modal--active';
 const disableScroll = 'active-modal';
+const isInvalid = $('is--invalid');
 
 // Cookie Names
 const defaultCookie = 'default';
@@ -37,10 +40,9 @@ const cookiesOrLegal = () => {
 const validateAge = () => {
   if (!$verifyAge.prop('checked')) {
     // If they haven't verified their age, they are unable to clear the age gate
-    // styling for the on-screen checkbox
-    const $onScreenCheckbox = $verifyAge.prev('.form__checkbox');
-    $onScreenCheckbox.addClass('is--invalid');
-    $('.form__caption--invalid').show();
+    // Invalid styling for the on-screen checkbox
+    $verifyAge.prev($onScreenCheckbox).addClass(isInvalid);
+    $invalidPrompt.show();
     return;
   } else if ($verifyAge.prop('checked') && !$rememberMe.prop('checked')) {
     // If they only verify their age, but do not wanted to be remembered, let them in and create a cookie to account for repeat visits within a 24-hour period and clear the age gate
