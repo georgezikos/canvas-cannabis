@@ -77,16 +77,16 @@ const clickAwayClose = () => {
   $document.on('click', (e) => {
     let $target = $(e.target);
     if (
-      $segmentationModal.hasClass(activeSegmentation) &&
-      !$target.closest($modalContainer).length
+      !$target.closest($modalContainer).length &&
+      $segmentationModal.is(':visible')
     ) {
-      $segmentationModal.removeClass(activeSegmentation);
-      $html.removeClass(disableScroll);
-      $body.removeClass(disableScroll);
+      // $segmentationModal.removeClass(activeSegmentation);
+      // $html.removeClass(disableScroll);
+      // $body.removeClass(disableScroll);
       console.log('Clicking away');
     } else {
       console.log('Clicking the modal');
-      return;
+      // return;
     }
   });
 };
