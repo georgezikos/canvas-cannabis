@@ -1,5 +1,7 @@
 import '../modals.css';
 
+// Collapse open menu if the modal is triggered
+
 // Selectors
 // Global
 const $document = $(document);
@@ -310,6 +312,3 @@ const shopSegmentation = () => {
 };
 
 export default shopSegmentation;
-
-// Add 'Shop Now' mobile nav button to this mix + footer 'shop' link
-// Collapse open menu if the modal is triggered
