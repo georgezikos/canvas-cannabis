@@ -85,7 +85,7 @@ const clickAwayClose = () => {
       !$target.closest($shopFlower).length &&
       !$target.closest($shopEdibles).length &&
       !$target.closest($shopAccessories).length &&
-      $segmentationModal.is(':visible')
+      $segmentationModal.hasClass(activeSegmentation)
     ) {
       // $segmentationModal.removeClass(activeSegmentation);
       // $html.removeClass(disableScroll);
@@ -93,10 +93,10 @@ const clickAwayClose = () => {
       console.log('Clicking away');
     } else if (
       $target.closest($modalContainer).length &&
-      $segmentationModal.is(':visible')
+      $segmentationModal.hasClass(activeSegmentation)
     ) {
       console.log('Clicking the modal');
-    } else if (!$segmentationModal.is(':visible')) {
+    } else if (!$segmentationModal.hasClass(activeSegmentation)) {
       return;
     }
   });
