@@ -38,7 +38,7 @@ const validateAge = () => {
   if (!$verifyAge.prop('checked')) {
     // If they haven't verified their age, they are unable to clear the age gate
     // styling for the on-screen checkbox
-    $verifyAge.prev().css('border-color', '#F3806D');
+    // $verifyAge.prev().css('border-color', '#F3806D');
     return;
   } else if ($verifyAge.prop('checked') && !$rememberMe.prop('checked')) {
     // If they only verify their age, but do not wanted to be remembered, let them in and create a cookie to account for repeat visits within a 24-hour period and clear the age gate
@@ -58,7 +58,7 @@ const validateAge = () => {
 };
 
 const ageGate = () => {
-  $verifyAge.attr('aria-required', 'true');
+  // $verifyAge.attr('aria-required', 'true');
   // Checks for the existence of cookies and whether or not the user is on the Legal page
   cookiesOrLegal();
   // Deals with the age verification and cookie creation logic
