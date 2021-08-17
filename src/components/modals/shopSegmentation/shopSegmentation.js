@@ -90,7 +90,7 @@ const escClose = () => {
 // };
 const closeModalHandler = () => {
   escClose();
-  clickAwayClose();
+  // clickAwayClose();
 };
 
 const shopSegmentation = () => {
