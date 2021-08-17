@@ -8,6 +8,7 @@ const $body = $('body');
 
 // Modal
 const $segmentationModal = $('.modal--shop'); // containing element
+const $modalContainer = $('.modal__container');
 const $segmentationForm = $('.modal__form--shop');
 const $storeSelect = $('#shop-segmentation-select');
 const $selectPlaceholder = $('#shop-segmentation-select > option:first-child');
@@ -72,24 +73,27 @@ const escClose = () => {
   });
 };
 // Clicking away from nav to close open sub-menus
-// const clickAwayClose = () => {
-//   $document.on('click', (e) => {
-//     let $target = $(e.target);
-//     if (
-//       $segmentationModal.hasClass(activeSegmentation) &&
-// !$target.closest($segmentationModal).length
-//     ) {
-//       $segmentationModal.removeClass(activeSegmentation);
-//       $html.removeClass(disableScroll);
-//       $body.removeClass(disableScroll);
-//     } else {
-//       return;
-//     }
-//   });
-// };
+const clickAwayClose = () => {
+  $document.on('click', (e) => {
+    let $target = $(e.target);
+    if (
+      $segmentationModal.hasClass(activeSegmentation) &&
+      !$target.closest($modalContainer).length
+    ) {
+      // $segmentationModal.removeClass(activeSegmentation);
+      // $html.removeClass(disableScroll);
+      // $body.removeClass(disableScroll);
+      console.log('Clicking away');
+    } else {
+      console.log('Clicking the modal');
+      // return;
+    }
+  });
+};
+
 const closeModalHandler = () => {
   escClose();
-  // clickAwayClose();
+  clickAwayClose();
 };
 
 const shopSegmentation = () => {
