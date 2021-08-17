@@ -2,8 +2,9 @@ import '../modals.css';
 
 // Selectors
 // Global
-const $body = $('body');
+const $document = $('document');
 const $html = $('html');
+const $body = $('body');
 
 // Modal
 const $segmentationModal = $('.modal--shop'); // containing element
