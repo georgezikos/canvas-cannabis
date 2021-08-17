@@ -84,8 +84,9 @@ const clickAwayClose = () => {
       !$target.closest($dailySpecialsShop).length ||
       !$target.closest($shopFlower).length ||
       !$target.closest($shopEdibles).length ||
-      (!$target.closest($shopAccessories).length &&
-        $segmentationModal.is(':visible'))
+      // prettier-ignore
+      !$target.closest($shopAccessories).length &&
+        $segmentationModal.is(':visible')
     ) {
       // $segmentationModal.removeClass(activeSegmentation);
       // $html.removeClass(disableScroll);
