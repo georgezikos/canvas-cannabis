@@ -57,6 +57,7 @@ const validateAge = () => {
 };
 
 const ageGate = () => {
+  $verifyAge.attr('aria-required', 'true');
   // Checks for the existence of cookies and whether or not the user is on the Legal page
   cookiesOrLegal();
   // Deals with the age verification and cookie creation logic
