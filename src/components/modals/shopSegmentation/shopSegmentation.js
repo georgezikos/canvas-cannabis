@@ -80,13 +80,13 @@ const clickAwayClose = () => {
       $segmentationModal.hasClass(activeSegmentation) &&
       !$target.closest($modalContainer).length
     ) {
-      // $segmentationModal.removeClass(activeSegmentation);
-      // $html.removeClass(disableScroll);
-      // $body.removeClass(disableScroll);
+      $segmentationModal.removeClass(activeSegmentation);
+      $html.removeClass(disableScroll);
+      $body.removeClass(disableScroll);
       console.log('Clicking away');
     } else {
       console.log('Clicking the modal');
-      // return;
+      return;
     }
   });
 };
