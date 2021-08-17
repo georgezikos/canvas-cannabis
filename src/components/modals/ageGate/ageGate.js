@@ -40,7 +40,7 @@ const validateAge = () => {
     // input type checkbox is invalid, target previous sibling .form__checkbox with styles .css('border-color', '#F3806D');
     console.dir($verifyAge.prev());
     console.log('Helllo');
-    return;
+    // return;
   } else if ($verifyAge.prop('checked') && !$rememberMe.prop('checked')) {
     // If they only verify their age, but do not wanted to be remembered, let them in and create a cookie to account for repeat visits within a 24-hour period and clear the age gate
     Cookies.set(defaultCookie, true, { expires: 1 });
