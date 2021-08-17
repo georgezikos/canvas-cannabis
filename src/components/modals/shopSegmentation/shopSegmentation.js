@@ -78,15 +78,14 @@ const clickAwayClose = () => {
   $document.on('click', (e) => {
     const $target = $(e.target);
     if (
-      !$target.closest($modalContainer).length ||
-      !$target.closest($navShop).length ||
-      !$target.closest($heroShop).length ||
-      !$target.closest($dailySpecialsShop).length ||
-      !$target.closest($shopFlower).length ||
-      !$target.closest($shopEdibles).length ||
-      // prettier-ignore
+      !$target.closest($modalContainer).length &&
+      !$target.closest($navShop).length &&
+      !$target.closest($heroShop).length &&
+      !$target.closest($dailySpecialsShop).length &&
+      !$target.closest($shopFlower).length &&
+      !$target.closest($shopEdibles).length &&
       !$target.closest($shopAccessories).length &&
-        $segmentationModal.is(':visible')
+      $segmentationModal.is(':visible')
     ) {
       // $segmentationModal.removeClass(activeSegmentation);
       // $html.removeClass(disableScroll);
