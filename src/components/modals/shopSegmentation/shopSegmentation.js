@@ -78,6 +78,7 @@ const clickAwayClose = () => {
   $document.on('click', (e) => {
     const $target = $(e.target);
     if (
+      // clicking away from the modal when modal is active
       !$target.closest($modalContainer).length &&
       !$target.closest($navShop).length &&
       !$target.closest($heroShop).length &&
@@ -87,16 +88,18 @@ const clickAwayClose = () => {
       !$target.closest($shopAccessories).length &&
       $segmentationModal.hasClass(activeSegmentation)
     ) {
-      // $segmentationModal.removeClass(activeSegmentation);
-      // $html.removeClass(disableScroll);
-      // $body.removeClass(disableScroll);
+      $segmentationModal.removeClass(activeSegmentation);
+      $html.removeClass(disableScroll);
+      $body.removeClass(disableScroll);
       console.log('Clicking away');
     } else if (
+      // clicking the modal when its active
       $target.closest($modalContainer).length &&
       $segmentationModal.hasClass(activeSegmentation)
     ) {
-      console.log('Clicking the modal');
+      return;
     } else if (!$segmentationModal.hasClass(activeSegmentation)) {
+      // if the modal isn't engaged, don't listen for or do anything
       return;
     }
   });
