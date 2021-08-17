@@ -14,7 +14,7 @@ const $storeSelect = $('#shop-segmentation-select');
 const $selectPlaceholder = $('#shop-segmentation-select > option:first-child');
 
 // Buttons
-const $navShop = $('.main-nav__link--shop'); // nav 'shop' link
+const $navShop = $('.is--shop-trigger'); // nav 'shop' link
 const $heroShop = $('#shop-now-btn'); // hero 'shop now'
 const $dailySpecialsShop = $('#daily-specials-btn'); // daily specials/staff picks
 const $shopFlower = $('#shop-flower-btn'); // shop flower
@@ -312,6 +312,4 @@ const shopSegmentation = () => {
 export default shopSegmentation;
 
 // Add 'Shop Now' mobile nav button to this mix + footer 'shop' link
-// Add click away from modal to close functionality
-// Add esc to close functionality
 // Collapse open menu if the modal is triggered
