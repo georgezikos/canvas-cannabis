@@ -38,8 +38,7 @@ const validateAge = () => {
   if (!$verifyAge.prop('checked')) {
     // If they haven't verified their age, they are unable to clear the age gate
     // input type checkbox is invalid, target previous sibling .form__checkbox with styles
-    const $onScreenCheckbox = $verifyAge.prev();
-    $onScreenCheckbox.css('border-color', '#F3806D');
+    $verifyAge.prev('.form__checkbox').css('border-color', '#F3806D');
     return;
   } else if ($verifyAge.prop('checked') && !$rememberMe.prop('checked')) {
     // If they only verify their age, but do not wanted to be remembered, let them in and create a cookie to account for repeat visits within a 24-hour period and clear the age gate
