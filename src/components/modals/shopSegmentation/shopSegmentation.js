@@ -57,40 +57,41 @@ const pathConstructor = (main, store, products, destination) => {
 };
 
 // See if I can make these functions more dynamic and import them between nav component and here
-// const closeModalHandler = () => {
-//   // ESC key to close menu
-//   const escClose = () => {
-//     $document.keyup((e) => {
-//       const escKey = 27;
-//       if (
-//         $segmentationModal.hasClass(activeSegmentation) &&
-//         e.keyCode === escKey
-//       ) {
-//         $segmentationModal.removeClass(activeSegmentation);
-//         $html.removeClass(disableScroll);
-//         $body.removeClass(disableScroll);
-//       }
-//     });
-//   };
-//   // Clicking away from nav to close open sub-menus
-//   const clickAwayClose = () => {
-//     $document.on('click', (e) => {
-//       let $target = $(e.target);
-//       if (
-//         $segmentationModal.hasClass(activeSegmentation) &&
+// ESC key to close menu
+const escClose = () => {
+  $document.keyup((e) => {
+    const escKey = 27;
+    if (
+      $segmentationModal.hasClass(activeSegmentation) &&
+      e.keyCode === escKey
+    ) {
+      // $segmentationModal.removeClass(activeSegmentation);
+      // $html.removeClass(disableScroll);
+      // $body.removeClass(disableScroll);
+      console.log('escaping');
+    }
+  });
+};
+// Clicking away from nav to close open sub-menus
+// const clickAwayClose = () => {
+//   $document.on('click', (e) => {
+//     let $target = $(e.target);
+//     if (
+//       $segmentationModal.hasClass(activeSegmentation) &&
 // !$target.closest($segmentationModal).length
-//       ) {
-//         $segmentationModal.removeClass(activeSegmentation);
-//         $html.removeClass(disableScroll);
-//         $body.removeClass(disableScroll);
-//       } else {
-//         return;
-//       }
-//     });
-//   };
-//   escClose();
-//   clickAwayClose();
+//     ) {
+//       $segmentationModal.removeClass(activeSegmentation);
+//       $html.removeClass(disableScroll);
+//       $body.removeClass(disableScroll);
+//     } else {
+//       return;
+//     }
+//   });
 // };
+const closeModalHandler = () => {
+  escClose();
+  clickAwayClose();
+};
 
 const shopSegmentation = () => {
   // Create a placeholder value in the select field
