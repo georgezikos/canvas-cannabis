@@ -72,13 +72,20 @@ const escClose = () => {
     }
   });
 };
+
 // Clicking away from modal to close
 const clickAwayClose = () => {
   $document.on('click', (e) => {
     const $target = $(e.target);
     if (
-      !$target.closest($modalContainer).length &&
-      $segmentationModal.is(':visible')
+      !$target.closest($modalContainer).length ||
+      !$target.closest($navShop).length ||
+      !$target.closest($heroShop).length ||
+      !$target.closest($dailySpecialsShop).length ||
+      !$target.closest($shopFlower).length ||
+      !$target.closest($shopEdibles).length ||
+      (!$target.closest($shopAccessories).length &&
+        $segmentationModal.is(':visible'))
     ) {
       // $segmentationModal.removeClass(activeSegmentation);
       // $html.removeClass(disableScroll);
