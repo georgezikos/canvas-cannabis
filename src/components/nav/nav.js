@@ -76,7 +76,7 @@ const mobileNavHandler = () => {
     $dropdownSubMenu.removeClass(activeSubMenu);
     if ($dropdownIcon.hasClass(activeDropdownIcon)) {
       $dropdownIcon.removeClass(activeDropdownIcon);
-      gsap.to($dropdownIcon, { duration: 0.25, rotation: 360 });
+      gsap.to($dropdownIcon, { duration: 0.25, rotation: 0 }); // was 360
     }
   }
 };
@@ -96,7 +96,7 @@ const subMenuHandler = () => {
       // prettier-ignore
       gsap.set($openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon), { transformOrigin: 'center' });
       // prettier-ignore
-      gsap.fromTo($openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon), { duration: 0.25, rotation: 180}, { duration: 0.25, rotation: 360});
+      gsap.fromTo($openSubMenus.find($dropdownSubMenu).prev($dropdownChildren).find($dropdownIcon), { duration: 0.25, rotation: 180}, { duration: 0.25, rotation: 0}); // was 360
     }
 
     $this.next().toggleClass(activeSubMenu); // Open the sub-menu corresponding with the clicked link
@@ -108,7 +108,7 @@ const subMenuHandler = () => {
     if ($this.find($dropdownIcon).hasClass(activeDropdownIcon)) {
       $this.find($dropdownIcon).removeClass(activeDropdownIcon);
       gsap.set($this.find($dropdownIcon), { transformOrigin: 'center' });
-      gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 180}, { duration: 0.25, rotation: 360,});
+      gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 180}, { duration: 0.25, rotation: 0,}); // was 360
 
       if ($window.width() > tabletBreakpoint && $mainNav.hasClass('main-nav--dark-ui')) {
         gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
@@ -150,7 +150,7 @@ const closeMenuHandler = () => {
         $dropdownSubMenu.removeClass(activeSubMenu);
         if ($dropdownIcon.hasClass(activeDropdownIcon)) {
           $dropdownIcon.removeClass(activeDropdownIcon);
-          gsap.to($dropdownIcon, { duration: 0.25, rotation: 360 });
+          gsap.to($dropdownIcon, { duration: 0.25, rotation: 0 }); // was 360
         }
         if ($mainNav.hasClass('main-nav--dark-ui')) {
           gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
@@ -183,7 +183,7 @@ const closeMenuHandler = () => {
         $dropdownSubMenu.removeClass(activeSubMenu);
         if ($dropdownIcon.hasClass(activeDropdownIcon)) {
           $dropdownIcon.removeClass(activeDropdownIcon);
-          gsap.to($dropdownIcon, { duration: 0.25, rotation: 360 });
+          gsap.to($dropdownIcon, { duration: 0.25, rotation: 0 }); // was 360
         }
         if ($mainNav.hasClass('main-nav--dark-ui')) {
           gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
@@ -223,7 +223,7 @@ const closeMenuHandler = () => {
         $dropdownSubMenu.removeClass(activeSubMenu);
         if ($dropdownIcon.hasClass(activeDropdownIcon)) {
           $dropdownIcon.removeClass(activeDropdownIcon);
-          gsap.to($dropdownIcon, { duration: 0.25, rotation: 360 });
+          gsap.to($dropdownIcon, { duration: 0.25, rotation: 0 }); // was 360
         }
         if ($mainNav.hasClass('main-nav--dark-ui')) {
           gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
@@ -263,7 +263,7 @@ const closeMenuHandler = () => {
         $dropdownSubMenu.removeClass(activeSubMenu);
         if ($dropdownIcon.hasClass(activeDropdownIcon)) {
           $dropdownIcon.removeClass(activeDropdownIcon);
-          gsap.to($dropdownIcon, { duration: 0.25, rotation: 360 });
+          gsap.to($dropdownIcon, { duration: 0.25, rotation: 0 }); // was 360
         }
         if ($mainNav.hasClass('main-nav--dark-ui')) {
           gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
@@ -286,7 +286,7 @@ const closeMenuHandler = () => {
         $dropdownSubMenu.removeClass(activeSubMenu);
         if ($dropdownIcon.hasClass(activeDropdownIcon)) {
           $dropdownIcon.removeClass(activeDropdownIcon);
-          gsap.to($dropdownIcon, { duration: 0.25, rotation: 360 });
+          gsap.to($dropdownIcon, { duration: 0.25, rotation: 0 }); // was 360
         }
         if ($mainNav.hasClass('main-nav--dark-ui')) {
           gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
