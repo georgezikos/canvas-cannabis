@@ -21,7 +21,7 @@ const $heroShop = $('#shop-now-btn'); // hero 'shop now'
 const $dailySpecialsShop = $('#daily-specials-btn'); // daily specials/staff picks
 const $shopFlower = $('#shop-flower-btn'); // shop flower
 const $shopEdibles = $('#shop-edibles-btn'); // shop edibles
-const $shopAccessories = $('#shop-accessories-btn'); // shop accessories
+const $shopVaporizers = $('#shop-vaporizers-btn'); // shop vaporizers
 
 // Classes
 const activeSegmentation = 'modal--active';
@@ -38,8 +38,8 @@ const mountDennis = 'canvas-weston'; // mount dennis main
 // Destinations
 const specials = 'specials'; // specials category
 const flower = 'flower'; // flower category
-const edibles = 'edibles'; // flower category
-const accessories = 'accessories'; // flower category
+const edibles = 'edibles'; // edibles category
+const vaporizers = 'vaporizers'; // vaporizers category
 
 // URL Variables
 let main = false;
@@ -93,7 +93,7 @@ const clickAwayClose = () => {
       !$target.closest($dailySpecialsShop).length &&
       !$target.closest($shopFlower).length &&
       !$target.closest($shopEdibles).length &&
-      !$target.closest($shopAccessories).length &&
+      !$target.closest($shopVaporizers).length &&
       $segmentationModal.hasClass(activeSegmentation)
     ) {
       // resets the url variables
@@ -150,9 +150,9 @@ const shopSegmentation = () => {
     } else if (dataVal === 'edibles') {
       products = true;
       destination = edibles;
-    } else if (dataVal === 'accessories') {
+    } else if (dataVal === 'vaporizers') {
       products = true;
-      destination = accessories;
+      destination = vaporizers;
     }
     main ? console.log(dutchieTopLevel) : console.log(destination); // remove
   });
@@ -172,8 +172,8 @@ const shopSegmentation = () => {
       destination = flower;
     } else if (dataVal === 'edibles') {
       destination = edibles;
-    } else if (dataVal === 'accessories') {
-      destination = accessories;
+    } else if (dataVal === 'vaporizers') {
+      destination = vaporizers;
     }
     main ? console.log(dutchieTopLevel) : console.log(destination); // remove
   });
@@ -193,8 +193,8 @@ const shopSegmentation = () => {
       destination = flower;
     } else if (dataVal === 'edibles') {
       destination = edibles;
-    } else if (dataVal === 'accessories') {
-      destination = accessories;
+    } else if (dataVal === 'vaporizers') {
+      destination = vaporizers;
     }
     main ? console.log(dutchieTopLevel) : console.log(destination); // remove
   });
@@ -216,8 +216,8 @@ const shopSegmentation = () => {
     } else if (dataVal === 'edibles') {
       destination = edibles;
       products = true;
-    } else if (dataVal === 'accessories') {
-      destination = accessories;
+    } else if (dataVal === 'vaporizers') {
+      destination = vaporizers;
       products = true;
     }
     main ? console.log(dutchieTopLevel) : console.log(destination); // remove
@@ -240,13 +240,13 @@ const shopSegmentation = () => {
     } else if (dataVal === 'edibles') {
       destination = edibles;
       products = true;
-    } else if (dataVal === 'accessories') {
-      destination = accessories;
+    } else if (dataVal === 'vaporizers') {
+      destination = vaporizers;
       products = true;
     }
     main ? console.log(dutchieTopLevel) : console.log(destination); // remove
   });
-  $shopAccessories.on('click', function () {
+  $shopVaporizers.on('click', function () {
     // launch the modal
     $segmentationModal.addClass(activeSegmentation);
     $html.addClass(disableScroll);
@@ -264,8 +264,8 @@ const shopSegmentation = () => {
     } else if (dataVal === 'edibles') {
       destination = edibles;
       products = true;
-    } else if (dataVal === 'accessories') {
-      destination = accessories;
+    } else if (dataVal === 'vaporizers') {
+      destination = vaporizers;
       products = true;
     }
     main ? console.log(dutchieTopLevel) : console.log(destination); // remove

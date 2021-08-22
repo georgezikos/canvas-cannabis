@@ -12,19 +12,19 @@ const specials = {
     days: {
       mondays: {
         label: 'Monday',
-        products: 'Pre-Rolls',
+        products: 'Pre-Rolls', // Cannabis Pre-Rolls
       },
       tuesdays: {
         label: 'Tuesday',
-        products: 'Cartridges & Disposable Vapes',
+        products: 'Cartridges & Disposable Vapes', // 'Vaporizer Cartridges & Disposable Cannabis Vaporizers'
       },
       wednesdays: {
         label: 'Wednesday',
-        products: 'Oils, Capsules & Concentrates',
+        products: 'Oils, Capsules & Concentrates', // 'Cannabis and CBD Oils, Capsules & Concentrates'/
       },
       thursdays: {
         label: 'Thursday',
-        products: 'Edibles',
+        products: 'Edibles', // 'Cannabis Edibles'
       },
     },
   },
@@ -51,7 +51,7 @@ const dailySpecials = () => {
     // see if I can use ternarys in place of some of these variables
     $dailySpecialsHeading.text(specials.weekends.heading);
     $dailySpecialsBody.text(
-      `${specials.weekends.prefix} ${specials.weekends.days.weekends.label} we feature our favourite ${specials.weekends.days.weekends.products} at 15% off their normal price. Shop today's deals below or visit your closest Canvas Cannabis location.`
+      `${specials.weekends.prefix} ${specials.weekends.days.weekends.label} we feature our favourite ${specials.weekends.days.weekends.products} at 15% off their normal price. Shop today's deals below or visit your closest Canvas Cannabis location.` // 'Toronto cannabis delivery or visit the Canvas Cannabis dispensary near you.'
     );
     $dailySpecialsBtn.text(`Shop ${specials.weekends.cta}`);
   } else if (currentDay === 4) {
