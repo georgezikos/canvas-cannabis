@@ -31,7 +31,7 @@ const faq = () => {
     if ($this.next().hasClass(activeAnswer)) {
       $this.next().removeAttr('hidden');
     } else if (!$this.next().hasClass(activeAnswer)) {
-      $this.next().attr('hidden', true);
+      $this.next().prop('hidden', true);
     }
     // prettier-ignore
     if ($this.find($toggleIcon).hasClass(activeToggleIcon)) {
