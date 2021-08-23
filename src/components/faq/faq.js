@@ -18,9 +18,9 @@ const faq = () => {
     // console.log('clicked'); // temporary, while learning how to debounce/throttle properly
     const $this = $(this);
     const $otherTabs = $this.parent().siblings($questionAnswer);
-    $this.attr('tabindex', '-1');
+    // $this.attr('tabindex', '-1');
     $this.attr('aria-selected', 'true');
-    $otherTabs.find($toggleButton).attr('tabindex', '0');
+    // $otherTabs.find($toggleButton).attr('tabindex', '0');
     $otherTabs.find($toggleButton).attr('aria-selected', 'false');
     $this.toggleClass(activeToggleButton);
     // aria handling
