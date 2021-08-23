@@ -17,7 +17,7 @@ const faq = () => {
     const $this = $(this);
     const $otherTabs = $this.parent().siblings('.faq__question-answer');
     $this.attr('tabindex', '-1');
-    $otherTabs.attr('tabindex', '0');
+    $otherTabs.find($toggleButton).attr('tabindex', '0');
     $this.toggleClass(activeToggleButton);
     // aria handling
     if ($this.hasClass(activeToggleButton)) {
