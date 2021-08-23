@@ -13,6 +13,9 @@ const activeToggleButton = 'faq__question-container--active';
 const activeAnswer = 'faq__answer-container--active';
 const activeToggleIcon = 'faq__toggle-icon--active';
 
+// Other
+let tabFocus = 0;
+
 const faq = () => {
   // Click handling
   $toggleButton.on('click', function () {
@@ -50,7 +53,7 @@ const faq = () => {
     const moveLeft = 37;
     // Enter only if left or right keys
     if (e.keyCode === moveRight || e.keyCode === moveLeft) {
-      console.log('LEFT OR RIGHT MY GUY');
+      $toggleButton[0].attr('tabindex', '10');
       // tabs[tabFocus].setAttribute("tabindex", -1);
       // if (e.keyCode === 39) {
       //   tabFocus++;
