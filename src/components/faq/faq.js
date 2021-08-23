@@ -55,26 +55,25 @@ const faq = () => {
     if (e.keyCode === moveRight || e.keyCode === moveLeft) {
       $faqQuestionsParent.find($toggleButton).first().attr('tabindex', '-1');
       // move right
-      // if (e.keyCode === moveRight) {
-      //   tabFocus++;
-      //   // If we're at the end, go to the start
-      //   if (tabFocus >= tabs.length) {
-      //     tabFocus = 0;
-      //   }
-      //   // Move left
-      // } else if (e.keyCode === 37) {
-      //   tabFocus--;
-      //   // If we're at the start, move to the end
-      //   if (tabFocus < 0) {
-      //     tabFocus = tabs.length - 1;
-      //   }
-      // }
-
-      // tabs[tabFocus].setAttribute("tabindex", 0);
-      // tabs[tabFocus].focus();
+      if (e.keyCode === moveRight) {
+        tabFocus++;
+        // If we're at the end, go to the start
+        if (tabFocus >= $questionAnswer.length) {
+          tabFocus = 0;
+        }
+        // Move left
+      } else if (e.keyCode === moveLeft) {
+        tabFocus--;
+        // If we're at the start, move to the end
+        if (tabFocus < 0) {
+          tabFocus = $questionAnswer.length - 1;
+        }
+      }
+      // $questionAnswer[tabFocus].setAttribute("tabindex", 0);
+      // $questionAnswer[tabFocus].focus();
+      console.log($questionAnswer[tabFocus]);
     }
   });
-  console.log($questionAnswer.length);
 };
 
 export default faq;
