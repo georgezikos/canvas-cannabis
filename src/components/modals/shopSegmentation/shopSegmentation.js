@@ -273,8 +273,8 @@ const shopSegmentation = () => {
       // put these store strings in constants?
       store = danforth;
       const fullPath = pathConstructor(main, store, products, destination);
-      // window.open(fullPath);
-      window.location.href = fullPath; // this is the test
+      // window.open(fullPath); // new window
+      window.location.href = fullPath; // same window
       // reset URL variables
       main = false;
       store = undefined;
@@ -288,7 +288,8 @@ const shopSegmentation = () => {
     } else if ($selectedStore === 'liberty') {
       store = liberty;
       const fullPath = pathConstructor(main, store, products, destination);
-      window.open(fullPath);
+      // window.open(fullPath); // new window
+      window.location.href = fullPath; // same window
       // reset URL variables
       main = false;
       store = undefined;
@@ -302,7 +303,8 @@ const shopSegmentation = () => {
     } else if ($selectedStore === 'mount-dennis') {
       store = mountDennis;
       const fullPath = pathConstructor(main, store, products, destination);
-      window.open(fullPath);
+      // window.open(fullPath); // new window
+      window.location.href = fullPath; // same window
       // reset URL variables
       main = false;
       store = undefined;
