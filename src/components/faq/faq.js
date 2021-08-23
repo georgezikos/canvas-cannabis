@@ -34,8 +34,10 @@ const faq = () => {
     // aria handling
     if ($this.next().hasClass(activeAnswer)) {
       $this.next().removeAttr('hidden');
+      $this.next().attr('aria-expanded', 'true');
     } else if (!$this.next().hasClass(activeAnswer)) {
       $this.next().prop('hidden', true);
+      $this.next().attr('aria-expanded', 'false');
     }
     // prettier-ignore
     if ($this.find($toggleIcon).hasClass(activeToggleIcon)) {
@@ -65,8 +67,10 @@ const faq = () => {
       // aria handling
       if ($this.next().hasClass(activeAnswer)) {
         $this.next().removeAttr('hidden');
+        $this.next().attr('aria-expanded', 'true');
       } else if (!$this.next().hasClass(activeAnswer)) {
         $this.next().prop('hidden', true);
+        $this.next().attr('aria-expanded', 'false');
       }
       // prettier-ignore
       if ($this.find($toggleIcon).hasClass(activeToggleIcon)) {
