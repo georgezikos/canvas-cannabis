@@ -84,7 +84,7 @@ const faq = () => {
     const moveLeft = 37;
     // Enter only if left or right keys
     if (e.keyCode === moveRight || e.keyCode === moveLeft) {
-      $faqQuestionsParent.find($toggleButton).first().attr('tabindex', '-1');
+      $questionAnswer[tabFocus].firstChild.setAttribute('tabindex', -1);
       // move right
       if (e.keyCode === moveRight) {
         tabFocus++;
