@@ -15,12 +15,14 @@ const faq = () => {
   $toggleButton.on('click', function () {
     // console.log('clicked'); // temporary, while learning how to debounce/throttle properly
     const $this = $(this);
+    const $otherTabs = $this.parent().siblings('.faq__question-answer');
     $this.toggleClass(activeToggleButton);
     // aria handling
     if ($this.hasClass(activeToggleButton)) {
       $this.attr('aria-selected', 'true');
-      // prettier-ignore
-      $this.closest('.faq__question-answer').siblings().children($toggleButton).attr('aria-selected', 'true');
+      if ($otherTabs.find($toggleButton).hasClass(activeToggleButton)) {
+        $otherTabs.find($toggleButton).attr('aria-selected', 'false');
+      }
     } else {
       $this.attr('aria-selected', 'false');
     }
