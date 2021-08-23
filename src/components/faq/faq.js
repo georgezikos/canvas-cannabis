@@ -100,7 +100,7 @@ const faq = () => {
           tabFocus = $questionAnswer.length - 1;
         }
       }
-      $questionAnswer[tabFocus].setAttribute('tabindex', 0);
+      $questionAnswer[tabFocus].firstChild.setAttribute('tabindex', 0);
       $questionAnswer[tabFocus].focus();
     }
   });
