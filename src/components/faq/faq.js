@@ -3,6 +3,7 @@ import gsap from 'gsap/gsap-core';
 import './faq.css';
 
 // Selectors
+const $faqQuestionsParent = $('.faq__questions'); // houses all of the toggle buttons
 const $toggleButton = $('.faq__question-container'); // container with question and toggle icon - triggers the whole thing
 const $toggleIcon = $('.faq__toggle-icon'); // toggle icon needs to rotate
 const $questionAnswer = $('.faq__question-answer'); // question and answer parent
@@ -44,6 +45,32 @@ const faq = () => {
     }
   });
   // Arrow handling
+  $faqQuestionsParent.on('keydown', function (e) {
+    const moveRight = 39;
+    const moveLeft = 37;
+    // Enter only if left or right keys
+    if (e.keyCode === moveRight || e.keyCode === moveLeft) {
+      console.log('LEFT OR RIGHT MY GUY');
+      // tabs[tabFocus].setAttribute("tabindex", -1);
+      // if (e.keyCode === 39) {
+      //   tabFocus++;
+      //   // If we're at the end, go to the start
+      //   if (tabFocus >= tabs.length) {
+      //     tabFocus = 0;
+      //   }
+      //   // Move left
+      // } else if (e.keyCode === 37) {
+      //   tabFocus--;
+      //   // If we're at the start, move to the end
+      //   if (tabFocus < 0) {
+      //     tabFocus = tabs.length - 1;
+      //   }
+      // }
+
+      // tabs[tabFocus].setAttribute("tabindex", 0);
+      // tabs[tabFocus].focus();
+    }
+  });
 };
 
 export default faq;
