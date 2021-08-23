@@ -16,6 +16,11 @@ const faq = () => {
     // console.log('clicked'); // temporary, while learning how to debounce/throttle properly
     const $this = $(this);
     $this.toggleClass(activeToggleButton);
+    if ($this.hasClass(activeToggleButton)) {
+      $this.attr('aria-selected', 'true'); // aria handling
+    } else {
+      $this.attr('aria-selected', 'false'); // aria handling
+    }
     $this.next().toggleClass(activeAnswer);
     // prettier-ignore
     if ($this.find($toggleIcon).hasClass(activeToggleIcon)) {
