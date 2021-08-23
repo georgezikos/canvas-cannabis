@@ -21,11 +21,12 @@ const faq = () => {
     $this.attr('tabindex', '-1');
     $this.attr('aria-selected', 'true');
     $otherTabs.find($toggleButton).attr('tabindex', '0');
+    $otherTabs.find($toggleButton).attr('aria-selected', 'false');
     $this.toggleClass(activeToggleButton);
     // aria handling
-    if ($otherTabs.find($toggleButton).hasClass(activeToggleButton)) {
-      $otherTabs.find($toggleButton).attr('aria-selected', 'false');
-    }
+    // if ($otherTabs.find($toggleButton).hasClass(activeToggleButton)) {
+    //   $otherTabs.find($toggleButton).attr('aria-selected', 'false');
+    // }
     $this.next().toggleClass(activeAnswer);
     // aria handling
     if ($this.next().hasClass(activeAnswer)) {
