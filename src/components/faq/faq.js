@@ -5,6 +5,7 @@ import './faq.css';
 // Selectors
 const $toggleButton = $('.faq__question-container'); // container with question and toggle icon - triggers the whole thing
 const $toggleIcon = $('.faq__toggle-icon'); // toggle icon needs to rotate
+const $questionAnswer = $('.faq__question-answer'); // question and answer parent
 
 // Classes
 const activeToggleButton = 'faq__question-container--active';
@@ -12,10 +13,11 @@ const activeAnswer = 'faq__answer-container--active';
 const activeToggleIcon = 'faq__toggle-icon--active';
 
 const faq = () => {
+  // Click handling
   $toggleButton.on('click', function () {
     // console.log('clicked'); // temporary, while learning how to debounce/throttle properly
     const $this = $(this);
-    const $otherTabs = $this.parent().siblings('.faq__question-answer');
+    const $otherTabs = $this.parent().siblings($questionAnswer);
     $this.attr('tabindex', '-1');
     $otherTabs.find($toggleButton).attr('tabindex', '0');
     $this.toggleClass(activeToggleButton);
@@ -44,6 +46,7 @@ const faq = () => {
       gsap.fromTo($this.find($toggleIcon), { duration: 0.25, rotation: 0 }, { duration: 0.25, rotation: 90 });
     }
   });
+  // Arrow handling
 };
 
 export default faq;
