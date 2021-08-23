@@ -75,7 +75,7 @@ const dailySpecials = () => {
   } else if (currentDay === 1) {
     $dailySpecialsHeading.text(specials.weekdays.heading);
     $dailySpecialsBody.text(
-      `${specials.weekdays.prefix} ${specials.weekdays.days.mondays.label} we feature our favourite cannabis ${specials.weekdays.days.mondays.products} at 15% off their normal price. Shop today's deals below for Toronto cannabis delivery or visit a Canvas Cannabis dispensary near you.`
+      `${specials.weekdays.prefix} ${specials.weekdays.days.mondays.label} we feature our favourite ${specials.weekdays.days.mondays.products} at 15% off their normal price. Shop today's deals below for Toronto cannabis delivery or visit a Canvas Cannabis dispensary near you.`
     );
     $dailySpecialsBtn.text(`Shop ${specials.weekdays.cta}`);
   }
