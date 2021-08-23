@@ -53,9 +53,9 @@ const faq = () => {
     const moveLeft = 37;
     // Enter only if left or right keys
     if (e.keyCode === moveRight || e.keyCode === moveLeft) {
-      $faqQuestionsParent.find($toggleButton).first().attr('tabindex', '10');
-      // tabs[tabFocus].setAttribute("tabindex", -1);
-      // if (e.keyCode === 39) {
+      $faqQuestionsParent.find($toggleButton).first().attr('tabindex', '-1');
+      // move right
+      // if (e.keyCode === moveRight) {
       //   tabFocus++;
       //   // If we're at the end, go to the start
       //   if (tabFocus >= tabs.length) {
@@ -74,6 +74,7 @@ const faq = () => {
       // tabs[tabFocus].focus();
     }
   });
+  console.log($faqQuestionsParent.length);
 };
 
 export default faq;
