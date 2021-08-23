@@ -89,6 +89,10 @@ const faq = () => {
     // Enter only if left or right keys
     if (e.keyCode === moveRight || e.keyCode === moveLeft) {
       $questionAnswer[tabFocus].firstChild.setAttribute('tabindex', -1);
+      $questionAnswer[tabFocus].firstChild.setAttribute(
+        'aria-selected',
+        'false'
+      );
       // move right
       if (e.keyCode === moveRight) {
         tabFocus++;
@@ -105,6 +109,10 @@ const faq = () => {
         }
       }
       $questionAnswer[tabFocus].firstChild.setAttribute('tabindex', 0);
+      $questionAnswer[tabFocus].firstChild.setAttribute(
+        'aria-selected',
+        'true'
+      );
       $questionAnswer[tabFocus].firstChild.focus();
     }
   });
