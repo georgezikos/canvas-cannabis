@@ -28,18 +28,29 @@ const activeSegmentation = 'modal--active';
 const disableScroll = 'active-modal';
 
 // URL Parts
-const dutchieTopLevel = 'https://dutchie.com/embedded-menu'; // top-level
+// const dutchieTopLevel = 'https://dutchie.com/embedded-menu'; // top-level
+
+const dutchieTopLevel = '/cannabis-store-menu/'; // top-level revised
 
 // Stores
-const danforth = 'canvas'; // danforth main
-const liberty = 'canvas-liberty'; // liberty main
-const mountDennis = 'canvas-weston'; // mount dennis main
+// const danforth = 'canvas'; // danforth main
+// const liberty = 'canvas-liberty'; // liberty main
+// const mountDennis = 'canvas-weston'; // mount dennis main
+
+const danforth = 'danforth-dispensary?dtche%5B'; // danforth main revised
+const liberty = 'liberty-village-dispensary?dtche%5B'; // liberty main revised
+const mountDennis = 'mount-dennis-dispensary?dtche%5B'; // mount dennis main revised
 
 // Destinations
-const specials = 'specials'; // specials category
-const flower = 'flower'; // flower category
-const edibles = 'edibles'; // edibles category
-const vaporizers = 'vaporizers'; // vaporizers category
+// const specials = 'specials'; // specials category
+// const flower = 'flower'; // flower category
+// const edibles = 'edibles'; // edibles category
+// const vaporizers = 'vaporizers'; // vaporizers category
+
+const specials = 'path%5D=specials'; // specials category revised
+const flower = 'category%5D=flower'; // flower category revised
+const edibles = 'category%5D=edibles'; // edibles category revised
+const vaporizers = 'category%5D=vaporizers'; // vaporizers category revised
 
 // URL Variables
 let main = false;
@@ -51,11 +62,14 @@ let destination;
 const pathConstructor = (main, store, products, destination) => {
   if (main) {
     // convert to switch-case?
-    return `${dutchieTopLevel}/${store}`;
+    // return `${dutchieTopLevel}/${store}`;
+    return `${dutchieTopLevel}${store}`; // revised
   } else if (!products) {
-    return `${dutchieTopLevel}/${store}/${destination}`;
+    // return `${dutchieTopLevel}/${store}/${destination}`;
+    return `${dutchieTopLevel}${store}${destination}`; // revised
   } else if (products) {
-    return `${dutchieTopLevel}/${store}/products/${destination}`; // put products in a constant?
+    // return `${dutchieTopLevel}/${store}/products/${destination}`; // put products in a constant?
+    return `${dutchieTopLevel}${store}${destination}`; // revised
   }
 };
 
