@@ -27,7 +27,7 @@ const faq = () => {
       }
     } else {
       $this.attr('aria-selected', 'false');
-      // $this.attr('tabindex', '0');
+      $this.attr('tabindex', '0');
     }
     $this.next().toggleClass(activeAnswer);
     // aria handling
