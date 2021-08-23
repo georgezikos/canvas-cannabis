@@ -101,7 +101,7 @@ const faq = () => {
         }
       }
       $questionAnswer[tabFocus].firstChild.setAttribute('tabindex', 0);
-      $questionAnswer[tabFocus].focus();
+      $questionAnswer[tabFocus].firstChild.focus();
     }
   });
 };
