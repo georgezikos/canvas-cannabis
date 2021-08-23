@@ -27,6 +27,10 @@ const faq = () => {
       $this.attr('aria-selected', 'false');
     }
     $this.next().toggleClass(activeAnswer);
+    // aria handling
+    if ($this.next().hasClass(activeAnswer)) {
+      $this.next().attr('hidden', 'false');
+    }
     // prettier-ignore
     if ($this.find($toggleIcon).hasClass(activeToggleIcon)) {
       $this.find($toggleIcon).removeClass(activeToggleIcon);
