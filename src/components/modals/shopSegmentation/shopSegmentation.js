@@ -154,7 +154,6 @@ const shopSegmentation = () => {
       products = true;
       destination = vaporizers;
     }
-    main ? console.log(dutchieTopLevel) : console.log(destination); // remove
   });
   $navShop.on('click', function () {
     // launch the modal – convert into it's own function
@@ -175,7 +174,6 @@ const shopSegmentation = () => {
     } else if (dataVal === 'vaporizers') {
       destination = vaporizers;
     }
-    main ? console.log(dutchieTopLevel) : console.log(destination); // remove
   });
   $dailySpecialsShop.on('click', function () {
     // launch the modal – convert into it's own function
@@ -196,7 +194,6 @@ const shopSegmentation = () => {
     } else if (dataVal === 'vaporizers') {
       destination = vaporizers;
     }
-    main ? console.log(dutchieTopLevel) : console.log(destination); // remove
   });
   $shopFlower.on('click', function () {
     // launch the modal
@@ -220,7 +217,6 @@ const shopSegmentation = () => {
       destination = vaporizers;
       products = true;
     }
-    main ? console.log(dutchieTopLevel) : console.log(destination); // remove
   });
   $shopEdibles.on('click', function () {
     // launch the modal
@@ -244,7 +240,6 @@ const shopSegmentation = () => {
       destination = vaporizers;
       products = true;
     }
-    main ? console.log(dutchieTopLevel) : console.log(destination); // remove
   });
   $shopVaporizers.on('click', function () {
     // launch the modal
@@ -268,7 +263,6 @@ const shopSegmentation = () => {
       destination = vaporizers;
       products = true;
     }
-    main ? console.log(dutchieTopLevel) : console.log(destination); // remove
   });
   $segmentationForm.on('submit', function (e) {
     e.preventDefault();
@@ -279,7 +273,8 @@ const shopSegmentation = () => {
       // put these store strings in constants?
       store = danforth;
       const fullPath = pathConstructor(main, store, products, destination);
-      window.open(fullPath);
+      // window.open(fullPath);
+      window.location.href = fullPath; // this is the test
       // reset URL variables
       main = false;
       store = undefined;
