@@ -74,7 +74,7 @@ const faq = () => {
       // tabs[tabFocus].focus();
     }
   });
-  console.log($faqQuestionsParent.length);
+  console.log($questionAnswer.length);
 };
 
 export default faq;
