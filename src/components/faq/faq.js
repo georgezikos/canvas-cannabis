@@ -16,10 +16,13 @@ const faq = () => {
     // console.log('clicked'); // temporary, while learning how to debounce/throttle properly
     const $this = $(this);
     $this.toggleClass(activeToggleButton);
+    // aria handling
     if ($this.hasClass(activeToggleButton)) {
-      $this.attr('aria-selected', 'true'); // aria handling
+      $this.attr('aria-selected', 'true');
+      // prettier-ignore
+      $this.closest('.faq__question-answer').siblings().children($toggleButton).attr('aria-selected', 'true');
     } else {
-      $this.attr('aria-selected', 'false'); // aria handling
+      $this.attr('aria-selected', 'false');
     }
     $this.next().toggleClass(activeAnswer);
     // prettier-ignore
