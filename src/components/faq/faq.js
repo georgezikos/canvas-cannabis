@@ -16,18 +16,17 @@ const faq = () => {
     // console.log('clicked'); // temporary, while learning how to debounce/throttle properly
     const $this = $(this);
     const $otherTabs = $this.parent().siblings('.faq__question-answer');
+    $this.attr('tabindex', '-1');
+    $otherTabs.attr('tabindex', '0');
     $this.toggleClass(activeToggleButton);
     // aria handling
     if ($this.hasClass(activeToggleButton)) {
       $this.attr('aria-selected', 'true');
-      $this.attr('tabindex', '-1');
       if ($otherTabs.find($toggleButton).hasClass(activeToggleButton)) {
         $otherTabs.find($toggleButton).attr('aria-selected', 'false');
-        $otherTabs.find($toggleButton).attr('tabindex', '0');
       }
     } else {
       $this.attr('aria-selected', 'false');
-      $this.attr('tabindex', '0');
     }
     $this.next().toggleClass(activeAnswer);
     // aria handling
