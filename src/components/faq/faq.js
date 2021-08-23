@@ -29,7 +29,9 @@ const faq = () => {
     $this.next().toggleClass(activeAnswer);
     // aria handling
     if ($this.next().hasClass(activeAnswer)) {
-      $this.next().attr('hidden', 'false');
+      $this.next().removeAttr('hidden');
+    } else if (!$this.next().hasClass(activeAnswer)) {
+      $this.next().attr('hidden', 'true');
     }
     // prettier-ignore
     if ($this.find($toggleIcon).hasClass(activeToggleIcon)) {
