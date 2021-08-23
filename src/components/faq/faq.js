@@ -19,7 +19,6 @@ let tabFocus = 0;
 const faq = () => {
   // Click handling
   $toggleButton.on('click', function () {
-    // console.log('clicked'); // temporary, while learning how to debounce/throttle properly
     const $this = $(this);
     const $otherTabs = $this.parent().siblings($questionAnswer);
     // $this.attr('tabindex', '-1');
@@ -45,6 +44,38 @@ const faq = () => {
     } else {
       $this.find($toggleIcon).addClass(activeToggleIcon);
       gsap.fromTo($this.find($toggleIcon), { duration: 0.25, rotation: 0 }, { duration: 0.25, rotation: 90 });
+    }
+  });
+  // Enter handling
+  $toggleButton.on('keyup', function (e) {
+    const enterKey = 13;
+    if (e.keyCode === enterKey) {
+      const $this = $(this);
+      const $otherTabs = $this.parent().siblings($questionAnswer);
+      // $this.attr('tabindex', '-1');
+      $this.attr('aria-selected', 'true');
+      // $otherTabs.find($toggleButton).attr('tabindex', '0');
+      $otherTabs.find($toggleButton).attr('aria-selected', 'false');
+      $this.toggleClass(activeToggleButton);
+      // aria handling
+      // if ($otherTabs.find($toggleButton).hasClass(activeToggleButton)) {
+      //   $otherTabs.find($toggleButton).attr('aria-selected', 'false');
+      // }
+      $this.next().toggleClass(activeAnswer);
+      // aria handling
+      if ($this.next().hasClass(activeAnswer)) {
+        $this.next().removeAttr('hidden');
+      } else if (!$this.next().hasClass(activeAnswer)) {
+        $this.next().prop('hidden', true);
+      }
+      // prettier-ignore
+      if ($this.find($toggleIcon).hasClass(activeToggleIcon)) {
+        $this.find($toggleIcon).removeClass(activeToggleIcon);
+        gsap.fromTo($this.find($toggleIcon), { duration: 0.25, rotation: 90 }, { duration: 0.25, rotation: 0 });
+      } else {
+        $this.find($toggleIcon).addClass(activeToggleIcon);
+        gsap.fromTo($this.find($toggleIcon), { duration: 0.25, rotation: 0 }, { duration: 0.25, rotation: 90 });
+      }
     }
   });
   // Arrow handling
