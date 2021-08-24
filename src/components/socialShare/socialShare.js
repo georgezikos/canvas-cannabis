@@ -22,7 +22,7 @@ const emailSubject = `Canvas Cannabis Blog: ${$currentPostTitle}`;
 const emailBody = `Hey, I wanted to share this article with you on ${$currentPostTitle} from Canvas Cannabis. You can check it out right here: ${$currentPost} – Let me know what you think!`;
 
 // Share buttons
-const $shareBtnsContainer = $('blog-post__share-btns');
+const $shareBtnsContainer = $('.blog-post__share-btns');
 const $facebookShareBtn = $('.blog-post__share-link--facebook');
 const $linkedInShareBtn = $('.blog-post__share-link--linkedin');
 const $emailShareBtn = $('.blog-post__share-link--email');
