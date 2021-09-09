@@ -185,20 +185,20 @@ const closeMenuHandler = () => {
           $dropdownIcon.removeClass(activeDropdownIcon);
           gsap.to($dropdownIcon, { duration: 0.25, rotation: 0 }); // was 360
         }
-        
+
         // I think this is the problematic chunk of code?
-        // if ($mainNav.hasClass('main-nav--dark-ui')) {
-        //   gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
-        //   gsap.to('.main-nav__logo-bounding', {
-        //     duration: 0.25,
-        //     color: '#f2efed',
-        //   });
-        //   gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
-        //   gsap.to($mainNav, {
-        //     duration: 0.25,
-        //     backgroundColor: 'transparent',
-        //   });
-        // }
+        if ($mainNav.hasClass('main-nav--dark-ui')) {
+          gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
+          gsap.to('.main-nav__logo-bounding', {
+            duration: 0.25,
+            color: '#f2efed',
+          });
+          gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
+          gsap.to($mainNav, {
+            duration: 0.25,
+            backgroundColor: 'transparent',
+          });
+        }
 
         // both of these branches deal with resetting leftover styles if the screen size changes even if the menu was not left open
       } else if (
