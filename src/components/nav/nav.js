@@ -1,5 +1,4 @@
 import { gsap } from 'gsap';
-import Headroom from 'headroom.js';
 import './nav.css';
 
 // Selectors
@@ -28,10 +27,6 @@ const $dropdownSubMenu = $('.main-nav__sub-menu'); // Containing element of sub-
 // Classes
 const disableScroll = 'active-nav';
 const activeMobileNav = 'main-nav__links-list--active';
-
-// Headroom Classes
-const headroomNotTop = 'headroom--not-top';
-const headroomPinned = 'headroom--pinned';
 
 // Unused
 const mainNavActiveMobile = 'main-nav--active-mobile';
@@ -370,22 +365,6 @@ const closeMenuHandler = () => {
   scrollAwayClose();
 };
 
-const stickyStyles = () => {
-  // this needs to be throttled
-  $window.on('scroll', () => {
-    if ($mainNav.hasClass(headroomNotTop) && $mainNav.hasClass(headroomPinned)) {
-      console.log('This is when the styles should change');
-      gsap.to($mainNav, { duration: 0.25, backgroundColor: '#f2efed' });
-      gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
-      gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: 'black' });
-      gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
-    };
-  })
-}
-
-const stickyNav = document.querySelector('nav.main-nav');
-const headroom = new Headroom(stickyNav);
-
 const nav = () => {
   // Hamburger click handler
   $hamburger.on('click', () => {
@@ -395,9 +374,6 @@ const nav = () => {
   subMenuHandler();
   // Menu close functionalities
   closeMenuHandler();
-  // Hide/reveal nav
-  headroom.init();
-  stickyStyles();
 };
 
 export default nav;
