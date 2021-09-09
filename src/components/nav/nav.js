@@ -1,5 +1,5 @@
 import { gsap } from 'gsap';
-// import Headroom from 'headroom.js';
+import Headroom from 'headroom.js';
 import './nav.css';
 
 // Selectors
@@ -366,8 +366,8 @@ const closeMenuHandler = () => {
   scrollAwayClose();
 };
 
-// const stickyNav = document.querySelector('nav.main-nav');
-// const headroom = new Headroom(stickyNav);
+const stickyNav = document.querySelector('nav.main-nav');
+const headroom = new Headroom(stickyNav);
 
 const nav = () => {
   // Hamburger click handler
@@ -379,7 +379,7 @@ const nav = () => {
   // Menu close functionalities
   closeMenuHandler();
   // Hide/reveal nav
-  // headroom.init();
+  headroom.init();
 };
 
 export default nav;
