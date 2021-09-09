@@ -371,10 +371,14 @@ const closeMenuHandler = () => {
 };
 
 const stickyStyles = () => {
+  // this needs to be throttled
   $window.on('scroll', () => {
     if ($mainNav.hasClass(headroomNotTop) && $mainNav.hasClass(headroomPinned)) {
       console.log('This is when the styles should change');
-      return;
+      gsap.to($mainNav, { duration: 0.25, backgroundColor: '#f2efed' });
+      gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
+      gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: 'black' });
+      gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
     };
   })
 }
