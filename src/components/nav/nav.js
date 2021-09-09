@@ -371,9 +371,11 @@ const closeMenuHandler = () => {
 };
 
 const stickyStyles = () => {
-  if ($mainNav.hasClass(headroomNotTop) && $mainNav.hasClass(headroomPinned)) {
-    console.log('This is when the styles should change');
-  };
+  $window.on('scroll', () => {
+    if ($mainNav.hasClass(headroomNotTop) && $mainNav.hasClass(headroomPinned)) {
+      console.log('This is when the styles should change');
+    };
+  })
 }
 
 const stickyNav = document.querySelector('nav.main-nav');
