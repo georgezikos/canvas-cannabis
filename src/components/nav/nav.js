@@ -42,6 +42,10 @@ const activeSubMenu = 'main-nav__sub-menu--active';
 // Other
 const tabletBreakpoint = 991; // If the mobile menu is left open, growing the window beyond this width will trigger a menu close
 
+// Match media variables
+const mediaQuery = '(max-width: 991px)';
+const mediaQueryList = window.matchMedia(mediaQuery);
+
 // Functions
 // Deals with showing and hiding the menu on smaller viewports
 const mobileNavHandler = () => {
@@ -170,15 +174,59 @@ const closeMenuHandler = () => {
 
   // Window resize to close menu
   const windowResizeClose = () => {
-    $window.on('resize', () => {
+    // $window.on('resize', () => {
+    //   if (
+    //     $linksList.hasClass(activeMobileNav) &&
+    //     $window.width() > tabletBreakpoint
+    //   ) {
+    //     mobileNavHandler();
+    //   } else if (
+    //     $dropdownSubMenu.hasClass(activeSubMenu) &&
+    //     $window.width() <= tabletBreakpoint // Also collapses an open menu on orientation change
+    //   ) {
+    //     $dropdownSubMenu.removeClass(activeSubMenu);
+    //     if ($dropdownIcon.hasClass(activeDropdownIcon)) {
+    //       $dropdownIcon.removeClass(activeDropdownIcon);
+    //       gsap.to($dropdownIcon, { duration: 0.25, rotation: 0 }); // was 360
+    //     }
+
+    //     // I think this is the problematic chunk of code?
+    //     if ($mainNav.hasClass('main-nav--dark-ui')) {
+    //       gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
+    //       gsap.to('.main-nav__logo-bounding', {
+    //         duration: 0.25,
+    //         color: '#f2efed',
+    //       });
+    //       gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
+    //       gsap.to($mainNav, {
+    //         duration: 0.25,
+    //         backgroundColor: 'transparent',
+    //       });
+    //     }
+
+    //     // both of these branches deal with resetting leftover styles if the screen size changes even if the menu was not left open
+    //   } else if (
+    //     $window.width() > tabletBreakpoint &&
+    //     $mainNav.hasClass('main-nav--dark-ui')
+    //   ) {
+    //     gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
+    //     gsap.to('.main-nav__link', { duration: 0.25, color: '#f2efed' });
+    //   } else if ($window.width() < tabletBreakpoint) {
+    //     gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
+    //     gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
+    //   }
+    // });
+
+    // Trying matchMedia instead
+    mediaQueryList.addEventListener('change', e => {
       if (
         $linksList.hasClass(activeMobileNav) &&
-        $window.width() > tabletBreakpoint
+        !e.matches
       ) {
         mobileNavHandler();
       } else if (
         $dropdownSubMenu.hasClass(activeSubMenu) &&
-        $window.width() <= tabletBreakpoint // Also collapses an open menu on orientation change
+        e.matches
       ) {
         $dropdownSubMenu.removeClass(activeSubMenu);
         if ($dropdownIcon.hasClass(activeDropdownIcon)) {
@@ -202,7 +250,7 @@ const closeMenuHandler = () => {
 
         // both of these branches deal with resetting leftover styles if the screen size changes even if the menu was not left open
       } else if (
-        $window.width() > tabletBreakpoint &&
+        !e.matches &&
         $mainNav.hasClass('main-nav--dark-ui')
       ) {
         gsap.to($dropdownIcon, { duration: 0.25, color: '#f2efed' });
@@ -212,6 +260,7 @@ const closeMenuHandler = () => {
         gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
       }
     });
+
   };
 
   // Clicking away from nav to close open sub-menus
