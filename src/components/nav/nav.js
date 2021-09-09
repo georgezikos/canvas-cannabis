@@ -374,6 +374,7 @@ const stickyStyles = () => {
   $window.on('scroll', () => {
     if ($mainNav.hasClass(headroomNotTop) && $mainNav.hasClass(headroomPinned)) {
       console.log('This is when the styles should change');
+      return;
     };
   })
 }
