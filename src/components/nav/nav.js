@@ -29,6 +29,10 @@ const $dropdownSubMenu = $('.main-nav__sub-menu'); // Containing element of sub-
 const disableScroll = 'active-nav';
 const activeMobileNav = 'main-nav__links-list--active';
 
+// Headroom Classes
+const headroomNotTop = 'headroom--not-top';
+const headroomPinned = 'headroom--pinned';
+
 // Unused
 const mainNavActiveMobile = 'main-nav--active-mobile';
 const navLogoActiveMobile = 'main-nav__logo--active-mobile';
@@ -366,6 +370,12 @@ const closeMenuHandler = () => {
   scrollAwayClose();
 };
 
+const stickyStyles = () => {
+  if ($mainNav.hasClass(headroomNotTop) && $mainNav.hasClass(headroomPinned)) {
+    console.log('This is when the styles should change');
+  };
+}
+
 const stickyNav = document.querySelector('nav.main-nav');
 const headroom = new Headroom(stickyNav);
 
@@ -380,6 +390,7 @@ const nav = () => {
   closeMenuHandler();
   // Hide/reveal nav
   headroom.init();
+  stickyStyles();
 };
 
 export default nav;
