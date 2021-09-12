@@ -101,6 +101,11 @@ const escClose = () => {
       $segmentationModal.removeClass(activeSegmentation);
       $html.removeClass(disableScroll);
       $body.removeClass(disableScroll);
+      // resets the modals dynamic element values
+      $modalHeader.html(defaultModalHeader);
+      $modalBody.html(defaultModalBody);
+      $modalBtn.val(defaultModalBtn);
+      $modalDesc.html(defaultModalDesc);
     }
   });
 };
@@ -129,6 +134,11 @@ const clickAwayClose = () => {
       $segmentationModal.removeClass(activeSegmentation);
       $html.removeClass(disableScroll);
       $body.removeClass(disableScroll);
+      // resets the modals dynamic element values
+      $modalHeader.html(defaultModalHeader);
+      $modalBody.html(defaultModalBody);
+      $modalBtn.val(defaultModalBtn);
+      $modalDesc.html(defaultModalDesc);
     } else if (
       // clicking the modal when its active
       $target.closest($modalContainer).length &&
@@ -145,15 +155,6 @@ const clickAwayClose = () => {
 const closeModalHandler = () => {
   escClose();
   clickAwayClose();
-  // reset dynamic element values
-  // $modalHeader.html(defaultModalHeader);
-  // $modalBody.html(defaultModalBody);
-  // $modalBtn.val(defaultModalBtn);
-  // $modalDesc.html(defaultModalDesc);
-  console.log(defaultModalHeader);
-  console.log(defaultModalBody);
-  console.log(defaultModalBtn);
-  console.log(defaultModalDesc);
 };
 
 const shopSegmentation = () => {
