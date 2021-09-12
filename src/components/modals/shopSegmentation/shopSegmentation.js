@@ -182,7 +182,7 @@ const shopSegmentation = () => {
       } else if (window.location.href.indexOf('liberty-village') > -1) {
         $("#shop-segmentation-select option[value='liberty']").remove();
       } else if (window.location.href.indexOf('mount-dennis') > -1) {
-        $("#shop-segmentation-select option[value='liberty']").remove();
+        $("#shop-segmentation-select option[value='mount-dennis']").remove();
       }
       // change the header text
       //change the body text
