@@ -146,10 +146,14 @@ const closeModalHandler = () => {
   escClose();
   clickAwayClose();
   // reset dynamic element values
-  $modalHeader.html(defaultModalHeader);
-  $modalBody.html(defaultModalBody);
-  $modalBtn.val(defaultModalBtn);
-  $modalDesc.html(defaultModalDesc);
+  // $modalHeader.html(defaultModalHeader);
+  // $modalBody.html(defaultModalBody);
+  // $modalBtn.val(defaultModalBtn);
+  // $modalDesc.html(defaultModalDesc);
+  console.log(defaultModalHeader);
+  console.log(defaultModalBody);
+  console.log(defaultModalBtn);
+  console.log(defaultModalDesc);
 };
 
 const shopSegmentation = () => {
