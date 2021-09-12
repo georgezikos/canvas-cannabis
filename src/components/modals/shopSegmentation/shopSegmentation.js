@@ -267,9 +267,16 @@ const shopSegmentation = () => {
     $segmentationModal.addClass(activeSegmentation);
     $html.addClass(disableScroll);
     $body.addClass(disableScroll);
-
-    // Change the header text, change the body text, change the button text, change the small print
-
+    // change the body text
+    $modalBody.html(
+      'Choose from our Toronto dispensary locations to begin shopping for cannabis flower:'
+    );
+    // change the button text
+    $modalBtn.val('Go to Flower');
+    // change the description
+    $modalDesc.html(
+      'Choose your local Canvas Cannabis Toronto dispensary from the field above to be taken to its flower sub-menu for click and collect or cannabis delivery.'
+    );
     // capture value of data attr
     const dataVal = $(this).data('menu');
     // construct part of the url
@@ -293,9 +300,16 @@ const shopSegmentation = () => {
     $segmentationModal.addClass(activeSegmentation);
     $html.addClass(disableScroll);
     $body.addClass(disableScroll);
-
-    // Change the header text, change the body text, change the button text, change the small print
-
+    // change the body text
+    $modalBody.html(
+      'Choose from our Toronto dispensary locations to begin shopping for cannabis edibles:'
+    );
+    // change the button text
+    $modalBtn.val('Go to Edibles');
+    // change the description
+    $modalDesc.html(
+      'Choose your local Canvas Cannabis Toronto dispensary from the field above to be taken to its edibles sub-menu for click and collect or cannabis delivery.'
+    );
     // capture value of data attr
     const dataVal = $(this).data('menu');
     // construct part of the url
@@ -321,9 +335,16 @@ const shopSegmentation = () => {
     $body.addClass(disableScroll);
     // capture value of data attr
     const dataVal = $(this).data('menu');
-
-    // Change the header text, change the body text, change the button text, change the small print
-
+    // change the body text
+    $modalBody.html(
+      'Choose from our Toronto dispensary locations to begin shopping for cannabis vaporizers:'
+    );
+    // change the button text
+    $modalBtn.val('Go to Vapes');
+    // change the description
+    $modalDesc.html(
+      'Choose your local Canvas Cannabis Toronto dispensary from the field above to be taken to its vaporizers sub-menu for click and collect or cannabis delivery.'
+    );
     // construct part of the url
     if (dataVal === 'main') {
       main = true;
