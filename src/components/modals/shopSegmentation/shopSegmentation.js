@@ -198,6 +198,20 @@ const shopSegmentation = () => {
       $('#shop-segmentation-description').html(
         'Choose another local Canvas Cannabis Toronto dispensary from the field above to be taken to its menu for click and collect or cannabis delivery.'
       );
+      // change the header text
+      $('#shop-segmentation-label').html(
+        'Please select your cannabis store location below'
+      );
+      // change the body text
+      $('#choose-store-label').html(
+        'Choose from our Toronto dispensary locations to begin shopping:'
+      );
+      // change the button text
+      $('#go-to-menu').val('Go to Menu');
+      // change the small print
+      $('#shop-segmentation-description').html(
+        'Choose your local Canvas Cannabis Toronto dispensary from the field above to be taken to its menu for click and collect or cannabis delivery.'
+      );
     }
     // capture value of data attr – try the alternative to 'this' from the docs
     const dataVal = $(this).data('menu');
