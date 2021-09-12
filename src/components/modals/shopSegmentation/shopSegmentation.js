@@ -219,9 +219,16 @@ const shopSegmentation = () => {
     $segmentationModal.addClass(activeSegmentation);
     $html.addClass(disableScroll);
     $body.addClass(disableScroll);
-
-    // Change the header text, change the body text, change the button text, change the small print
-
+    // change the body text
+    $('#choose-store-label').html(
+      `Choose from our Toronto dispensary locations to begin shopping today's specials:`
+    );
+    // change the button text
+    $('#go-to-menu').val('Go to Specials');
+    // change the small print
+    $('#shop-segmentation-description').html(
+      'Choose your local Canvas Cannabis Toronto dispensary from the field above to be taken to its specials sub-menu for click and collect or cannabis delivery.'
+    );
     // capture value of data attr – try the alternative to 'this' from the docs
     const dataVal = $(this).data('menu');
     // construct part of the url – turn this into it's own function and switch-case?
