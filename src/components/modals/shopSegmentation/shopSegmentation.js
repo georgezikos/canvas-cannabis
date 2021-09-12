@@ -174,6 +174,22 @@ const shopSegmentation = () => {
     $segmentationModal.addClass(activeSegmentation);
     $html.addClass(disableScroll);
     $body.addClass(disableScroll);
+    // check if currently on a menu page
+    if (window.location.href.indexOf('cannabis-store-menu') > -1) {
+      // remove the current menu from the select options
+      if (window.location.href.indexOf('danforth') > -1) {
+        $("#shop-segmentation-select option[value='danforth']").remove();
+      } else if (window.location.href.indexOf('liberty-village') > -1) {
+        $("#shop-segmentation-select option[value='liberty']").remove();
+      } else if (window.location.href.indexOf('mount-dennis') > -1) {
+        $("#shop-segmentation-select option[value='liberty']").remove();
+      }
+      // change the header text
+      //change the body text
+      //remove the current menu from the options
+      //change the button text
+      //change the small print
+    }
     // capture value of data attr – try the alternative to 'this' from the docs
     const dataVal = $(this).data('menu');
     // construct part of the url – turn this into it's own function and switch-case?
@@ -194,6 +210,9 @@ const shopSegmentation = () => {
     $segmentationModal.addClass(activeSegmentation);
     $html.addClass(disableScroll);
     $body.addClass(disableScroll);
+
+    // Change the header text, change the body text, change the button text, change the small print
+
     // capture value of data attr – try the alternative to 'this' from the docs
     const dataVal = $(this).data('menu');
     // construct part of the url – turn this into it's own function and switch-case?
@@ -214,6 +233,9 @@ const shopSegmentation = () => {
     $segmentationModal.addClass(activeSegmentation);
     $html.addClass(disableScroll);
     $body.addClass(disableScroll);
+
+    // Change the header text, change the body text, change the button text, change the small print
+
     // capture value of data attr
     const dataVal = $(this).data('menu');
     // construct part of the url
@@ -237,6 +259,9 @@ const shopSegmentation = () => {
     $segmentationModal.addClass(activeSegmentation);
     $html.addClass(disableScroll);
     $body.addClass(disableScroll);
+
+    // Change the header text, change the body text, change the button text, change the small print
+
     // capture value of data attr
     const dataVal = $(this).data('menu');
     // construct part of the url
@@ -262,6 +287,9 @@ const shopSegmentation = () => {
     $body.addClass(disableScroll);
     // capture value of data attr
     const dataVal = $(this).data('menu');
+
+    // Change the header text, change the body text, change the button text, change the small print
+
     // construct part of the url
     if (dataVal === 'main') {
       main = true;
