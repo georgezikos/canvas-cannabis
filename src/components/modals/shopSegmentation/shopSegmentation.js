@@ -15,6 +15,16 @@ const $segmentationForm = $('.modal__form--shop');
 const $storeSelect = $('#shop-segmentation-select');
 const $selectPlaceholder = $('#shop-segmentation-select > option:first-child');
 
+const $modalHeader = $('#shop-segmentation-label');
+const $modalBody = $('#choose-store-label');
+const $modalBtn = $('#go-to-menu');
+const $modalDesc = $('#shop-segmentation-description');
+
+// $modalHeader
+// $modalBody
+// $modalBtn
+// $modalDesc
+
 // Buttons
 const $navShop = $('.is--shop-trigger'); // nav 'shop' link
 const $heroShop = $('#shop-now-btn'); // hero 'shop now'
@@ -151,6 +161,12 @@ const shopSegmentation = () => {
     $segmentationModal.addClass(activeSegmentation);
     $html.addClass(disableScroll);
     $body.addClass(disableScroll);
+
+    console.log($modalHeader.html());
+    console.log($modalBody.html());
+    console.log($modalBtn.val());
+    console.log($modalDesc.html());
+
     // capture value of data attr – try the alternative to 'this' from the docs
     const dataVal = $(this).data('menu');
     // construct part of the url – turn this into it's own function and switch-case?
