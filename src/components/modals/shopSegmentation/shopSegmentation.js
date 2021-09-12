@@ -185,10 +185,19 @@ const shopSegmentation = () => {
         $("#shop-segmentation-select option[value='mount-dennis']").remove();
       }
       // change the header text
-      //change the body text
-      //remove the current menu from the options
-      //change the button text
-      //change the small print
+      $('#shop-segmentation-label').html(
+        'Please select another cannabis store location below'
+      );
+      // change the body text
+      $('#choose-store-label').html(
+        'Choose from one of our other Toronto dispensary locations to switch menus:'
+      );
+      // change the button text
+      $('#go-to-menu').val('Switch Menus');
+      // change the small print
+      $('#shop-segmentation-description').html(
+        'Choose another local Canvas Cannabis Toronto dispensary from the field above to be taken to its menu for click and collect or cannabis delivery.'
+      );
     }
     // capture value of data attr – try the alternative to 'this' from the docs
     const dataVal = $(this).data('menu');
