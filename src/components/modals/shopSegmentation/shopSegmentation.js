@@ -20,10 +20,10 @@ const $modalBody = $('#choose-store-label');
 const $modalBtn = $('#go-to-menu');
 const $modalDesc = $('#shop-segmentation-description');
 
-// $modalHeader
-// $modalBody
-// $modalBtn
-// $modalDesc
+const defaultModalHeader = $modalHeader.html();
+const defaultModalBody = $modalBody.html();
+const defaultModalBtn = $modalBtn.val();
+const defaultModalDesc = $modalDesc.html();
 
 // Buttons
 const $navShop = $('.is--shop-trigger'); // nav 'shop' link
@@ -145,6 +145,11 @@ const clickAwayClose = () => {
 const closeModalHandler = () => {
   escClose();
   clickAwayClose();
+  // reset dynamic element values
+  $modalHeader.html(defaultModalHeader);
+  $modalBody.html(defaultModalBody);
+  $modalBtn.val(defaultModalBtn);
+  $modalDesc.html(defaultModalDesc);
 };
 
 const shopSegmentation = () => {
@@ -161,12 +166,6 @@ const shopSegmentation = () => {
     $segmentationModal.addClass(activeSegmentation);
     $html.addClass(disableScroll);
     $body.addClass(disableScroll);
-
-    console.log($modalHeader.html());
-    console.log($modalBody.html());
-    console.log($modalBtn.val());
-    console.log($modalDesc.html());
-
     // capture value of data attr – try the alternative to 'this' from the docs
     const dataVal = $(this).data('menu');
     // construct part of the url – turn this into it's own function and switch-case?
@@ -201,32 +200,16 @@ const shopSegmentation = () => {
         $("#shop-segmentation-select option[value='mount-dennis']").remove();
       }
       // change the header text
-      $('#shop-segmentation-label').html(
-        'Please select another cannabis store location below'
-      );
+      $modalHeader.html('Please select another cannabis store location below');
       // change the body text
-      $('#choose-store-label').html(
+      $modalBody.html(
         'Choose from one of our other Toronto dispensary locations to switch menus:'
       );
       // change the button text
-      $('#go-to-menu').val('Switch Menus');
-      // change the small print
-      $('#shop-segmentation-description').html(
+      $modalBtn.val('Switch Menus');
+      // change the description
+      $modalDesc.html(
         'Choose another local Canvas Cannabis Toronto dispensary from the field above to be taken to its menu for click and collect or cannabis delivery.'
-      );
-      // change the header text
-      $('#shop-segmentation-label').html(
-        'Please select your cannabis store location below'
-      );
-      // change the body text
-      $('#choose-store-label').html(
-        'Choose from our Toronto dispensary locations to begin shopping:'
-      );
-      // change the button text
-      $('#go-to-menu').val('Go to Menu');
-      // change the small print
-      $('#shop-segmentation-description').html(
-        'Choose your local Canvas Cannabis Toronto dispensary from the field above to be taken to its menu for click and collect or cannabis delivery.'
       );
     }
     // capture value of data attr – try the alternative to 'this' from the docs
@@ -250,13 +233,13 @@ const shopSegmentation = () => {
     $html.addClass(disableScroll);
     $body.addClass(disableScroll);
     // change the body text
-    $('#choose-store-label').html(
+    $modalBody.html(
       `Choose from our Toronto dispensary locations to begin shopping today's specials:`
     );
     // change the button text
-    $('#go-to-menu').val('Go to Specials');
-    // change the small print
-    $('#shop-segmentation-description').html(
+    $modalBtn.val('Go to Specials');
+    // change the description
+    $modalDesc.html(
       'Choose your local Canvas Cannabis Toronto dispensary from the field above to be taken to its specials sub-menu for click and collect or cannabis delivery.'
     );
     // capture value of data attr – try the alternative to 'this' from the docs
