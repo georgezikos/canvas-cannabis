@@ -33,7 +33,7 @@ const buttonsWaiting = () => {
       success: function (data) {
         console.log('success');
         $footerSubmit.toggleClass(loading);
-        $this.reset();
+        $this[0].reset();
       },
       error: function (data) {
         console.log('error');
