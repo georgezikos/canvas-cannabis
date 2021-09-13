@@ -22,7 +22,7 @@ const $modalDesc = $('#shop-segmentation-description');
 
 const defaultModalHeader = $modalHeader.html();
 const defaultModalBody = $modalBody.html();
-const defaultModalBtn = $modalBtn.val();
+const defaultModalBtn = $modalBtn.html();
 const defaultModalDesc = $modalDesc.html();
 
 // Buttons
@@ -104,7 +104,7 @@ const escClose = () => {
       // resets the modals dynamic element values
       $modalHeader.html(defaultModalHeader);
       $modalBody.html(defaultModalBody);
-      $modalBtn.val(defaultModalBtn);
+      $modalBtn.html(defaultModalBtn);
       $modalDesc.html(defaultModalDesc);
     }
   });
@@ -137,7 +137,7 @@ const clickAwayClose = () => {
       // resets the modals dynamic element values
       $modalHeader.html(defaultModalHeader);
       $modalBody.html(defaultModalBody);
-      $modalBtn.val(defaultModalBtn);
+      $modalBtn.html(defaultModalBtn);
       $modalDesc.html(defaultModalDesc);
     } else if (
       // clicking the modal when its active
@@ -211,7 +211,7 @@ const shopSegmentation = () => {
         'Choose from one of our other Toronto dispensary locations to switch menus:'
       );
       // change the button text
-      $modalBtn.val('Switch Menus');
+      $modalBtn.html('Switch Menus');
       // change the description
       $modalDesc.html(
         'Choose another local Canvas Cannabis Toronto dispensary from the field above to be taken to its menu for click and collect or cannabis delivery.'
@@ -242,7 +242,7 @@ const shopSegmentation = () => {
       `Choose from our Toronto dispensary locations to begin shopping today's specials:`
     );
     // change the button text
-    $modalBtn.val('Go to Specials');
+    $modalBtn.html('Go to Specials');
     // change the description
     $modalDesc.html(
       'Choose your local Canvas Cannabis Toronto dispensary from the field above to be taken to its specials sub-menu for click and collect or cannabis delivery.'
@@ -272,7 +272,7 @@ const shopSegmentation = () => {
       'Choose from our Toronto dispensary locations to begin shopping for cannabis flower:'
     );
     // change the button text
-    $modalBtn.val('Go to Flower');
+    $modalBtn.html('Go to Flower');
     // change the description
     $modalDesc.html(
       'Choose your local Canvas Cannabis Toronto dispensary from the field above to be taken to its flower sub-menu for click and collect or cannabis delivery.'
@@ -305,7 +305,7 @@ const shopSegmentation = () => {
       'Choose from our Toronto dispensary locations to begin shopping for cannabis edibles:'
     );
     // change the button text
-    $modalBtn.val('Go to Edibles');
+    $modalBtn.html('Go to Edibles');
     // change the description
     $modalDesc.html(
       'Choose your local Canvas Cannabis Toronto dispensary from the field above to be taken to its edibles sub-menu for click and collect or cannabis delivery.'
@@ -340,7 +340,7 @@ const shopSegmentation = () => {
       'Choose from our Toronto dispensary locations to begin shopping for cannabis vaporizers:'
     );
     // change the button text
-    $modalBtn.val('Go to Vapes');
+    $modalBtn.html('Go to Vapes');
     // change the description
     $modalDesc.html(
       'Choose your local Canvas Cannabis Toronto dispensary from the field above to be taken to its vaporizers sub-menu for click and collect or cannabis delivery.'
