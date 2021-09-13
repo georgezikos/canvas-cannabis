@@ -3,8 +3,8 @@ import './buttonsWaiting.css';
 // Button Selectors
 let $footerSubmit = $('#newsletter-subscribe'); // footer opt-in
 const $footerOptInForm = $('#newsletter-optin-form'); // footer opt-in form
+const $segmentationSubmit = $('#go-to-menu'); // #go-to-menu
 
-// const $segmentationSubmit // #go-to-menu
 // const $jobApplicationSubmit // .main-button.main-button--fixed.is--job-application
 
 // Classes
@@ -16,13 +16,18 @@ const footerSubmitReplacement = `
   <button class="main-button main-button--fixed is--submit" id="newsletter-subscribe">
     <span class="main-button__text">Subscribe</span>
   </button>
+  `;
+
+const segmentationSubmitReplacement = `
+  <button class="main-button main-button--fixed main-button--modal is--submit" id="go-to-menu">
+    <span class="main-button__text">Go to Menu</span>
+  </button>
 `;
-// const ageGateSubmitReplacement
-// const segmentationSubmitReplacement
 // const jobApplicationSubmitReplacement
 
 // on form submit animate inside the button
 const buttonsWaiting = () => {
+  // Footer
   $footerSubmit.replaceWith(footerSubmitReplacement);
   $footerSubmit = $('#newsletter-subscribe');
   $footerOptInForm.submit(function () {
@@ -45,6 +50,9 @@ const buttonsWaiting = () => {
       },
     });
   });
+
+  // Segmentation
+  $segmentationSubmit.replaceWith(footerSubmitReplacement);
 };
 
 export default buttonsWaiting;

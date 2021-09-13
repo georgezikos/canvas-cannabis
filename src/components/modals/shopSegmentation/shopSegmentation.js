@@ -1,4 +1,6 @@
 import '../modals.css';
+import '../../buttons/buttonsWaiting.css';
+import '../../buttons/buttonsWaiting';
 
 // Collapse open menu if the modal is triggered
 
@@ -363,6 +365,8 @@ const shopSegmentation = () => {
   });
   $segmentationForm.on('submit', function (e) {
     e.preventDefault();
+    // waiting animation
+    $segmentationSubmit.toggleClass(btnLoading);
     // construct the path
     const $selectedStore = $storeSelect.val();
     // move this into it's own function?
