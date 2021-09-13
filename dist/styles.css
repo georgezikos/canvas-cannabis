@@ -41,8 +41,8 @@
   border-right: 2px solid white;
   border-top: 2px solid white;
   content: '';
-  top: 12px;
-  left: 6px;
+  top: 50%;
+  left: 48.22%;
   position: absolute;
   animation: checkmark 800ms ease;
 }
