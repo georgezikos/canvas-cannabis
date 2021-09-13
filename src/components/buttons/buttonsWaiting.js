@@ -36,7 +36,7 @@ const buttonsWaiting = () => {
     $.ajax({
       data: $this.serialize(),
       success: function (data) {
-        console.log('success');
+        // console.log('success');
         $footerSubmit.toggleClass(btnLoading);
         $footerSubmit.toggleClass(btnSuccess);
         $this[0].reset();
@@ -45,7 +45,7 @@ const buttonsWaiting = () => {
         }, 1000);
       },
       error: function (data) {
-        console.log('error');
+        // console.log('error');
         $footerSubmit.toggleClass(btnLoading);
       },
     });

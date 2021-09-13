@@ -3,7 +3,7 @@
 }
 
 .main-button__text {
-  transition: all 0.4s;
+  transition: all 0.2s;
 }
 
 .main-button--waiting .main-button__text {
