@@ -2,7 +2,7 @@ import './buttonsWaiting.css';
 
 // Button Selectors
 let $footerSubmit = $('#newsletter-subscribe'); // footer opt-in
-// const $footerOptInForm = $('#newsletter-optin-form'); // footer opt-in form
+const $footerOptInForm = $('#newsletter-optin-form'); // footer opt-in form
 
 // const $ageGateSubmit // #confirm-age
 // const $segmentationSubmit // #go-to-menu
@@ -25,9 +25,8 @@ const footerSubmitReplacement = `
 const buttonsWaiting = () => {
   $footerSubmit.replaceWith(footerSubmitReplacement);
   $footerSubmit = $('#newsletter-subscribe');
-  $footerSubmit.on('click', function () {
-    const $this = $(this);
-    $this.toggleClass(loading);
+  $footerOptInForm.on('submit', function () {
+    $footerSubmit.toggleClass(loading);
   });
 };
 
