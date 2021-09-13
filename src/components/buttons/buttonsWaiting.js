@@ -27,10 +27,14 @@ const buttonsWaiting = () => {
   $footerSubmit = $('#newsletter-subscribe');
   $footerOptInForm.submit(function () {
     $footerSubmit.toggleClass(loading);
-    // const $this = $(this);
+    const $this = $(this);
     $.ajax({
-      success: function () {
+      data: $this.serialize(),
+      success: function (data) {
         console.log('success');
+      },
+      error: function (data) {
+        console.log('error');
       },
     });
   });
