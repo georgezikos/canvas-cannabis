@@ -1,7 +1,7 @@
 import './buttonsWaiting.css';
 
 // Button Selectors
-const $footerSubmit = $('#newsletter-subscribe'); // footer opt-in
+let $footerSubmit = $('#newsletter-subscribe'); // footer opt-in
 // const $footerOptInForm = $('#newsletter-optin-form'); // footer opt-in form
 
 // const $ageGateSubmit // #confirm-age
@@ -24,6 +24,7 @@ const footerSubmitReplacement = `
 // on form submit animate inside the button
 const buttonsWaiting = () => {
   $footerSubmit.replaceWith(footerSubmitReplacement);
+  $footerSubmit = $('#newsletter-subscribe');
   // $footerSubmit.on('click', function () {
   //   // const $this = $(this);
   //   // $this.toggleClass(loading);
