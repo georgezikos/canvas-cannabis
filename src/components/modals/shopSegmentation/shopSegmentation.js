@@ -17,7 +17,7 @@ const $selectPlaceholder = $('#shop-segmentation-select > option:first-child');
 
 const $modalHeader = $('#shop-segmentation-label');
 const $modalBody = $('#choose-store-label');
-const $modalBtn = $('#go-to-menu');
+const $modalBtn = $('.main-button__text');
 const $modalDesc = $('#shop-segmentation-description');
 
 const defaultModalHeader = $modalHeader.html();
