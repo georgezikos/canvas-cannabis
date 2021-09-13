@@ -27,6 +27,8 @@ const buttonsWaiting = () => {
   $footerSubmit = $('#newsletter-subscribe');
   $footerOptInForm.on('submit', function () {
     $footerSubmit.toggleClass(loading);
+    const $this = $(this);
+    $this.css('display', 'block');
   });
 };
 
