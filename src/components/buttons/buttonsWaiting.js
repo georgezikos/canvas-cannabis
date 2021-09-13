@@ -6,9 +6,12 @@ const $footerSubmit = $('#newsletter-subscribe'); // #newsletter-subscribe
 // const $segmentationSubmit // #go-to-menu
 // const $jobApplicationSubmit // .main-button.main-button--fixed.is--job-application
 
+// Classes
+const loading = 'main-button--waiting';
+
 // Replacement HTML
 const footerSubmitReplacement = `
-  <button class="main-button main-button--fixed" id="newsletter-subscribe">
+  <button class="main-button main-button--fixed is--submit ${loading}" id="newsletter-subscribe">
     <span class="main-button__text">Subscribe</span>
   </button>
 `;
