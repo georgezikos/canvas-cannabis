@@ -28,6 +28,11 @@ const buttonsWaiting = () => {
   $footerOptInForm.submit(function () {
     $footerSubmit.toggleClass(loading);
     // const $this = $(this);
+    $.ajax({
+      success: function () {
+        console.log('success');
+      },
+    });
   });
 };
 
