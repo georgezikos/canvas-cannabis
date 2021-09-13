@@ -9,7 +9,8 @@ const $footerOptInForm = $('#newsletter-optin-form'); // footer opt-in form
 // const $jobApplicationSubmit // .main-button.main-button--fixed.is--job-application
 
 // Classes
-const loading = 'main-button--waiting';
+const btnLoading = 'main-button--waiting';
+const btnSuccess = 'main-button--success';
 
 // Replacement HTML
 const footerSubmitReplacement = `
@@ -26,18 +27,19 @@ const buttonsWaiting = () => {
   $footerSubmit.replaceWith(footerSubmitReplacement);
   $footerSubmit = $('#newsletter-subscribe');
   $footerOptInForm.submit(function () {
-    $footerSubmit.toggleClass(loading);
+    $footerSubmit.toggleClass(btnLoading);
     const $this = $(this);
     $.ajax({
       data: $this.serialize(),
       success: function (data) {
         console.log('success');
-        $footerSubmit.toggleClass(loading);
+        $footerSubmit.toggleClass(btnLoading);
+        $footerSubmit.toggleClass(btnSuccess);
         $this[0].reset();
       },
       error: function (data) {
         console.log('error');
-        $footerSubmit.toggleClass(loading);
+        $footerSubmit.toggleClass(btnLoading);
       },
     });
   });
