@@ -56,4 +56,5 @@ const buttonsWaiting = () => {
   $segmentationSubmit = $('#go-to-menu');
 };
 
+export const $modalBtn = $('#go-to-menu > .main-button__text');
 export default buttonsWaiting;

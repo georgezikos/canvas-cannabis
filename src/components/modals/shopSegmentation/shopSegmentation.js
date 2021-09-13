@@ -1,6 +1,6 @@
 import '../modals.css';
 // prettier-ignore
-import { $segmentationSubmit, btnLoading } from '../../buttons/buttonsWaiting';
+import { $segmentationSubmit, btnLoading, $modalBtn } from '../../buttons/buttonsWaiting';
 
 // Selectors
 // Global
@@ -17,7 +17,7 @@ const $selectPlaceholder = $('#shop-segmentation-select > option:first-child');
 
 const $modalHeader = $('#shop-segmentation-label');
 const $modalBody = $('#choose-store-label');
-const $modalBtn = $('#go-to-menu > .main-button__text');
+// const $modalBtn = $('#go-to-menu > .main-button__text');
 const $modalDesc = $('#shop-segmentation-description');
 
 const defaultModalHeader = $modalHeader.html();
@@ -188,7 +188,6 @@ const shopSegmentation = () => {
       products = true;
       destination = vaporizers;
     }
-    console.log($modalBtn[0].outerHTML);
   });
   $navShop.on('click', function () {
     // launch the modal – convert into it's own function
