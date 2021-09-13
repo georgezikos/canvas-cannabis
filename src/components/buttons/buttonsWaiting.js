@@ -27,6 +27,7 @@ const buttonsWaiting = () => {
   $footerSubmit.on('click', () => {
     const $this = $(this);
     $this.toggleClass(loading);
+    console.log('clicking me');
   });
 };
 
