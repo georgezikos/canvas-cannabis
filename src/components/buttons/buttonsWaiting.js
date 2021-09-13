@@ -25,12 +25,11 @@ const footerSubmitReplacement = `
 const buttonsWaiting = () => {
   $footerSubmit.replaceWith(footerSubmitReplacement);
   $footerSubmit = $('#newsletter-subscribe');
-  // $footerSubmit.on('click', function () {
-  //   // const $this = $(this);
-  //   // $this.toggleClass(loading);
-  //   console.log('clicking me');
-  // });
-  console.log($footerSubmit);
+  $footerSubmit.on('click', function () {
+    // const $this = $(this);
+    // $this.toggleClass(loading);
+    console.log('clicking me');
+  });
 };
 
 export default buttonsWaiting;
