@@ -3,7 +3,7 @@ import './buttonsWaiting.css';
 // Button Selectors
 let $footerSubmit = $('#newsletter-subscribe'); // footer opt-in
 const $footerOptInForm = $('#newsletter-optin-form'); // footer opt-in form
-export const $segmentationSubmit = $('#go-to-menu'); // #go-to-menu
+export let $segmentationSubmit = $('#go-to-menu'); // #go-to-menu
 
 // const $jobApplicationSubmit // .main-button.main-button--fixed.is--job-application
 
@@ -53,6 +53,7 @@ const buttonsWaiting = () => {
 
   // Segmentation
   $segmentationSubmit.replaceWith(segmentationSubmitReplacement);
+  $segmentationSubmit = $('#go-to-menu');
 };
 
 export default buttonsWaiting;
