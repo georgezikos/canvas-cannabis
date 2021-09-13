@@ -8,7 +8,9 @@ const $footerSubmit = $('#newsletter-subscribe'); // #newsletter-subscribe
 
 // Replacement HTML
 const footerSubmitReplacement = `
-  <button class="main-button main-button--fixed" id="newsletter-subscribe">Subscribe</button>
+  <button class="main-button main-button--fixed" id="newsletter-subscribe">
+    <span class="main-button__text">Subscribe</span>
+  </button>
 `;
 // const ageGateSubmitReplacement
 // const segmentationSubmitReplacement
