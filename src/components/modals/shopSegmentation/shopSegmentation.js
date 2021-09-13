@@ -188,6 +188,7 @@ const shopSegmentation = () => {
       products = true;
       destination = vaporizers;
     }
+    console.log($modalBtn[0].outerHTML);
   });
   $navShop.on('click', function () {
     // launch the modal – convert into it's own function
