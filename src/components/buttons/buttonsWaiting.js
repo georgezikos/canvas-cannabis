@@ -28,7 +28,9 @@ const buttonsWaiting = () => {
   $footerOptInForm.on('submit', function () {
     $footerSubmit.toggleClass(loading);
     const $this = $(this);
-    $this.css('display', 'block');
+    $this.ajaxComplete(() => {
+      console.log('success!');
+    });
   });
 };
 
