@@ -1,8 +1,6 @@
 import '../modals.css';
-import '../../buttons/buttonsWaiting.css';
-import '../../buttons/buttonsWaiting';
-
-// Collapse open menu if the modal is triggered
+// prettier-ignore
+import { $segmentationSubmit, btnLoading } from '../../buttons/buttonsWaiting';
 
 // Selectors
 // Global
