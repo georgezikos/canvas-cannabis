@@ -4,7 +4,6 @@ import './buttonsWaiting.css';
 let $footerSubmit = $('#newsletter-subscribe'); // footer opt-in
 const $footerOptInForm = $('#newsletter-optin-form'); // footer opt-in form
 
-// const $ageGateSubmit // #confirm-age
 // const $segmentationSubmit // #go-to-menu
 // const $jobApplicationSubmit // .main-button.main-button--fixed.is--job-application
 

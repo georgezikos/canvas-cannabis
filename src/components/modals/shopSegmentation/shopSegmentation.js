@@ -379,9 +379,9 @@ const shopSegmentation = () => {
       destination = undefined;
       $storeSelect.prop('selectedIndex', 0); // resets the select field
       // destroy the modal – convert into it's own function
-      $segmentationModal.removeClass(activeSegmentation);
-      $html.removeClass(disableScroll);
-      $body.removeClass(disableScroll);
+      // $segmentationModal.removeClass(activeSegmentation);
+      // $html.removeClass(disableScroll);
+      // $body.removeClass(disableScroll);
     } else if ($selectedStore === 'liberty') {
       store = liberty;
       const fullPath = pathConstructor(main, store, products, destination);
@@ -394,9 +394,9 @@ const shopSegmentation = () => {
       destination = undefined;
       $storeSelect.prop('selectedIndex', 0); // resets the select field
       // destroy the modal – convert into it's own function
-      $segmentationModal.removeClass(activeSegmentation);
-      $html.removeClass(disableScroll);
-      $body.removeClass(disableScroll);
+      // $segmentationModal.removeClass(activeSegmentation);
+      // $html.removeClass(disableScroll);
+      // $body.removeClass(disableScroll);
     } else if ($selectedStore === 'mount-dennis') {
       store = mountDennis;
       const fullPath = pathConstructor(main, store, products, destination);
@@ -409,9 +409,9 @@ const shopSegmentation = () => {
       destination = undefined;
       $storeSelect.prop('selectedIndex', 0); // resets the select field
       // destroy the modal – convert into it's own function
-      $segmentationModal.removeClass(activeSegmentation);
-      $html.removeClass(disableScroll);
-      $body.removeClass(disableScroll);
+      // $segmentationModal.removeClass(activeSegmentation);
+      // $html.removeClass(disableScroll);
+      // $body.removeClass(disableScroll);
     }
   });
   closeModalHandler();
