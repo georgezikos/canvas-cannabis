@@ -32,9 +32,11 @@ const buttonsWaiting = () => {
       data: $this.serialize(),
       success: function (data) {
         console.log('success');
+        $footerSubmit.toggleClass(loading);
       },
       error: function (data) {
         console.log('error');
+        $footerSubmit.toggleClass(loading);
       },
     });
   });
