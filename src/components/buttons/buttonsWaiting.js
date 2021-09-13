@@ -1,7 +1,9 @@
 import './buttonsWaiting.css';
 
 // Button Selectors
-const $footerSubmit = $('#newsletter-subscribe'); // #newsletter-subscribe
+const $footerSubmit = $('#newsletter-subscribe'); // footer opt-in
+// const $footerOptInForm = $('#newsletter-optin-form'); // footer opt-in form
+
 // const $ageGateSubmit // #confirm-age
 // const $segmentationSubmit // #go-to-menu
 // const $jobApplicationSubmit // .main-button.main-button--fixed.is--job-application
@@ -11,7 +13,7 @@ const loading = 'main-button--waiting';
 
 // Replacement HTML
 const footerSubmitReplacement = `
-  <button class="main-button main-button--fixed is--submit ${loading}" id="newsletter-subscribe">
+  <button class="main-button main-button--fixed is--submit" id="newsletter-subscribe">
     <span class="main-button__text">Subscribe</span>
   </button>
 `;
@@ -22,6 +24,7 @@ const footerSubmitReplacement = `
 // on form submit animate inside the button
 const buttonsWaiting = () => {
   $footerSubmit.replaceWith(footerSubmitReplacement);
+  // $footerOptInForm
 };
 
 export default buttonsWaiting;
