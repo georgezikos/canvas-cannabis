@@ -52,7 +52,7 @@ const buttonsWaiting = () => {
   });
 
   // Segmentation
-  $segmentationSubmit.replaceWith(footerSubmitReplacement);
+  $segmentationSubmit.replaceWith(segmentationSubmitReplacement);
 };
 
 export default buttonsWaiting;
