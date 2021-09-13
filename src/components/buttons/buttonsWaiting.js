@@ -36,6 +36,7 @@ const buttonsWaiting = () => {
         $footerSubmit.toggleClass(btnLoading);
         $footerSubmit.toggleClass(btnSuccess);
         $this[0].reset();
+        $footerSubmit.toggleClass(btnSuccess);
       },
       error: function (data) {
         console.log('error');
