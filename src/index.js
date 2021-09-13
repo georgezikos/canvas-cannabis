@@ -1,3 +1,4 @@
+import buttonsWaiting from './components/buttons/buttonsWaiting';
 import ageGate from './components/modals/ageGate/ageGate';
 import shopSegmentation from './components/modals/shopSegmentation/shopSegmentation';
 import nav from './components/nav/nav';
@@ -7,6 +8,7 @@ import socialShare from './components/socialShare/socialShare';
 import addressLinks from './components/addressLinks/addressLinks';
 
 const global = () => {
+  buttonsWaiting();
   ageGate();
   shopSegmentation();
   nav();
