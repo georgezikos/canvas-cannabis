@@ -25,12 +25,9 @@ const footerSubmitReplacement = `
 const buttonsWaiting = () => {
   $footerSubmit.replaceWith(footerSubmitReplacement);
   $footerSubmit = $('#newsletter-subscribe');
-  $footerOptInForm.on('submit', function () {
+  $footerOptInForm.submit(function () {
     $footerSubmit.toggleClass(loading);
-    const $this = $(this);
-    $this.ajaxComplete(() => {
-      console.log('success!');
-    });
+    // const $this = $(this);
   });
 };
 
