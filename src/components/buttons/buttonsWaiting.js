@@ -24,11 +24,12 @@ const footerSubmitReplacement = `
 // on form submit animate inside the button
 const buttonsWaiting = () => {
   $footerSubmit.replaceWith(footerSubmitReplacement);
-  $footerSubmit.on('click', function () {
-    // const $this = $(this);
-    // $this.toggleClass(loading);
-    console.log('clicking me');
-  });
+  // $footerSubmit.on('click', function () {
+  //   // const $this = $(this);
+  //   // $this.toggleClass(loading);
+  //   console.log('clicking me');
+  // });
+  console.log($footerSubmit);
 };
 
 export default buttonsWaiting;
