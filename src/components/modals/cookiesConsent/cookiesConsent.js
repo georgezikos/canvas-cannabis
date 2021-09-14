@@ -7,6 +7,7 @@ const cookiesConsent = () => {
   $acceptCookiesBtn.on('click', function () {
     // Temporary dismissal functionality
     $cookiesConsentModal.hide();
+    console.log('clicked');
   });
 };
 
