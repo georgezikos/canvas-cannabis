@@ -1,4 +1,5 @@
-.is--submit {
+.is--submit,
+.is--job-application {
   position: relative;
 }
 
