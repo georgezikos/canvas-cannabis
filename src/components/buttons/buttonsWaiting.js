@@ -46,7 +46,7 @@ const buttonsWaiting = () => {
         // console.log('success');
         $footerSubmit.toggleClass(btnLoading);
         $footerSubmit.toggleClass(btnSuccess);
-        $this[0].reset();
+        // $this[0].reset();
         setTimeout(function () {
           $footerSubmit.toggleClass(btnSuccess);
         }, 1000);
@@ -54,6 +54,12 @@ const buttonsWaiting = () => {
       error: function (data) {
         console.log('error');
         $footerSubmit.toggleClass(btnLoading);
+        // temporary to be able to see how the success state looks in either case, remove
+        $footerSubmit.toggleClass(btnSuccess);
+        // $this[0].reset();
+        setTimeout(function () {
+          $footerSubmit.toggleClass(btnSuccess);
+        }, 1000);
       },
     });
   });
@@ -80,6 +86,12 @@ const buttonsWaiting = () => {
       error: function (data) {
         console.log('error');
         $jobApplicationSubmit.toggleClass(btnLoading);
+        // temporary to be able to see how the success state looks in either case, remove
+        $jobApplicationSubmit.toggleClass(btnSuccess);
+        // $this[0].reset();
+        setTimeout(function () {
+          $jobApplicationSubmit.toggleClass(btnSuccess);
+        }, 1000);
       },
     });
   });
