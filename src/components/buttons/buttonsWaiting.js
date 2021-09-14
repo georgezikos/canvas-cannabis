@@ -65,6 +65,7 @@ const buttonsWaiting = () => {
     $jobApplicationSubmit.toggleClass(btnLoading);
     const $this = $(this);
     $.ajax({
+      type: 'POST',
       data: $this.serialize(),
       success: function (data) {
         // console.log('success');
