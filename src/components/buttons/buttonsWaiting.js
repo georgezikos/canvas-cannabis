@@ -51,7 +51,7 @@ const buttonsWaiting = () => {
         }, 1000);
       },
       error: function (data) {
-        // console.log('error');
+        console.log('error');
         $footerSubmit.toggleClass(btnLoading);
       },
     });
@@ -76,7 +76,7 @@ const buttonsWaiting = () => {
         }, 1000);
       },
       error: function (data) {
-        // console.log('error');
+        console.log('error');
         $jobApplicationSubmit.toggleClass(btnLoading);
       },
     });
