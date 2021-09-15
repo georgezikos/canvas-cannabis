@@ -47,6 +47,8 @@ const windowTop = windowHeight / 2 - 608 / 2;
 const copyLink = () => {
   $copyShareBtn.on('click', (e) => {
     e.preventDefault();
+    console.log($temp);
+    console.log($currentPost);
     $temp.textContent = $currentPost;
     $temp.style.position = 'fixed'; // prevents scrolling to bottom
     $body.append($temp); // append near the icon to prevent scroll jump?
