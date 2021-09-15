@@ -12,8 +12,8 @@ const $currentPost = $(location).attr('href'); // for copying and emails
 const $currentPostEncoded = encodeURIComponent($(location).attr('href')); // for share links
 
 // Metadata
-const $currentPostTitle = $('title').text();
-const $currentPostTitleEncoded = encodeURIComponent($('title').text());
+const $currentPostTitle = $('title').text(); // grab the h1 content instead
+const $currentPostTitleEncoded = encodeURIComponent($('title').text()); // same idea here
 const $currentPostSummary = $metaDesc.attr('content');
 const $currentPostSummaryEncoded = encodeURIComponent($currentPostSummary);
 
@@ -46,7 +46,7 @@ const windowTop = windowHeight / 2 - 608 / 2;
 // Functions
 const copyLink = () => {
   $copyShareBtn.on('click', (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     // $body.append($temp); // append near the icon to prevent scroll jump?
     $shareBtnsContainer.append($temp); // revised
     document.execCommand('copy');
