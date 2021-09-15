@@ -46,7 +46,8 @@ const windowTop = windowHeight / 2 - 608 / 2;
 // Functions
 const copyLink = () => {
   $copyShareBtn.on('click', (e) => {
-    // e.preventDefault();
+    e.preventDefault();
+    console.log('clicked');
     // $body.append($temp); // append near the icon to prevent scroll jump?
     $shareBtnsContainer.append($temp); // revised
     document.execCommand('copy');
