@@ -12,8 +12,8 @@ const $currentPost = $(location).attr('href'); // for copying and emails
 const $currentPostEncoded = encodeURIComponent($(location).attr('href')); // for share links
 
 // Metadata
-const $currentPostTitle = $('title').text(); // grab the h1 content instead
-const $currentPostTitleEncoded = encodeURIComponent($('title').text()); // same idea here
+const $currentPostTitle = $('h1').html();
+const $currentPostTitleEncoded = encodeURIComponent($('h1').html());
 const $currentPostSummary = $metaDesc.attr('content');
 const $currentPostSummaryEncoded = encodeURIComponent($currentPostSummary);
 
@@ -34,9 +34,6 @@ const facebookShareLink = `https://www.facebook.com/sharer/sharer.php?u=${$curre
 const linkedInShareLink = `https://www.linkedin.com/shareArticle?mini=true&url=${$currentPostEncoded}&title=${$currentPostTitleEncoded}&source=https%3A%2F%2Fcanvascannabis.ca%2F&summary=${$currentPostSummaryEncoded}`;
 const emailShareLink = `mailto:?subject=${emailSubject}&body=${emailBody}`; // gmail on ios is tricky with mailto in general + clean up body variable and subject
 
-// Copy link related
-// const $temp = document.createElement('textarea');
-
 // Pop-up window related
 const windowWidth = $window.width();
 const windowHeight = $window.height();
@@ -47,11 +44,7 @@ const windowTop = windowHeight / 2 - 608 / 2;
 const copyLink = () => {
   $copyShareBtn.on('click', (e) => {
     e.preventDefault();
-    // $temp.textContent = $currentPost;
-    // $temp.style.position = 'fixed'; // prevents scrolling to bottom
-    // $body.append($temp); // append near the icon to prevent scroll jump?
     navigator.clipboard.writeText($currentPost);
-    // $temp.remove();
   });
   // Tooltip confirmation
   tippy(copyShareBtn, {
