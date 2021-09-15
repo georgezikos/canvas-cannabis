@@ -35,7 +35,7 @@ const linkedInShareLink = `https://www.linkedin.com/shareArticle?mini=true&url=$
 const emailShareLink = `mailto:?subject=${emailSubject}&body=${emailBody}`; // gmail on ios is tricky with mailto in general + clean up body variable and subject
 
 // Copy link related
-const $temp = document.createElement('textarea');
+// const $temp = document.createElement('textarea');
 
 // Pop-up window related
 const windowWidth = $window.width();
@@ -47,13 +47,11 @@ const windowTop = windowHeight / 2 - 608 / 2;
 const copyLink = () => {
   $copyShareBtn.on('click', (e) => {
     e.preventDefault();
-    console.log($temp);
-    console.log($currentPost);
-    $temp.textContent = $currentPost;
-    $temp.style.position = 'fixed'; // prevents scrolling to bottom
-    $body.append($temp); // append near the icon to prevent scroll jump?
-    document.execCommand('copy');
-    $temp.remove();
+    // $temp.textContent = $currentPost;
+    // $temp.style.position = 'fixed'; // prevents scrolling to bottom
+    // $body.append($temp); // append near the icon to prevent scroll jump?
+    navigator.clipboard.writeText($currentPost);
+    // $temp.remove();
   });
   // Tooltip confirmation
   tippy(copyShareBtn, {
