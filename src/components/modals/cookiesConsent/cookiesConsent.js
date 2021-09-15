@@ -14,7 +14,7 @@ const cookiesConsent = () => {
     return;
   } else {
     // If not, show the prompt
-    $cookiesConsentModal.show();
+    $cookiesConsentModal.css('display', 'flex');
     // After x amount of scroll translateY into view
     $acceptCookiesBtn.on('click', function () {
       // When dismissed create cookie
