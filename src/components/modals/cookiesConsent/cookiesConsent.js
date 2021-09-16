@@ -1,6 +1,7 @@
 import '../modals.css';
 import { $ageGate, activeAgeGate } from '../ageGate/ageGate';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Cookies from 'js-cookie';
 
 // Selectors
