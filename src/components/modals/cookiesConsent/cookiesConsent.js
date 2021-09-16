@@ -51,13 +51,13 @@ const cookiesConsent = () => {
     return;
   } else {
     // If not, check for the existence of the age gate first
-    if ($ageGate.hasClass(activeAgeGate)) {
-      // Age gate exists so don't make the prompt visible
-      return;
-    } else if (
-      !$ageGate.hasClass(activeAgeGate) &&
+    if (
+      $ageGate.hasClass(activeAgeGate) ||
       window.location.href.indexOf('legal') > -1
     ) {
+      // Age gate exists so don't make the prompt visible
+      return;
+    } else if (!$ageGate.hasClass(activeAgeGate)) {
       // There is no age gate and we're not on the legal page, so deal with the prompt – this assuming this isn't coming immediately after clearing the age gate, which is dealt with in the age gate module
       cookiesConsentPrompt();
     }
