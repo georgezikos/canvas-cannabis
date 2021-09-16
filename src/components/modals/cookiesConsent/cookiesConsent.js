@@ -25,7 +25,7 @@ export const cookiesConsentPrompt = () => {
     ease: 'power1.out',
     scrollTrigger: {
       trigger: '.thirds-section--featured-products',
-      scrub: 0.3,
+      // scrub: 0.3,
     },
   });
 
