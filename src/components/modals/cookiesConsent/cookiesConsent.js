@@ -16,26 +16,29 @@ const getConsent = 'is--active';
 
 // Functions
 export const cookiesConsentPrompt = () => {
-  // Age gate has been cleared, show the cookies consent at a specific percentage down the page translateY into view
+  // No presence of an age gate, so give the prompt a display of flex
   $cookiesConsentModal.toggleClass(getConsent);
-
+  // Set the GSAP animation to trigger when the user is 100% of the viewport from the top
   gsap.registerPlugin(ScrollTrigger);
   gsap.to($cookiesConsentModal, {
     y: 0,
-    autoAlpha: 1,
-    // ease: 'power1.out',
+    ease: 'power1.out',
     scrollTrigger: {
       trigger: 'body',
       start: 'top -100%',
       end: 'top -100%',
     },
   });
-  // destroy the scrollTrigger once it's done?
+  // Deal with the dismissal of the prompt
   $acceptCookiesBtn.on('click', function () {
     // When dismissed create cookie
     Cookies.set(cookiesConsentCookie, true, { expires: 30 });
     // Fire checkmark animation
     // translateY out of view
+    gsap.to($cookiesConsentModal, {
+      yPercent: 150,
+      ease: 'power1.out',
+    });
     // display none;
     $cookiesConsentModal.toggleClass(getConsent);
   });
@@ -48,9 +51,10 @@ const cookiesConsent = () => {
   } else {
     // If not, check for the existence of the age gate first
     if ($ageGate.hasClass(activeAgeGate)) {
-      // Age gate hasn't been clear so don't show the cookies consent yet
+      // Age gate exists so don't make the prompt visible
       return;
     } else if (!$ageGate.hasClass(activeAgeGate)) {
+      // There is no age gate, so deal with the prompt – this assuming this isn't coming immediately after clearing the age gate, which is dealt with in the age gate module
       cookiesConsentPrompt();
     }
   }
