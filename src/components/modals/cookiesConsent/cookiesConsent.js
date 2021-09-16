@@ -12,9 +12,6 @@ const $cookiesConsentModal = $('.modal--cookies-consent');
 // Cookie Names
 const cookiesConsentCookie = 'acceptCookies';
 
-// Classes
-const getConsent = 'is--active';
-
 // Functions
 export const cookiesConsentPrompt = () => {
   // No presence of an age gate, so give the prompt a display of flex
