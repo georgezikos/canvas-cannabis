@@ -40,7 +40,7 @@ export const cookiesConsentPrompt = () => {
       ease: 'power1.out',
     });
     // display none;
-    $cookiesConsentModal.toggleClass(getConsent);
+    // $cookiesConsentModal.toggleClass(getConsent);
   });
 };
 
