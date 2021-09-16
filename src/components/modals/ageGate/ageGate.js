@@ -51,6 +51,7 @@ const validateAge = () => {
     $ageGate.removeClass(activeAgeGate);
     $html.removeClass(disableScroll);
     $body.removeClass(disableScroll);
+    cookiesConsentPrompt();
     return;
   } else if ($verifyAge.prop('checked') && $rememberMe.prop('checked')) {
     // If they verify their age and also want to be remembered, create a cookie for a 30-day period and clear the age gate
@@ -58,6 +59,7 @@ const validateAge = () => {
     $ageGate.removeClass(activeAgeGate);
     $html.removeClass(disableScroll);
     $body.removeClass(disableScroll);
+    cookiesConsentPrompt();
     return;
   }
 };
