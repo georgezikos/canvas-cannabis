@@ -36,15 +36,12 @@ export const cookiesConsentPrompt = () => {
     // When dismissed create cookie
     Cookies.set(cookiesConsentCookie, true, { expires: 30 });
     // Fire checkmark animation
-    const $this = $(this);
-    $this.toggleClass(btnSuccess);
     // Move out of view
     gsap.to($cookiesConsentModal, {
       yPercent: 150,
       ease: 'power1.out',
       display: 'none',
     });
-    // $cookiesConsentModal.toggleClass(getConsent);
   });
 };
 
