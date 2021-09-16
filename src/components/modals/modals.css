@@ -11,3 +11,8 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
+
+/* Active cookies consent */
+.is--active {
+  display: flex;
+}

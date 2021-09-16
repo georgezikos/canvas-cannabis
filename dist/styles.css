@@ -98,6 +98,11 @@
   -webkit-overflow-scrolling: touch;
 }
 
+/* Active cookies consent */
+.is--active {
+  display: flex;
+}
+
 /* For the body and html elements */
 .active-nav {
   overflow: hidden;
