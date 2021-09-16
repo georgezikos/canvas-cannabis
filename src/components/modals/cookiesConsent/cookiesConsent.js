@@ -21,7 +21,7 @@ export const cookiesConsentPrompt = () => {
 
   gsap.registerPlugin(ScrollTrigger);
   gsap.to($cookiesConsentModal, {
-    y: -321,
+    y: 0,
     ease: 'power1.out',
     scrollTrigger: {
       trigger: '.thirds-section--featured-products',
