@@ -1,5 +1,6 @@
 import '../modals.css';
 import { $ageGate, activeAgeGate } from '../ageGate/ageGate';
+import { btnSuccess } from '../../buttons/buttonsWaiting';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Cookies from 'js-cookie';
@@ -35,6 +36,8 @@ export const cookiesConsentPrompt = () => {
     // When dismissed create cookie
     Cookies.set(cookiesConsentCookie, true, { expires: 30 });
     // Fire checkmark animation
+    const $this = $(this);
+    $this.toggleClass(btnSuccess);
     // Move out of view
     gsap.to($cookiesConsentModal, {
       yPercent: 150,

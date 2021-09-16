@@ -11,7 +11,7 @@ const $jobApplicationForm = $('.application__form');
 
 // Classes
 export const btnLoading = 'main-button--waiting';
-const btnSuccess = 'main-button--success';
+export const btnSuccess = 'main-button--success';
 
 // Replacement HTML
 const footerSubmitReplacement = `
