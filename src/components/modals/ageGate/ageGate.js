@@ -4,7 +4,7 @@ import '../modals.css';
 // Selectors
 const $body = $('body');
 const $html = $('html');
-export const $ageGate = $('.modal--age-gate'); // containing element
+const $ageGate = $('.modal--age-gate'); // containing element
 const $ageGateForm = $('.modal__form--age-gate');
 const $verifyAge = $('#verify-age');
 const $rememberMe = $('#remember-me');
@@ -12,7 +12,7 @@ const $onScreenCheckbox = $('.form__checkbox');
 const $invalidPrompt = $('.form__caption--invalid');
 
 // Classes
-export const activeAgeGate = 'modal--active';
+const activeAgeGate = 'modal--active';
 const disableScroll = 'active-modal';
 const isInvalid = 'is--invalid';
 
