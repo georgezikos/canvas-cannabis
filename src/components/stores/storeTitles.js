@@ -1,8 +1,11 @@
-const $storeTitle = $('h2.store-locations__heading');
+const $storeTitleEl = $('h2.store-locations__heading');
 
 const storeTitles = () => {
-  for (let i = 0; i < $storeTitle.length; i++) {
-    console.log($storeTitle[i].innerText.split(' '));
+  for (let i = 0; i < $storeTitleEl.length; i++) {
+    let storeTitleSplit = $storeTitleEl[i].innerText.split(' ');
+    let storeTitleLength = storeTitleSplit.length;
+    let lastWord = storeTitleSplit[storeTitleLength - 1];
+    console.log(lastWord);
   }
 };
 
