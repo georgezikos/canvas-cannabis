@@ -4,7 +4,7 @@ const storeTitles = () => {
   for (let i = 0; i < $storeTitleEl.length; i++) {
     const storeTitleSplit = $storeTitleEl[i].innerText.split(' ');
     const lastWord = storeTitleSplit.pop();
-    console.log(lastWord);
+    console.log(storeTitleSplit, lastWord);
     // $storeTitleEl[i].innerHTML.replace('Dispensary', 'Datspensary');
     // $storeTitleEl[i].html().replace('DISPENSARY', 'DATSPENSARY');
     // const storeTitleLength = storeTitleSplit.length;
