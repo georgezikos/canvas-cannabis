@@ -2,8 +2,9 @@ const $storeTitle = $('h2.store-locations__heading');
 const storeTitleSplit = $storeTitle.html().split();
 
 const storeTitles = () => {
-  console.log($storeTitle);
-  console.log(storeTitleSplit);
+  for (let i = 0; i < $storeTitle.length; i++) {
+    console.log($storeTitle[i]);
+  }
 };
 
 export default storeTitles;
