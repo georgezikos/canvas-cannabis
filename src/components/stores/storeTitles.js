@@ -5,10 +5,8 @@ const storeTitles = () => {
     const storeTitleSplit = $storeTitleEl[i].innerText.split(' ');
     const lastWord = storeTitleSplit.pop();
     const firstHalf = storeTitleSplit.join(' ');
-    const newTitle = `
-      <h2 class="store-locations__heading">${firstHalf} <span class="line-break">${lastWord}</span></h2>
-    `;
-    $storeTitleEl[i].replaceWith(newTitle);
+    const newTitle = `<h2 class="store-locations__heading">${firstHalf} <span class="line-break">${lastWord}</span></h2>`;
+    $storeTitleEl[i].outerHTML(newTitle);
   }
 };
 
