@@ -5,12 +5,10 @@ const storeTitles = () => {
     const storeTitleSplit = $storeTitleEl[i].innerText.split(' ');
     const lastWord = storeTitleSplit.pop();
     const firstHalf = storeTitleSplit.join(' ');
-    console.log(firstHalf, lastWord);
-    // $storeTitleEl[i].innerHTML.replace('Dispensary', 'Datspensary');
-    // $storeTitleEl[i].html().replace('DISPENSARY', 'DATSPENSARY');
-    // const storeTitleLength = storeTitleSplit.length;
-    // const lastWord = storeTitleSplit[storeTitleLength - 1];
-    // const lastWordBlock = `<span class="line-break">${lastWord}</span>`
+    const newTitle = `
+      <h2 class="store-locations__heading">${firstHalf} <span class="line-break">${lastWord}</span></h2>
+    `;
+    $storeTitleEl[i].replaceWith(newTitle);
   }
 };
 
