@@ -7,6 +7,7 @@ import dailySpecials from './components/dailySpecials/dailySpecials';
 import faq from './components/faq/faq';
 import socialShare from './components/socialShare/socialShare';
 import addressLinks from './components/addressLinks/addressLinks';
+import storeTitles from './components/stores/storeTitles';
 
 const global = () => {
   buttonsWaiting();
@@ -21,6 +22,7 @@ const home = () => {
 };
 
 const stores = () => {
+  storeTitles();
   addressLinks();
 };
 
