@@ -56,7 +56,7 @@ const mobileNavHandler = () => {
     if ($mainNav.hasClass('main-nav--dark-ui')) {
       gsap.to($mainNav, {
         duration: 0.25,
-        backgroundColor: '#000000',
+        backgroundColor: '#f2efed',
       });
       gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: 'black' });
       gsap.to($hamburgerTop, { duration: 0.25, backgroundColor: 'black' });
@@ -128,7 +128,7 @@ const subMenuHandler = () => {
       gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 0}, { duration: 0.25, rotation: 180});
       
       if ($window.width() > tabletBreakpoint && $mainNav.hasClass('main-nav--dark-ui')) {
-        gsap.to($mainNav, { duration: 0.25, backgroundColor: '#000000' });
+        gsap.to($mainNav, { duration: 0.25, backgroundColor: '#f2efed' });
         gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
         gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: 'black' });
         gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
