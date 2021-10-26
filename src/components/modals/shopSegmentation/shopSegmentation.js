@@ -241,22 +241,19 @@ const shopSegmentation = () => {
     $body.addClass(disableScroll);
     // change the body text
     $modalBody.html(
-      // change 2 back to 0 after test
-      currentDay === 2 || currentDay === 6 || currentDay === 5
+      currentDay === 0 || currentDay === 6 || currentDay === 5
         ? `Choose from our Toronto dispensary locations to begin shopping our private collection:`
         : `Choose from our Toronto dispensary locations to begin shopping today's specials:`
     );
     // change the button text
     $modalBtn.html(
-      // change 2 back to 0 after test
-      currentDay === 2 || currentDay === 6 || currentDay === 5
+      currentDay === 0 || currentDay === 6 || currentDay === 5
         ? `Go to Collection`
         : `Go to Specials`
     );
     // change the description
     $modalDesc.html(
-      // change 2 back to 0 after test
-      currentDay === 2 || currentDay === 6 || currentDay === 5
+      currentDay === 0 || currentDay === 6 || currentDay === 5
         ? `Choose your local Canvas Cannabis Toronto dispensary from the field above to be taken to its private collection sub-menu for click and collect or cannabis delivery.`
         : `Choose your local Canvas Cannabis Toronto dispensary from the field above to be taken to its specials sub-menu for click and collect or cannabis delivery.`
     );
