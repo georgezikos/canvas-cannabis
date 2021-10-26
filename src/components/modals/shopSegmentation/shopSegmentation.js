@@ -233,19 +233,32 @@ const shopSegmentation = () => {
     }
   });
   $dailySpecialsShop.on('click', function () {
+    const currentDate = new Date();
+    const currentDay = currentDate.getDay();
     // launch the modal – convert into it's own function
     $segmentationModal.addClass(activeSegmentation);
     $html.addClass(disableScroll);
     $body.addClass(disableScroll);
     // change the body text
     $modalBody.html(
-      `Choose from our Toronto dispensary locations to begin shopping today's specials:`
+      // change 2 back to 0 after test
+      currentDay === 2 || currentDay === 6 || currentDay === 5
+        ? `Choose from our Toronto dispensary locations to begin shopping our private collection:`
+        : `Choose from our Toronto dispensary locations to begin shopping today's specials:`
     );
     // change the button text
-    $modalBtn.html('Go to Specials');
+    $modalBtn.html(
+      // change 2 back to 0 after test
+      currentDay === 2 || currentDay === 6 || currentDay === 5
+        ? `Go to Collection`
+        : `Go to Specials`
+    );
     // change the description
     $modalDesc.html(
-      'Choose your local Canvas Cannabis Toronto dispensary from the field above to be taken to its specials sub-menu for click and collect or cannabis delivery.'
+      // change 2 back to 0 after test
+      currentDay === 2 || currentDay === 6 || currentDay === 5
+        ? `Choose your local Canvas Cannabis Toronto dispensary from the field above to be taken to its private collection sub-menu for click and collect or cannabis delivery.`
+        : `Choose your local Canvas Cannabis Toronto dispensary from the field above to be taken to its specials sub-menu for click and collect or cannabis delivery.`
     );
     // capture value of data attr – try the alternative to 'this' from the docs
     const dataVal = $(this).data('menu');
