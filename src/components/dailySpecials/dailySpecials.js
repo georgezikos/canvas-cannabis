@@ -57,8 +57,7 @@ const currentDate = new Date();
 const currentDay = currentDate.getDay();
 
 const dailySpecials = () => {
-  if (currentDay === 2 || currentDay === 6 || currentDay === 5) {
-    // change 2 back to 0
+  if (currentDay === 0 || currentDay === 6 || currentDay === 5) {
     // refactor into a function that takes all of these repeating variables as arguments
     // see if I can use ternarys in place of some of these variables
     $dailySpecialsImage.attr('src', specials.weekends.days.weekends.image);
