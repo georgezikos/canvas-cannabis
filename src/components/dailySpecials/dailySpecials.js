@@ -73,8 +73,8 @@ const dailySpecials = () => {
     // see if I can use ternarys in place of some of these variables
     $dailySpecialsImage.attr('src', specials.weekends.days.weekends.image);
     $dailySpecialsShadow.attr('src', specials.weekends.days.weekends.shadow);
-    // $dailySpecialsImage.attr('srcset', specials.weekends.days.weekends.image);
-    // $dailySpecialsShadow.attr('srcset', specials.weekends.days.weekends.shadow);
+    $dailySpecialsImage.attr('srcset', specials.weekends.days.weekends.image);
+    $dailySpecialsShadow.attr('srcset', specials.weekends.days.weekends.shadow);
     $dailySpecialsHeading.text(specials.weekends.heading);
     $dailySpecialsBody.text(
       `${specials.weekends.prefix} ${specials.weekends.days.weekends.label} we feature our ${specials.weekends.days.weekends.products} of cannabis accessories. Hand carved and polished by a small team of generational wood craftsmen showcasing a range of natural tones and unique finishes. An aesthetic sure to fit in with your home décor.`
