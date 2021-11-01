@@ -8,7 +8,7 @@ export let $modalBtn = $('#go-to-menu > .main-button__text'); // segmentation bu
 // prettier-ignore
 let $jobApplicationSubmit = $('.main-button.main-button--fixed.is--job-application'); // job application buttons
 const $jobApplicationForm = $('.application__form');
-export let defaultModalBtn = $modalBtn.html();
+export let defaultModalBtn;
 
 // Classes
 export const btnLoading = 'main-button--waiting';
@@ -101,6 +101,7 @@ const buttonsWaiting = () => {
   $segmentationSubmit.replaceWith(segmentationSubmitReplacement);
   $segmentationSubmit = $('#go-to-menu');
   $modalBtn = $('#go-to-menu > .main-button__text');
+  defaultModalBtn = $modalBtn.html();
 };
 
 export default buttonsWaiting;
