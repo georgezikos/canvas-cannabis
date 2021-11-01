@@ -1,6 +1,7 @@
 import '../modals.css';
 // prettier-ignore
-import { $segmentationSubmit, btnLoading, $modalBtn, defaultModalBtn } from '../../buttons/buttonsWaiting';
+import { $segmentationSubmit, btnLoading } from '../../buttons/buttonsWaiting';
+// $modalBtn, defaultModalBtn
 
 // Selectors
 // Global
@@ -17,12 +18,12 @@ const $selectPlaceholder = $('#shop-segmentation-select > option:first-child');
 
 const $modalHeader = $('#shop-segmentation-label');
 const $modalBody = $('#choose-store-label');
-// const $modalBtn = $('#go-to-menu > .main-button__text');
+const $modalBtn = $('#go-to-menu > .main-button__text');
 const $modalDesc = $('#shop-segmentation-description');
 
 const defaultModalHeader = $modalHeader.html();
 const defaultModalBody = $modalBody.html();
-// const defaultModalBtn = $modalBtn.html();
+const defaultModalBtn = $modalBtn.html();
 const defaultModalDesc = $modalDesc.html();
 
 // Buttons
