@@ -8,6 +8,7 @@ export let $modalBtn = $('#go-to-menu > .main-button__text'); // segmentation bu
 // prettier-ignore
 let $jobApplicationSubmit = $('.main-button.main-button--fixed.is--job-application'); // job application buttons
 const $jobApplicationForm = $('.application__form');
+export let defaultModalBtn = $modalBtn.html();
 
 // Classes
 export const btnLoading = 'main-button--waiting';
