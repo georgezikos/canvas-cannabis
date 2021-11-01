@@ -105,7 +105,7 @@ const escClose = () => {
       $modalHeader.html(defaultModalHeader);
       $modalBody.html(defaultModalBody);
       // $modalBtn.html(defaultModalBtn)
-      console.log(defaultModalBtn, $modalBtn);
+      console.log(defaultModalBtn, $modalBtn, defaultModalBody);
       $modalDesc.html(defaultModalDesc);
     }
   });
