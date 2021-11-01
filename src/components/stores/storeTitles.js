@@ -1,4 +1,5 @@
-const $storeTitleEl = $('h2.store-locations__heading');
+const $cityStoreTitleEl = $('h2.store-locations__heading');
+const $allStoreTitleEl = $('h3.store-locations__heading');
 const $aboutStoreTitleEl = $('h3.about__stores-heading');
 
 const storeTitles = () => {
@@ -8,13 +9,16 @@ const storeTitles = () => {
       const lastWord = storeTitleSplit.pop();
       const firstHalf = storeTitleSplit.join(' ');
       const newTitle =
-        el === $storeTitleEl
+        el === $cityStoreTitleEl
           ? `<h2 class="store-locations__heading">${firstHalf} <span class="line-break">${lastWord}</span></h2>`
-          : `<h3 class="about__stores-heading">${firstHalf} <span class="line-break">${lastWord}</span></h3>`;
+          : el === $aboutStoreTitleEl
+          ? `<h3 class="about__stores-heading">${firstHalf} <span class="line-break">${lastWord}</span></h3>`
+          : `<h3 class="store-locations__heading">${firstHalf} <span class="line-break">${lastWord}</span></h3>`;
       el[i].outerHTML = newTitle;
     }
   };
-  titleFormatter($storeTitleEl);
+  titleFormatter($cityStoreTitleEl);
+  titleFormatter($allStoreTitleEl);
   titleFormatter($aboutStoreTitleEl);
 };
 
