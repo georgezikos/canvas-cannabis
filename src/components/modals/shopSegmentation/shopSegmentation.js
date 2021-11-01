@@ -104,7 +104,7 @@ const escClose = () => {
       // resets the modals dynamic element values
       $modalHeader.html(defaultModalHeader);
       $modalBody.html(defaultModalBody);
-      $modalBtn.html(defaultModalBtn);
+      console.log($modalBtn.html(defaultModalBtn), $modalBtn);
       $modalDesc.html(defaultModalDesc);
     }
   });
