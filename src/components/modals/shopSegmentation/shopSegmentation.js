@@ -429,6 +429,12 @@ const shopSegmentation = () => {
     }
   });
   closeModalHandler();
+  console.log(
+    defaultModalHeader,
+    defaultModalBody,
+    defaultModalBtn,
+    defaultModalDesc
+  );
 };
 
 export default shopSegmentation;
