@@ -1,5 +1,7 @@
 const $cityStoreTitleEl = $('h2.store-locations__heading');
-const $allStoreTitleEl = $('h3.store-locations__heading');
+const $allStoreTitleEl = $(
+  'h3.store-locations__heading:not(.stores-location__heading--sub)'
+);
 const $aboutStoreTitleEl = $('h3.about__stores-heading');
 
 const storeTitles = () => {
