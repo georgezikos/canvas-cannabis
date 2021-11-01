@@ -21,7 +21,6 @@ const $modalDesc = $('#shop-segmentation-description');
 
 const defaultModalHeader = $modalHeader.html();
 const defaultModalBody = $modalBody.html();
-// const defaultModalBtn = $modalBtn.html();
 const defaultModalDesc = $modalDesc.html();
 
 // Buttons
@@ -103,7 +102,7 @@ const escClose = () => {
       // resets the modals dynamic element values
       $modalHeader.html(defaultModalHeader);
       $modalBody.html(defaultModalBody);
-      // $modalBtn.html(defaultModalBtn)
+      $modalBtn.html(defaultModalBtn);
       console.log(defaultModalBtn, $modalBtn, defaultModalBody);
       $modalDesc.html(defaultModalDesc);
     }
@@ -427,11 +426,6 @@ const shopSegmentation = () => {
     }
   });
   closeModalHandler();
-  console.log(defaultModalHeader);
-  console.log(defaultModalBody);
-  console.log(defaultModalBtn);
-  console.log(defaultModalDesc);
-  console.log($modalBtn.html());
 };
 
 export default shopSegmentation;
