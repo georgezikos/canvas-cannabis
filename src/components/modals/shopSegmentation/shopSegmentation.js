@@ -433,7 +433,7 @@ const shopSegmentation = () => {
   console.log(defaultModalBody);
   console.log(defaultModalBtn);
   console.log(defaultModalDesc);
-  console.log($modalBtn);
+  console.log($modalBtn.html());
 };
 
 export default shopSegmentation;
