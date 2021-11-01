@@ -23,7 +23,7 @@ const $modalDesc = $('#shop-segmentation-description');
 
 const defaultModalHeader = $modalHeader.html();
 const defaultModalBody = $modalBody.html();
-const defaultModalBtn = $modalBtn.html();
+const defaultModalBtn = $modalBtn.text();
 const defaultModalDesc = $modalDesc.html();
 
 // Buttons
