@@ -429,12 +429,10 @@ const shopSegmentation = () => {
     }
   });
   closeModalHandler();
-  console.log(
-    defaultModalHeader,
-    defaultModalBody,
-    defaultModalBtn,
-    defaultModalDesc
-  );
+  console.log(defaultModalHeader);
+  console.log(defaultModalBody);
+  console.log(defaultModalBtn);
+  console.log(defaultModalDesc);
 };
 
 export default shopSegmentation;
