@@ -16,7 +16,7 @@ const cookiesConsentCookie = 'acceptCookies';
 export const cookiesConsentPrompt = () => {
   // No presence of an age gate, so give the prompt a display of flex
   // $cookiesConsentModal.toggleClass(getConsent);
-  // Set the GSAP animation to trigger when the user is 200% of the viewport from the top
+  // Set the GSAP animation to trigger when the user is 180% of the viewport from the top
   gsap.registerPlugin(ScrollTrigger);
   gsap.to($cookiesConsentModal, {
     y: 0,
@@ -24,8 +24,8 @@ export const cookiesConsentPrompt = () => {
     display: 'flex',
     scrollTrigger: {
       trigger: 'body',
-      start: 'top -200%',
-      end: 'top -200%',
+      start: 'top -180%',
+      end: 'top -180%',
     },
   });
   // Deal with the dismissal of the prompt
