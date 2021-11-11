@@ -71,8 +71,8 @@ const mobileNavHandler = () => {
         backgroundColor: 'transparent',
       });
       // gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: '#000000' });
-      // gsap.to($hamburgerTop, { duration: 0.25, backgroundColor: '#000000' });
-      // gsap.to($hamburgerBottom, { duration: 0.25, backgroundColor: '#000000' });
+      gsap.to($hamburgerTop, { duration: 0.25, y: 0, rotationZ: 0 });
+      gsap.to($hamburgerBottom, { duration: 0.25, y: 0, rotationZ: 0 });
     }
   }
   // Collapsing open submenus
