@@ -60,9 +60,9 @@ const mobileNavHandler = () => {
       });
       // No longer needed with the updated design – same as below
       // gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: 'black' });
-      gsap.to($hamburgerTop, { duration: 0.25, y: 7, rotationZ: 40 });
-      gsap.to($hamburgerBottom, { duration: 0.25, y: -7, rotationZ: -40 });
     }
+    gsap.to($hamburgerTop, { duration: 0.25, y: 7, rotationZ: 40 });
+    gsap.to($hamburgerBottom, { duration: 0.25, y: -7, rotationZ: -40 });
   } else if ($linksList.hasClass(activeMobileNav)) {
     $linksList.removeClass(activeMobileNav);
     if ($mainNav.hasClass('main-nav--dark-ui')) {
@@ -71,9 +71,9 @@ const mobileNavHandler = () => {
         backgroundColor: 'transparent',
       });
       // gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: '#000000' });
-      gsap.to($hamburgerTop, { duration: 0.25, y: 0, rotationZ: 0 });
-      gsap.to($hamburgerBottom, { duration: 0.25, y: 0, rotationZ: 0 });
     }
+    gsap.to($hamburgerTop, { duration: 0.25, y: 0, rotationZ: 0 });
+    gsap.to($hamburgerBottom, { duration: 0.25, y: 0, rotationZ: 0 });
   }
   // Collapsing open submenus
   if ($dropdownSubMenu.hasClass(activeSubMenu)) {
