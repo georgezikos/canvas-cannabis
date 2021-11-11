@@ -465,7 +465,7 @@ const shopSegmentation = () => {
   barba.init({
     transitions: [
       {
-        once(next) {
+        once({ next }) {
           animationEnter(next.container);
         },
       },
