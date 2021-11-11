@@ -146,7 +146,7 @@ const closeMenuHandler = () => {
     $document.keyup((e) => {
       const escKey = 27;
       if ($linksList.hasClass(activeMobileNav) && e.keyCode === escKey) {
-        $body.hasClass('active-modal')
+        $('.modal--shop').hasClass('modal--active')
           ? console.log('true')
           : console.log('false');
         mobileNavHandler();
