@@ -73,11 +73,21 @@ let destination;
 // Functions
 // GSAP x Barba Animations
 const animationEnter = (container) => {
-  return gsap.from(container, { autoAlpha: 0, duration: 2 });
+  return gsap.from(container, {
+    autoAlpha: 0,
+    duration: 2,
+    clearProps: 'all',
+    ease: 'none',
+  });
 };
 
 const animationLeave = (container) => {
-  return gsap.to(container, { autoAlpha: 0, duration: 2 });
+  return gsap.to(container, {
+    autoAlpha: 0,
+    duration: 2,
+    clearProps: 'all',
+    ease: 'none',
+  });
 };
 
 const pathConstructor = (main, store, products, destination) => {
@@ -466,6 +476,12 @@ const shopSegmentation = () => {
     transitions: [
       {
         once({ next }) {
+          animationEnter(next.container);
+        },
+        leave({ current }) {
+          animationLeave(current.container);
+        },
+        enter({ next }) {
           animationEnter(next.container);
         },
       },
