@@ -31,6 +31,8 @@ const $shopFlower = $('#shop-flower-btn'); // shop flower
 const $shopEdibles = $('#shop-edibles-btn'); // shop edibles
 const $shopVaporizers = $('#shop-vaporizers-btn'); // shop vaporizers
 
+const $escModal = $('#modal-esc'); // explicit modal esc
+
 // Classes
 const activeSegmentation = 'modal--active';
 const disableScroll = 'active-modal';
@@ -121,6 +123,7 @@ const clickAwayClose = () => {
       !$target.closest($shopFlower).length &&
       !$target.closest($shopEdibles).length &&
       !$target.closest($shopVaporizers).length &&
+      !$target.closest($escModal).length && // this may be buggy
       $segmentationModal.hasClass(activeSegmentation)
     ) {
       // resets the url variables
@@ -150,9 +153,32 @@ const clickAwayClose = () => {
   });
 };
 
+// Click explicit esc to close
+const explicitEsc = () => {
+  $escModal.on('click', function () {
+    if ($segmentationModal.hasClass(activeSegmentation)) {
+      // resets the url variables
+      main = false;
+      store = undefined;
+      products = false;
+      destination = undefined;
+      $storeSelect.prop('selectedIndex', 0); // resets the select field
+      $segmentationModal.removeClass(activeSegmentation);
+      $html.removeClass(disableScroll);
+      $body.removeClass(disableScroll);
+      // resets the modals dynamic element values
+      $modalHeader.html(defaultModalHeader);
+      $modalBody.html(defaultModalBody);
+      $modalBtn.html(defaultModalBtn);
+      $modalDesc.html(defaultModalDesc);
+    }
+  });
+};
+
 const closeModalHandler = () => {
   escClose();
   clickAwayClose();
+  explicitEsc();
 };
 
 const shopSegmentation = () => {
