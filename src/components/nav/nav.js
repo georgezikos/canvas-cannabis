@@ -58,9 +58,9 @@ const mobileNavHandler = () => {
         duration: 0.25,
         backgroundColor: '#f2efed',
       });
-      gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: 'black' });
-      gsap.to($hamburgerTop, { duration: 0.25, backgroundColor: 'black' });
-      gsap.to($hamburgerBottom, { duration: 0.25, backgroundColor: 'black' });
+      // gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: 'black' });
+      // gsap.to($hamburgerTop, { duration: 0.25, backgroundColor: 'black' });
+      // gsap.to($hamburgerBottom, { duration: 0.25, backgroundColor: 'black' });
     }
   } else if ($linksList.hasClass(activeMobileNav)) {
     $linksList.removeClass(activeMobileNav);
@@ -69,9 +69,9 @@ const mobileNavHandler = () => {
         duration: 0.25,
         backgroundColor: 'transparent',
       });
-      gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: '#000000' });
-      gsap.to($hamburgerTop, { duration: 0.25, backgroundColor: '#000000' });
-      gsap.to($hamburgerBottom, { duration: 0.25, backgroundColor: '#000000' });
+      // gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: '#000000' });
+      // gsap.to($hamburgerTop, { duration: 0.25, backgroundColor: '#000000' });
+      // gsap.to($hamburgerBottom, { duration: 0.25, backgroundColor: '#000000' });
     }
   }
   // Collapsing open submenus
