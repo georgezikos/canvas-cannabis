@@ -1,6 +1,8 @@
+import barba from '@barba/core';
 import '../modals.css';
 // prettier-ignore
 import { $segmentationSubmit, btnLoading, $modalBtn, defaultModalBtn } from '../../buttons/buttonsWaiting';
+import gsap from 'gsap/all';
 
 // Selectors
 // Global
@@ -69,6 +71,15 @@ let products = false;
 let destination;
 
 // Functions
+// GSAP x Barba Animations
+const animationEnter = (container) => {
+  return gsap.from(container, { autoAlpha: 0, duration: 2 });
+};
+
+const animationLeave = (container) => {
+  return gsap.to(container, { autoAlpha: 0, duration: 2 });
+};
+
 const pathConstructor = (main, store, products, destination) => {
   if (main) {
     // convert to switch-case?
@@ -451,6 +462,15 @@ const shopSegmentation = () => {
     }
   });
   closeModalHandler();
+  barba.init({
+    transitions: [
+      {
+        once(next) {
+          animationEnter(next.container);
+        },
+      },
+    ],
+  });
 };
 
 export default shopSegmentation;
