@@ -148,7 +148,7 @@ const closeMenuHandler = () => {
       if (
         $linksList.hasClass(activeMobileNav) &&
         e.keyCode === escKey &&
-        !$('.modal--shop').hasClass('modal--active')
+        !$('body').hasClass('active-modal')
       ) {
         mobileNavHandler();
       } else if (
