@@ -5,6 +5,7 @@ let $footerSubmit = $('#newsletter-subscribe'); // footer opt-in
 const $footerOptInForm = $('#newsletter-optin-form'); // footer opt-in form
 export let $segmentationSubmit = $('#go-to-menu'); // segmentation button
 export let $modalBtn = $('#go-to-menu > .main-button__text'); // segmentation button text
+let $passwordProtected = $('#password-protected-submit'); // password protected pages
 // prettier-ignore
 let $jobApplicationSubmit = $('.main-button.main-button--fixed.is--job-application'); // job application buttons
 const $jobApplicationForm = $('.application__form');
@@ -22,13 +23,19 @@ const footerSubmitReplacement = `
   `;
 
 const segmentationSubmitReplacement = `
-<button class="main-button main-button--fixed main-button--modal is--submit" id="go-to-menu">
-<span class="main-button__text">Go to Menu</span>
-</button>
+  <button class="main-button main-button--fixed main-button--modal is--submit" id="go-to-menu">
+    <span class="main-button__text">Go to Menu</span>
+  </button>
 `;
 const jobApplicationSubmitReplacement = `
   <button class="main-button main-button--fixed is--job-application">
     <span class="main-button__text">Submit Application</span>
+  </button>
+`;
+
+const passwordProtectedReplacement = `
+  <button class="main-button main-button--fixed id="password-protected-submit">
+    <span class="main-button__text">Submit</span>
   </button>
 `;
 
@@ -102,6 +109,10 @@ const buttonsWaiting = () => {
   $segmentationSubmit = $('#go-to-menu');
   $modalBtn = $('#go-to-menu > .main-button__text');
   defaultModalBtn = $modalBtn.html();
+
+  // Password Protected
+  $passwordProtected.replaceWith(passwordProtectedReplacement);
+  $passwordProtected = $('#password-protected-submit');
 };
 
 export default buttonsWaiting;
