@@ -58,9 +58,10 @@ const mobileNavHandler = () => {
         duration: 0.25,
         backgroundColor: '#f2efed',
       });
+      // No longer needed with the updated design – same as below
       // gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: 'black' });
-      // gsap.to($hamburgerTop, { duration: 0.25, backgroundColor: 'black' });
-      // gsap.to($hamburgerBottom, { duration: 0.25, backgroundColor: 'black' });
+      gsap.to($hamburgerTop, { duration: 0.25, y: 7 });
+      gsap.to($hamburgerBottom, { duration: 0.25, y: -7 });
     }
   } else if ($linksList.hasClass(activeMobileNav)) {
     $linksList.removeClass(activeMobileNav);
