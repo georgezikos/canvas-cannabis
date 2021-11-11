@@ -157,7 +157,6 @@ const clickAwayClose = () => {
 const explicitEsc = () => {
   $escModal.on('click', function () {
     if ($segmentationModal.hasClass(activeSegmentation)) {
-      console.log('clicked!');
       // resets the url variables
       main = false;
       store = undefined;
