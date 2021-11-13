@@ -29,10 +29,8 @@ const storeTitles = () => {
   // temp
   const imgSourceReplacer = () => {
     for (let i = 0; i < $pressHighlightImg.length; i++) {
-      $pressHighlightImg[i].attr(
-        'src',
-        'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAQAAACRI2S5AAAAEElEQVR42mNkIAAYRxWAAQAG9gAKqv6+AwAAAABJRU5ErkJggg=='
-      );
+      $pressHighlightImg[i].src =
+        'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAQAAACRI2S5AAAAEElEQVR42mNkIAAYRxWAAQAG9gAKqv6+AwAAAABJRU5ErkJggg==';
     }
   };
   imgSourceReplacer();
