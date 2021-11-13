@@ -28,7 +28,9 @@ const storeTitles = () => {
 
   // temp
   const imgSourceReplacer = () => {
-    console.log($pressHighlightImg);
+    for (let i = 0; i < $pressHighlightImg.length; i++) {
+      console.log($pressHighlightImg);
+    }
   };
   imgSourceReplacer();
 };
