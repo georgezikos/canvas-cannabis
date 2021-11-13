@@ -4,6 +4,9 @@ const $allStoreTitleEl = $(
 );
 const $aboutStoreTitleEl = $('h3.about__stores-heading');
 
+// temp
+const $pressHighlightImg = $('.posts-listing__img');
+
 const storeTitles = () => {
   const titleFormatter = (el) => {
     for (let i = 0; i < el.length; i++) {
@@ -22,6 +25,12 @@ const storeTitles = () => {
   titleFormatter($cityStoreTitleEl);
   titleFormatter($allStoreTitleEl);
   titleFormatter($aboutStoreTitleEl);
+
+  // temp
+  const imgSourceReplacer = () => {
+    console.log($pressHighlightImg);
+  };
+  imgSourceReplacer();
 };
 
 export default storeTitles;
