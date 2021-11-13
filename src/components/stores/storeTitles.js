@@ -4,9 +4,6 @@ const $allStoreTitleEl = $(
 );
 const $aboutStoreTitleEl = $('h3.about__stores-heading');
 
-// temp
-const $pressHighlightImg = $('.posts-listing__img');
-
 const storeTitles = () => {
   const titleFormatter = (el) => {
     for (let i = 0; i < el.length; i++) {
@@ -25,15 +22,6 @@ const storeTitles = () => {
   titleFormatter($cityStoreTitleEl);
   titleFormatter($allStoreTitleEl);
   titleFormatter($aboutStoreTitleEl);
-
-  // temp
-  const imgSourceReplacer = () => {
-    for (let i = 0; i < $pressHighlightImg.length; i++) {
-      $pressHighlightImg[i].src =
-        'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAQAAACRI2S5AAAAEElEQVR42mNkIAAYRxWAAQAG9gAKqv6+AwAAAABJRU5ErkJggg==';
-    }
-  };
-  imgSourceReplacer();
 };
 
 export default storeTitles;
