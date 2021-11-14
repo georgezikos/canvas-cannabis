@@ -1,16 +1,16 @@
-import buttonsLoadingState from './components/Buttons/ButtonsLoadingState';
+import ButtonsLoadingState from './components/Buttons/ButtonsLoadingState';
 import ageGate from './components/modals/ageGate/ageGate';
 import shopSegmentation from './components/modals/shopSegmentation/shopSegmentation';
 import cookiesConsent from './components/modals/cookiesConsent/cookiesConsent';
 import nav from './components/nav/nav';
-import dailySpecials from './components/dailySpecials/dailySpecials';
+import DailySpecials from './components/DailySpecials/DailySpecials';
 import faq from './components/faq/faq';
 import socialShare from './components/socialShare/socialShare';
-import storeAddressLinks from './components/StoreAddressLinks/StoreAddressLinks';
+import StoreAddressLinks from './components/StoreAddressLinks/StoreAddressLinks';
 import storeTitles from './components/stores/storeTitles';
 
 const global = () => {
-  buttonsLoadingState();
+  ButtonsLoadingState();
   ageGate();
   shopSegmentation();
   cookiesConsent();
@@ -18,12 +18,12 @@ const global = () => {
 };
 
 const home = () => {
-  dailySpecials();
+  DailySpecials();
 };
 
 const stores = () => {
   storeTitles();
-  storeAddressLinks();
+  StoreAddressLinks();
 };
 
 const support = () => {

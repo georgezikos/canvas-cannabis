@@ -34,7 +34,7 @@ const jobApplicationSubmitReplacement = `
 `;
 
 // on form submit animate inside the button
-const buttonsLoadingState = () => {
+const ButtonsLoadingState = () => {
   // Footer
   $footerSubmit.replaceWith(footerSubmitReplacement);
   $footerSubmit = $('#newsletter-subscribe');
@@ -105,4 +105,4 @@ const buttonsLoadingState = () => {
   defaultModalBtn = $modalBtn.html();
 };
 
-export default buttonsLoadingState;
+export default ButtonsLoadingState;

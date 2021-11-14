@@ -67,7 +67,7 @@ const specials = {
 const currentDate = new Date();
 const currentDay = currentDate.getDay();
 
-const dailySpecials = () => {
+const DailySpecials = () => {
   if (currentDay === 0 || currentDay === 6 || currentDay === 5) {
     // refactor into a function that takes all of these repeating variables as arguments
     // see if I can use ternarys in place of some of these variables
@@ -129,4 +129,4 @@ const dailySpecials = () => {
   }
 };
 
-export default dailySpecials;
+export default DailySpecials;
