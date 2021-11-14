@@ -9,7 +9,7 @@ import SocialShare from './components/SocialShare/SocialShare';
 import StoreAddressLinks from './components/StoreAddressLinks/StoreAddressLinks';
 import StoreTitles from './components/Stores/StoreTitles';
 
-const global = () => {
+const GlobalComponents = () => {
   ButtonsLoadingState();
   AgeGate();
   ShopSegmentation();
@@ -17,29 +17,29 @@ const global = () => {
   Nav();
 };
 
-const home = () => {
+const HomePage = () => {
   DailySpecials();
 };
 
-const stores = () => {
+const StoresRelated = () => {
   StoreTitles();
   StoreAddressLinks();
 };
 
-const support = () => {
+const CustomerSupport = () => {
   FrequentlyAskedQuestions();
 };
 
-const blog = () => {
+const BlogPosts = () => {
   SocialShare();
 };
 
 const init = () => {
-  global();
-  home();
-  stores();
-  support();
-  blog();
+  GlobalComponents();
+  HomePage();
+  StoresRelated();
+  CustomerSupport();
+  BlogPosts();
 };
 
 $(function () {
