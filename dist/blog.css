@@ -1,0 +1,21 @@
+.tippy-box[data-theme~='canvas'] {
+  background-color: #f2efed;
+  padding: 8px 16px;
+  border: 1px solid black;
+  border-radius: 0px;
+  opacity: 0.9;
+}
+
+.share__link--content {
+  margin-right: 2px;
+  line-height: 100%;
+}
+
+.share__link--copied {
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  margin-bottom: 4px;
+}
+
+.tippy-box[data-animation=scale][data-placement^=top]{transform-origin:bottom}.tippy-box[data-animation=scale][data-placement^=bottom]{transform-origin:top}.tippy-box[data-animation=scale][data-placement^=left]{transform-origin:right}.tippy-box[data-animation=scale][data-placement^=right]{transform-origin:left}.tippy-box[data-animation=scale][data-state=hidden]{transform:scale(.5);opacity:0}
