@@ -7,7 +7,7 @@ import DailySpecials from './components/DailySpecials/DailySpecials';
 import FrequentlyAskedQuestions from './components/FrequentlyAskedQuestions/FrequentlyAskedQuestions';
 import SocialShare from './components/SocialShare/SocialShare';
 import StoreAddressLinks from './components/StoreAddressLinks/StoreAddressLinks';
-import storeTitles from './components/stores/storeTitles';
+import StoreTitles from './components/Stores/StoreTitles';
 
 const global = () => {
   ButtonsLoadingState();
@@ -22,7 +22,7 @@ const home = () => {
 };
 
 const stores = () => {
-  storeTitles();
+  StoreTitles();
   StoreAddressLinks();
 };
 

@@ -4,7 +4,7 @@ const $allStoreTitleEl = $(
 );
 const $aboutStoreTitleEl = $('h3.about__stores-heading');
 
-const storeTitles = () => {
+const StoreTitles = () => {
   const titleFormatter = (el) => {
     for (let i = 0; i < el.length; i++) {
       const storeTitleSplit = el[i].innerText.split(' ');
@@ -24,4 +24,4 @@ const storeTitles = () => {
   titleFormatter($aboutStoreTitleEl);
 };
 
-export default storeTitles;
+export default StoreTitles;
