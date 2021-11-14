@@ -12,10 +12,8 @@ module.exports = {
     support: './src/support.js',
     blog: './src/blog.js',
   },
-  // './src/index.js',
   output: {
     filename: '[name].js',
-    // filename: 'bundle.js',
     // filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, './dist'),
   },
@@ -53,7 +51,6 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
-      // filename: 'styles.css',
       // filename: '[name].[contenthash].css',
     }),
     // prettier-ignore

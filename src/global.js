@@ -4,6 +4,8 @@ import ShopSegmentation from './components/Modals/ShopSegmentation/ShopSegmentat
 import CookiesConsent from './components/Modals/CookiesConsent/CookiesConsent';
 import Nav from './components/Nav/Nav';
 
+// Imported into the main site settings head
+
 const GlobalComponents = () => {
   ButtonsLoadingState();
   AgeGate();
