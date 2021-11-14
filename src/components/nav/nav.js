@@ -1,5 +1,5 @@
 import { gsap } from 'gsap';
-import './nav.css';
+import './Nav.css';
 
 // Selectors
 // Global
@@ -356,7 +356,7 @@ const closeMenuHandler = () => {
   scrollAwayClose();
 };
 
-const nav = () => {
+const Nav = () => {
   // Hamburger click handler
   $hamburger.on('click', () => {
     mobileNavHandler();
@@ -367,4 +367,4 @@ const nav = () => {
   closeMenuHandler();
 };
 
-export default nav;
+export default Nav;
