@@ -7,4 +7,4 @@ const storeAddressLinks = () => {
   $storePageAddress.attr('rel', 'noopener noreferrer');
 };
 
-export default addressLinks;
+export default storeAddressLinks;
