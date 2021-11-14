@@ -1,5 +1,5 @@
 // import { throttle as _throttle, debounce as _debounce } from 'lodash'; // bring these dependencies back in when I learn how to bind properly
-import gsap from 'gsap/gsap-core';
+import { gsap } from 'gsap';
 import './FrequentlyAskedQuestions.css';
 
 // Selectors
