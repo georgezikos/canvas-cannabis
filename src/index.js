@@ -1,4 +1,4 @@
-import buttonsWaiting from './components/buttons/buttonsWaiting';
+import buttonsLoadingState from './components/Buttons/ButtonsLoadingState';
 import ageGate from './components/modals/ageGate/ageGate';
 import shopSegmentation from './components/modals/shopSegmentation/shopSegmentation';
 import cookiesConsent from './components/modals/cookiesConsent/cookiesConsent';
@@ -10,7 +10,7 @@ import storeAddressLinks from './components/StoreAddressLinks/StoreAddressLinks'
 import storeTitles from './components/stores/storeTitles';
 
 const global = () => {
-  buttonsWaiting();
+  buttonsLoadingState();
   ageGate();
   shopSegmentation();
   cookiesConsent();

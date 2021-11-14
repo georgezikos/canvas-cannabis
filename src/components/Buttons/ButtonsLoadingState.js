@@ -1,4 +1,4 @@
-import './buttonsWaiting.css';
+import './ButtonsLoadingState.css';
 
 // Button Selectors
 let $footerSubmit = $('#newsletter-subscribe'); // footer opt-in
@@ -34,7 +34,7 @@ const jobApplicationSubmitReplacement = `
 `;
 
 // on form submit animate inside the button
-const buttonsWaiting = () => {
+const buttonsLoadingState = () => {
   // Footer
   $footerSubmit.replaceWith(footerSubmitReplacement);
   $footerSubmit = $('#newsletter-subscribe');
@@ -105,4 +105,4 @@ const buttonsWaiting = () => {
   defaultModalBtn = $modalBtn.html();
 };
 
-export default buttonsWaiting;
+export default buttonsLoadingState;
