@@ -1,6 +1,6 @@
 // import { throttle as _throttle, debounce as _debounce } from 'lodash'; // bring these dependencies back in when I learn how to bind properly
 import gsap from 'gsap/gsap-core';
-import './faq.css';
+import './FrequentlyAskedQuestions.css';
 
 // Selectors
 const $faqQuestionsParent = $('.faq__questions'); // houses all of the toggle buttons
@@ -16,7 +16,7 @@ const activeToggleIcon = 'faq__toggle-icon--active';
 // Other
 let tabFocus = 0;
 
-const faq = () => {
+const FrequentlyAskedQuestions = () => {
   // Click handling
   $toggleButton.on('click', function () {
     const $this = $(this);
@@ -115,4 +115,4 @@ const faq = () => {
   });
 };
 
-export default faq;
+export default FrequentlyAskedQuestions;

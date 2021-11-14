@@ -4,7 +4,7 @@ import shopSegmentation from './components/modals/shopSegmentation/shopSegmentat
 import cookiesConsent from './components/modals/cookiesConsent/cookiesConsent';
 import nav from './components/nav/nav';
 import DailySpecials from './components/DailySpecials/DailySpecials';
-import faq from './components/faq/faq';
+import FrequentlyAskedQuestions from './components/FrequentlyAskedQuestions/FrequentlyAskedQuestions';
 import socialShare from './components/socialShare/socialShare';
 import StoreAddressLinks from './components/StoreAddressLinks/StoreAddressLinks';
 import storeTitles from './components/stores/storeTitles';
@@ -27,7 +27,7 @@ const stores = () => {
 };
 
 const support = () => {
-  faq();
+  FrequentlyAskedQuestions();
 };
 
 const blog = () => {
