@@ -1,5 +1,5 @@
 import tippy from 'tippy.js';
-import './socialShare.css';
+import './SocialShare.css';
 import 'tippy.js/animations/scale.css';
 
 // Global
@@ -90,7 +90,7 @@ const linkedInShare = () => {
   });
 };
 
-const socialShare = () => {
+const SocialShare = () => {
   $emailShareBtn.attr('href', emailShareLink);
   $facebookShareBtn.attr('href', facebookShareLink);
   facebookShare();
@@ -99,4 +99,4 @@ const socialShare = () => {
   copyLink();
 };
 
-export default socialShare;
+export default SocialShare;

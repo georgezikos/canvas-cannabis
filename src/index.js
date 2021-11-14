@@ -5,7 +5,7 @@ import CookiesConsent from './components/Modals/CookiesConsent/CookiesConsent';
 import Nav from './components/Nav/Nav';
 import DailySpecials from './components/DailySpecials/DailySpecials';
 import FrequentlyAskedQuestions from './components/FrequentlyAskedQuestions/FrequentlyAskedQuestions';
-import socialShare from './components/socialShare/socialShare';
+import SocialShare from './components/SocialShare/SocialShare';
 import StoreAddressLinks from './components/StoreAddressLinks/StoreAddressLinks';
 import storeTitles from './components/stores/storeTitles';
 
@@ -31,7 +31,7 @@ const support = () => {
 };
 
 const blog = () => {
-  socialShare();
+  SocialShare();
 };
 
 const init = () => {
