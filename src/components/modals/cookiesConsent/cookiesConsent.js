@@ -1,5 +1,5 @@
-import '../modals.css';
-import { $ageGate, activeAgeGate } from '../ageGate/ageGate';
+import '../Modals.css';
+import { $ageGate, activeAgeGate } from '../AgeGate/AgeGate';
 import { btnSuccess } from '../../Buttons/ButtonsLoadingState';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -42,7 +42,7 @@ export const cookiesConsentPrompt = () => {
   });
 };
 
-const cookiesConsent = () => {
+const CookiesConsent = () => {
   if (Cookies.get(cookiesConsentCookie)) {
     // If the cookies existence returns true, we won't show the cookies consent prompt again for 30 days
     return;
@@ -61,4 +61,4 @@ const cookiesConsent = () => {
   }
 };
 
-export default cookiesConsent;
+export default CookiesConsent;

@@ -1,4 +1,4 @@
-import '../modals.css';
+import '../Modals.css';
 // prettier-ignore
 import { $segmentationSubmit, btnLoading, $modalBtn, defaultModalBtn } from '../../Buttons/ButtonsLoadingState';
 import gsap from 'gsap/all';
@@ -182,7 +182,7 @@ const closeModalHandler = () => {
   explicitEsc();
 };
 
-const shopSegmentation = () => {
+const ShopSegmentation = () => {
   // Create a placeholder value in the select field
   // prettier-ignore
   $selectPlaceholder.attr({
@@ -454,4 +454,4 @@ const shopSegmentation = () => {
   closeModalHandler();
 };
 
-export default shopSegmentation;
+export default ShopSegmentation;

@@ -1,6 +1,6 @@
 import Cookies from 'js-cookie';
-import { cookiesConsentPrompt } from '../cookiesConsent/cookiesConsent';
-import '../modals.css';
+import { cookiesConsentPrompt } from '../CookiesConsent/CookiesConsent';
+import '../Modals.css';
 
 // Selectors
 const $body = $('body');
@@ -64,7 +64,7 @@ const validateAge = () => {
   }
 };
 
-const ageGate = () => {
+const AgeGate = () => {
   $verifyAge.attr('aria-required', 'true');
   // Checks for the existence of cookies and whether or not the user is on the Legal page
   cookiesOrLegal();
@@ -75,4 +75,4 @@ const ageGate = () => {
   });
 };
 
-export default ageGate;
+export default AgeGate;

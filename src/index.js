@@ -1,7 +1,7 @@
 import ButtonsLoadingState from './components/Buttons/ButtonsLoadingState';
-import ageGate from './components/modals/ageGate/ageGate';
-import shopSegmentation from './components/modals/shopSegmentation/shopSegmentation';
-import cookiesConsent from './components/modals/cookiesConsent/cookiesConsent';
+import AgeGate from './components/Modals/AgeGate/AgeGate';
+import ShopSegmentation from './components/Modals/ShopSegmentation/ShopSegmentation';
+import CookiesConsent from './components/Modals/CookiesConsent/CookiesConsent';
 import nav from './components/nav/nav';
 import DailySpecials from './components/DailySpecials/DailySpecials';
 import FrequentlyAskedQuestions from './components/FrequentlyAskedQuestions/FrequentlyAskedQuestions';
@@ -11,9 +11,9 @@ import storeTitles from './components/stores/storeTitles';
 
 const global = () => {
   ButtonsLoadingState();
-  ageGate();
-  shopSegmentation();
-  cookiesConsent();
+  AgeGate();
+  ShopSegmentation();
+  CookiesConsent();
   nav();
 };
 
