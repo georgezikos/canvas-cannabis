@@ -6,7 +6,7 @@ import nav from './components/nav/nav';
 import dailySpecials from './components/dailySpecials/dailySpecials';
 import faq from './components/faq/faq';
 import socialShare from './components/socialShare/socialShare';
-import addressLinks from './components/addressLinks/addressLinks';
+import storeAddressLinks from './components/StoreAddressLinks/StoreAddressLinks';
 import storeTitles from './components/stores/storeTitles';
 
 const global = () => {
@@ -23,7 +23,7 @@ const home = () => {
 
 const stores = () => {
   storeTitles();
-  addressLinks();
+  storeAddressLinks();
 };
 
 const support = () => {
