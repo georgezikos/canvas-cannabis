@@ -8,7 +8,7 @@ import Nav from './components/Nav/Nav';
 
 const GlobalComponents = () => {
   ButtonsLoadingState();
-  AgeGate();
+  // AgeGate();
   ShopSegmentation();
   CookiesConsent();
   Nav();
