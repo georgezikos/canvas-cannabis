@@ -1,5 +1,5 @@
-import tippy from 'tippy.js';
 import 'tippy.js/animations/scale.css';
+import tippy from 'tippy.js';
 
 // Global
 const $body = $('body');
