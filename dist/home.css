@@ -1,5 +1,4 @@
 /* Featured Products */
-/* Home */
 .featured-products__base-bounding {
   vertical-align: middle;
 }
@@ -32,14 +31,11 @@
 }
 
 /* Dynamic Blog CTA */
-/* Home */
-/* Image Mask */
 .cta-section__img.cta-section__img--latest-post {
   -webkit-clip-path: url(#latest-post__mask);
   clip-path: url(#latest-post__mask);
 }
 
-/* Links */
 .link-container--cta:hover .cta-section__heading {
   color: #333333;
 }
