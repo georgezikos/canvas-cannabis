@@ -21,6 +21,7 @@ module.exports = {
     'job-postings': './src/job-postings.css',
     'posts-listing': './src/posts-listing.css',
     legal: './src/legal.css',
+    utility: './src/utility.css',
   },
   output: {
     filename: '[name].js',
