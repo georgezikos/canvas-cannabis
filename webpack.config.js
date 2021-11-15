@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 
 module.exports = {
   entry: {
@@ -61,6 +62,7 @@ module.exports = {
     // prettier-ignore
     new LodashModuleReplacementPlugin,
     new CleanWebpackPlugin(),
+    new RemoveEmptyScriptsPlugin(),
   ],
   // devtool: 'cheap-module-eval-source-map', development
   // devtool: 'cheap-source-map', production
