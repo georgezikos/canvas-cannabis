@@ -15,6 +15,7 @@ module.exports = {
     blog: './src/blog.css',
     'blog-posts': ['./src/blog-posts.js', './src/blog-posts.css'],
     'blog-categories': './src/blog-categories.css',
+    careers: './src/careers.css',
     'job-postings': './src/job-postings.css',
     'posts-listing': './src/posts-listing.css',
   },
