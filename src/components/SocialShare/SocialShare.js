@@ -1,5 +1,4 @@
 import tippy from 'tippy.js';
-import './SocialShare.css';
 import 'tippy.js/animations/scale.css';
 
 // Global
