@@ -10,6 +10,7 @@ module.exports = {
     global: ['./src/global.js', '/src/global.css'],
     home: ['./src/home.js', './src/home.css'],
     cities: './src/cities.css',
+    stores: './src/stores.css',
     'stores-info': './src/stores-info.js',
     support: ['./src/support.js', './src/support.css'],
     about: './src/about.css',
