@@ -9,7 +9,7 @@ module.exports = {
   entry: {
     global: ['./src/global.js', '/src/global.css'],
     home: ['./src/home.js', './src/home.css'],
-    stores: './src/stores.js',
+    'stores-info': './src/stores-info.js',
     support: ['./src/support.js', './src/support.css'],
     about: './src/about.css',
     blog: './src/blog.css',
