@@ -1,4 +1,3 @@
-// import '../Modals.css';
 // prettier-ignore
 import { $segmentationSubmit, btnLoading, $modalBtn, defaultModalBtn } from '../../Buttons/ButtonsLoadingState';
 import gsap from 'gsap/all';

@@ -1,5 +1,3 @@
-// import './ButtonsLoadingState.css';
-
 // Button Selectors
 let $footerSubmit = $('#newsletter-subscribe'); // footer opt-in
 const $footerOptInForm = $('#newsletter-optin-form'); // footer opt-in form
