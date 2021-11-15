@@ -1,6 +1,6 @@
 import Cookies from 'js-cookie';
 import { cookiesConsentPrompt } from '../CookiesConsent/CookiesConsent';
-import '../Modals.css';
+// import '../Modals.css';
 
 // Selectors
 const $body = $('body');

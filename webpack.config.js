@@ -6,11 +6,15 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
+    // Scripts
     global: './src/global.js',
     home: './src/home.js',
     stores: './src/stores.js',
     support: './src/support.js',
     blog: './src/blog.js',
+    // Styles
+    global: '/src/global.css',
+    home: './src/home.css',
   },
   output: {
     filename: '[name].js',

@@ -1,5 +1,5 @@
 import { gsap } from 'gsap';
-import './Nav.css';
+// import './Nav.css';
 
 // Selectors
 // Global

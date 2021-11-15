@@ -1,4 +1,4 @@
-import '../Modals.css';
+// import '../Modals.css';
 import { $ageGate, activeAgeGate } from '../AgeGate/AgeGate';
 import { btnSuccess } from '../../Buttons/ButtonsLoadingState';
 import { gsap } from 'gsap';
