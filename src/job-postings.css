@@ -20,3 +20,8 @@ form.application__form {
 .form__upload-field-text.is--success-state {
   word-break: break-all;
 }
+
+.rich-text-body--job-posting > ul:nth-last-child(1),
+.rich-text-body--job-posting > ul > li:nth-last-child(1) {
+  margin-bottom: 0;
+}
