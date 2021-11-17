@@ -23,6 +23,7 @@
 }
 
 .about__stores-link:hover .about__stores-heading,
-.about__stores-link:hover .about__stores-address {
+.about__stores-link:hover .about__stores-address,
+.link-container__blog-category:hover .small-heading--category-section {
   color: #333333;
 }
