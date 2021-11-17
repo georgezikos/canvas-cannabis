@@ -32,7 +32,7 @@ const specials = {
         label: 'Wednesday',
         products: 'Cannabis and CBD Oils, Capsules & Concentrates',
         image:
-          'https://assets.website-files.com/60cfd1175523ac59337574a3/61955c3f3c2f8b204b8ef943_OilsCapsCons_PureSunfarmsCBDOilEdit_Compressed.png',
+          'https://assets.website-files.com/60cfd1175523ac59337574a3/619560fab20d7b333bca19e0_OilsCapsCons_PureSunfarmsCBDOilEdit_Compressed.png',
         shadow:
           'https://assets.website-files.com/60cfd1175523ac59337574a3/617ee7ab05aa1e5274a2962c_OilsCapsConsShadow_Compressed.png',
       },
