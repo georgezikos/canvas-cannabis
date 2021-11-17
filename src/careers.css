@@ -1,17 +1,17 @@
 /* Containing Element */
 .thirds-section.thirds-section--job-postings.wrapper--pad-only {
-  padding: calc(56px - 24px) calc(5% - 24px) calc(88px - 24px);
+  padding: calc(56px - 32px) calc(5% - 32px) calc(88px - 32px); /* 24s */
 }
 
 @media (max-width: 991px) {
   .thirds-section.thirds-section--job-postings.wrapper--pad-only {
-    padding: calc(56px - 24px) calc(5% - 16px) calc(80px - 24px);
+    padding: calc(56px - 32px) calc(5% - 24px) calc(80px - 32px); /* 24 & 16 */
   }
 }
 
 @media (max-width: 767px) {
   .thirds-section.thirds-section--job-postings.wrapper--pad-only {
-    padding: calc(48px - 24px) 5% calc(64px - 24px);
+    padding: calc(48px - 32px) 5% calc(64px - 32px); /* 24px */
   }
 }
 
@@ -28,12 +28,12 @@
 
 /* Individual Postings */
 .thirds-section__container.thirds-section__container--job-postings {
-  width: calc((100% / 3) - 48px);
+  width: calc((100% / 3) - 64px); /* 48 */
 }
 
 @media (max-width: 991px) {
   .thirds-section__container.thirds-section__container--job-postings {
-    width: calc(50% - 32px);
+    width: calc(50% - 48px); /* 32 */
   }
 }
 
