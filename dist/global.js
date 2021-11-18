@@ -7967,9 +7967,12 @@ var ShopSegmentation = function ShopSegmentation() {
       // $segmentationModal.removeClass(activeSegmentation);
       // $html.removeClass(disableScroll);
       // $body.removeClass(disableScroll);
-    }
+    } // $segmentationSubmit.toggleClass(btnLoading);
 
-    $segmentationSubmit.toggleClass(btnLoading); // $segmentationModal.removeClass(activeSegmentation);
+
+    window.onpopstate = function () {
+      console.log('page changed');
+    }; // $segmentationModal.removeClass(activeSegmentation);
     // $html.removeClass(disableScroll);
     // $body.removeClass(disableScroll);
     // resets the modals dynamic element values
@@ -7977,6 +7980,7 @@ var ShopSegmentation = function ShopSegmentation() {
     // $modalBody.html(defaultModalBody);
     // $modalBtn.html(defaultModalBtn);
     // $modalDesc.html(defaultModalDesc);
+
   });
   closeModalHandler();
 };
