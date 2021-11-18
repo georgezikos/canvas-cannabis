@@ -452,6 +452,14 @@ const ShopSegmentation = () => {
     document.addEventListener('visibilitychange', function () {
       if (document.visibilityState === 'hidden') {
         $segmentationSubmit.toggleClass(btnLoading);
+        $segmentationModal.removeClass(activeSegmentation);
+        $html.removeClass(disableScroll);
+        $body.removeClass(disableScroll);
+        // resets the modals dynamic element values
+        $modalHeader.html(defaultModalHeader);
+        $modalBody.html(defaultModalBody);
+        $modalBtn.html(defaultModalBtn);
+        $modalDesc.html(defaultModalDesc);
       }
     });
   });

@@ -7972,6 +7972,14 @@ var ShopSegmentation = function ShopSegmentation() {
     document.addEventListener('visibilitychange', function () {
       if (document.visibilityState === 'hidden') {
         $segmentationSubmit.toggleClass(btnLoading);
+        $segmentationModal.removeClass(activeSegmentation);
+        ShopSegmentation_$html.removeClass(ShopSegmentation_disableScroll);
+        ShopSegmentation_$body.removeClass(ShopSegmentation_disableScroll); // resets the modals dynamic element values
+
+        $modalHeader.html(defaultModalHeader);
+        $modalBody.html(defaultModalBody);
+        $modalBtn.html(defaultModalBtn);
+        $modalDesc.html(defaultModalDesc);
       }
     });
   });
