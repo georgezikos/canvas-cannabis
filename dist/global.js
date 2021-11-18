@@ -326,11 +326,7 @@ var ButtonsLoadingState = function ButtonsLoadingState() {
   $segmentationSubmit.replaceWith(segmentationSubmitReplacement);
   $segmentationSubmit = $('#go-to-menu');
   $modalBtn = $('#go-to-menu > .main-button__text');
-  defaultModalBtn = $modalBtn.html(); // Temp
-
-  console.log($segmentationSubmit);
-  console.log($modalBtn);
-  console.log(defaultModalBtn);
+  defaultModalBtn = $modalBtn.html();
 };
 
 /* harmony default export */ const Buttons_ButtonsLoadingState = (ButtonsLoadingState);
@@ -7971,7 +7967,9 @@ var ShopSegmentation = function ShopSegmentation() {
       // $segmentationModal.removeClass(activeSegmentation);
       // $html.removeClass(disableScroll);
       // $body.removeClass(disableScroll);
-    } // $segmentationModal.removeClass(activeSegmentation);
+    }
+
+    $segmentationSubmit.toggleClass(btnLoading); // $segmentationModal.removeClass(activeSegmentation);
     // $html.removeClass(disableScroll);
     // $body.removeClass(disableScroll);
     // resets the modals dynamic element values
@@ -7979,7 +7977,6 @@ var ShopSegmentation = function ShopSegmentation() {
     // $modalBody.html(defaultModalBody);
     // $modalBtn.html(defaultModalBtn);
     // $modalDesc.html(defaultModalDesc);
-
   });
   closeModalHandler();
 };

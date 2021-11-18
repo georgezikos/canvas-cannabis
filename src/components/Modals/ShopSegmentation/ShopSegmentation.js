@@ -449,6 +449,7 @@ const ShopSegmentation = () => {
       // $html.removeClass(disableScroll);
       // $body.removeClass(disableScroll);
     }
+    $segmentationSubmit.toggleClass(btnLoading);
     // $segmentationModal.removeClass(activeSegmentation);
     // $html.removeClass(disableScroll);
     // $body.removeClass(disableScroll);
