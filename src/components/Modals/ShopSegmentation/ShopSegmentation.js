@@ -449,14 +449,14 @@ const ShopSegmentation = () => {
       // $html.removeClass(disableScroll);
       // $body.removeClass(disableScroll);
     }
-    $segmentationModal.removeClass(activeSegmentation);
-    $html.removeClass(disableScroll);
-    $body.removeClass(disableScroll);
+    // $segmentationModal.removeClass(activeSegmentation);
+    // $html.removeClass(disableScroll);
+    // $body.removeClass(disableScroll);
     // resets the modals dynamic element values
-    $modalHeader.html(defaultModalHeader);
-    $modalBody.html(defaultModalBody);
-    $modalBtn.html(defaultModalBtn);
-    $modalDesc.html(defaultModalDesc);
+    // $modalHeader.html(defaultModalHeader);
+    // $modalBody.html(defaultModalBody);
+    // $modalBtn.html(defaultModalBtn);
+    // $modalDesc.html(defaultModalDesc);
   });
   closeModalHandler();
 };
