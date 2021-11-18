@@ -450,7 +450,15 @@ const ShopSegmentation = () => {
       // $body.removeClass(disableScroll);
     }
   });
-  closeModalHandler();
+  // closeModalHandler();
+  $segmentationModal.removeClass(activeSegmentation);
+  $html.removeClass(disableScroll);
+  $body.removeClass(disableScroll);
+  // resets the modals dynamic element values
+  $modalHeader.html(defaultModalHeader);
+  $modalBody.html(defaultModalBody);
+  $modalBtn.html(defaultModalBtn);
+  $modalDesc.html(defaultModalDesc);
 };
 
 export default ShopSegmentation;

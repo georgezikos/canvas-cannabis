@@ -245,13 +245,13 @@ var $footerOptInForm = $('#newsletter-optin-form'); // footer opt-in form
 
 var $segmentationSubmit = $('#go-to-menu'); // segmentation button
 
-var $modalBtn = $('#go-to-menu > .main-button__text'); // segmentation button text
+var ButtonsLoadingState_$modalBtn = $('#go-to-menu > .main-button__text'); // segmentation button text
 // prettier-ignore
 
 var $jobApplicationSubmit = $('.main-button.main-button--fixed.is--job-application'); // job application buttons
 
 var $jobApplicationForm = $('.application__form');
-var defaultModalBtn; // Classes
+var ButtonsLoadingState_defaultModalBtn; // Classes
 
 var btnLoading = 'main-button--waiting';
 var btnSuccess = 'main-button--success'; // Replacement HTML
@@ -325,8 +325,8 @@ var ButtonsLoadingState = function ButtonsLoadingState() {
 
   $segmentationSubmit.replaceWith(segmentationSubmitReplacement);
   $segmentationSubmit = $('#go-to-menu');
-  $modalBtn = $('#go-to-menu > .main-button__text');
-  defaultModalBtn = $modalBtn.html();
+  ButtonsLoadingState_$modalBtn = $('#go-to-menu > .main-button__text');
+  ButtonsLoadingState_defaultModalBtn = ButtonsLoadingState_$modalBtn.html();
 };
 
 /* harmony default export */ const Buttons_ButtonsLoadingState = (ButtonsLoadingState);
@@ -7772,7 +7772,7 @@ var ShopSegmentation = function ShopSegmentation() {
 
       $modalBody.html('Choose from one of our other Toronto dispensary locations to switch menus:'); // change the button text
 
-      $modalBtn.html('Switch Menus'); // change the description
+      ButtonsLoadingState_$modalBtn.html('Switch Menus'); // change the description
 
       $modalDesc.html('Choose another local Canvas Cannabis Toronto dispensary from the field above to be taken to its menu for click and collect or cannabis delivery.');
     } // capture value of data attr – try the alternative to 'this' from the docs
@@ -7802,7 +7802,7 @@ var ShopSegmentation = function ShopSegmentation() {
 
     $modalBody.html(currentDay === 0 || currentDay === 6 || currentDay === 5 ? "Choose from our Toronto dispensary locations to begin shopping our private collection:" : "Choose from our Toronto dispensary locations to begin shopping today's specials:"); // change the button text
 
-    $modalBtn.html(currentDay === 0 || currentDay === 6 || currentDay === 5 ? "Go to Collection" : "Go to Specials"); // change the description
+    ButtonsLoadingState_$modalBtn.html(currentDay === 0 || currentDay === 6 || currentDay === 5 ? "Go to Collection" : "Go to Specials"); // change the description
 
     $modalDesc.html(currentDay === 0 || currentDay === 6 || currentDay === 5 ? "Choose your local Canvas Cannabis Toronto dispensary from the field above to be taken to its private collection sub-menu for click and collect or cannabis delivery." : "Choose your local Canvas Cannabis Toronto dispensary from the field above to be taken to its specials sub-menu for click and collect or cannabis delivery."); // capture value of data attr – try the alternative to 'this' from the docs
 
@@ -7828,7 +7828,7 @@ var ShopSegmentation = function ShopSegmentation() {
 
     $modalBody.html('Choose from our Toronto dispensary locations to begin shopping for cannabis flower:'); // change the button text
 
-    $modalBtn.html('Go to Flower'); // change the description
+    ButtonsLoadingState_$modalBtn.html('Go to Flower'); // change the description
 
     $modalDesc.html('Choose your local Canvas Cannabis Toronto dispensary from the field above to be taken to its flower sub-menu for click and collect or cannabis delivery.'); // capture value of data attr
 
@@ -7857,7 +7857,7 @@ var ShopSegmentation = function ShopSegmentation() {
 
     $modalBody.html('Choose from our Toronto dispensary locations to begin shopping for cannabis edibles:'); // change the button text
 
-    $modalBtn.html('Go to Edibles'); // change the description
+    ButtonsLoadingState_$modalBtn.html('Go to Edibles'); // change the description
 
     $modalDesc.html('Choose your local Canvas Cannabis Toronto dispensary from the field above to be taken to its edibles sub-menu for click and collect or cannabis delivery.'); // capture value of data attr
 
@@ -7888,7 +7888,7 @@ var ShopSegmentation = function ShopSegmentation() {
 
     $modalBody.html('Choose from our Toronto dispensary locations to begin shopping for cannabis vaporizers:'); // change the button text
 
-    $modalBtn.html('Go to Vapes'); // change the description
+    ButtonsLoadingState_$modalBtn.html('Go to Vapes'); // change the description
 
     $modalDesc.html('Choose your local Canvas Cannabis Toronto dispensary from the field above to be taken to its vaporizers sub-menu for click and collect or cannabis delivery.'); // construct part of the url
 
@@ -7968,8 +7968,16 @@ var ShopSegmentation = function ShopSegmentation() {
       // $html.removeClass(disableScroll);
       // $body.removeClass(disableScroll);
     }
-  });
-  closeModalHandler();
+  }); // closeModalHandler();
+
+  $segmentationModal.removeClass(activeSegmentation);
+  ShopSegmentation_$html.removeClass(ShopSegmentation_disableScroll);
+  ShopSegmentation_$body.removeClass(ShopSegmentation_disableScroll); // resets the modals dynamic element values
+
+  $modalHeader.html(defaultModalHeader);
+  $modalBody.html(defaultModalBody);
+  ButtonsLoadingState_$modalBtn.html(ButtonsLoadingState_defaultModalBtn);
+  $modalDesc.html(defaultModalDesc);
 };
 
 /* harmony default export */ const ShopSegmentation_ShopSegmentation = (ShopSegmentation);
