@@ -449,10 +449,11 @@ const ShopSegmentation = () => {
       // $html.removeClass(disableScroll);
       // $body.removeClass(disableScroll);
     }
-    // $segmentationSubmit.toggleClass(btnLoading);
-    window.addEventListener('popstate', function () {
-      console.log('Hehh');
+    window.addEventListener('popstate', function (event) {
+      // Log the state data to the console
+      console.log(event.state);
     });
+    // $segmentationSubmit.toggleClass(btnLoading);
     // $segmentationModal.removeClass(activeSegmentation);
     // $html.removeClass(disableScroll);
     // $body.removeClass(disableScroll);
