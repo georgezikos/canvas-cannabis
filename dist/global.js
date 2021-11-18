@@ -326,7 +326,11 @@ var ButtonsLoadingState = function ButtonsLoadingState() {
   $segmentationSubmit.replaceWith(segmentationSubmitReplacement);
   $segmentationSubmit = $('#go-to-menu');
   $modalBtn = $('#go-to-menu > .main-button__text');
-  defaultModalBtn = $modalBtn.html();
+  defaultModalBtn = $modalBtn.html(); // Temp
+
+  console.log($segmentationSubmit);
+  console.log($modalBtn);
+  console.log(defaultModalBtn);
 };
 
 /* harmony default export */ const Buttons_ButtonsLoadingState = (ButtonsLoadingState);

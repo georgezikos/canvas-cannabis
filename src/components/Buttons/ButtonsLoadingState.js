@@ -101,6 +101,10 @@ const ButtonsLoadingState = () => {
   $segmentationSubmit = $('#go-to-menu');
   $modalBtn = $('#go-to-menu > .main-button__text');
   defaultModalBtn = $modalBtn.html();
+  // Temp
+  console.log($segmentationSubmit);
+  console.log($modalBtn);
+  console.log(defaultModalBtn);
 };
 
 export default ButtonsLoadingState;
