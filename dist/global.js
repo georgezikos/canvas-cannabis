@@ -7711,30 +7711,12 @@ var explicitEsc = function explicitEsc() {
       $modalDesc.html(defaultModalDesc);
     }
   });
-}; // Terminate the modal if you navigate back to the page you originated on with the modal
-
-
-var navigateBack = function navigateBack() {
-  window.addEventListener('load', function () {
-    if ($segmentationModal.hasClass(activeSegmentation)) {
-      $segmentationSubmit.toggleClass(btnLoading);
-      $segmentationModal.removeClass(activeSegmentation);
-      ShopSegmentation_$html.removeClass(ShopSegmentation_disableScroll);
-      ShopSegmentation_$body.removeClass(ShopSegmentation_disableScroll); // resets the modals dynamic element values
-
-      $modalHeader.html(defaultModalHeader);
-      $modalBody.html(defaultModalBody);
-      $modalBtn.html(defaultModalBtn);
-      $modalDesc.html(defaultModalDesc);
-    }
-  });
 };
 
 var closeModalHandler = function closeModalHandler() {
   escClose();
   clickAwayClose();
   explicitEsc();
-  navigateBack();
 };
 
 var ShopSegmentation = function ShopSegmentation() {
@@ -7986,6 +7968,9 @@ var ShopSegmentation = function ShopSegmentation() {
       // $html.removeClass(disableScroll);
       // $body.removeClass(disableScroll);
     }
+  });
+  window.addEventListener('popstate', function () {
+    $segmentationSubmit.toggleClass(btnLoading);
   });
   closeModalHandler();
 };
