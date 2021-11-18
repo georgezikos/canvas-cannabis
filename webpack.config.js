@@ -28,13 +28,6 @@ module.exports = {
     // filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, './dist'),
   },
-  optimization: {
-    minimizer: [
-      new TerserPlugin({
-        extractComments: false,
-      }),
-    ],
-  },
   mode: 'production',
   module: {
     rules: [
@@ -59,6 +52,9 @@ module.exports = {
     minimizer: [new CssMinimizerPlugin()],
   },
   plugins: [
+    new TerserPlugin({
+      extractComments: false,
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       // filename: '[name].[contenthash].css',
