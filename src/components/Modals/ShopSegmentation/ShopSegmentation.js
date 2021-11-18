@@ -175,10 +175,28 @@ const explicitEsc = () => {
   });
 };
 
+// Terminate the modal if you navigate back to the page you originated on with the modal
+const navigateBack = () => {
+  window.addEventListener('load', () => {
+    if ($segmentationModal.hasClass(activeSegmentation)) {
+      $segmentationSubmit.toggleClass(btnLoading);
+      $segmentationModal.removeClass(activeSegmentation);
+      $html.removeClass(disableScroll);
+      $body.removeClass(disableScroll);
+      // resets the modals dynamic element values
+      $modalHeader.html(defaultModalHeader);
+      $modalBody.html(defaultModalBody);
+      $modalBtn.html(defaultModalBtn);
+      $modalDesc.html(defaultModalDesc);
+    }
+  });
+};
+
 const closeModalHandler = () => {
   escClose();
   clickAwayClose();
   explicitEsc();
+  navigateBack();
 };
 
 const ShopSegmentation = () => {
@@ -449,17 +467,6 @@ const ShopSegmentation = () => {
       // $html.removeClass(disableScroll);
       // $body.removeClass(disableScroll);
     }
-    window.addEventListener('unload', function () {
-      $segmentationSubmit.toggleClass(btnLoading);
-    });
-    // $segmentationModal.removeClass(activeSegmentation);
-    // $html.removeClass(disableScroll);
-    // $body.removeClass(disableScroll);
-    // resets the modals dynamic element values
-    // $modalHeader.html(defaultModalHeader);
-    // $modalBody.html(defaultModalBody);
-    // $modalBtn.html(defaultModalBtn);
-    // $modalDesc.html(defaultModalDesc);
   });
   closeModalHandler();
 };
