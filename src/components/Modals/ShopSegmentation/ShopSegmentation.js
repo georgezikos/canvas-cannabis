@@ -453,8 +453,8 @@ const ShopSegmentation = () => {
       if (document.visibilityState === 'hidden') {
         $segmentationSubmit.toggleClass(btnLoading);
         $segmentationModal.removeClass(activeSegmentation);
-        $html.removeClass(disableScroll);
-        $body.removeClass(disableScroll);
+        // $html.removeClass(disableScroll);
+        // $body.removeClass(disableScroll);
         // resets the modals dynamic element values
         $modalHeader.html(defaultModalHeader);
         $modalBody.html(defaultModalBody);
