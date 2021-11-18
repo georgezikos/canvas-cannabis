@@ -90,7 +90,7 @@ const DailySpecials = () => {
     );
     $dailySpecialsHeading.text(specials.weekdays.heading);
     $dailySpecialsBody.text(
-      `${specials.weekdays.prefix} ${specials.weekdays.days.thursdays.label} we feature our favourite ${specials.weekdays.days.thursdays.products} at 15% off their normal price. Shop today's deals below for Toronto cannabis delivery or visit a Canvas Cannabis dispensary near you.`
+      `${specials.weekdays.prefix} ${specials.weekdays.days.thursdays.label} we feature our favourite ${specials.weekdays.days.thursdays.products} at 10% off their normal price. Shop today's deals below for Toronto cannabis delivery or visit a Canvas Cannabis dispensary near you.`
     );
     $dailySpecialsBtn.text(`Shop ${specials.weekdays.cta}`);
   } else if (currentDay === 3) {
@@ -103,7 +103,7 @@ const DailySpecials = () => {
     );
     $dailySpecialsHeading.text(specials.weekdays.heading);
     $dailySpecialsBody.text(
-      `${specials.weekdays.prefix} ${specials.weekdays.days.wednesdays.label} we feature our favourite ${specials.weekdays.days.wednesdays.products} at 15% off their normal price. Shop today's deals below for Toronto cannabis delivery or visit a Canvas Cannabis dispensary near you.`
+      `${specials.weekdays.prefix} ${specials.weekdays.days.wednesdays.label} we feature our favourite ${specials.weekdays.days.wednesdays.products} at 10% off their normal price. Shop today's deals below for Toronto cannabis delivery or visit a Canvas Cannabis dispensary near you.`
     );
     $dailySpecialsBtn.text(`Shop ${specials.weekdays.cta}`);
   } else if (currentDay === 2) {
@@ -113,7 +113,7 @@ const DailySpecials = () => {
     $dailySpecialsShadow.attr('srcset', specials.weekdays.days.tuesdays.shadow);
     $dailySpecialsHeading.text(specials.weekdays.heading);
     $dailySpecialsBody.text(
-      `${specials.weekdays.prefix} ${specials.weekdays.days.tuesdays.label} we feature our favourite ${specials.weekdays.days.tuesdays.products} at 15% off their normal price. Shop today's deals below for Toronto cannabis delivery or visit a Canvas Cannabis dispensary near you.`
+      `${specials.weekdays.prefix} ${specials.weekdays.days.tuesdays.label} we feature our favourite ${specials.weekdays.days.tuesdays.products} at 10% off their normal price. Shop today's deals below for Toronto cannabis delivery or visit a Canvas Cannabis dispensary near you.`
     );
     $dailySpecialsBtn.text(`Shop ${specials.weekdays.cta}`);
   } else if (currentDay === 1) {
@@ -123,7 +123,7 @@ const DailySpecials = () => {
     $dailySpecialsShadow.attr('srcset', specials.weekdays.days.mondays.shadow);
     $dailySpecialsHeading.text(specials.weekdays.heading);
     $dailySpecialsBody.text(
-      `${specials.weekdays.prefix} ${specials.weekdays.days.mondays.label} we feature our favourite ${specials.weekdays.days.mondays.products} at 15% off their normal price. Shop today's deals below for Toronto cannabis delivery or visit a Canvas Cannabis dispensary near you.`
+      `${specials.weekdays.prefix} ${specials.weekdays.days.mondays.label} we feature our favourite ${specials.weekdays.days.mondays.products} at 10% off their normal price. Shop today's deals below for Toronto cannabis delivery or visit a Canvas Cannabis dispensary near you.`
     );
     $dailySpecialsBtn.text(`Shop ${specials.weekdays.cta}`);
   }
