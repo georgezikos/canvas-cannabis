@@ -7970,10 +7970,8 @@ var ShopSegmentation = function ShopSegmentation() {
     }
 
     window.addEventListener('unload', function () {
-      console.log('HEY');
-      alert('HEY');
-    });
-    $segmentationSubmit.toggleClass(btnLoading); // $segmentationModal.removeClass(activeSegmentation);
+      $segmentationSubmit.toggleClass(btnLoading);
+    }); // $segmentationModal.removeClass(activeSegmentation);
     // $html.removeClass(disableScroll);
     // $body.removeClass(disableScroll);
     // resets the modals dynamic element values
