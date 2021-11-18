@@ -449,9 +449,11 @@ const ShopSegmentation = () => {
       // $html.removeClass(disableScroll);
       // $body.removeClass(disableScroll);
     }
-  });
-  window.addEventListener('popstate', () => {
-    $segmentationSubmit.toggleClass(btnLoading);
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState === 'hidden') {
+        $segmentationSubmit.toggleClass(btnLoading);
+      }
+    });
   });
   closeModalHandler();
 };

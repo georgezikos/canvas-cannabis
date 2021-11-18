@@ -7968,9 +7968,12 @@ var ShopSegmentation = function ShopSegmentation() {
       // $html.removeClass(disableScroll);
       // $body.removeClass(disableScroll);
     }
-  });
-  window.addEventListener('popstate', function () {
-    $segmentationSubmit.toggleClass(btnLoading);
+
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState === 'hidden') {
+        $segmentationSubmit.toggleClass(btnLoading);
+      }
+    });
   });
   closeModalHandler();
 };
