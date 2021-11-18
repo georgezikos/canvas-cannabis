@@ -7971,7 +7971,7 @@ var ShopSegmentation = function ShopSegmentation() {
 
 
     window.addEventListener('popstate', function () {
-      alert(1);
+      console.log('Hehh');
     }); // $segmentationModal.removeClass(activeSegmentation);
     // $html.removeClass(disableScroll);
     // $body.removeClass(disableScroll);
