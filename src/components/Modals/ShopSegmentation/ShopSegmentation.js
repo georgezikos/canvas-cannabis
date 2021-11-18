@@ -395,7 +395,7 @@ const ShopSegmentation = () => {
       products = true;
     }
   });
-  $segmentationForm.on('submit', function (e) {
+  $segmentationForm.submit(function (e) {
     e.preventDefault();
     // waiting animation
     $segmentationSubmit.toggleClass(btnLoading);
