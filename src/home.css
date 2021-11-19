@@ -11,11 +11,11 @@
   }
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   p.daily-specials__body {
     font-size: 16px;
   }
-}
+} */
 
 /* Featured Products */
 .featured-products__base-bounding {
