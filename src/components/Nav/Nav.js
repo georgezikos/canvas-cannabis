@@ -153,12 +153,12 @@ const closeMenuHandler = () => {
           gsap.to($dropdownIcon, { duration: 0.25, rotation: 0 }); // was 360
         }
         if ($mainNav.hasClass('main-nav--dark-ui')) {
-          gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
-          gsap.to('.main-nav__logo-bounding', {
-            duration: 0.25,
-            color: '#000000',
-          });
-          gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
+          // gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
+          // gsap.to('.main-nav__logo-bounding', {
+          //   duration: 0.25,
+          //   color: '#000000',
+          // });
+          // gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
           gsap.to($mainNav, {
             duration: 0.25,
             backgroundColor: 'transparent',
@@ -226,12 +226,12 @@ const closeMenuHandler = () => {
 
         // I think this is the problematic chunk of code?
         if ($mainNav.hasClass('main-nav--dark-ui')) {
-          gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
-          gsap.to('.main-nav__logo-bounding', {
-            duration: 0.25,
-            color: '#000000',
-          });
-          gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
+          // gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
+          // gsap.to('.main-nav__logo-bounding', {
+          //   duration: 0.25,
+          //   color: '#000000',
+          // });
+          // gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
           gsap.to($mainNav, {
             duration: 0.25,
             backgroundColor: 'transparent',
@@ -240,11 +240,11 @@ const closeMenuHandler = () => {
 
         // both of these branches deal with resetting leftover styles if the screen size changes even if the menu was not left open
       } else if (!e.matches && $mainNav.hasClass('main-nav--dark-ui')) {
-        gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
-        gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
+        // gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
+        // gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
       } else if ($window.width() < tabletBreakpoint) {
-        gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
-        gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
+        // gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
+        // gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
       }
     });
   };
@@ -259,24 +259,24 @@ const closeMenuHandler = () => {
         !$target.closest($mainNav).length
       ) {
         $dropdownSubMenu.removeClass(activeSubMenu);
-        if ($dropdownIcon.hasClass(activeDropdownIcon)) {
-          $dropdownIcon.removeClass(activeDropdownIcon);
-          gsap.to($dropdownIcon, { duration: 0.25, rotation: 0 }); // was 360
-        }
-        if ($mainNav.hasClass('main-nav--dark-ui')) {
-          gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
-          gsap.to('.main-nav__logo-bounding', {
-            duration: 0.25,
-            color: '#000000',
-          });
-          gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
-          gsap.to($mainNav, {
-            duration: 0.25,
-            backgroundColor: 'transparent',
-          });
-        }
-      } else {
-        return;
+        //   if ($dropdownIcon.hasClass(activeDropdownIcon)) {
+        //     $dropdownIcon.removeClass(activeDropdownIcon);
+        //     gsap.to($dropdownIcon, { duration: 0.25, rotation: 0 }); // was 360
+        //   }
+        //   if ($mainNav.hasClass('main-nav--dark-ui')) {
+        //     gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
+        //     gsap.to('.main-nav__logo-bounding', {
+        //       duration: 0.25,
+        //       color: '#000000',
+        //     });
+        //     gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
+        //     gsap.to($mainNav, {
+        //       duration: 0.25,
+        //       backgroundColor: 'transparent',
+        //     });
+        //   }
+        // } else {
+        //   return;
       }
     });
   };
@@ -303,18 +303,18 @@ const closeMenuHandler = () => {
           $dropdownIcon.removeClass(activeDropdownIcon);
           gsap.to($dropdownIcon, { duration: 0.25, rotation: 0 }); // was 360
         }
-        if ($mainNav.hasClass('main-nav--dark-ui')) {
-          gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
-          gsap.to('.main-nav__logo-bounding', {
-            duration: 0.25,
-            color: '#000000',
-          });
-          gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
-          gsap.to($mainNav, {
-            duration: 0.25,
-            backgroundColor: 'transparent',
-          });
-        }
+        // if ($mainNav.hasClass('main-nav--dark-ui')) {
+        //   gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
+        //   gsap.to('.main-nav__logo-bounding', {
+        //     duration: 0.25,
+        //     color: '#000000',
+        //   });
+        //   gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
+        //   gsap.to($mainNav, {
+        //     duration: 0.25,
+        //     backgroundColor: 'transparent',
+        //   });
+        // }
         return;
       } else if (
         currentScroll < lastScroll &&
@@ -326,18 +326,18 @@ const closeMenuHandler = () => {
           $dropdownIcon.removeClass(activeDropdownIcon);
           gsap.to($dropdownIcon, { duration: 0.25, rotation: 0 }); // was 360
         }
-        if ($mainNav.hasClass('main-nav--dark-ui')) {
-          gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
-          gsap.to('.main-nav__logo-bounding', {
-            duration: 0.25,
-            color: '#000000',
-          });
-          gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
-          gsap.to($mainNav, {
-            duration: 0.25,
-            backgroundColor: 'transparent',
-          });
-        }
+        // if ($mainNav.hasClass('main-nav--dark-ui')) {
+        //   gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
+        //   gsap.to('.main-nav__logo-bounding', {
+        //     duration: 0.25,
+        //     color: '#000000',
+        //   });
+        //   gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
+        //   gsap.to($mainNav, {
+        //     duration: 0.25,
+        //     backgroundColor: 'transparent',
+        //   });
+        // }
         return;
       }
       lastScroll = currentScroll;
