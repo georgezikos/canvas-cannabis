@@ -11,11 +11,11 @@
   }
 }
 
-/* @media (max-width: 1024px) {
-  p.daily-specials__body {
-    font-size: 16px;
+@media (max-width: 1024px) {
+  span.small-heading__line-break {
+    display: block;
   }
-} */
+}
 
 /* Featured Products */
 .featured-products__base-bounding {
