@@ -11,7 +11,7 @@
   }
 }
 
-@media (max-width: 1024px) and (min-width: 992px) {
+@media (max-width: 1156px) and (min-width: 992px) {
   span.small-heading__line-break {
     display: block;
   }
