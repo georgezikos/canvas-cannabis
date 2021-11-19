@@ -254,7 +254,7 @@ const closeMenuHandler = () => {
     $document.on('click touch', (e) => {
       let $target = $(e.target);
       if (
-        $window.width() > tabletBreakpoint &&
+        // $window.width() > tabletBreakpoint &&
         $dropdownSubMenu.hasClass(activeSubMenu) &&
         !$target.closest($mainNav).length
       ) {
