@@ -20,3 +20,8 @@ section.posts-category:last-of-type {
     padding-bottom: calc(88px - (64px - 32px));
   }
 }
+
+/* Category More Links */
+.link-container__blog-category:hover .small-heading--category-section {
+  color: #333;
+}
