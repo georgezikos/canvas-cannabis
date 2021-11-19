@@ -1,5 +1,5 @@
 /* Daily Specials */
-@media (max-width: 1118px) {
+@media (max-width: 1118px) and (min-width: 992px) {
   .daily-specials__petal.is--004 {
     left: 78%;
   }
