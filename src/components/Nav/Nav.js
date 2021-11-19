@@ -57,8 +57,6 @@ const mobileNavHandler = () => {
         duration: 0.25,
         backgroundColor: '#f2efed',
       });
-      // No longer needed with the updated design – same as below
-      // gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: 'black' });
     }
     gsap.to($hamburgerTop, { duration: 0.25, y: 7, rotationZ: 40 });
     gsap.to($hamburgerBottom, { duration: 0.25, y: -7, rotationZ: -40 });
@@ -69,7 +67,6 @@ const mobileNavHandler = () => {
         duration: 0.25,
         backgroundColor: 'transparent',
       });
-      // gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: '#000000' });
     }
     gsap.to($hamburgerTop, { duration: 0.25, y: 0, rotationZ: 0 });
     gsap.to($hamburgerBottom, { duration: 0.25, y: 0, rotationZ: 0 });
@@ -114,9 +111,9 @@ const subMenuHandler = () => {
       gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 180}, { duration: 0.25, rotation: 0,}); // was 360
 
       if ($window.width() > tabletBreakpoint && $mainNav.hasClass('main-nav--dark-ui')) {
-        gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
-        gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: '#000000' });
-        gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
+        // gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
+        // gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: '#000000' });
+        // gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
         gsap.to($mainNav, { duration: 0.25, backgroundColor: 'transparent' });
 
         gsap.to($this.next(), { duration: 0.25, opacity: 0 }); // sub-menu opacity
@@ -129,9 +126,9 @@ const subMenuHandler = () => {
       
       if ($window.width() > tabletBreakpoint && $mainNav.hasClass('main-nav--dark-ui')) {
         gsap.to($mainNav, { duration: 0.25, backgroundColor: '#f2efed' });
-        gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
-        gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: 'black' });
-        gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
+        // gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
+        // gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: 'black' });
+        // gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
 
         gsap.to($this.next(), { duration: 0.25, opacity: 1 }); // sub-menu opacity
       }
