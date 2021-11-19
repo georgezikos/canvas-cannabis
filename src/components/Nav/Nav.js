@@ -251,7 +251,7 @@ const closeMenuHandler = () => {
 
   // Clicking away from nav to close open sub-menus
   const clickAwayClose = () => {
-    $document.on('click', (e) => {
+    $document.on('click touch', (e) => {
       let $target = $(e.target);
       if (
         $window.width() > tabletBreakpoint &&
