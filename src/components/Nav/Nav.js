@@ -303,18 +303,18 @@ const closeMenuHandler = () => {
           $dropdownIcon.removeClass(activeDropdownIcon);
           gsap.to($dropdownIcon, { duration: 0.25, rotation: 0 }); // was 360
         }
-        // if ($mainNav.hasClass('main-nav--dark-ui')) {
-        //   gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
-        //   gsap.to('.main-nav__logo-bounding', {
-        //     duration: 0.25,
-        //     color: '#000000',
-        //   });
-        //   gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
-        //   gsap.to($mainNav, {
-        //     duration: 0.25,
-        //     backgroundColor: 'transparent',
-        //   });
-        // }
+        if ($mainNav.hasClass('main-nav--dark-ui')) {
+          // gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
+          // gsap.to('.main-nav__logo-bounding', {
+          //   duration: 0.25,
+          //   color: '#000000',
+          // });
+          // gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
+          gsap.to($mainNav, {
+            duration: 0.25,
+            backgroundColor: 'transparent',
+          });
+        }
         return;
       } else if (
         currentScroll < lastScroll &&
@@ -326,18 +326,18 @@ const closeMenuHandler = () => {
           $dropdownIcon.removeClass(activeDropdownIcon);
           gsap.to($dropdownIcon, { duration: 0.25, rotation: 0 }); // was 360
         }
-        // if ($mainNav.hasClass('main-nav--dark-ui')) {
-        //   gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
-        //   gsap.to('.main-nav__logo-bounding', {
-        //     duration: 0.25,
-        //     color: '#000000',
-        //   });
-        //   gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
-        //   gsap.to($mainNav, {
-        //     duration: 0.25,
-        //     backgroundColor: 'transparent',
-        //   });
-        // }
+        if ($mainNav.hasClass('main-nav--dark-ui')) {
+          // gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
+          // gsap.to('.main-nav__logo-bounding', {
+          //   duration: 0.25,
+          //   color: '#000000',
+          // });
+          // gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
+          gsap.to($mainNav, {
+            duration: 0.25,
+            backgroundColor: 'transparent',
+          });
+        }
         return;
       }
       lastScroll = currentScroll;
