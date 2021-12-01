@@ -52,22 +52,22 @@ const mobileNavHandler = () => {
   // $linksList.toggleClass(activeMobileNav);
   if (!$linksList.hasClass(activeMobileNav)) {
     $linksList.addClass(activeMobileNav);
-    // if ($mainNav.hasClass('main-nav--dark-ui')) {
-    //   gsap.to($mainNav, {
-    //     duration: 0.25,
-    //     backgroundColor: '#f2efed',
-    //   });
-    // }
+    if ($mainNav.hasClass('main-nav--dark-ui')) {
+      gsap.to($mainNav, {
+        duration: 0.25,
+        backgroundColor: '#f2efed',
+      });
+    }
     gsap.to($hamburgerTop, { duration: 0.25, y: 7, rotationZ: 40 });
     gsap.to($hamburgerBottom, { duration: 0.25, y: -7, rotationZ: -40 });
   } else if ($linksList.hasClass(activeMobileNav)) {
     $linksList.removeClass(activeMobileNav);
-    // if ($mainNav.hasClass('main-nav--dark-ui')) {
-    //   gsap.to($mainNav, {
-    //     duration: 0.25,
-    //     backgroundColor: 'transparent',
-    //   });
-    // }
+    if ($mainNav.hasClass('main-nav--dark-ui')) {
+      gsap.to($mainNav, {
+        duration: 0.25,
+        backgroundColor: 'transparent',
+      });
+    }
     gsap.to($hamburgerTop, { duration: 0.25, y: 0, rotationZ: 0 });
     gsap.to($hamburgerBottom, { duration: 0.25, y: 0, rotationZ: 0 });
   }
