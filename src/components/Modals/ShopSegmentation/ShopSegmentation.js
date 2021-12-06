@@ -51,6 +51,9 @@ const danforth = 'danforth-dispensary?dtche%5B'; // danforth main revised
 const liberty = 'liberty-village-dispensary?dtche%5B'; // liberty main revised
 const mountDennis = 'mount-dennis-dispensary?dtche%5B'; // mount dennis main revised
 
+// New
+const harbord = 'harbord-village-dispensary?dtche%5B'; // harbord village
+
 // Destinations
 // const specials = 'specials'; // specials category
 // const flower = 'flower'; // flower category
@@ -61,6 +64,10 @@ const specials = 'path%5D=specials'; // specials category revised
 const flower = 'category%5D=flower'; // flower category revised
 const edibles = 'category%5D=edibles'; // edibles category revised
 const vaporizers = 'category%5D=vaporizers'; // vaporizers category revised
+
+// New
+const privateCollection =
+  'search%5D=private+collection&dtche%5Bcategory%5D=all'; // private collection search results
 
 // URL Variables
 let main = false;
@@ -203,7 +210,7 @@ const ShopSegmentation = () => {
     } else if (dataVal === 'specials') {
       destination = specials;
     } else if (dataVal === 'flower') {
-      products = true;
+      products = true; // is this right?
       destination = flower;
     } else if (dataVal === 'edibles') {
       products = true;
@@ -228,6 +235,7 @@ const ShopSegmentation = () => {
       } else if (window.location.href.indexOf('mount-dennis') > -1) {
         $("#shop-segmentation-select option[value='mount-dennis']").remove();
       }
+      // Add harbord
       // change the header text
       $modalHeader.html('Please select another cannabis store location below');
       // change the body text
@@ -287,7 +295,10 @@ const ShopSegmentation = () => {
     if (dataVal === 'main') {
       main = true;
     } else if (dataVal === 'specials') {
-      destination = specials;
+      destination =
+        currentDay === 0 || currentDay === 6 || currentDay === 5
+          ? privateCollection
+          : specials;
     } else if (dataVal === 'flower') {
       destination = flower;
     } else if (dataVal === 'edibles') {
@@ -435,6 +446,21 @@ const ShopSegmentation = () => {
       // $body.removeClass(disableScroll);
     } else if ($selectedStore === 'mount-dennis') {
       store = mountDennis;
+      const fullPath = pathConstructor(main, store, products, destination);
+      // window.open(fullPath); // new window
+      window.location.href = fullPath; // same window
+      // reset URL variables
+      main = false;
+      store = undefined;
+      products = false;
+      destination = undefined;
+      $storeSelect.prop('selectedIndex', 0); // resets the select field
+      // destroy the modal – convert into it's own function
+      // $segmentationModal.removeClass(activeSegmentation);
+      // $html.removeClass(disableScroll);
+      // $body.removeClass(disableScroll);
+    } else if ($selectedStore === 'harbord') {
+      store = harbord;
       const fullPath = pathConstructor(main, store, products, destination);
       // window.open(fullPath); // new window
       window.location.href = fullPath; // same window
