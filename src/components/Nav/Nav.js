@@ -52,32 +52,22 @@ const mobileNavHandler = () => {
   // $linksList.toggleClass(activeMobileNav);
   if (!$linksList.hasClass(activeMobileNav)) {
     $linksList.addClass(activeMobileNav);
-    // if ($mainNav.hasClass('main-nav--dark-ui')) {
-    //   gsap.to($mainNav, {
-    //     duration: 0.25,
-    //     backgroundColor: '#f2efed',
-    //   });
-    // }
-    // updated below
-    gsap.to($mainNav, {
-      duration: 0.25,
-      backgroundColor: '#f2efed',
-    });
+    if ($mainNav.hasClass('main-nav--dark-ui')) {
+      gsap.to($mainNav, {
+        duration: 0.25,
+        backgroundColor: '#f2efed',
+      });
+    }
     gsap.to($hamburgerTop, { duration: 0.25, y: 7, rotationZ: 40 });
     gsap.to($hamburgerBottom, { duration: 0.25, y: -7, rotationZ: -40 });
   } else if ($linksList.hasClass(activeMobileNav)) {
     $linksList.removeClass(activeMobileNav);
-    // if ($mainNav.hasClass('main-nav--dark-ui')) {
-    //   gsap.to($mainNav, {
-    //     duration: 0.25,
-    //     backgroundColor: 'transparent',
-    //   });
-    // }
-    // updated below
-    gsap.to($mainNav, {
-      duration: 0.25,
-      backgroundColor: 'transparent',
-    });
+    if ($mainNav.hasClass('main-nav--dark-ui')) {
+      gsap.to($mainNav, {
+        duration: 0.25,
+        backgroundColor: 'transparent',
+      });
+    }
     gsap.to($hamburgerTop, { duration: 0.25, y: 0, rotationZ: 0 });
     gsap.to($hamburgerBottom, { duration: 0.25, y: 0, rotationZ: 0 });
   }
@@ -133,18 +123,15 @@ const subMenuHandler = () => {
       $this.find($dropdownIcon).addClass(activeDropdownIcon);
       gsap.set($this.find($dropdownIcon), { transformOrigin: 'center' });
       gsap.fromTo($this.find($dropdownIcon), { duration: 0.25, rotation: 0}, { duration: 0.25, rotation: 180});
-      // updated below
-      gsap.to($mainNav, { duration: 0.25, backgroundColor: '#f2efed' });
-      gsap.to($this.next(), { duration: 0.25, opacity: 1 }); // sub-menu opacity
       
-      // if ($window.width() > tabletBreakpoint && $mainNav.hasClass('main-nav--dark-ui')) {
-      //   gsap.to($mainNav, { duration: 0.25, backgroundColor: '#f2efed' });
-      //   // gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
-      //   // gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: 'black' });
-      //   // gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
+      if ($window.width() > tabletBreakpoint && $mainNav.hasClass('main-nav--dark-ui')) {
+        gsap.to($mainNav, { duration: 0.25, backgroundColor: '#f2efed' });
+        // gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
+        // gsap.to('.main-nav__logo-bounding', { duration: 0.25, color: 'black' });
+        // gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
 
-      //   gsap.to($this.next(), { duration: 0.25, opacity: 1 }); // sub-menu opacity
-      // }
+        gsap.to($this.next(), { duration: 0.25, opacity: 1 }); // sub-menu opacity
+      }
     }
   });
 };
@@ -236,33 +223,28 @@ const closeMenuHandler = () => {
           $dropdownIcon.removeClass(activeDropdownIcon);
           gsap.to($dropdownIcon, { duration: 0.25, rotation: 0 }); // was 360
         }
-        // updated below
-        gsap.to($mainNav, {
-          duration: 0.25,
-          backgroundColor: 'transparent',
-        });
-        // I think this is the problematic chunk of code?
-        // if ($mainNav.hasClass('main-nav--dark-ui')) {
-        //   // gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
-        //   // gsap.to('.main-nav__logo-bounding', {
-        //   //   duration: 0.25,
-        //   //   color: '#000000',
-        //   // });
-        //   // gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
 
-        //   gsap.to($mainNav, {
-        //     duration: 0.25,
-        //     backgroundColor: 'transparent',
-        //   });
-        // }
+        // I think this is the problematic chunk of code?
+        if ($mainNav.hasClass('main-nav--dark-ui')) {
+          // gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
+          // gsap.to('.main-nav__logo-bounding', {
+          //   duration: 0.25,
+          //   color: '#000000',
+          // });
+          // gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
+          gsap.to($mainNav, {
+            duration: 0.25,
+            backgroundColor: 'transparent',
+          });
+        }
 
         // both of these branches deal with resetting leftover styles if the screen size changes even if the menu was not left open
-        // } else if (!e.matches && $mainNav.hasClass('main-nav--dark-ui')) {
-        //   // gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
-        //   // gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
-        // } else if ($window.width() < tabletBreakpoint) {
-        //   // gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
-        //   // gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
+      } else if (!e.matches && $mainNav.hasClass('main-nav--dark-ui')) {
+        // gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
+        // gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
+      } else if ($window.width() < tabletBreakpoint) {
+        // gsap.to($dropdownIcon, { duration: 0.25, color: 'black' });
+        // gsap.to('.main-nav__link', { duration: 0.25, color: 'black' });
       }
     });
   };
@@ -281,23 +263,18 @@ const closeMenuHandler = () => {
           $dropdownIcon.removeClass(activeDropdownIcon);
           gsap.to($dropdownIcon, { duration: 0.25, rotation: 0 }); // was 360
         }
-        // updated below
-        gsap.to($mainNav, {
-          duration: 0.25,
-          backgroundColor: 'transparent',
-        });
-        // if ($mainNav.hasClass('main-nav--dark-ui')) {
-        //   // gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
-        //   // gsap.to('.main-nav__logo-bounding', {
-        //   //   duration: 0.25,
-        //   //   color: '#000000',
-        //   // });
-        //   // gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
-        //   gsap.to($mainNav, {
-        //     duration: 0.25,
-        //     backgroundColor: 'transparent',
-        //   });
-        // }
+        if ($mainNav.hasClass('main-nav--dark-ui')) {
+          // gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
+          // gsap.to('.main-nav__logo-bounding', {
+          //   duration: 0.25,
+          //   color: '#000000',
+          // });
+          // gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
+          gsap.to($mainNav, {
+            duration: 0.25,
+            backgroundColor: 'transparent',
+          });
+        }
       } else {
         return;
       }
@@ -326,24 +303,18 @@ const closeMenuHandler = () => {
           $dropdownIcon.removeClass(activeDropdownIcon);
           gsap.to($dropdownIcon, { duration: 0.25, rotation: 0 }); // was 360
         }
-        // updated below
-        gsap.to($mainNav, {
-          duration: 0.25,
-          backgroundColor: 'transparent',
-        });
-
-        // if ($mainNav.hasClass('main-nav--dark-ui')) {
-        //   // gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
-        //   // gsap.to('.main-nav__logo-bounding', {
-        //   //   duration: 0.25,
-        //   //   color: '#000000',
-        //   // });
-        //   // gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
-        //   gsap.to($mainNav, {
-        //     duration: 0.25,
-        //     backgroundColor: 'transparent',
-        //   });
-        // }
+        if ($mainNav.hasClass('main-nav--dark-ui')) {
+          // gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
+          // gsap.to('.main-nav__logo-bounding', {
+          //   duration: 0.25,
+          //   color: '#000000',
+          // });
+          // gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
+          gsap.to($mainNav, {
+            duration: 0.25,
+            backgroundColor: 'transparent',
+          });
+        }
         return;
       } else if (
         currentScroll < lastScroll &&
@@ -355,23 +326,18 @@ const closeMenuHandler = () => {
           $dropdownIcon.removeClass(activeDropdownIcon);
           gsap.to($dropdownIcon, { duration: 0.25, rotation: 0 }); // was 360
         }
-        // Updated below
-        gsap.to($mainNav, {
-          duration: 0.25,
-          backgroundColor: 'transparent',
-        });
-        // if ($mainNav.hasClass('main-nav--dark-ui')) {
-        //   // gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
-        //   // gsap.to('.main-nav__logo-bounding', {
-        //   //   duration: 0.25,
-        //   //   color: '#000000',
-        //   // });
-        //   // gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
-        //   gsap.to($mainNav, {
-        //     duration: 0.25,
-        //     backgroundColor: 'transparent',
-        //   });
-        // }
+        if ($mainNav.hasClass('main-nav--dark-ui')) {
+          // gsap.to($dropdownIcon, { duration: 0.25, color: '#000000' });
+          // gsap.to('.main-nav__logo-bounding', {
+          //   duration: 0.25,
+          //   color: '#000000',
+          // });
+          // gsap.to('.main-nav__link', { duration: 0.25, color: '#000000' });
+          gsap.to($mainNav, {
+            duration: 0.25,
+            backgroundColor: 'transparent',
+          });
+        }
         return;
       }
       lastScroll = currentScroll;
