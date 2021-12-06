@@ -293,7 +293,7 @@ const ShopSegmentation = () => {
       main = true;
     } else if (dataVal === 'specials') {
       destination =
-        currentDay === 0 || currentDay === 6 || currentDay === 5
+        currentDay !== 0 || currentDay !== 6 || currentDay !== 5 // flip back to ===
           ? privateCollection
           : specials;
     } else if (dataVal === 'flower') {
