@@ -50,8 +50,6 @@ const dutchieTopLevel = '/cannabis-store-menu/'; // top-level revised
 const danforth = 'danforth-dispensary?dtche%5B'; // danforth main revised
 const liberty = 'liberty-village-dispensary?dtche%5B'; // liberty main revised
 const mountDennis = 'mount-dennis-dispensary?dtche%5B'; // mount dennis main revised
-
-// New
 const harbord = 'harbord-village-dispensary?dtche%5B'; // harbord village
 
 // Destinations
@@ -64,8 +62,6 @@ const specials = 'path%5D=specials'; // specials category revised
 const flower = 'category%5D=flower'; // flower category revised
 const edibles = 'category%5D=edibles'; // edibles category revised
 const vaporizers = 'category%5D=vaporizers'; // vaporizers category revised
-
-// New
 const privateCollection =
   'search%5D=private+collection&dtche%5Bcategory%5D=all'; // private collection search results
 
@@ -478,7 +474,7 @@ const ShopSegmentation = () => {
     }
     document.addEventListener('visibilitychange', function () {
       if (document.visibilityState === 'hidden') {
-        $segmentationSubmit.toggleClass(btnLoading);
+        $segmentationSubmit.removeClass(btnLoading); // was toggleClass
         $segmentationModal.removeClass(activeSegmentation);
         $html.removeClass(disableScroll);
         $body.removeClass(disableScroll);
