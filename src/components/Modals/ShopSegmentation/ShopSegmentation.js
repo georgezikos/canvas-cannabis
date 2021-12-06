@@ -234,8 +234,9 @@ const ShopSegmentation = () => {
         $("#shop-segmentation-select option[value='liberty']").remove();
       } else if (window.location.href.indexOf('mount-dennis') > -1) {
         $("#shop-segmentation-select option[value='mount-dennis']").remove();
+      } else if (window.location.href.indexOf('harbord-village') > -1) {
+        $("#shop-segmentation-select option[value='harbord']").remove();
       }
-      // Add harbord
       // change the header text
       $modalHeader.html('Please select another cannabis store location below');
       // change the body text
