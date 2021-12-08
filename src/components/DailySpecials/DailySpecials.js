@@ -16,33 +16,33 @@ const specials = {
         label: 'Monday',
         products: 'Cannabis Pre-Rolls',
         image:
-          'https://assets.website-files.com/60cfd1175523ac59337574a3/617ee7acab65e4717346a695_PreRolls_PureSunfarmsPreRollEdit_Compressed.png',
+          'https://assets.website-files.com/60cfd1175523ac59337574a3/61b015e4710f16bc1749ce6b_best-toronto-dispensary_cannabis-stores-toronto__daily-specials_cannabis-pre-rolls.png',
         shadow:
-          'https://assets.website-files.com/60cfd1175523ac59337574a3/617ee7aa635b9a8bf93629fd_PreRollsShadow_Compressed.png',
+          'https://assets.website-files.com/60cfd1175523ac59337574a3/61b015e3ff6095dc866e5930_shadow__daily-specials_cannabis-pre-rolls.png',
       },
       tuesdays: {
         label: 'Tuesday',
         products: 'Vaporizer Cartridges & Disposable Cannabis Vaporizers',
         image:
-          'https://assets.website-files.com/60cfd1175523ac59337574a3/617ee7ac885c2b150f52f4e4_Cartridges_Wayfarer510Edit_Compressed.png',
+          'https://assets.website-files.com/60cfd1175523ac59337574a3/61b015e570a6915785220648_best-toronto-dispensary_cannabis-stores-toronto__daily-specials_cannabis-vaporizers-vapes.png',
         shadow:
-          'https://assets.website-files.com/60cfd1175523ac59337574a3/617ee7ac2e706145a23ea059_CartridgesShadow_Compressed.png',
+          'https://assets.website-files.com/60cfd1175523ac59337574a3/61b015e260f891af1173b219_shadow__daily-specials_cannabis-vaporizers-vapes.png',
       },
       wednesdays: {
         label: 'Wednesday',
         products: 'Cannabis and CBD Oils, Capsules & Concentrates',
         image:
-          'https://assets.website-files.com/60cfd1175523ac59337574a3/619560fab20d7b333bca19e0_OilsCapsCons_PureSunfarmsCBDOilEdit_Compressed.png',
+          'https://assets.website-files.com/60cfd1175523ac59337574a3/61b015e52a3f76217aac8523_best-toronto-dispensary_cannabis-stores-toronto__daily-specials_cbd-cannabis-oils.png',
         shadow:
-          'https://assets.website-files.com/60cfd1175523ac59337574a3/617ee7ab05aa1e5274a2962c_OilsCapsConsShadow_Compressed.png',
+          'https://assets.website-files.com/60cfd1175523ac59337574a3/61b015e450e05825f369ec2f_shadow__daily-specials_cbd-cannabis-oils.png',
       },
       thursdays: {
         label: 'Thursday',
         products: 'Cannabis Edibles',
         image:
-          'https://assets.website-files.com/60cfd1175523ac59337574a3/617ee7ad5ecb8e9a5a1deeaa_Edibles_BhangChocolateEdit_Compressed.png',
+          'https://assets.website-files.com/60cfd1175523ac59337574a3/61b015e4f939b4808fe4379b_best-toronto-dispensary_cannabis-stores-toronto__daily-specials_cannabis-edibles.png',
         shadow:
-          'https://assets.website-files.com/60cfd1175523ac59337574a3/617ee7ab234721b873042958_EdiblesShadow_Compressed.png',
+          'https://assets.website-files.com/60cfd1175523ac59337574a3/61b015e3520ea877d53e2c2f_shadow__daily-specials_cannabis-edibles.png',
       },
     },
   },
@@ -55,9 +55,9 @@ const specials = {
         label: 'Weekends',
         products: 'Private Collection',
         image:
-          'https://assets.website-files.com/60cfd1175523ac59337574a3/617ee7ad26a5a4dbf9f2440d_Weekends_PrivateCollectionEdit_Compressed.png',
+          'https://assets.website-files.com/60cfd1175523ac59337574a3/61b015e45324e89e1448c186_best-toronto-dispensary_cannabis-stores-toronto__daily-specials_cannabis-accessories.png',
         shadow:
-          'https://assets.website-files.com/60cfd1175523ac59337574a3/617ee7aabfffe95924193ec1_PrivateCollectionShadow_Compressed.png',
+          'https://assets.website-files.com/60cfd1175523ac59337574a3/61b015e2f1f32626a5305b07_shadow__daily-specials_cannabis-accessories.png',
       },
     },
   },
