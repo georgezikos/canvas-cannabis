@@ -93,7 +93,7 @@ const DailySpecials = () => {
       `${specials.weekdays.prefix} ${specials.weekdays.days.thursdays.label} we feature our favourite ${specials.weekdays.days.thursdays.products} at 10% off their normal price. Shop today's deals below for Toronto cannabis delivery or visit a Canvas Cannabis dispensary near you.`
     );
     $dailySpecialsBtn.text(`Shop ${specials.weekdays.cta}`);
-  } else if (currentDay === 1) {
+  } else if (currentDay === 2) {
     // switch back to 3
     $dailySpecialsImage.attr('src', specials.weekdays.days.wednesdays.image);
     $dailySpecialsShadow.attr('src', specials.weekdays.days.wednesdays.shadow);
@@ -107,7 +107,8 @@ const DailySpecials = () => {
       `${specials.weekdays.prefix} ${specials.weekdays.days.wednesdays.label} we feature our favourite ${specials.weekdays.days.wednesdays.products} at 10% off their normal price. Shop today's deals below for Toronto cannabis delivery or visit a Canvas Cannabis dispensary near you.`
     );
     $dailySpecialsBtn.text(`Shop ${specials.weekdays.cta}`);
-  } else if (currentDay === 2) {
+  } else if (currentDay === 3) {
+    // switch bacck to 2
     $dailySpecialsImage.attr('src', specials.weekdays.days.tuesdays.image);
     $dailySpecialsShadow.attr('src', specials.weekdays.days.tuesdays.shadow);
     $dailySpecialsImage.attr('srcset', specials.weekdays.days.tuesdays.image);
@@ -117,8 +118,7 @@ const DailySpecials = () => {
       `${specials.weekdays.prefix} ${specials.weekdays.days.tuesdays.label} we feature our favourite ${specials.weekdays.days.tuesdays.products} at 10% off their normal price. Shop today's deals below for Toronto cannabis delivery or visit a Canvas Cannabis dispensary near you.`
     );
     $dailySpecialsBtn.text(`Shop ${specials.weekdays.cta}`);
-  } else if (currentDay === 3) {
-    // switch back to 1
+  } else if (currentDay === 1) {
     $dailySpecialsImage.attr('src', specials.weekdays.days.mondays.image);
     $dailySpecialsShadow.attr('src', specials.weekdays.days.mondays.shadow);
     $dailySpecialsImage.attr('srcset', specials.weekdays.days.mondays.image);
