@@ -68,7 +68,7 @@ const currentDate = new Date();
 const currentDay = currentDate.getDay();
 
 const DailySpecials = () => {
-  if (currentDay === 3) {
+  if (currentDay === 0 || currentDay === 6 || currentDay === 5) {
     // refactor into a function that takes all of these repeating variables as arguments
     // see if I can use ternarys in place of some of these variables
     $dailySpecialsImage.attr('src', specials.weekends.days.weekends.image);
@@ -93,8 +93,7 @@ const DailySpecials = () => {
       `${specials.weekdays.prefix} ${specials.weekdays.days.thursdays.label} we feature our favourite ${specials.weekdays.days.thursdays.products} at 10% off their normal price. Shop today's deals below for Toronto cannabis delivery or visit a Canvas Cannabis dispensary near you.`
     );
     $dailySpecialsBtn.text(`Shop ${specials.weekdays.cta}`);
-  } else if (currentDay === 0 || currentDay === 6 || currentDay === 5) {
-    // switch back to 3
+  } else if (currentDay === 3) {
     $dailySpecialsImage.attr('src', specials.weekdays.days.wednesdays.image);
     $dailySpecialsShadow.attr('src', specials.weekdays.days.wednesdays.shadow);
     $dailySpecialsImage.attr('srcset', specials.weekdays.days.wednesdays.image);
