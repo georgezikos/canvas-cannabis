@@ -80,7 +80,8 @@ const DailySpecials = () => {
       `${specials.weekends.prefix} ${specials.weekends.days.weekends.label} we feature our ${specials.weekends.days.weekends.products} of cannabis accessories. Hand carved and polished by a small team of generational wood craftsmen showcasing a range of natural tones and unique finishes. An aesthetic sure to fit in with your home décor.`
     );
     $dailySpecialsBtn.text(`Shop ${specials.weekends.cta}`);
-  } else if (currentDay === 4) {
+  } else if (currentDay === 3) {
+    // switch back to 4
     $dailySpecialsImage.attr('src', specials.weekdays.days.thursdays.image);
     $dailySpecialsShadow.attr('src', specials.weekdays.days.thursdays.shadow);
     $dailySpecialsImage.attr('srcset', specials.weekdays.days.thursdays.image);
@@ -93,7 +94,7 @@ const DailySpecials = () => {
       `${specials.weekdays.prefix} ${specials.weekdays.days.thursdays.label} we feature our favourite ${specials.weekdays.days.thursdays.products} at 10% off their normal price. Shop today's deals below for Toronto cannabis delivery or visit a Canvas Cannabis dispensary near you.`
     );
     $dailySpecialsBtn.text(`Shop ${specials.weekdays.cta}`);
-  } else if (currentDay === 2) {
+  } else if (currentDay === 4) {
     // switch back to 3
     $dailySpecialsImage.attr('src', specials.weekdays.days.wednesdays.image);
     $dailySpecialsShadow.attr('src', specials.weekdays.days.wednesdays.shadow);
@@ -107,8 +108,7 @@ const DailySpecials = () => {
       `${specials.weekdays.prefix} ${specials.weekdays.days.wednesdays.label} we feature our favourite ${specials.weekdays.days.wednesdays.products} at 10% off their normal price. Shop today's deals below for Toronto cannabis delivery or visit a Canvas Cannabis dispensary near you.`
     );
     $dailySpecialsBtn.text(`Shop ${specials.weekdays.cta}`);
-  } else if (currentDay === 3) {
-    // switch bacck to 2
+  } else if (currentDay === 2) {
     $dailySpecialsImage.attr('src', specials.weekdays.days.tuesdays.image);
     $dailySpecialsShadow.attr('src', specials.weekdays.days.tuesdays.shadow);
     $dailySpecialsImage.attr('srcset', specials.weekdays.days.tuesdays.image);
