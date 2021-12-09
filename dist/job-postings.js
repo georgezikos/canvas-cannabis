@@ -1,0 +1,1 @@
+(()=>{"use strict";(()=>{var t=$("#apply-now"),n=$(location).attr("href");const c=function(){t.attr("href","".concat(n).concat("#application"))};var a=function(){c()};$((function(){a()}))})()})();

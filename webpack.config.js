@@ -19,7 +19,7 @@ module.exports = {
     'blog-posts': ['./src/blog-posts.js', './src/blog-posts.css'],
     'blog-categories': './src/blog-categories.css',
     careers: './src/careers.css',
-    'job-postings': './src/job-postings.css',
+    'job-postings': ['./src/job-postings.js', './src/job-postings.css'],
     'posts-listing': './src/posts-listing.css',
     legal: './src/legal.css',
   },
